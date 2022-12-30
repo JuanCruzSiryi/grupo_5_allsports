@@ -3,6 +3,7 @@
 - Descripción del público: Público en general.
 
 - Descripción de los integrantes del equipo: 
+
     1.	Leandro López, 45 años, Analista en sistemas informáticos, hoy trabajo como gerente de distribución y logística. Espero con este equipo aprender, crecer y desarrollar juntos un ecommerce que podamos mostrar con orgullo como nuestra carta de presentación.
 
     2.  Juan Cruz Siryi, 24 años, Contador Público. Actualmente trabajando como Administrador en una empresa distribuidora de pollos. Desarrollando el curso de Full Stack Developer de Digital House. Ansioso de llevar a cabo el proyecto de ecommerce junto a mi equipo de trabajo.
@@ -28,14 +29,21 @@
     Sitio: https://ar.puma.com/ : una página que notamos a simple vista la gran variedad de colores. Lo tomamos de referencia para evitar ese tipo de diseño, procurando uno más sobrio con respecto a la gama de colores. 
     
 - Wireframe digital o analógico con:
+
     Home -> https://wireframe.cc/4PBIAg -> - PC
+    
     Detalle de producto -> https://wireframe.cc/MS6nap - PC
+    
     Carrito de compras -> https://wireframe.cc/djhWky - PC
+    
     Formulario de registro -> https://wireframe.cc/DKfd21 - PC
+    
     Formulario de login -> https://wireframe.cc/4TzMc0 - PC
+    
     Creamos la carpeta WIREFRAMES para incluir el contenido.
     
 - Opcional: boceto o diseño del sitio con:
+
     Logo: contiene una imagen de un zorro y el nombre de nuestro ecommerce “ALL SPORTS”
   
     Colores de logo: gama de azules con negro y detalles en naranja son de nuestras preferencias inicialmente. El azul crea confianza y el naranja refleja entusiasmo y éxito. Agregamos una imagen de un zorro, para crear un logo diferente y distintivo.
