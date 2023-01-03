@@ -54,6 +54,6 @@
     
     Creamos la carpeta DESIGN para incluir el contenido.
 
-
+LINK DE TRELLO SPRINT 2: https://trello.com/b/w4nUES3c/sprint-2
 
 
