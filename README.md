@@ -53,7 +53,7 @@
     Tipografías: en construcción. Ideas: Open Sans, Roboto.
     
     Creamos la carpeta DESIGN para incluir el contenido.
+    
+LINK DE TRELLO SPRINT 1: https://trello.com/b/3XxBkR9M/sprint-1
 
 LINK DE TRELLO SPRINT 2: https://trello.com/b/w4nUES3c/sprint-2
-
-
