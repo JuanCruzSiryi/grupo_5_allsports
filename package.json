@@ -1,0 +1,27 @@
+{
+  "name": "grupo_5_allsports",
+  "version": "1.0.0",
+  "description": "- Descripción de la oferta de productos: Tienda Deportiva. Ofrecemos la venta de productos que incluye ropa deportiva, accesorios y calzados. El nombre será ALL SPORTS.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanCruzSiryi/grupo_5_allsports.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanCruzSiryi/grupo_5_allsports/issues"
+  },
+  "homepage": "https://github.com/JuanCruzSiryi/grupo_5_allsports#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
