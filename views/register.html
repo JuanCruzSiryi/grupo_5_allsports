@@ -5,8 +5,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
+  <link rel="stylesheet" href="/css/register.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
 </head>
 <body>
-  <h1>Register</h1>
+  
+  <header>
+    <div class="main-header">
+        HEADER
+    </div>
+  </header>
+
+  <main class="principal-box">
+
+      <div class="title">
+          <h2 class="title-register">Registrarme</h2>
+      </div>
+
+      <div class="regi-box">
+          <ul class="content-regi-box">
+            <form action="" method="">
+
+              <div>
+                <label><i>* </i>Nombre completo:</label>
+                  <input type="text" name="userName" required>
+                  <span class="feedback"></span>  
+              </div>
+
+              <div>
+                <label><i>* </i>Apellido:</label>
+                  <input type="text" name="userLastName" required>
+                  <span class="feedback"></span>
+              </div>
+
+              <div>
+                <label><i>* </i>Email:</label>
+                  <input type="email" name="userEmail" required>
+                <span class="feedback"></span>
+              </div>
+
+              <div>
+                <label><i>* </i>Contraseña (mínimo 8 caracteres):</label>
+                  <input type="password" name="userPassword" required>
+                  <span class="feedback"></span>
+              </div>
+
+              <div>
+                <label>Género:</label>
+                  <select>
+                    <option>Seleccionar</option>
+                    <option>Hombre</option>
+                    <option>Mujer</option>
+                    <option>Otros</option>
+                  </select>
+                  <span class="feedback"></span>
+              </div>
+
+            </form>
+          </ul>
+      </div>
+
+      <div class="terms-box">
+          
+          <label><input type="checkbox" name="accepted-terms" value="">
+            Acepto las 
+            <i> Políticas de Privacidad y Términos y Condiciones</i>
+          </label>
+
+          <label><input type="checkbox" name="accepted-promotions" value="">
+            Quiero recibir emails de promociones y noticias.  
+          </label>
+        
+      </div>
+
+      <div class="register-button">
+          <button type="submit">CREAR CUENTA</button>
+      </div>
+
+  </main>
+
+  <footer>
+    <div>
+      FOOTER
+    </div>
+  </footer>
+
 </body>
 </html>

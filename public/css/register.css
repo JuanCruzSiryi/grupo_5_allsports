@@ -1,0 +1,136 @@
+* {
+    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ---------------------------HEADER---------------------------- */
+
+header {
+    width: 100%;
+    background-color: yellow;
+    text-align: center;
+    height: 100px;
+}
+
+/* ---------------------------MAIN---------------------------- */
+main {
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    height: 600px;
+}
+
+.title {
+    width: 100%;
+    padding: 10px;
+}
+
+.title-register {
+    font-weight: bold;
+    color: rgb(3, 3, 113);
+    font-size: 20px;
+}
+
+.regi-box {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-regi-box {
+    margin-top: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.regi-box ul label {
+    font-size: 14px;
+    font: 900;
+}
+
+.regi-box ul input {
+    width: 100%;
+    height: 80%;
+    border-radius: 6px;
+}
+
+.regi-box ul select {
+    width: 100%;
+    height: 80%;
+    border-radius: 6px;
+}
+
+.regi-box ul i {
+    color: red;
+    font-size: 20px;
+}
+
+.terms-box {
+    width: 100%;
+    height: 15%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.terms-box label {
+    margin-left: 2%;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.terms-box label i {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+.register-button {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button button {
+    width: 60%;
+    height: 30px;
+    background-color: white;
+    font-size: 16px;
+    color: orangered;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.register-button button:hover {
+    background-color: rgb(240, 237, 237)
+}
+
+/* ---------------------------FOOTER---------------------------- */
+
+footer {
+    width: 100%;
+    background-color: yellow;
+    text-align: center;
+    height: 100PX;
+}
+
