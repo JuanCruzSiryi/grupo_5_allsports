@@ -26,23 +26,25 @@ body {
 }
 
 .menu-var{
-    margin: -9% 17% 33% 3%;
+    margin: 36% 3% 19% 2%;
     background-color: #b2b3db;
     font-size: 12px;
-    /* display:flex;
-    flex-direction: row; */
-    display:block;
+    display:flex;
+    flex-direction: row;
+    /* display:block;
     flex-direction: column; 
-    
-}
+     */
+}    
+
 
 .waist {
     width: 20%;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    margin: 31% 73% 2% 4%;
+    margin: 8% -6% 0% 7%;
     text-align: center;
 }
+
 
 .letter {    
     border: solid 1px blue;
@@ -58,21 +60,44 @@ body {
      
     }
 
-.image{
-    max-width: 80%;
+.image{    
+    max-width: 99%;
     max-height: 40%;
     border: solid 1px blue;
     border-radius: 5%;
+    margin: 36% -44% 90% 39%;
 }
 
 .icons{
-    padding: 11%;
-    margin: 2% 2% 2% 2%;
+    padding: 9%;
+    margin: 25% 25% 0% 43%;
 }
 
 .cart{
     margin: 32% 5% 32% 5%;
 }
+
+.input-color{
+    column-count: 2;
+    font-size: 10px;
+}
+
+.white{
+    color: white;
+}
+
+.black{
+    color: black;
+}
+
+.red{
+    color:red;
+}
+
+.blue{
+    color:blue;
+}
+
 /* ---------------------------FOOTER---------------------------- */
 
 footer {
