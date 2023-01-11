@@ -17,60 +17,51 @@
     </div>
   </header>
 
-  <main class="principal-box">
+  <main>
+    <div class="principal-box">
 
       <div class="title">
           <h2 class="title-register">Registrarme</h2>
       </div>
 
-      <div class="regi-box">
-          <ul class="content-regi-box">
-            <form action="" method="">
-
-              <div>
-                <label><i>* </i>Nombre completo:</label>
-                  <input type="text" name="userName" required>
-                  <span class="feedback"></span>  
-              </div>
-
-              <div>
-                <label><i>* </i>Apellido:</label>
-                  <input type="text" name="userLastName" required>
-                  <span class="feedback"></span>
-              </div>
-
-              <div>
-                <label><i>* </i>Email:</label>
-                  <input type="email" name="userEmail" required>
-                <span class="feedback"></span>
-              </div>
-
-              <div>
-                <label><i>* </i>Contraseña (mínimo 8 caracteres):</label>
-                  <input type="password" name="userPassword" required>
-                  <span class="feedback"></span>
-              </div>
-
-              <div>
-                <label>Género:</label>
-                  <select>
-                    <option>Seleccionar</option>
-                    <option>Hombre</option>
-                    <option>Mujer</option>
-                    <option>Otros</option>
-                  </select>
-                  <span class="feedback"></span>
-              </div>
-
-            </form>
-          </ul>
+      <div class="content-box-register">
+        <form action="/" method="">
+          <div>
+            <label for="username">Nombre</label>
+            <input type="text" name="name" id="username" required>
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <label for="username">Apellido</label>
+            <input type="text" name="lastname" id="userlastname">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div>
+            <label for="username">Email</label>
+            <input type="email" name="email" id="useremail" required>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div>
+            <label for="username">Contraseña (mínimo 8 caracteres)</label>
+            <input type="password" name="password" id="userpassword" required>
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div>
+            <label for="genre">Género</label>
+            <select name="genre" placeholder="Seleccionar" id="genre">
+              <option>Masculino</option>
+              <option>Femenino</option>
+              <option>Otros</option>
+            </select>
+          </div>
+        </form>
       </div>
 
       <div class="terms-box">
           
           <label><input type="checkbox" name="accepted-terms" value="">
             Acepto las 
-            <i> Políticas de Privacidad y Términos y Condiciones</i>
+            <a href=""> Políticas de Privacidad y Términos y Condiciones</a>
           </label>
 
           <label><input type="checkbox" name="accepted-promotions" value="">
@@ -83,6 +74,7 @@
           <button type="submit">CREAR CUENTA</button>
       </div>
 
+    </div>
   </main>
 
   <footer>

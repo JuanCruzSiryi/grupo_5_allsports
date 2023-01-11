@@ -16,10 +16,67 @@ header {
 
 /* ---------------------------MAIN---------------------------- */
 main {
-    width: 100%;
-    background-color: white;
+    background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
     text-align: center;
-    height: 600px;
+    width: 100%;
+    padding: 15px;
+}
+
+.principal-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: white;
+    opacity: 0.6;
+    border-radius: 6px;
+}
+
+.content-box-register form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content-box-register form div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    position: relative;
+    width: 100%;
+}
+
+.content-box-register form div input {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.content-box-register form div label {
+    position: relative;
+    bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content-box-register form div select {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.content-box-register form div i {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    opacity: 0.2;
 }
 
 .title {
@@ -33,59 +90,14 @@ main {
     font-size: 20px;
 }
 
-.regi-box {
-    width: 100%;
-    height: 65%;
-    display: flex;
-    flex-direction: column;
-}
-
-.content-regi-box {
-    margin-top: 10px;
-    margin-right: 20%;
-    margin-left: 20%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: left;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.regi-box ul label {
-    font-size: 14px;
-    font: 900;
-}
-
-.regi-box ul input {
-    width: 100%;
-    height: 80%;
-    border-radius: 6px;
-}
-
-.regi-box ul select {
-    width: 100%;
-    height: 80%;
-    border-radius: 6px;
-}
-
-.regi-box ul i {
-    color: red;
-    font-size: 20px;
-}
-
 .terms-box {
     width: 100%;
     height: 15%;
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
 .terms-box label {
@@ -96,9 +108,13 @@ form {
     justify-content: center;
 }
 
-.terms-box label i {
+.terms-box label a {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.terms-box label a:visited {
+    color: rgb(78, 4, 147);
 }
 
 
@@ -109,20 +125,31 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 .register-button button {
     width: 60%;
     height: 30px;
-    background-color: white;
     font-size: 16px;
-    color: orangered;
+    color: white;
     font-weight: bold;
     border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
 
 .register-button button:hover {
     background-color: rgb(240, 237, 237)
+}
+
+@media (min-width: 769px) {
+    .principal-box {
+        margin-left: 20%;
+        margin-right: 20%;
+        justify-content: center;
+    }
 }
 
 /* ---------------------------FOOTER---------------------------- */
