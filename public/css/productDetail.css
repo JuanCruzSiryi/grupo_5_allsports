@@ -60,28 +60,40 @@ body {
      
     }
 
-.image{    
-    max-width: 99%;
-    max-height: 40%;
+.image{
+    width: 150px;
     border: solid 1px blue;
     border-radius: 5%;
-    margin: 36% -44% 90% 39%;
+    margin: 30% -54% 100% 29%;
 }
 
+.image:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+
+}
 .icons{
-    padding: 9%;
-    margin: 25% 25% 0% 43%;
+    padding: 19%;
+    margin: 15% 25% 0% 43%;
+}
+
+
+.heart:hover:hover{
+    box-shadow: 0px 0px 10px rgb(226, 43, 43);
+
 }
 
 .cart{
     margin: 32% 5% 32% 5%;
 }
 
+
+
 .input-color{
     column-count: 2;
     font-size: 10px;
 }
 
+/* seleccion color */
 .white{
     color: white;
 }
@@ -97,6 +109,29 @@ body {
 .blue{
     color:blue;
 }
+
+/* descripción prod */
+.description{        
+    position: fixed;
+    bottom: 32vh;
+    left: -3vw;
+    width: 110%;
+    font-size: 11px;
+}
+
+.description-price{
+    color: blueviolet;
+    font-style: italic;
+}
+
+/* detalle prod */
+
+.detail{
+    position: fixed;
+    bottom: 19vh;
+    width: 90%;
+}
+
 
 /* ---------------------------FOOTER---------------------------- */
 
