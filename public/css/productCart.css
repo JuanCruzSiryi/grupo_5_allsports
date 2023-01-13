@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body {
+    background-color:#f9cc86;
+}
+
+.main {
+    background-color: #b2b3db;
+    width: 100%;
+    padding: 0;
+}
+
+.seccionPrincipal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imageProducto {
+    width:  100%;
+}
+
+.producto {
+    background-color: #b2b3db;
+    padding: 20px;
+}
+
+.pagos {
+    background-color: #b2b3db;
+    padding: 20px;
+    padding-top: 175px;
+}
+
+.image {
+    width: 100%;
+    padding: 10px;
+}
+
+.seccionSecundaria {
+    text-align: center;
+}
+
+.productosInteres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.productosInteres p {
+    margin-left: 8px;
+}
+
+@media (min-width: 769px) {
+    .imageProducto {
+        width: 80%;
+    }
+    .image {
+        width: 100%;
+        padding: 10px;
+    }
+
+}
