@@ -4,6 +4,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
+/* ---------------------------HEADER---------------------------- */
 a {
   text-decoration: none;
 }
@@ -41,8 +42,6 @@ input {
   display: flex;
   margin-top: 10px;
 }
-
-
 
 .header-ul {
   margin-top: 10px;
@@ -129,6 +128,7 @@ li a {
   font-size: 18px;
 }
 
+/* ---------------------------FOOTER---------------------------- */
 footer {
   background-color: #1259c3;
   color: aliceblue;
