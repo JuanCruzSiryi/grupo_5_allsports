@@ -18,138 +18,179 @@ html {
 
 /* ---------------------Main------------- */
 
- .menu-var{
-/*    margin: 6% 3% 19% 2%; */
-    font-size: 12px;
-    display: flex;
-    flex-direction: row;
-}    
 
+.product{
+    width: 40%;
+    display:flex;
+    flex-direction: row;     
+    padding: 2%;
+} 
+
+ /* --------------imagen--------- */
+.image{
+        width: 120%;
+        border: solid 1px blue;
+        border-radius: 5%;
+        margin: 110% 0% 0% 5%;
+}
+
+.image:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+}
+
+
+/* --------------------- */
+.column1{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 15% 0% 0% 0%;
+    padding: 4%;
+}
+
+
+/* ------------iconos--------- */
+.icons{
+    padding: 9%;
+    margin: 420% 0% 0% 0%;
+}
+
+
+.heart:hover {
+    color rgb(226, 43, 43);
+    box-shadow: 0px 0px 10px rgb(245, 4, 44);
+}
+
+.cart{
+    margin: 32% 5% 32% 5%;}
+
+.cart:hover{    
+    box-shadow: 0px 0px 10px blueviolet;
+ } 
+
+/* ----------- talles------------ */
 
 .waist {
     width: 20%;
     display: flex;
     flex-direction: column;
-    margin: 8% -6% 0% 7%;
+    margin: 40% 0% 0% 10%;
     text-align: center;
-    border:1px solid #d9d9d9;
-    height:30px;
-    /* overflow: hidden;
-    width: 230px;
-    position:relative; */
+    border: 1px solid #d9d9d9;
+    height: 30px;
+    /* position: relative; */
+}
+
+ .waist h3{
+    color: darkblue;
+    text-decoration: underline;
+    font-size: 12px;
  }
 
  select {
     background: transparent;
     border: none;
-    font-size: 14px;
-    height: 30px;
+    font-size: 10px;
+    height: 20px;
     padding: 5px;
     width: 25px;
  }
 
- 
-.product{
-    width: 40%;
-    display:flex;
-    flex-direction: row;     
- } 
+ .select:hover {
+    border-color: darkblue;
+ }
 
-.image{
-    width: 150px;
-    border: solid 1px blue;
-    border-radius: 5%;
-    margin: 30% -54% 100% 29%;
-}
-
-.image:hover{
-    box-shadow: 0px 0px 10px blueviolet;
-
-}
-.icons{
-    padding: 19%;
-    margin: 15% 25% 0% 43%;
+/* --------------columna 2------- */
+ .column2{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 43% 0% 0% -3%;
+    padding: 4%;
 }
 
 
-.heart:hover{
-    color rgb(226, 43, 43);
-
-}
-
-.cart{
-    margin: 32% 5% 32% 5%;
-} */
-
-
- 
-.input-color{
-    column-count: 2;
-    font-size: 10px;
-}
-
-/* seleccion color */
-
-.label-black{
-    color:white;
-    width: 10%
-} 
-.button-black{
-    color: white;
-    width: 10%
-} 
-
-
-.label-black{
-    color:black;
-    width: 10%
-} 
-.button-black{
-    color: black;
-    width: 10%
-} 
-
-.label-red{
-    color:red;
-}
-
-.button-red{
-    color:red;
-    width: 10%;
-}
-
-
-.label-blue{
-    color:blue;
-    width: 10%
-} 
-.button-blue{
-    color:blue;
-    width: 10%
-} 
-
-
-/* descripción prod */
- .description{        
-    position: fixed;
-    bottom: 32vh;
-    left: -3vw;
+ /* ----------descripción prod ----------*/
+.description{        
     width: 110%;
-    font-size: 11px;
+    margin: 110% 30% 0% 11%;
+    color: darkblue;
+    text-align: center;
+    background: gainsboro;
+    padding: 2%;
+}
+
+.description-name{
+    font-size: 13px;
+    padding: 5%;
+    width: max-content;
 }
 
 .description-price{
+    font-size: 11px;
     color: blueviolet;
-    font-style: italic;
-} */ 
+    font-weight: bold;
+}  
+
+.description-code{
+    font-size: 10px;
+    
+}  
+/*------------cantidad---------  */
+
+.amount{
+    width: 100%;
+    margin: 16% 0% 0% 17%;
+
+}
+
+.amount h3{
+    font-size: 12px;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+
+/* seleccion color */
+
+
+.color{
+    display: flex;
+    width: 86%;
+    font-size: 10px;
+    color: darkblue;
+    margin: 24% 0% 0% -15%
+}
+
+.color h3{
+    font-size: 12px;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+
+.input-color{
+    font-size: 12px;
+}
+
+.label-white{
+    font-size: 10px;
+} 
+.button-white{
+    width: 300%;
+} 
+
+
 
 /* detalle prod */
 
- .detail{
-    position: fixed;
-    bottom: 19vh;
+ .detail{  
+    position: absolute;
+    bottom: 27vh;
     width: 90%;
+    left: 3vw;
 }
+
 
 
 /* ---------------------------FOOTER---------------------------- */
