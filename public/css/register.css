@@ -302,15 +302,18 @@ main {
     background-color: rgb(240, 237, 237)
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     .principal-box {
         margin-left: 20%;
         margin-right: 20%;
         justify-content: center;
     }
+    main {
+      height: 75vh;
+    }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
     .content-box-register form .terms-box .terms-box-label{
       font-size: 14px;
     }
@@ -433,5 +436,9 @@ footer {
   
     .main-navbar a {
       font-size: 19px;
+    }
+
+    footer .footer-main-div {
+        justify-content: space-around;
     }
   }
