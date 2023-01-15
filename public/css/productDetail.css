@@ -8,12 +8,135 @@
 /* ---------------------------HEADER---------------------------- */
 
 
-html {
+/* html {
     width: 100%;
     text-align: center;
     height: 100px;
     display: flex;
-}
+} */
+
+a {
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: #225be0;
+    width: 100%;
+    padding-bottom: 10px;
+    color: aliceblue;
+  
+  }
+  
+  input { 
+    font-size: 1rem;
+    color: darkgray; 
+  }
+  
+  .main-header {
+    border: #1259c3;
+  }
+  
+  .main-header h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 5px 0;
+    background-color: #052b63;
+  }
+  
+  .header-input {
+    margin-left: 20px;
+  }
+  
+  .header-input-botton {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .header-ul {
+    margin-top: 10px;
+  }
+  
+  .main-header-top-bar {
+    padding: 10px;
+  }
+  
+  .main-header-bottom-bar{
+    padding: 10px;
+    background-color: black;
+    display: flex;
+  }
+  
+  .main-navbar{
+    display: none;
+  }
+  
+  .main-navbar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  .header-logo {
+    width: 250px;
+  }
+  
+  .header-text {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+  }
+  
+  .header-right-bar {
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .header-right-bar li {
+    margin: 0 10px;
+  }
+  
+  .header-right-bar li a{
+    font-size: 20px;
+  }
+  
+  li a {
+    color: aliceblue;
+    font-size: 12px;
+  }
+  
+  .burger-menu {
+    width: 35px;
+    height: 35px;
+    margin: 10px auto;
+    background-color: #1259c3;
+    border-radius: 8px;
+  }
+  
+  .fa-bars-old {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-left: 9px;
+    margin-top: 8px;
+  }
+  
+  .hamburguer-button {
+    background-color: #1259c3;
+    color: white;
+    display: block;
+    max-width: 30px;
+    max-height: 30px;
+    padding: 5px 0;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+  }
 
 
 /* ---------------------Main------------- */
@@ -27,11 +150,12 @@ html {
 } 
 
  /* --------------imagen--------- */
-.image{
-        width: 120%;
-        border: solid 1px blue;
-        border-radius: 5%;
-        margin: 110% 0% 0% 5%;
+.image{    
+    width: 140%;
+    height: 140%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    margin: 32% 0% 0% 5%;
 }
 
 .image:hover{
@@ -52,17 +176,18 @@ html {
 /* ------------iconos--------- */
 .icons{
     padding: 9%;
-    margin: 420% 0% 0% 0%;
+    margin: 31% 0% 0% 10%;
 }
 
 
 .heart:hover {
-    color rgb(226, 43, 43);
+    color: rgb(226, 43, 43);
     box-shadow: 0px 0px 10px rgb(245, 4, 44);
 }
 
 .cart{
-    margin: 32% 5% 32% 5%;}
+    margin: 32% 5% 32% 5%;
+}
 
 .cart:hover{    
     box-shadow: 0px 0px 10px blueviolet;
@@ -101,23 +226,22 @@ html {
  }
 
 /* --------------columna 2------- */
- .column2{
+ .column2{    
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin: 43% 0% 0% -3%;
-    padding: 4%;
-}
+    margin: 4% 0% 0% 0%;
+    padding: 4%;}
 
 
  /* ----------descripción prod ----------*/
 .description{        
-    width: 110%;
-    margin: 110% 30% 0% 11%;
+    width: 120%;
+    height: 35%;
+    margin: 37% 0% 0% 0%;
     color: darkblue;
     text-align: center;
     background: gainsboro;
-    padding: 2%;
+    padding: 5%;
 }
 
 .description-name{
@@ -128,7 +252,7 @@ html {
 
 .description-price{
     font-size: 11px;
-    color: blueviolet;
+    color: rgb(89, 49, 126);
     font-weight: bold;
 }  
 
@@ -158,7 +282,7 @@ html {
     width: 86%;
     font-size: 10px;
     color: darkblue;
-    margin: 24% 0% 0% -15%
+    margin: 24% 0% 0% -15%;
 }
 
 .color h3{
@@ -181,25 +305,107 @@ html {
 
 /* detalle prod */
 
- .detail{  
-    position: absolute;
-    bottom: 27vh;
+.detail{  
     width: 90%;
-    left: 3vw;
+    height: 90%;
+ }
+
+.detail h4{
+    font-size: 10px;
+    width: 200%;
+    margin: 0% 0% 0% -70%;
+    color: darkblue;
+    text-align: center;
 }
 
-.product2{
-    display: none;
+
+/* ..........más prod.......... */
+ .product2{
+  width: 40%;
+  display:flex;
+  flex-direction: row;     
+  padding: 2%;
 }
+
+  .image2{
+    width: 140%;
+    height: 140%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    margin: 32% 0% 0% 5%;
+  }
+
+  .image2:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+}
+
+.product3{
+  width: 40%;
+  display:flex;
+  flex-direction: row;     
+  padding: 2%;
+}
+
+  .image3{
+    width: 140%;
+    height: 140%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    margin: 32% 0% 0% 5%;
+  }
+
+  .image3:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+}
+
+.product4{
+  width: 40%;
+  display:flex;
+  flex-direction: row;     
+  padding: 2%;
+}
+
+  .image4{
+    width: 140%;
+    height: 140%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    margin: 32% 0% 0% 5%;
+  }
+
+  .image4:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+}
+
+  
+
 
 /* -------- tablet--------- */
 
 @media (min-width: 768px){
    
-.image{
-    display: block;
+    .image{
+        display: block;
+        margin: 0;
+        padding: 2%;
+    }
 
-}
+    .image2{
+      display: block;
+      margin: 0;
+      padding: 2%;
+    }
+    .image3{
+      display: block;
+      margin: 0;
+      padding: 2%;
+    }
+    .image4{
+      display: block;
+      margin: 0;
+      padding: 2%;
+    }
+
     .column1 {    
         display: flex;
         flex-wrap: wrap;
@@ -210,20 +416,13 @@ html {
         font-size: 28px;
     }  
    
-    .icons{
+    .icons{    
         padding: 9%;
-        margin: 800% 30% 70% 0%;
+        margin: 0% 0% 0% 0%;
         width: 100%;
-   }
+        font-size: 28px;
+    }
     
-    .heart i.fa-regular:hover{
-        color: red;
-        
-    }
-
-    .cart i.fa-solid:hover{
-        color: blue;
-    }
     .waist{
         width: 100%;  
         margin: 65% 0% 0% 10%;
@@ -240,45 +439,46 @@ html {
         font-size: 16px;
     }
 
-.column2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 76% 0% 0% -13%;
-    padding: 10%;
-    font-size: 20px;
-}
+    .column2 {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0% 0% 0% 8%;
+        padding: 10%;
+        font-size: 20px;
+    }
 
-.description{
-    width: 120%;
-    margin: auto;
-}
-.description-name{
+    .description{
+        width: 120%;
+        margin: 0;
+    }
+    .description-name{
     font-size:24px;
-}
-.description-code{
-    font-size:16px;
-}
+    }
+    .description-code{
+        font-size:16px;
+    }
 
-.amount{
-    width: 100%;
-    height: 26%;
-}
-.amount h3{
-    width: 100%;
-    font-size: 20px;
-}
+    .amount{
+        width: 100%;
+        height: 26%;
+    }
+    .amount h3{
+     width: 100%;
+        font-size: 20px;
+    }
 
-.amount select{
-    height: 35%;
-    width: 50%;
-    font-size: 16px;
-}
+    .amount select{
+        height: 35%;
+        width: 50%;
+        font-size: 16px;
+    }
 
-.color{
-    width: 100%;
-    margin: 0% 0% 0% 0%}
-}
+    .color{
+        width: 100%;
+        margin: 0% 0% 0% 0%;
+    }
+
+
 .color h3{
     font-size: 20px;
     margin: -10% 10% -30% 0%;
@@ -291,24 +491,136 @@ html {
 .button-white {
     width: 115%;
 }
-.detail {    
-    width: 70%;
-    font-size: 16px;
-    margin: 0% 0% -30% 20%;
+.detail h4{    
+    width: 200%;
+    font-size: 20px;
+    margin: 0% 0% 0% -70%;
 }
+}
+  
 
-/* 
-.product2{
-    display: flex;
-} */
+
+
 
 /* -------- desktop------- */
-@media (min-width: 1024px){
-.column1{
+@media (min-width: 1200px){
+    .column1 {
     width: 100%;
     margin: 0%;
     padding: 24%;
-}
+    }
 }
 
 /* -------------footer---------- */
+
+footer {
+    background-color: #1259c3;
+    color: aliceblue;
+  }
+  
+  .footer-div-icon {
+    width: 2em;
+    height: 2em;
+    margin: 5px auto;
+    margin-bottom: 10px;
+  }
+  
+  .footer-icon {
+    color: #1259c3;
+    font-size: 2em;
+  }
+  
+  .footer-title {
+    text-align: center;
+  }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  
+  .footer-div {
+    margin: 20px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    padding: 2%;
+  }
+  
+  @media (min-width: 361px) {
+  
+  }
+  
+  @media(min-width: 768px) {
+    .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-text {
+      max-width: 300px;
+      text-align: right;
+    }
+  
+    .hamburguer-button {
+      display: none;
+    }
+    .main-navbar {
+      display: flex;
+    }
+    .main-navbar ul {
+      display: flex;
+    }
+    .main-navbar li {
+      margin: 0 8px;
+    }
+  
+    footer .footer-main-div{
+      display: flex;
+    }
+  
+    footer .footer-div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    footer .footer-icon:hover{
+      color:  #3498db;
+    }
+  
+  }
+  
+  @media (min-width: 1200px) {
+    .main-header-top-bar, .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar {
+      margin-top: 20px;
+    }
+  
+    .header-text {
+      max-width: none;
+      text-align: right;
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .main-navbar li {
+      margin: 0 10px;
+    }
+  
+    .main-navbar a {
+      font-size: 19px;
+    }
+  }

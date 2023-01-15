@@ -10,11 +10,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" >
 </head>
 <body>
-    <header class="main-header">
+  <header class="main-header">
       <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
       <div class="main-header-top-bar">
+        <a href="/">
         <img class="header-logo" src="./design/logo_white_large.png" alt="" />
-
+        </a>
         <div class="header-input-botton">
           <input type="input" class="header-input" value="Buscar" />
           <button type="submit">
@@ -24,7 +25,7 @@
 
         <ul class="header-right-bar">
           <li>
-            <a href="/register"><i class="fa-solid fa-user"></i></a>
+            <a href="/login"><i class="fa-solid fa-user"></i></a>
           </li>
           <li>
             <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
@@ -93,12 +94,12 @@
           </div>
 
           <div class="terms-box">
-              <label><input type="checkbox" name="accepted-terms" value="">
-              Acepto las 
-              <a href=""> Políticas de Privacidad y Términos y Condiciones</a>
+              <label class="terms-box-label"><input type="checkbox" name="accepted-terms" value="">
+                Acepto las 
+                <a href=""> Políticas de Privacidad y Términos y Condiciones</a>
               </label>
-              <label><input type="checkbox" name="accepted-promotions" value="">
-              Quiero recibir emails de promociones y noticias.  
+              <label class="terms-box-label"><input type="checkbox" name="accepted-promotions" value="">
+                Quiero recibir emails de promociones y noticias.  
               </label>
           </div>
 

@@ -239,22 +239,33 @@ main {
 }
 
 .terms-box {
-    width: 100%;
-    height: 15%;
     font-size: 12px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
     margin-bottom: 10px;
 }
 
-.terms-box label {
-    margin-left: 2%;
-    text-align: center;
+.content-box-register form .terms-box{
+    width: 100%;
     display: flex;
-    gap: 5px;
-    justify-content: center;
+    flex-direction: column;
 }
+.content-box-register form .terms-box label {
+    display: flex;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.content-box-register form .terms-box input {
+    width: 5%;
+    height: 15px;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0;
+    text-align: left;
+}
+
 
 .terms-box label a {
     font-weight: bold;
@@ -273,7 +284,6 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
 }
 
 .register-button button {
@@ -300,6 +310,12 @@ main {
     }
 }
 
+@media (min-width: 1025px) {
+    .content-box-register form .terms-box .terms-box-label{
+      font-size: 14px;
+    }
+}
+
 /* ---------------------------FOOTER---------------------------- */
 
 footer {
@@ -321,6 +337,7 @@ footer {
   
   .footer-title {
     text-align: center;
+    padding: 5px;
   }
   
   .footer-text {
@@ -328,13 +345,19 @@ footer {
     font-size: 12px;
     font-weight: lighter;
   }
+
+  h4 {
+    margin-top: 20px;
+  }
   
   .footer-div {
-    margin: 20px;
+    margin: 0px;
   }
   
   .footer-logo {
     width: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
   }
 
   @media (min-width: 361px) {
