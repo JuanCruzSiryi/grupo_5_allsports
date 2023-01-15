@@ -57,12 +57,13 @@ html {
 
 
 .heart:hover {
-    color rgb(226, 43, 43);
+    color: rgb(226, 43, 43);
     box-shadow: 0px 0px 10px rgb(245, 4, 44);
 }
 
 .cart{
-    margin: 32% 5% 32% 5%;}
+    margin: 32% 5% 32% 5%;
+}
 
 .cart:hover{    
     box-shadow: 0px 0px 10px blueviolet;
@@ -158,7 +159,7 @@ html {
     width: 86%;
     font-size: 10px;
     color: darkblue;
-    margin: 24% 0% 0% -15%
+    margin: 24% 0% 0% -15%;
 }
 
 .color h3{
@@ -196,10 +197,9 @@ html {
 
 @media (min-width: 768px){
    
-.image{
-    display: block;
-
-}
+    .image{
+        display: block;
+    }
     .column1 {    
         display: flex;
         flex-wrap: wrap;
@@ -214,11 +214,10 @@ html {
         padding: 9%;
         margin: 800% 30% 70% 0%;
         width: 100%;
-   }
+    }
     
     .heart i.fa-regular:hover{
         color: red;
-        
     }
 
     .cart i.fa-solid:hover{
@@ -240,45 +239,47 @@ html {
         font-size: 16px;
     }
 
-.column2 {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 76% 0% 0% -13%;
-    padding: 10%;
-    font-size: 20px;
-}
+    .column2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 76% 0% 0% -13%;
+        padding: 10%;
+        font-size: 20px;
+    }
 
-.description{
-    width: 120%;
-    margin: auto;
-}
-.description-name{
+    .description{
+        width: 120%;
+        margin: auto;
+    }
+    .description-name{
     font-size:24px;
-}
-.description-code{
-    font-size:16px;
+    }
+    .description-code{
+        font-size:16px;
+    }
+
+    .amount{
+        width: 100%;
+        height: 26%;
+    }
+    .amount h3{
+     width: 100%;
+        font-size: 20px;
+    }
+
+    .amount select{
+        height: 35%;
+        width: 50%;
+        font-size: 16px;
+    }
+
+    .color{
+        width: 100%;
+        margin: 0% 0% 0% 0%;
+    }
 }
 
-.amount{
-    width: 100%;
-    height: 26%;
-}
-.amount h3{
-    width: 100%;
-    font-size: 20px;
-}
-
-.amount select{
-    height: 35%;
-    width: 50%;
-    font-size: 16px;
-}
-
-.color{
-    width: 100%;
-    margin: 0% 0% 0% 0%}
-}
 .color h3{
     font-size: 20px;
     margin: -10% 10% -30% 0%;
@@ -304,11 +305,12 @@ html {
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
-.column1{
+    .column1 {
     width: 100%;
     margin: 0%;
     padding: 24%;
-}
+    }
 }
 
 /* -------------footer---------- */
+
