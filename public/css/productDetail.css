@@ -141,6 +141,7 @@ a {
 
 /* ---------------------Main------------- */
 
+main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148))}
 
 .product{
     width: 40%;
@@ -246,7 +247,7 @@ a {
 
 .description-name{
     font-size: 13px;
-    padding: 5%;
+    /* padding: 5%; */
     width: max-content;
 }
 
