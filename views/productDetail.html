@@ -8,63 +8,89 @@
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fd87f10e95.js" crossorigin="anonymous"></script> 
   <link rel="stylesheet" href="/css/productDetail.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 
 
 <body>
   <header class="main-header">
-      <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
-      <div class="main-header-top-bar">
+    <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
+    <div class="main-header-top-bar">
+      <div class="header-top-bar-container">
         <img class="header-logo" src="./design/logo_white_large.png" alt="" />
+      </div>
 
-        <div class="header-input-botton">
-          <input type="input" class="header-input" value="Buscar" />
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
+      <div class="header-input-botton">
+        <input type="input" class="header-input" placeholder="Buscar..." />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
 
-        <ul class="header-right-bar">
-          <li>
-            <a href="/register"><i class="fa-solid fa-user"></i></a>
-          </li>
-          <li>
-            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-regular fa-circle-question"></i></a>
-          </li>
+      <ul class="header-right-bar">
+        <li>
+          <a href="/register"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li>
+          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-regular fa-circle-question"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="main-header-bottom-bar">
+      <nav class="main-navbar">
+        <ul>
+          <li><a href="#">New In</a></li>
+          <li><a href="#">Categorias</a></li>
+          <li><a href="#">Hombre</a></li>
+          <li><a href="#">Mujer</a></li>
+          <li><a href="#">Marcas</a></li>
+          <li><a href="#">SALE</a></li>
+          <li><a href="#">Niños</a></li>
         </ul>
+      </nav>
+    </div>
+
+    <div class="main-header-mobile-container">
+      <div class="header-left-navbar">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
       </div>
 
-      <div class="main-header-bottom-bar">
-        <nav class="main-navbar">
-          <ul>
-            <li><a href="#">New In</a></li>
-            <li><a href="#">Categorias</a></li>
-            <li><a href="#">Hombre</a></li>
-            <li><a href="#">Mujer</a></li>
-            <li><a href="#">Marcas</a></li>
-            <li><a href="#">SALE</a></li>
-            <li><a href="#">Niños</a></li>
-          </ul>
-        </nav>
+      <div class="header-top-bar-container">
+        <img class="header-logo" src="./design/logo_white_large.png" alt="" />
       </div>
 
-      <a href="#" class="hamburguer-button">
-        <i class="fa-solid fa-bars"></i>
-      </a>
+      <ul class="header-right-navbar">
+        <li>
+          <a href="#"><i class="fa-solid fa-user"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="site-search">
+      <button type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+      <input type="input" class="header-input" placeholder="Buscar..." />
+    </div>
   </header>
 
   <main>
    <div class="product"> 
-      <img class="image" src="/image/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
+      <img class="image" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
    
       <!-- <div class="column1"> -->
 
          <div class="icons">
           <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-          <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div>
+          <!-- <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div> -->
+          <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
         </div>
   
          <!-- <div class="waist">   
@@ -119,7 +145,7 @@
     <br>
    </div>  
       <div class="product2"> 
-        <img class="image2" src="/image/zapa-adidas-blanca.jpg" alt="Adidas Gran Prix"> </img>
+        <img class="image2" src="/images/zapa-adidas-blanca.jpg" alt="Adidas Gran Prix"> </img>
        
           <div class="icons">
             <div class="heart"> <i class="fa-regular fa-heart"></i></div>
@@ -141,7 +167,7 @@
     </div>
   </div>
     <div class="product3"> 
-      <img class="image3" src="/image/zapa-adidas.jpg" alt="Adidas Court"> </img>
+      <img class="image3" src="/images/zapa-adidas.jpg" alt="Adidas Court"> </img>
      
         <div class="icons">
           <div class="heart"> <i class="fa-regular fa-heart"></i></div>
@@ -164,7 +190,7 @@
   </div>
   </div>
   <div class="product4"> 
-    <img class="image4" src="/image/zapa-adidas2.jpg" alt="Adidas Court Pro"> </img>
+    <img class="image4" src="/images/zapa-adidas2.jpg" alt="Adidas Court Pro"> </img>
    
       <div class="icons">
         <div class="heart"> <i class="fa-regular fa-heart"></i></div>
@@ -200,45 +226,43 @@
         <img class="footer-logo" src="./design/logo_small.png" alt="" />
       </div>
       <div class="footer-div">
-        <!-- <div class="footer-div-icon">
-          <i class="fa-solid fa-users footer-icon"></i>
-        </div> -->
         <h3 class="footer-title">Institucional</h3>
         <p class="footer-text">
-          Quiénes Somos
-          Políticas de Privacidad
-          Protocolos COVID-19
-          Términos y Condiciones
-          Sustentabilidad
-          Defensa del Consumidor
+          Quiénes Somos Políticas de Privacidad Términos y Condiciones
         </p>
       </div>
 
       <div class="footer-div">
-        <!-- <div class="footer-div-icon">
-          <i class="fa-solid fa-users footer-icon"></i>
-        </div> -->
         <h3 class="footer-title">Seguinos</h3>
-        <p class="footer-text">
-          Twitter
-          Facebook
-          Instagram
-        </p>
+        <ul class="footer-social-bar">
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+        </ul>
       </div>
 
       <div class="footer-div">
         <!-- <div class="footer-div-icon">
           <i class="fa-solid fa-users footer-icon"></i>
         </div> -->
-        <h3 class="footer-title">News Letter</h3>
+        <h3 class="footer-title">Eventos</h3>
         <p class="footer-text">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. A corporis
-          aspernatur aliquid adipisci.
+          Black Friday
+          Cyberlunes
+          Hot Sale.
         </p>
       </div>
     </div>
 
-    <h4 class="footer-text">Copyright © 2022-2023 All-sports</h4>
+    <h4 class="footer-text">
+      Copyright © 2022-2023 All-sports Todos los derechos reservados.
+    </h4>
   </footer>
 
 </body>
