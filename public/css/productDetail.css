@@ -27,7 +27,8 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .image:hover{
     box-shadow: 0px 0px 10px blueviolet;
-}
+    
+  }
 
 
 /* --------------------- */
@@ -49,7 +50,6 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .heart:hover {
     color: rgb(226, 43, 43);
-    box-shadow: 0px 0px 10px rgb(245, 4, 44);
 }
 
 .cart{
@@ -57,7 +57,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 }
 
 .cart:hover{    
-    box-shadow: 0px 0px 10px blueviolet;
+  color: blueviolet;  
  } 
 
 /* ----------- talles------------ */
