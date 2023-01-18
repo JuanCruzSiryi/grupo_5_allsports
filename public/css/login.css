@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+/* ------------------------ MAIN -------------------------- */
+
+main {
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+    padding: 15px;
+    margin-bottom: -20px;
+}
+
+.login-form {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0.6;
+    border-radius: 6px;
+    gap: 50px;
+    text-align: center;
+}
+
+.title-form {
+    font-weight: bold;
+    color: rgb(3, 3, 113);
+    font-size: 20px;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: left;
+    gap: 10px;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.email-form input {
+    height: 40px;
+    position: relative;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.email-form i {
+    position: relative;
+    bottom: 38px;
+    left: 10px;
+    opacity: 0.5;
+    width: 5px;
+}
+
+.password-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: left;
+    gap: 10px;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.password-form input {
+    height: 40px;
+    position: relative;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.password-form i {
+    position: relative;
+    bottom: 38px;
+    left: 10px;
+    opacity: 0.5;
+    width: 5px;
+}
+
+.remember-me {
+    text-align: left;
+    margin-left: 15px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.forget-pw a{
+    color: rgb(3, 3, 113);
+    text-decoration: underline;
+}
+
+.forget-pw a:hover {
+    color: orangered;
+}
+
+.no-account {
+    display: flex;
+    align-self: center;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.go-register {
+    color: orangered;
+    text-decoration: underline;
+}
+
+.login-button {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-button button {
+    width: 60%;
+    height: 30px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.register-button button:hover {
+    background-color: rgb(240, 237, 237)
+}
+
+@media (min-width: 768px) {
+    main {
+        height: 76vh;
+    }
+    .login-form {
+        height: 80%;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    main {
+        height: 75vh;
+    }
+    .login-form {
+        height: 90%;
+        width: 60%;
+        margin-left: 20%;
+    }
+}
