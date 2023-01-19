@@ -4,7 +4,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/* ---------------------------HEADER---------------------------- */
+/********************* HEADER *********************/
 a {
   text-decoration: none;
 }
@@ -137,13 +137,197 @@ li a {
   display:  flex;
 }
 
-/* ---------------------------MAIN---------------------------- */
+/********************* BANNER *********************/
+.banner-img {
+  display: flex;
+}
+.banner-img a img{
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img-2 {
+  text-align: center;
+}
+.banner-img-2 a img{
+  width: 100%;
+  height: 35vh;
+}
+
+/********************* MAIN *********************/
 .blank-field{
   background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
   height: 500px;
 }
 
-/* ---------------------------FOOTER---------------------------- */
+.main-header-top-bar {
+  padding: 10px;
+}
+
+.main-header-bottom-bar{
+  padding: 10px;
+}
+
+.main-navbar{
+  display: none;
+}
+
+.main-navbar ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.article-image {
+  width: 100%;
+  padding: 0;
+}
+
+.article-image-container {
+  position: relative;
+}
+
+body {
+  background: linear-gradient(to right, rgb(220, 227, 246), rgb(244, 241, 231));
+}
+
+.main-section-tittle {
+  margin: 20px;
+}
+
+.main-section {
+  width: 90vw;
+  margin-left: 5vw;
+  text-align: center;
+}
+
+.main-article {
+  margin: 10px;
+}
+
+.article-logo-shipping {
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  margin: 10px auto;
+  border: solid 1px rgb(2, 173, 2);
+  border-radius: 50%;
+  position: absolute;
+  right: 21px;
+  top: -29px;
+}
+.article-heart-shipping {
+  width: 35px;
+  height: 35px;
+  margin: 10px auto;
+  border-radius: 50%;
+  position: absolute;
+  right: 9px;
+  top: 0px;
+}
+
+.article-discount-shipping {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  padding-top: 7px;
+  right: 3px;
+  top: -44px;
+}
+
+.fa-truck {
+  font-size: 15px;
+  color: rgb(2, 173, 2);
+  text-align: center;
+  line-height: 40px;
+  margin-left: 2px;
+  margin-top: 8px;
+}
+.fa-heart {
+  font-size: 20px;
+  color: black;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 0px;
+  margin-top: 9px;
+}
+
+.fa-heart:hover {
+  color: rgb(226, 43, 43);
+}
+
+.fa-truck:hover {
+  transition: 1s;
+  transform: rotate(-90deg);
+}
+.article-name {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.article-price {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.article-discount, .article-price-neto{
+  margin: 0 5px;
+}
+
+.article-price-neto{
+  text-decoration: line-through;
+}
+
+.article-discount,
+.article-description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.article-description {
+  display: none;
+  margin-top: 20px;
+  color: #666;
+}
+
+.article-information-div {
+  /* width: 100%; */
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* margin: auto;
+  align-items: baseline; */
+  border-top: 1px solid #ebebeb;
+  position: relative;
+  padding: 15px;
+}
+
+.article-discount {
+  color: rgb(2, 173, 2);
+}
+
+main section article :hover .article-description {
+  display: block;
+}
+
+/* main section article .article-image-container :hover .article-description {
+  display: block;
+} */
+
+.marcas {
+  display: block;
+}
+
+.component-image {
+  width: 11%;
+}
+
+/********************* FOOTER *********************/
 footer {
   background-color: #1259c3;
   color: aliceblue;
@@ -210,9 +394,30 @@ footer {
     width: 100%;
     height: 40px;
   }
+
+  main section article :hover .article-image{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  main section article :hover .article-information-div{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  main section div.products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  main section div.products article{
+    width: 44%;
+  }
 }
 
 @media(min-width: 768px) {
+
+  /********************* HEADER *********************/
   .main-navbar {
     max-width: 1200px;
     margin: auto;
@@ -238,7 +443,7 @@ footer {
 
   .header-input {
     margin-left: 20px;
-    width: 300px;
+    width: 280px;
     height: 20px;
   }
   
@@ -263,6 +468,18 @@ footer {
     display: none;
   }
 
+  /********************* BANNER *********************/
+  .banner-img a img{
+    height: 350px;
+  }
+
+  /********************* MAIN *********************/
+  main section div.products article{
+    width: 22%;
+  }
+
+  /********************* FOOTER *********************/
+
   footer .footer-main-div{
     display: flex;
   }
@@ -284,6 +501,8 @@ footer {
 }
 
 @media (min-width: 1200px) {
+
+  /********************* HEADER *********************/
   .main-header-top-bar, .main-navbar {
     max-width: 1200px;
     margin: auto;
@@ -302,6 +521,13 @@ footer {
     font-size: 20px;
     margin: 0;
   }
+
+  /********************* BANNER *********************/
+  .banner-img a img{
+    height: 450px;
+  }
+
+  /********************* MAIN *********************/
 
   .main-navbar li {
     margin: 0 10px;
