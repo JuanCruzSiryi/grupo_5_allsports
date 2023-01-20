@@ -57,3 +57,28 @@
 LINK DE TRELLO SPRINT 1: https://trello.com/b/3XxBkR9M/sprint-1
 
 LINK DE TRELLO SPRINT 2: https://trello.com/b/w4nUES3c/sprint-2
+
+LINK DE TRELLO SPRINT 3: https://trello.com/b/DPHmEn5d/sprint-3
+
+
+GUÍA DE COLORES Y FUENTES:
+
+BACKGROUND:
+
+    HEADER & FOOTER -> #225be0
+
+    MAIN -> linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+
+    REGISTER & LOGIN BUTTON -> linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+
+SHADOW:
+
+    IMG, CART -> blueviolet
+    
+FONT-FAMILY (ALL): ROBOTO
+
+FONT-SIZE TITLE: 20px
+
+FONT-SIZE SUBTITLE: 18px
+
+FONT-SIZE: 12px
