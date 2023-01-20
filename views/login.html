@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/login.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a4adebf73c.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>login</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
+      <div class="main-header-top-bar">
+        <div class="header-top-bar-container">
+          <a href="/"><img class="header-logo" src="./design/logo_white_large.png" alt="" /></a>
+        </div>
+
+        <div class="header-input-botton">
+          <input type="input" class="header-input" placeholder="Buscar..." />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <ul class="header-right-bar">
+          <li>
+            <a href="/register"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-circle-question"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main-header-bottom-bar">
+        <nav class="main-navbar">
+          <ul>
+            <li><a href="#">New In</a></li>
+            <li><a href="#">Categorias</a></li>
+            <li><a href="#">Hombre</a></li>
+            <li><a href="#">Mujer</a></li>
+            <li><a href="#">Marcas</a></li>
+            <li><a href="#">SALE</a></li>
+            <li><a href="#">Niños</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="main-header-mobile-container">
+        <div class="header-left-navbar">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+
+        <div class="header-top-bar-container">
+          <a href="/"><img class="header-logo" src="./design/logo_white_large.png" alt="" /></a>
+        </div>
+
+        <ul class="header-right-navbar">
+          <li>
+            <a href="/register"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="site-search">
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input type="input" class="header-input" placeholder="Buscar..." />
+      </div>
+    </header>
+
+    <main>
+        <div class="login-form">
+          <h3 class="title-form">
+            Iniciar Sesión
+          </h3>
+          <form action="/" method="">
+
+            <div class="email-form">
+              <label for="username">Email</label>
+              <input type="email" name="email" id="useremail" required>
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <div class="password-form">
+              <label for="username">Contraseña</label>
+              <input type="password" name="password" id="userpassword" required>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <label class="remember-me"><input type="checkbox" name="accepted-promotions" value="">
+              Recordarme  
+            </label>
+
+            <div class="forget-pw">
+              <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <div class="no-account">
+              <h4>¿No tienes cuenta aún?</h4>
+              <a class="go-register" href="/register">Regístrate aquí</a>
+            </div>
+
+            <div class="login-button">
+              <button type="submit">INICIAR SESIÓN</button>
+            </div>
+
+          </form>
+          
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer-main-div">
+        <div class="footer-div">
+          <img class="footer-logo" src="./design/logo_small.png" alt="" />
+        </div>
+        <div class="footer-div">
+          <h3 class="footer-title">Institucional</h3>
+          <p class="footer-text">
+            Quiénes Somos Políticas de Privacidad Términos y Condiciones
+          </p>
+        </div>
+
+        <div class="footer-div">
+          <h3 class="footer-title">Seguinos</h3>
+          <ul class="footer-social-bar">
+            <li>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-div">
+          <!-- <div class="footer-div-icon">
+            <i class="fa-solid fa-users footer-icon"></i>
+          </div> -->
+          <h3 class="footer-title">Eventos</h3>
+          <p class="footer-text">
+            Black Friday
+            Cyberlunes
+            Hot Sale.
+          </p>
+        </div>
+      </div>
+
+      <h4 class="footer-text">
+        Copyright © 2022-2023 All-sports Todos los derechos reservados.
+      </h4>
+    </footer>
+  </body>
+</html>

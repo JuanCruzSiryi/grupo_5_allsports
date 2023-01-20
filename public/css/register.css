@@ -1,0 +1,446 @@
+* {
+    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ---------------------------HEADER---------------------------- */
+
+/* a {
+    text-decoration: none;
+  }
+  
+  header {
+    background-color: #225be0;
+    width: 100%;
+    padding-bottom: 10px;
+    color: aliceblue;
+  
+  }
+  
+  input { 
+    font-size: 1rem;
+    color: darkgray; 
+  }
+  
+  .main-header {
+    border: #1259c3;
+  }
+  
+  .main-header h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color: #052b63;
+  }
+  
+  .header-input {
+    margin-left: 20px;
+  }
+  
+  .header-input-botton {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .header-ul {
+    margin-top: 10px;
+  }
+  
+  .main-header-top-bar {
+    padding: 10px;
+  }
+  
+  .main-header-bottom-bar{
+    padding: 10px;
+    background-color: black;
+    display: flex;
+  }
+  
+  .main-navbar{
+    display: none;
+  }
+  
+  .main-navbar ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+  }
+  
+  .header-logo {
+    width: 250px;
+  }
+  
+  .header-text {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: lighter;
+  }
+  
+  .header-right-bar {
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .header-right-bar li {
+    margin: 0 10px;
+  }
+  
+  .header-right-bar li a{
+    font-size: 20px;
+  }
+  
+  li a {
+    color: aliceblue;
+    font-size: 12px;
+  }
+  
+  .burger-menu {
+    width: 35px;
+    height: 35px;
+    margin: 10px auto;
+    background-color: #1259c3;
+    border-radius: 8px;
+  }
+  
+  .fa-bars-old {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-left: 9px;
+    margin-top: 8px;
+  }
+  
+  .hamburguer-button {
+    background-color: #1259c3;
+    color: white;
+    display: block;
+    max-width: 30px;
+    max-height: 30px;
+    padding: 5px 0;
+    margin-top: 20px;
+    margin: auto;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  @media (min-width: 361px) {
+
+  }
+  
+  @media(min-width: 768px) {
+    .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-text {
+      max-width: 300px;
+      text-align: right;
+    }
+  
+    .hamburguer-button {
+      display: none;
+    }
+    .main-navbar {
+      display: flex;
+    }
+    .main-navbar ul {
+      display: flex;
+    }
+    .main-navbar li {
+      margin: 0 8px;
+    }
+} */
+
+/* ---------------------------MAIN---------------------------- */
+main {
+    background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: -20px;
+}
+
+.principal-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: white;
+    opacity: 0.6;
+    border-radius: 6px;
+}
+
+.content-box-register form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content-box-register form div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    position: relative;
+    width: 100%;
+}
+
+.content-box-register form div input {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.content-box-register form div label {
+    position: relative;
+    bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content-box-register form div select {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.content-box-register form div i {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    opacity: 0.2;
+}
+
+.title {
+    width: 100%;
+    padding: 10px;
+}
+
+.title-register {
+    font-weight: bold;
+    color: rgb(3, 3, 113);
+    font-size: 20px;
+}
+
+.terms-box {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.content-box-register form .terms-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content-box-register form .terms-box label {
+    display: flex;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.content-box-register form .terms-box input {
+    width: 5%;
+    height: 15px;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0;
+    text-align: left;
+}
+
+
+.terms-box label a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.terms-box label a:visited {
+    color: rgb(78, 4, 147);
+}
+
+
+.register-button {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button button {
+    width: 60%;
+    height: 30px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.register-button button:hover {
+    background-color: rgb(240, 237, 237)
+}
+
+@media (min-width: 768px) {
+    .principal-box {
+        margin-left: 20%;
+        margin-right: 20%;
+        justify-content: center;
+    }
+    main {
+      height: 75vh;
+      margin-bottom: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-box-register form .terms-box .terms-box-label{
+      font-size: 14px;
+    }
+}
+
+/* ---------------------------FOOTER---------------------------- */
+
+/* footer {
+    background-color: #1259c3;
+    color: aliceblue;
+  }
+  
+  .footer-div-icon {
+    width: 2em;
+    height: 2em;
+    margin: 5px auto;
+    margin-bottom: 10px;
+  }
+  
+  .footer-icon {
+    color: #1259c3;
+    font-size: 2em;
+  }
+  
+  .footer-title {
+    text-align: center;
+    padding: 5px;
+  }
+  
+  .footer-text {
+    text-align: center;
+    font-size: 12px;
+    font-weight: lighter;
+  } */
+
+  /* h4 {
+    margin-top: 20px;
+  } */
+  
+  /* .footer-div {
+    margin: 0px;
+  } */
+  
+  /* .footer-logo {
+    width: 150px;
+    margin-top: 10px;
+    margin-left: 10px;
+  } */
+
+  @media (min-width: 361px) {
+
+  }
+  
+  @media(min-width: 768px) {
+    .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-text {
+      max-width: 300px;
+      text-align: right;
+    }
+  
+    .hamburguer-button {
+      display: none;
+    }
+    .main-navbar {
+      display: flex;
+    }
+    .main-navbar ul {
+      display: flex;
+    }
+    .main-navbar li {
+      margin: 0 8px;
+    }
+  
+    /* footer .footer-main-div{
+      display: flex;
+    }
+  
+    footer .footer-div {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    footer .footer-icon:hover{
+      color:  #3498db;
+    } */
+  
+  }
+  
+  @media (min-width: 1200px) {
+    .main-header-top-bar, .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar {
+      margin-top: 20px;
+    }
+  
+    .header-text {
+      max-width: none;
+      text-align: right;
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .main-navbar li {
+      margin: 0 10px;
+    }
+  
+    .main-navbar a {
+      font-size: 19px;
+    }
+
+    /* footer .footer-main-div {
+        justify-content: space-around;
+    } */
+  }
