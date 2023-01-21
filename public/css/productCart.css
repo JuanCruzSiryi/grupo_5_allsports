@@ -16,15 +16,54 @@ main {
 
 .seccionPrincipal {
     width: 100%;
-    display:flex;
-    flex-direction: row;   
+    display: flex;
+    flex-direction: row;
     padding: 2%;
 }
 
-.pagos{
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50%;
+}
+
+.informacion>h3:first-child {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.informacion button {
+    background-color: blueviolet;
+    width: 100px;
+    height: 35;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.informacion button:hoover {
+    background-color: #2D4263;
+}
+
+.amount select {
+    margin-left: 30px;
+}
+
+.pagos {
     display: flex;
     flex-direction: column;
     margin: 50% 0% 0% 0%;
+}
+
+.pagos .mediosDePago {
+    flex-direction: column;
+    list-style: none;
 }
 
 .producto p {
@@ -46,75 +85,114 @@ main {
     box-shadow: 0px 0px 10px rgb(245, 4, 44);
 }
 
-.cart{
-    margin: 32% 5% 32% 5%;}
+.cart {
+    margin: 32% 5% 32% 5%;
+}
 
-.cart:hover{    
+.cart:hover {
     box-shadow: 0px 0px 10px blueviolet;
-} 
+}
 
-.imageProducto{
+.imageProducto {
     width: 70%;
     border: solid 1px blue;
     border-radius: 5%;
     margin: 10% 0% 0% 5%;
 }
 
-.imageProducto:hover{
+.imageProducto:hover {
     box-shadow: 0px 0px 10px blueviolet;
 }
 
- .seccionSecundaria {
-        text-align: left;
-        margin-top: 5%;
-        font-size: 13px;
-}
-    
-.productosInteres {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        text-align: left;
-        font-size: 10px;
+.seccionSecundaria {
+    text-align: left;
+    margin-top: 5%;
+    font-size: 18px;
 }
 
-.image{
+.productosInteres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: left;
+    font-size: 12px;
+}
+
+.image {
     width: 80%;
     border: solid 1px blue;
     border-radius: 5%;
 }
 
-.image:hover{
+.image:hover {
     box-shadow: 0px 0px 10px blueviolet;
 }
 
-@media (max-width: 768px){
-   
-    .pagos{
+@media (max-width: 768px) {
+
+    .pagos {
         display: none;
     }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .seccionPrincipal {
         width: 100%;
-        display:flex;
-        flex-direction: row;   
+        display: flex;
+        flex-direction: row;
         padding: 2%;
     }
-    
-    .pagos{
+
+    .informacion {
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 50%;
+    }
+
+    .informacion>h3:first-child {
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    .informacion button {
+        background-color: blueviolet;
+        width: 100px;
+        height: 35;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .informacion button:hoover {
+        background-color: #2D4263;
+    }
+
+    .amount {
+        flex-direction: column;
+    }
+
+    .amount select {
+        margin-left: 15px;
+    }
+
+    .pagos {
         display: flex;
         flex-direction: column;
         margin: 50% 0% 0% 0%;
     }
-    
+
     .producto p {
         text-align: left;
         margin-left: 18%;
         font-size: 22px;
     }
-    
+
     .column1 {
         display: flex;
         flex-direction: row;
@@ -122,51 +200,52 @@ main {
         text-align: left;
         margin: 10% 0% 0% 0%;
     }
-    
+
     .heart:hover {
         color: (226, 43, 43);
         box-shadow: 0px 0px 10px rgb(245, 4, 44);
     }
-    
-    .cart{
-        margin: 32% 5% 32% 5%;}
-    
-    .cart:hover{    
+
+    .cart {
+        margin: 32% 5% 32% 5%;
+    }
+
+    .cart:hover {
         box-shadow: 0px 0px 10px blueviolet;
-    } 
-    
-    .imageProducto{
+    }
+
+    .imageProducto {
         width: 70%;
         border: solid 1px blue;
         border-radius: 5%;
         margin: 10% 0% 0% 5%;
     }
-    
-    .imageProducto:hover{
+
+    .imageProducto:hover {
         box-shadow: 0px 0px 10px blueviolet;
     }
-    
-     .seccionSecundaria {
-            text-align: left;
-            margin-top: 5%;
-            font-size: 22px;
+
+    .seccionSecundaria {
+        text-align: left;
+        margin-top: 5%;
+        font-size: 22px;
     }
-        
+
     .productosInteres {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            text-align: left;
-            font-size: 22px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+        font-size: 18px;
     }
-    
-    .image{
+
+    .image {
         width: 80%;
         border: solid 1px blue;
         border-radius: 5%;
     }
-    
-    .image:hover{
+
+    .image:hover {
         box-shadow: 0px 0px 10px blueviolet;
-    }    
+    }
 }

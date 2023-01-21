@@ -82,3 +82,25 @@ FONT-SIZE TITLE: 20px
 FONT-SIZE SUBTITLE: 18px
 
 FONT-SIZE: 12px
+
+GUÍA DE COLORES Y FUENTES:
+
+BACKGROUND:
+
+    HEADER & FOOTER -> #225be0
+
+    MAIN -> linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+
+    REGISTER & LOGIN BUTTON -> linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+
+SHADOW:
+
+    IMG, CART -> blueviolet
+    
+FONT-FAMILY (ALL): ROBOTO
+
+FONT-SIZE TITLE: 20px
+
+FONT-SIZE SUBTITLE: 18px
+
+FONT-SIZE: 12px
