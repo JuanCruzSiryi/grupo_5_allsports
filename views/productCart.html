@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/fd87f10e95.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/productCart.css">
-    <link rel="stylesheet" href="/css/index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fd87f10e95.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/productCart.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -83,96 +83,113 @@
     </div>
   </header>
 
-    <main class="main">
-        <section class="seccionPrincipal">
-            <div class="producto">
-                <img class="imageProducto" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
-                <p>Nombre de Producto</p>
-                <p>Precio</p>
-                <p>Código de Articulo</p>
-                </div>
-                <div class="column1">
-                    <div class="icons">
-                        <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-                        <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div>
-                </div>
-            <div class="pagos">
-                <nav class="main-navbar">
-                    <ul>
-                        <li><a href="#">Tarjeta de Crédito</a></li>
-                        <li><a href="#">Tarjeta de Débito</a></li>
-                        <li><a href="#">Pago en Efectivo</a></li>
-                      </ul>
-                    </nav>
+  <main class="main">
+    <section class="seccionPrincipal">
+      <div class="producto">
+        <img class="imageProducto" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
+        <p>Adidas Galaxy 5</p>
+        <p>$34000</p>
+        <p>AdiAzuDep</p>
+      </div>
+      <div class="column1">
+        <div class="icons">
+          <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+          <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+        <div class ="informacion">
+        <div class="amount">
+          <button> Cantidad </button>
+          <select name="cantidad" id="cantidad">
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            <option value="7"> 7 </option>
+            <option value="8"> 8 </option>
+            <option value="9"> 9 </option>
+            <option value="10"> 10 </option>
+          </select>
+          <button>Comprar</button>
+          </div>
+          <div class="pagos">
+            <nav class="main-navbar">
+              <ul class ="mediosDePago">
+                <li><a href="#">Tarjeta de Crédito</a></li>
+                <li><a href="#">Tarjeta de Débito</a></li>
+                <li><a href="#">Pago en Efectivo</a></li>
+              </ul>
             </div>
-            </section>
-        <section class="seccionSecundaria">
-            <p>También te podría interesar</p>
-            <div class="productosInteres">
-                <div>
-                    <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
-                    <p>Nombre de Producto</p>
-                    <p>Precio</p>
-                </div>
-                <div>
-                    <img class="image" src="/images/zapa-adidas2.jpg" alt="Adidas Galaxy 5"> </img>
-                    <p>Nombre de Producto</p>
-                    <p>Precio</p>
-                </div>
-                <div>
-                    <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
-                    <p>Nombre de Producto</p>
-                    <p>Precio</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-      <div class="footer-main-div">
-        <div class="footer-div">
-          <img class="footer-logo" src="./design/logo_small.png" alt="" />
+            </nav>
+          </div>
+    </section>
+    <section class="seccionSecundaria">
+      <p>También te podría interesar</p>
+      <div class="productosInteres">
+        <div>
+          <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
+          <p>Adidas Court</p>
+          <p>$39000</p>
         </div>
-        <div class="footer-div">
-          <h3 class="footer-title">Institucional</h3>
-          <p class="footer-text">
-            Quiénes Somos Políticas de Privacidad Términos y Condiciones
-          </p>
+        <div>
+          <img class="image" src="/images/zapa-adidas2.jpg" alt="Adidas Galaxy 5"> </img>
+          <p>Adidas Court Pro</p>
+          <p>$39500</p>
         </div>
-
-        <div class="footer-div">
-          <h3 class="footer-title">Seguinos</h3>
-          <ul class="footer-social-bar">
-            <li>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-div">
-          <!-- <div class="footer-div-icon">
-            <i class="fa-solid fa-users footer-icon"></i>
-          </div> -->
-          <h3 class="footer-title">Eventos</h3>
-          <p class="footer-text">
-            Black Friday
-            Cyberlunes
-            Hot Sale.
-          </p>
+        <div>
+          <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
+          <p>Adidas Court</p>
+          <p>$39000</p>
         </div>
       </div>
+    </section>
+  </main>
 
-      <h4 class="footer-text">
-        Copyright © 2022-2023 All-sports Todos los derechos reservados.
-      </h4>
-    </footer>
+  <footer>
+    <div class="footer-main-div">
+      <div class="footer-div">
+        <img class="footer-logo" src="./design/logo_small.png" alt="" />
+      </div>
+      <div class="footer-div">
+        <h3 class="footer-title">Institucional</h3>
+        <p class="footer-text">
+          Quiénes Somos Políticas de Privacidad Términos y Condiciones
+        </p>
+      </div>
+
+      <div class="footer-div">
+        <h3 class="footer-title">Seguinos</h3>
+        <ul class="footer-social-bar">
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-div">
+        <!-- <div class="footer-div-icon">
+            <i class="fa-solid fa-users footer-icon"></i>
+          </div> -->
+        <h3 class="footer-title">Eventos</h3>
+        <p class="footer-text">
+          Black Friday
+          Cyberlunes
+          Hot Sale.
+        </p>
+      </div>
+    </div>
+
+    <h4 class="footer-text">
+      Copyright © 2022-2023 All-sports Todos los derechos reservados.
+    </h4>
+  </footer>
 </body>
-
 
 </html>

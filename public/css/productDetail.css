@@ -34,17 +34,13 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 /* --------------------- */
 .column1{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 15% 0% 0% 0%;
-    padding: 4%;
 }
 
 
 /* ------------iconos--------- */
 .icons{
-    padding: 9%;
-    margin: 31% 0% 0% 10%;
+    padding: 6%;
+    margin: 10% 0% 0% 10%;
 }
 
 
@@ -60,17 +56,21 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
   color: blueviolet;  
  } 
 
+
+ .product-logo{
+    display: flex;
+    padding: 21%;
+    margin-top: 7%;
+}
+
+
 /* ----------- talles------------ */
 
 .waist {
     width: 20%;
     display: flex;
-    flex-direction: column;
-    margin: 40% 0% 0% 10%;
     text-align: center;
     border: 1px solid #d9d9d9;
-    height: 30px;
-    /* position: relative; */
 }
 
  .waist h3{
@@ -83,7 +83,6 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     background: transparent;
     border: none;
     font-size: 10px;
-    height: 20px;
     padding: 5px;
     width: 25px;
  }
@@ -96,24 +95,29 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
  .column2{    
     display: flex;
     flex-wrap: wrap;
-    margin: 4% 0% 0% 0%;
-    padding: 4%;}
+    padding: 4%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ----------- columna total----- */
+.column {
+    display: inline;
+}
+
+
 
 
  /* ----------descripción prod ----------*/
 .description{        
-    width: 120%;
-    height: 35%;
-    margin: 37% 0% 0% 0%;
     color: darkblue;
     text-align: center;
     background: gainsboro;
-    padding: 5%;
+    margin-bottom: 5%;
 }
 
 .description-name{
     font-size: 13px;
-    /* padding: 5%; */
     width: max-content;
 }
 
@@ -140,9 +144,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: darkblue;
 }
 
-
 /* seleccion color */
-
 
 .color{
     display: flex;
@@ -158,7 +160,6 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: darkblue;
 }
 
-
 .input-color{
     font-size: 12px;
 }
@@ -172,77 +173,17 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 /* detalle prod */
 
-.detail{  
-    width: 90%;
-    height: 90%;
- }
+.detail{
+    width: 70%;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 .detail h4{
     font-size: 10px;
-    width: 200%;
-    margin: 0% 0% 0% -70%;
     color: darkblue;
-    text-align: center;
-}
+    text-align: center;} 
 
-
-/* ..........más prod.......... */
- .product2{
-  width: 40%;
-  display:flex;
-  flex-direction: row;     
-  padding: 2%;
-}
-
-  .image2{
-    width: 140%;
-    height: 140%;
-    border: solid 2px grey;
-    border-radius: 5%;
-    margin: 32% 0% 0% 5%;
-  }
-
-  .image2:hover{
-    box-shadow: 0px 0px 10px blueviolet;
-}
-
-.product3{
-  width: 40%;
-  display:flex;
-  flex-direction: row;     
-  padding: 2%;
-}
-
-  .image3{
-    width: 140%;
-    height: 140%;
-    border: solid 2px grey;
-    border-radius: 5%;
-    margin: 32% 0% 0% 5%;
-  }
-
-  .image3:hover{
-    box-shadow: 0px 0px 10px blueviolet;
-}
-
-.product4{
-  width: 40%;
-  display:flex;
-  flex-direction: row;     
-  padding: 2%;
-}
-
-  .image4{
-    width: 140%;
-    height: 140%;
-    border: solid 2px grey;
-    border-radius: 5%;
-    margin: 32% 0% 0% 5%;
-  }
-
-  .image4:hover{
-    box-shadow: 0px 0px 10px blueviolet;
-}
 
 /* -------- tablet--------- */
 
@@ -254,74 +195,57 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
         padding: 2%;
     }
 
-    .image2{
-      display: block;
-      margin: 0;
-      padding: 2%;
-    }
-    .image3{
-      display: block;
-      margin: 0;
-      padding: 2%;
-    }
-    .image4{
-      display: block;
-      margin: 0;
-      padding: 2%;
+     .column1 {    
+        display: flex;
+        padding: 4%;
+        width: 50%;
+        font-size: 28px;
+        align-items: center;
+    }  
+    .product-logo{
+        margin: 0% 0% 0% 100%;
     }
 
-    .column1 {    
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        margin: -51% 14% 0% 12%;
-        padding: 4%;
-        width: 100%;
-        font-size: 28px;
-    }  
-   
-    .icons{    
-        padding: 9%;
-        margin: 0% 0% 0% 0%;
-        width: 100%;
-        font-size: 28px;
-    }
-    
     .waist{
         width: 100%;  
-        margin: 65% 0% 0% 10%;
     }
 
     .waist h3 {
-        font-size: 20px;
+            font-size: 20px;
     }
 
     .waist select{    
         height: 100%;
         width: 230%;
-        margin: 0% 0% 0% -50%;
         font-size: 16px;
-    }
-
-    .column2 {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0% 0% 0% 8%;
-        padding: 10%;
-        font-size: 20px;
+        text-align: end;
     }
 
     .description{
         width: 120%;
-        margin: 0;
+        padding: 10%;
     }
+
     .description-name{
-    font-size:24px;
+        font-size: 24px;
     }
+    
+    .description-price{
+        font-size: 24px;
+    }
+
     .description-code{
         font-size:16px;
     }
 
+    .column2 {    
+        display: flex;
+        flex-wrap: wrap;
+        width: 130%;
+        align-items: flex-end;
+    }
+
+    /* 
     .amount{
         width: 100%;
         height: 26%;
@@ -336,8 +260,15 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
         width: 50%;
         font-size: 16px;
     }
+*/
+    .detail h4{    
+        width: 128%;
+        font-size: 18px;
+    }  
 
-    .color{
+/* -------color---- */
+
+    /* .color{
         width: 100%;
         margin: 0% 0% 0% 0%;
     }
@@ -354,20 +285,22 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .button-white {
     width: 115%;
-}
-.detail h4{    
-    width: 200%;
-    font-size: 20px;
-    margin: 0% 0% 0% -70%;
-}
+} */
+
 }
   
 
 /* -------- desktop------- */
-@media (min-width: 1200px){
-    .column1 {
+@media (min-width: 1024px){
+    .column {
     width: 100%;
     margin: 0%;
-    padding: 24%;
+    padding: 10%;
     }
+
+    .detail h4{    
+        padding: 5%;
+        }  
+
+
 }
