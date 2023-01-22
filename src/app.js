@@ -3,11 +3,17 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3005;
 
+/* Import index route from main,js */ 
+const routesMain = require('./routes/main');
+
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/index.html"))
-});
+/* Implement index route in the app */
+app.use("/", routesMain);
+
+// app.get("/", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "./views/index.html"))
+// });
 
 app.get("/productDetail", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
