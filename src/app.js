@@ -9,7 +9,7 @@ const routesMain = require('./routes/main');
 app.use(express.static("public"));
 
 /* Implement index route in the app */
-app.use("/", routesMain);
+app.use("/", routesMain); 
 
 // app.get("/", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "./views/index.html"))
