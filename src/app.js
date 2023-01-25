@@ -6,7 +6,12 @@ const PORT = process.env.PORT || 3005;
 /* Import index route from main,js */ 
 const routesMain = require('./routes/main');
 
+/* Access to the static resources folder is configured */
 app.use(express.static("public"));
+
+/* EJS is configured as the app's template engine */
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, "./views/"));
 
 /* Implement index route in the app */
 app.use("/", routesMain); 
