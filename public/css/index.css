@@ -4,139 +4,6 @@
   font-family: 'Roboto', sans-serif;
 }
 
-/********************* HEADER *********************/
-a {
-  text-decoration: none;
-}
-
-header {
-  background-color: #225be0;
-  width: 100%;
-  color: aliceblue;
-
-}
-
-input { 
-  font-size: 1rem;
-  color: darkgray; 
-}
-
-.main-header {
-  border: #1259c3;
-}
-
-.main-header h3 {
-  text-align: center;
-  font-size: 20px;
-  font-weight: lighter;
-  background-color: #052b63;
-}
-
-
-
-.header-ul {
-  margin-top: 10px;
-}
-
-.main-header-top-bar {
-  display: none;
-}
-
-.main-header-bottom-bar {
-  display: none;
-}
-
-.header-top-bar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.main-navbar{
-  display: none;
-}
-
-.main-navbar ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-}
-
-.header-logo {
-  width: 150px;
-}
-
-.header-text {
-  text-align: center;
-  font-size: 20px;
-  margin-top: 10px;
-  font-weight: lighter;
-}
-
-.header-right-bar {
-  list-style: none;
-  display: flex;
-}
-
-.header-right-bar li, .header-right-navbar li {
-  margin: 0 10px;
-}
-
-.header-right-bar li a, .header-right-navbar li a{
-  font-size: 20px;
-}
-
-li a {
-  color: aliceblue;
-  font-size: 12px;
-}
-
-.burger-menu {
-  width: 35px;
-  height: 35px;
-  background-color: #1259c3;
-  border-radius: 8px;
-}
-
-.hamburguer-button {
-  background-color: #1259c3;
-  color: white;
-  display: block;
-  max-width: 30px;
-  max-height: 30px;
-  padding: 5px 0;
-  margin-top: 20px;
-  margin: auto;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.main-header-mobile-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-.header-right-navbar {
-  display: flex;
-  list-style: none;
-}
-
-.header-left-navbar {
-  display: flex;
-  list-style: none;
-}
-.header-left-navbar a{
-  color:  white;
-  font-size: 20px;
-}
-.site-search {
-  display:  flex;
-}
-
 /********************* BANNER *********************/
 .banner-img {
   display: flex;
@@ -298,11 +165,6 @@ body {
 }
 
 .article-information-div {
-  /* width: 100%; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* margin: auto;
-  align-items: baseline; */
   border-top: 1px solid #ebebeb;
   position: relative;
   padding: 15px;
@@ -328,75 +190,7 @@ main section article :hover .article-description {
   width: 11%;
 }
 
-/********************* FOOTER *********************/
-footer {
-  background-color: #1259c3;
-  color: aliceblue;
-}
-
-.footer-div-icon {
-  width: 2em;
-  height: 2em;
-  margin: 5px auto;
-  margin-bottom: 10px;
-}
-
-.footer-icon {
-  color: #1259c3;
-  font-size: 2em;
-}
-
-.footer-title {
-  text-align: center;
-  color: black;
-  margin-bottom: 15px;
-}
-
-.footer-text {
-  text-align: center;
-  font-size: 12px;
-  font-weight: lighter;
-  color: white;
-}
-
-.footer-logo {
-  width: 150px;
-  margin-top: 10px;
-}
-
-.footer-div,  .footer-div ul{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-div {
-  margin: 20px;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.footer-div ul {
-  list-style: none;
-}
-
-.footer-div ul li {
-  margin: 0 10px;
-}
-
-.footer-div ul li a{
-  font-size: 20px;
-}
-
 @media (min-width: 361px) {
-  .header-right-bar {
-    justify-content: space-between;
-  }
-
-  .header-input {
-    width: 100%;
-    height: 40px;
-  }
 
   main section article :hover .article-image{
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
@@ -420,57 +214,6 @@ footer {
 
 @media(min-width: 768px) {
 
-  /********************* HEADER *********************/
-  .main-navbar {
-    max-width: 1200px;
-    margin: auto;
-  }
-  .main-header-top-bar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-  }
-  .main-header-bottom-bar{
-    padding: 10px;
-    background-color: #052b63;
-    display: flex;
-  }
-  .header-text {
-    max-width: 300px;
-    text-align: right;
-  }
-  .header-logo {
-    padding: 0px
-  }
-
-  .header-input {
-    margin-left: 20px;
-    width: 280px;
-    height: 20px;
-  }
-  
-  .header-input-botton {
-    display: flex;
-  }
-
-  .hamburguer-button {
-    display: none;
-  }
-  .main-navbar {
-    display: flex;
-  }
-  .main-navbar ul {
-    display: flex;
-  }
-  .main-navbar li {
-    margin: 0 8px;
-  }
-
-  .main-header-mobile-container, .site-search {
-    display: none;
-  }
-
   /********************* BANNER *********************/
   .banner-img a img{
     height: 350px;
@@ -481,52 +224,12 @@ footer {
     width: 22%;
   }
 
-  /********************* FOOTER *********************/
-
-  footer .footer-main-div{
-    display: flex;
-  }
-
-  footer .footer-div {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-  }
-
-  footer .footer-icon:hover{
-    color:  #3498db;
-  }
-
-  .footer-logo {
-    padding-left: 0px;
-  }
-
 }
 
 @media (min-width: 1200px) {
 
-  /********************* HEADER *********************/
-  .main-header-top-bar, .main-navbar {
-    max-width: 1200px;
-    margin: auto;
-  }
-  .main-header-top-bar{
-    display: flex;
-    align-items: center;
-  }
-  .main-navbar {
-    margin-top: 20px;
-  }
-
-  .header-text {
-    max-width: none;
-    text-align: right;
-    font-size: 20px;
-    margin: 0;
-  }
-
   /********************* BANNER *********************/
-  .banner-img a img{
+  .banner-img a img {
     height: 450px;
   }
 
