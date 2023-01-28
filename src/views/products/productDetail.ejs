@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Product-Detail</title>
+
+  <%- include('./partials/head') %>
+
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/fd87f10e95.js" crossorigin="anonymous"></script> 
-  <link rel="stylesheet" href="/css/productDetail.css">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="./css/productDetail.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 
 <body>
-<header class="main-header">
+  <%- include('./partials/header') %>
+<!-- <header class="main-header">
     <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
     <div class="main-header-top-bar">
       <div class="header-top-bar-container">
@@ -79,7 +84,7 @@
       </button>
       <input type="input" class="header-input" placeholder="Buscar..." />
     </div>
-  </header>
+  </header> -->
 
   <main>
     <div class="product"> 
@@ -118,28 +123,7 @@
       </div>
     </div>
     </div> 
-   
-      <!-- <div class="amount">  
-            <h3> Cantidad </h3>
-            <select name="cantidad" id="cantidad">
-              <option value="1"> 1 </option>
-              <option value="2"> 2 </option>
-              <option value="3"> 3 </option>
-              <option value="4"> 4 </option>
-              <option value="5"> 5 </option>
-          </select>
-      </div> -->
-
-        <!-- <div class="color">
-          <h3> Selecciona tu color </h3>
-            <div class ="input-color">
-            
-                <input class= "button-white" type="color" value="#ffffff" name="color" id="color"> 
-                <imput class= "label-white" type="text" value="color"> 
-              
-        </div> -->
-      
-      <br>  
+         <br>  
       <div class="detail">
         <br>
         <h4> Las nuevas ADIDAS GALAXI 5, cuentan con la última tecnología en materiales, un diseño ultra moderno y su suela air top es ideal para running</h4>
@@ -148,7 +132,9 @@
     
   </main>
   
-  <footer>
+  <%- include('./partials/footer') %>
+
+  <!-- <footer>
     <div class="footer-main-div">
       <div class="footer-div">
         <img class="footer-logo" src="./design/logo_small.png" alt="" />
@@ -176,10 +162,10 @@
       </div>
 
       <div class="footer-div">
-        <!-- <div class="footer-div-icon">
+         <div class="footer-div-icon">
           <i class="fa-solid fa-users footer-icon"></i>
         </div> -->
-        <h3 class="footer-title">Eventos</h3>
+        <!-- <h3 class="footer-title">Eventos</h3>
         <p class="footer-text">
           Black Friday
           Cyberlunes
@@ -191,7 +177,7 @@
     <h4 class="footer-text">
       Copyright © 2022-2023 All-sports Todos los derechos reservados.
     </h4>
-  </footer>
+  </footer>  -->
 
 </body>
 </html>

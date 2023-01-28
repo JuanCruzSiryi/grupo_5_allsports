@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 3005;
 /* Import index route from main,js */ 
 const routesMain = require('./routes/main');
 
+const routesProducts = require('./routes/products');
+
+
 /* Access to the static resources folder is configured */
 app.use(express.static("public"));
 
@@ -20,9 +23,11 @@ app.use("/", routesMain);
 //   res.sendFile(path.resolve(__dirname, "./views/index.html"))
 // });
 
-app.get("/productDetail", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
-});
+app.use("/", routesProducts); 
+
+// app.get("/productDetail", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
+// });
 
 app.get("/productCart", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
