@@ -23,7 +23,7 @@ app.use("/", routesMain);
 //   res.sendFile(path.resolve(__dirname, "./views/index.html"))
 // });
 
-app.use("/", routesProducts); 
+app.use("/productDetail", routesProducts); 
 
 // app.get("/productDetail", (req, res) => {
 //   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
