@@ -31,9 +31,11 @@ app.use("/", routesProducts);
 //   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
 // });
 
-app.get("/productCart", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
-});
+app.use("/", routesProducts);
+
+// app.get("/productCart", (req, res) => {
+//  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
+// });
 
 app.use("/", routesUsers);
 
