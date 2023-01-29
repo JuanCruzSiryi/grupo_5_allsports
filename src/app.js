@@ -29,9 +29,11 @@ app.use("/productDetail", routesProducts);
 //   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
 // });
 
-app.get("/productCart", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
-});
+app.use("/productCart", routesProducts);
+
+// app.get("/productCart", (req, res) => {
+//  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
+// });
 
 app.get("/register", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/users/register.html"))
