@@ -8,6 +8,8 @@ const routesMain = require('./routes/main');
 
 const routesProducts = require('./routes/products');
 
+const routesUsers = require('./routes/users');
+
 
 /* Access to the static resources folder is configured */
 app.use(express.static("public"));
@@ -33,14 +35,7 @@ app.get("/productCart", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
 });
 
-app.get("/register", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/users/register.html"))
-});
-
-app.get("/login", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/users/login.html"))
-});
-
+app.use("/", routesUsers);
 
 app.listen(PORT, () => {
   console.log(`server listening on ${PORT}`);
