@@ -6,6 +6,9 @@ const productsController = {
   },
   productCart: (req, res) => {
     res.render('../views/products/productCart')
+ },
+ productRegister: (req, res) => {
+   res.render('../views/products/productRegister')
  }
 }
 
