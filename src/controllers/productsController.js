@@ -1,6 +1,7 @@
 const stylesheetDetail = "productDetail.css";
 const stylesheetCart = "productCart.css";
-const stylesheetRegister = "register.css";
+const stylesheetRegister = "registerProduct.css";
+const stylesheetEdit = "editProduct.css";
 
 const productsController = {
   products: (req, res) => {
@@ -11,7 +12,10 @@ const productsController = {
   },
   productRegister: (req, res) => {
     res.render('../views/products/productRegister', {title: "Products-Register", stylesheetFile: stylesheetRegister})
-  }
+  },
+  productEdit: (req, res) => {
+    res.render('../views/products/productEdit', {title: "Products-Edit", stylesheetFile: stylesheetEdit})
+  },
 }
 
 module.exports = productsController;
