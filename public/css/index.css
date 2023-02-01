@@ -27,25 +27,6 @@
   height: 500px;
 }
 
-.main-header-top-bar {
-  padding: 10px;
-}
-
-.main-header-bottom-bar{
-  padding: 10px;
-}
-
-.main-navbar{
-  display: none;
-}
-
-.main-navbar ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  text-decoration: none;
-}
-
 .article-image {
   width: 100%;
   padding: 0;
@@ -231,15 +212,5 @@ main section article :hover .article-description {
   /********************* BANNER *********************/
   .banner-img a img {
     height: 450px;
-  }
-
-  /********************* MAIN *********************/
-
-  .main-navbar li {
-    margin: 0 10px;
-  }
-
-  .main-navbar a {
-    font-size: 19px;
   }
 }

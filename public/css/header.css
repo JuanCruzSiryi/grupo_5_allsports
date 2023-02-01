@@ -25,7 +25,24 @@ input {
   background-color: #052b63;
 }
 
+.main-header-top-bar {
+  padding: 10px;
+}
 
+.main-header-bottom-bar{
+  padding: 10px;
+}
+
+.main-navbar{
+  display: none;
+}
+
+.main-navbar ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
 
 .header-ul {
   margin-top: 10px;
@@ -215,5 +232,13 @@ li a {
     text-align: right;
     font-size: 20px;
     margin: 0;
+  }
+
+  .main-navbar li {
+    margin: 0 10px;
+  }
+
+  .main-navbar a {
+    font-size: 19px;
   }
 }
