@@ -1,75 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Registro</title>
   <%- include('../partials/head') %>
-  <link rel="stylesheet" href="/css/register.css">
-</head>
 
-<body>
-  
-  <%- include ("../partials/header.ejs") %>
+  <body>
+    
+    <%- include ("../partials/header.ejs") %>
 
-  <main>
-    <div class="principal-box">
+    <main>
+      <div class="principal-box">
 
-      <div class="title">
-          <h2 class="title-register">Registrarme</h2>
+        <div class="title">
+            <h2 class="title-register">Registrarme</h2>
+        </div>
+
+        <div class="content-box-register">
+          <form action="/login" method="">
+            <div>
+              <label for="username">Nombre</label>
+              <input type="text" name="name" id="username" required>
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <label for="username">Apellido</label>
+              <input type="text" name="lastname" id="userlastname">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div>
+              <label for="username">Email</label>
+              <input type="email" name="email" id="useremail" required>
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div>
+              <label for="username">Contraseña (mínimo 8 caracteres)</label>
+              <input type="password" name="password" id="userpassword" required>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <div>
+              <label for="genre">Género</label>
+              <select name="genre" placeholder="Seleccionar" id="genre">
+                <option>Masculino</option>
+                <option>Femenino</option>
+                <option>Otros</option>
+              </select>
+            </div>
+
+            <div class="terms-box">
+                <label class="terms-box-label"><input type="checkbox" name="accepted-terms" value="">
+                  Acepto las 
+                  <a href="https:/www.google.com.ar"> Políticas de Privacidad y Términos y Condiciones</a>
+                </label>
+                <label class="terms-box-label"><input type="checkbox" name="accepted-promotions" value="">
+                  Quiero recibir emails de promociones y noticias.  
+                </label>
+            </div>
+
+            <div class="register-button">
+                <button type="submit">CREAR CUENTA</button>
+            </div>
+
+          </form>
+        </div>
+
       </div>
+    </main>
 
-      <div class="content-box-register">
-        <form action="/login" method="">
-          <div>
-            <label for="username">Nombre</label>
-            <input type="text" name="name" id="username" required>
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div>
-            <label for="username">Apellido</label>
-            <input type="text" name="lastname" id="userlastname">
-            <i class="fa-solid fa-user"></i>
-          </div>
-          <div>
-            <label for="username">Email</label>
-            <input type="email" name="email" id="useremail" required>
-            <i class="fa-solid fa-envelope"></i>
-          </div>
-          <div>
-            <label for="username">Contraseña (mínimo 8 caracteres)</label>
-            <input type="password" name="password" id="userpassword" required>
-            <i class="fa-solid fa-lock"></i>
-          </div>
-          <div>
-            <label for="genre">Género</label>
-            <select name="genre" placeholder="Seleccionar" id="genre">
-              <option>Masculino</option>
-              <option>Femenino</option>
-              <option>Otros</option>
-            </select>
-          </div>
+    <%- include ("../partials/footer.ejs") %> 
 
-          <div class="terms-box">
-              <label class="terms-box-label"><input type="checkbox" name="accepted-terms" value="">
-                Acepto las 
-                <a href="https:/www.google.com.ar"> Políticas de Privacidad y Términos y Condiciones</a>
-              </label>
-              <label class="terms-box-label"><input type="checkbox" name="accepted-promotions" value="">
-                Quiero recibir emails de promociones y noticias.  
-              </label>
-          </div>
-
-          <div class="register-button">
-              <button type="submit">CREAR CUENTA</button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-  </main>
-
-  <%- include ("../partials/footer.ejs") %> 
-
-</body>
+  </body>
 </html>
