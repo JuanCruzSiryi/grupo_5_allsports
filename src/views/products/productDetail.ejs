@@ -1,136 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('../partials/head') %>
-
-
-<body>
-  <%- include('../partials/header') %>
-<!-- <header class="main-header">
-    <h3>>>>> Envio gratis en compras a partir de los $ >>>></h3>
-    <div class="main-header-top-bar">
-      <div class="header-top-bar-container">
-        <a href="/"><img class="header-logo" src="./design/logo_white_large.png" alt="" /></a>
-      </div>
-
-      <div class="header-input-botton">
-        <input type="input" class="header-input" placeholder="Buscar..." />
-        <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </div>
-
-      <ul class="header-right-bar">
-        <li>
-          <a href="/register"><i class="fa-solid fa-user"></i></a>
-        </li>
-        <li>
-          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-regular fa-circle-question"></i></a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="main-header-bottom-bar">
-      <nav class="main-navbar">
-        <ul>
-          <li><a href="#">New In</a></li>
-          <li><a href="#">Categorias</a></li>
-          <li><a href="#">Hombre</a></li>
-          <li><a href="#">Mujer</a></li>
-          <li><a href="#">Marcas</a></li>
-          <li><a href="#">SALE</a></li>
-          <li><a href="#">Niños</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="main-header-mobile-container">
-      <div class="header-left-navbar">
-        <a href="#"><i class="fa-solid fa-bars"></i></a>
-      </div>
-
-      <div class="header-top-bar-container">
-        <a href="/"><img class="header-logo" src="./design/logo_white_large.png" alt="" /></a>
-      </div>
-
-      <ul class="header-right-navbar">
-        <li>
-          <a href="/register"><i class="fa-solid fa-user"></i></a>
-        </li>
-        <li>
-          <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="site-search">
-      <button type="submit">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
-      <input type="input" class="header-input" placeholder="Buscar..." />
-    </div>
-  </header> -->
-
-  <main>
-    <div class="product"> 
-      <img class="image" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
-      <div class= "column" >
-      <div class="column1">
-        <div class="icons">
-          <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-          <!-- <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div> -->
-          <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+  <%- include('../partials/head') %>
+  <body>
+    <%- include('../partials/header') %>
+    <main>
+      <div class="product"> 
+        <img class="image" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
+        <div class= "column" >
+        <div class="column1">
+          <div class="icons">
+            <div class="heart"> <i class="fa-regular fa-heart"></i></div>
+            <!-- <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div> -->
+            <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+          <img class="product-logo" src="https://sportingio.vtexassets.com/arquivos/ids/523444-auto-200?width=auto&amp;height=200&amp;aspect=true" alt="ADIDAS" crossorigin="anonymous" style="height: 100px;"> </img> 
         </div>
-        <img class="product-logo" src="https://sportingio.vtexassets.com/arquivos/ids/523444-auto-200?width=auto&amp;height=200&amp;aspect=true" alt="ADIDAS" crossorigin="anonymous" style="height: 100px;"> </img> 
-      </div>
-      
-      <div class="column2">
-        <div class= "description">
-          <h3 class="description-name"> Adidas Galaxi 5 </h3>
-          <h3 class= "description-price"></h3> $34000 </h3>
-          <h3 class= "description-code"> AdiAzuDep </3>
-        </div> 
-        <div class="waist">   
-          <h3> Talles </h3>
-          <select name="talles" id="talles">
-            <option value="36 (EUR 37)"> 36 (EUR 37) </option>
-            <option value="37 (EUR 38)"> 37 (EUR 38) </option>
-            <option value="38 (EUR 39)"> 38 (EUR 39) </option>
-            <option value="39 (EUR 40)"> 39 (EUR 40) </option>
-            <option value="40 (EUR 41)"> 40 (EUR 41) </option>
-            <option value="41 (EUR 42)"> 41 (EUR 42) </option>
-            <option value="42 (EUR 43)"> 42 (EUR 43) </option>
-            <option value="43 (EUR 44)"> 43 (EUR 44) </option>
-            <option value="44 (EUR 45)"> 44 (EUR 45) </option>
-            <option value="45 (EUR 46)"> 45 (EUR 46) </option>
-          </select>
+        
+        <div class="column2">
+          <div class= "description">
+            <h3 class="description-name"> Adidas Galaxi 5 </h3>
+            <h3 class= "description-price"></h3> $34000 </h3>
+            <h3 class= "description-code"> AdiAzuDep </3>
+          </div> 
+          <div class="waist">   
+            <h3> Talles </h3>
+            <select name="talles" id="talles">
+              <option value="36 (EUR 37)"> 36 (EUR 37) </option>
+              <option value="37 (EUR 38)"> 37 (EUR 38) </option>
+              <option value="38 (EUR 39)"> 38 (EUR 39) </option>
+              <option value="39 (EUR 40)"> 39 (EUR 40) </option>
+              <option value="40 (EUR 41)"> 40 (EUR 41) </option>
+              <option value="41 (EUR 42)"> 41 (EUR 42) </option>
+              <option value="42 (EUR 43)"> 42 (EUR 43) </option>
+              <option value="43 (EUR 44)"> 43 (EUR 44) </option>
+              <option value="44 (EUR 45)"> 44 (EUR 45) </option>
+              <option value="45 (EUR 46)"> 45 (EUR 46) </option>
+            </select>
+          </div>
         </div>
       </div>
-    </div>
-    </div> 
-         <br>  
-      <div class="detail">
-        <br>
-        <h4> Las nuevas ADIDAS GALAXI 5, cuentan con la última tecnología en materiales, un diseño ultra moderno y su suela air top es ideal para running</h4>
       </div> 
+          <br>  
+        <div class="detail">
+          <br>
+          <h4> Las nuevas ADIDAS GALAXI 5, cuentan con la última tecnología en materiales, un diseño ultra moderno y su suela air top es ideal para running</h4>
+        </div> 
+        
+        <div class="detail-button">
+          <div class="edit-button">
+            <button onClick="location.href='/productEdit'" type="submit" >EDITAR</button>
+          </div>
+          <div class="delete-button">
+            <button type="submit">BORRAR</button>
+          </div>
+        </div>
+
       
-      <div class="detail-button">
-        <div class="edit-button">
-          <button onClick="location.href='/productEdit'" type="submit" >EDITAR</button>
-        </div>
-        <div class="delete-button">
-          <button type="submit">BORRAR</button>
-        </div>
-      </div>
-
-    
-  </main>
-  
-  <%- include('../partials/footer') %>
-
-
-
-</body>
+    </main>
+    <%- include('../partials/footer') %>
+  </body>
 </html>

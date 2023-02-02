@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    
+    <%- include ("../partials/header.ejs") %>
 
-<%- include('../partials/head') %>
+    <main>
+      <div class="principal-box">
 
-<body>
-  
-  <%- include ("../partials/header.ejs") %>
+        <div class="title">
+            <h2 class="title-register">INGRESAR NUEVO PRODUCTO</h2>
+        </div>
 
-  <main>
-    <div class="principal-box">
+        <div class="content-box-register">
+          <form action="/products" method="POST" enctype="multipart/form-data">
+            <div>
+              <label for="nameProduct">Ingresar nombre</label>
+              <input type="text" name="nameProduct" id="nameProduct">
+            </div>
+            <div class="desc-product">
+              <label for="descProduct">Ingresar descripción</label>
+              <input type="text" name="descProduct" id="descProduct">
+            </div>
+            <div>
+              <label for="imgProduct">Ingresar imagen</label>
+              <input type="file" name="imgProduct" id="imgProduct">
+            </div>
+            <div class="color-product">
+              <label for="colorsProduct">Colores disponibles</label>
+              <br>
+              <input type="color" name="colorProduct1" id="colorProduct1">
+              <input type="color" name="colorProduct2" id="colorProduct2">
+              <input type="color" name="colorProduct3" id="colorProduct3">
+              <input type="color" name="colorProduct4" id="colorProduct4">
+            </div>
+            <div class="size-product">
+              <label for="sizeProduct">Talles</label>
+              <br>
+              <label class="checkSize">35 <input type="checkbox" name="sizeProduct" id="sizeProduct1"></label>
+              <label class="checkSize">36 <input type="checkbox" name="sizeProduct" id="sizeProduct2"></label>
+              <label class="checkSize">37 <input type="checkbox" name="sizeProduct" id="sizeProduct3"></label>
+              <label class="checkSize">38 <input type="checkbox" name="sizeProduct" id="sizeProduct4"></label>
+              <label class="checkSize">39 <input type="checkbox" name="sizeProduct" id="sizeProduct5"></label>
+              <label class="checkSize">40 <input type="checkbox" name="sizeProduct" id="sizeProduct6"></label>
+              <label class="checkSize">41 <input type="checkbox" name="sizeProduct" id="sizeProduct7"></label>
+              <label class="checkSize">42 <input type="checkbox" name="sizeProduct" id="sizeProduct8"></label>
+              <label class="checkSize">43 <input type="checkbox" name="sizeProduct" id="sizeProduct9"></label>
+              <label class="checkSize">44 <input type="checkbox" name="sizeProduct" id="sizeProduct10"></label>
+              <label class="checkSize">45 <input type="checkbox" name="sizeProduct" id="sizeProduct11"></label>
+            </div>
+            <div>
+              <label for="priceProduct">Ingresar precio</label>
+              <input type="number" name="priceProduct" id="priceProduct">
+            </div>
 
-      <div class="title">
-          <h2 class="title-register">INGRESAR NUEVO PRODUCTO</h2>
+            <div class="register-button">
+                <button type="submit">CREAR PRODUCTO</button>
+            </div>
+
+          </form>
+        </div>
+
       </div>
+    </main>
 
-      <div class="content-box-register">
-        <form action="/products" method="POST" enctype="multipart/form-data">
-          <div>
-            <label for="nameProduct">Ingresar nombre</label>
-            <input type="text" name="nameProduct" id="nameProduct">
-          </div>
-          <div class="desc-product">
-            <label for="descProduct">Ingresar descripción</label>
-            <input type="text" name="descProduct" id="descProduct">
-          </div>
-          <div>
-            <label for="imgProduct">Ingresar imagen</label>
-            <input type="file" name="imgProduct" id="imgProduct">
-          </div>
-          <div class="color-product">
-            <label for="colorsProduct">Colores disponibles</label>
-            <br>
-            <input type="color" name="colorProduct1" id="colorProduct1">
-            <input type="color" name="colorProduct2" id="colorProduct2">
-            <input type="color" name="colorProduct3" id="colorProduct3">
-            <input type="color" name="colorProduct4" id="colorProduct4">
-          </div>
-          <div class="size-product">
-            <label for="sizeProduct">Talles</label>
-            <br>
-            <label class="checkSize">35 <input type="checkbox" name="sizeProduct" id="sizeProduct1"></label>
-            <label class="checkSize">36 <input type="checkbox" name="sizeProduct" id="sizeProduct2"></label>
-            <label class="checkSize">37 <input type="checkbox" name="sizeProduct" id="sizeProduct3"></label>
-            <label class="checkSize">38 <input type="checkbox" name="sizeProduct" id="sizeProduct4"></label>
-            <label class="checkSize">39 <input type="checkbox" name="sizeProduct" id="sizeProduct5"></label>
-            <label class="checkSize">40 <input type="checkbox" name="sizeProduct" id="sizeProduct6"></label>
-            <label class="checkSize">41 <input type="checkbox" name="sizeProduct" id="sizeProduct7"></label>
-            <label class="checkSize">42 <input type="checkbox" name="sizeProduct" id="sizeProduct8"></label>
-            <label class="checkSize">43 <input type="checkbox" name="sizeProduct" id="sizeProduct9"></label>
-            <label class="checkSize">44 <input type="checkbox" name="sizeProduct" id="sizeProduct10"></label>
-            <label class="checkSize">45 <input type="checkbox" name="sizeProduct" id="sizeProduct11"></label>
-          </div>
-          <div>
-            <label for="priceProduct">Ingresar precio</label>
-            <input type="number" name="priceProduct" id="priceProduct">
-          </div>
+    <%- include ("../partials/footer.ejs") %> 
 
-          <div class="register-button">
-              <button type="submit">CREAR PRODUCTO</button>
-          </div>
-
-        </form>
-      </div>
-
-    </div>
-  </main>
-
-  <%- include ("../partials/footer.ejs") %> 
-
-</body>
+  </body>
 </html>

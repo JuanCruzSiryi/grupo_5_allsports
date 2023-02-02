@@ -4,7 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3005;
 
 /* Import index route from main,js */ 
-const routesMain = require('./routes/main');
+const routesMain = require('./routes/mainRoutes');
 
 const routesProducts = require('./routes/products');
 
