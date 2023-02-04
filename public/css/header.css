@@ -223,6 +223,7 @@ li a {
   }
   .main-navbar {
     display: flex;
+    padding-right: 35px;
   }
   .main-navbar ul {
     display: flex;
@@ -237,7 +238,6 @@ li a {
 
   .marquee-container h3 {
     display: inline-block;
-     /* Ancho total de los títulos */
     animation: marquee 30s linear infinite;
     min-width: 30%;
   }
@@ -271,7 +271,8 @@ li a {
     align-items: center;
   }
   .main-navbar {
-    margin-top: 20px;
+    margin-top: 10px;
+    padding-right: 25px;
   }
 
   .header-text {
