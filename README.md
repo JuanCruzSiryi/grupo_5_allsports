@@ -60,6 +60,8 @@ LINK DE TRELLO SPRINT 2: https://trello.com/b/w4nUES3c/sprint-2
 
 LINK DE TRELLO SPRINT 3: https://trello.com/b/DPHmEn5d/sprint-3
 
+LINK DE TRELLO SPRINT 4: https://trello.com/b/8H9GEGCu/sprint-4
+
 
 GUÍA DE COLORES Y FUENTES:
 
