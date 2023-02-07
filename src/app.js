@@ -37,7 +37,7 @@ app.use("/", routesProducts);
 //  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
 // });
 
-app.use("/", routesUsers);
+//app.use("/", routesUsers);
 
 app.listen(PORT, () => {
   console.log(`server listening on ${PORT}`);
