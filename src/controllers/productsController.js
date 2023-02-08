@@ -40,6 +40,14 @@ const productsController = {
       stylesheetFile: "editProduct.css",
     });
   },
+  productList: (req, res) => {
+    res.render("../views/products/productList", {
+      title: "Products-List",
+      stylesheetFile: "productList.css",
+    });
+  },
+
+
 };
 
 module.exports = productsController;
