@@ -3,6 +3,10 @@ const router = express.Router();
 
 const productsController = require('../controllers/productsController');
 
+/* CRUD */
+router.get('/products', productsController.index);
+/* END CRUD */
+
 router.get('/productDetail', productsController.products);
 
 router.get('/productCart', productsController.productCart);

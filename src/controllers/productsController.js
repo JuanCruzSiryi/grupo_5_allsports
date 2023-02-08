@@ -1,4 +1,21 @@
+const fs = require("fs");
+const path = require("path");
+const productsPath = path.join(__dirname, "../data/products.json");
+
 const productsController = {
+  /* CRUD */
+  getProducts: () => {
+    return JSON.parse(fs.readFileSync(productsPath, "utf-8"));
+  },
+  index: (req, res) => {
+    res.render("../views/products/index", {
+      title: "Products List",
+      stylesheetFile: "index.css",
+      productsList: productsController.getProducts(),
+    });
+  },
+  /* END CRUD */
+
   products: (req, res) => {
     res.render("../views/products/productDetail", {
       title: "Product-Detail",
