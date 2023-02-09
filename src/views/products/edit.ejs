@@ -11,14 +11,14 @@
         </div>
 
         <div class="content-box-register">
-          <form action="/products" method="POST" enctype="multipart/form-data">
+          <form method="post" action="/products/<%=product.id %>/edit/?_method=PUT">
             <div>
               <label for="nameProduct">Modificar nombre</label>
-              <input type="text" name="nameProduct" id="nameProduct">
+              <input type="text" name="nameProduct" value="<%= product.name %>">
             </div>
             <div class="desc-product">
               <label for="descProduct">Modificar descripción</label>
-              <input type="text" name="descProduct" id="descProduct">
+              <input type="text" name="descProduct" id="descProduct" value="<%= product.description %>">
             </div>
             <div>
               <label for="imgProduct">Modificar imagen</label>
@@ -49,11 +49,11 @@
             </div>
             <div>
               <label for="priceProduct">Modificar precio</label>
-              <input type="number" name="priceProduct" id="priceProduct">
+              <input type="number" name="priceProduct" id="priceProduct" value="<%= product.price %>">
             </div>
 
             <div class="register-button">
-                <button type="submit">APLICAR</button>
+              <button type="submit">APLICAR</button>
             </div>
 
             <div class="register-button">
@@ -62,6 +62,14 @@
 
           </form>
         </div>
+        <!-- <form method="post" action="/products/<%=product.id %>/edit/?_method=PUT">
+          <label for="name">Nombre</label>
+          <input type="text" name="name" value="<%= product.name %>">
+          <label for="price">Año</label>
+          <input type="text" name="price" value="<%= product.price %>">
+      
+          <button type="submit">Editar</button>
+        </form> -->
 
       </div>
     </main>

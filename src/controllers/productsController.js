@@ -8,7 +8,7 @@ const productsController = {
     return JSON.parse(fs.readFileSync(productsPath, "utf-8"));
   },
   index: (req, res) => {
-    res.render("../views/products/index", {
+    res.render("../views/products/index_test", {
       title: "Products List",
       stylesheetFile: "productList.css",
       productsList: productsController.getProducts(),
@@ -21,23 +21,25 @@ const productsController = {
     res.render("../views/products/edit", {
       title: "Mi product",
       stylesheetFile: "editProduct.css",
+      product
     });
   },
   update: (req, res) => {
     let productId = req.params.id;
-    console.log(req.params);
+    console.log("body: ", req.body);
     let products = productsController.getProducts();
 
     products.forEach((product, index) => {
       if (product.id == productId) {
-        product.name = req.body.name;
-        product.size = req.body.size;
+        product.name = req.body.nameProduct || "sin nombre";
+        product.description = req.body.descProduct || "sin descripcion";
+        product.price = req.body.priceProduct || 0;
 
         products[index] = product;
       }
     });
 
-    fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
 
     res.redirect("/products");
   },
