@@ -14,6 +14,33 @@ const productsController = {
       productsList: productsController.getProducts(),
     });
   },
+  edit: (req, res) => {
+    let productId = req.params.id;
+    let product = productsController.getProducts().find((product) => product.id == productId);
+
+    res.render("../views/products/edit", {
+      title: "Mi product",
+      stylesheetFile: "editProduct.css",
+    });
+  },
+  update: (req, res) => {
+    let productId = req.params.id;
+    console.log(req.params);
+    let products = productsController.getProducts();
+
+    products.forEach((product, index) => {
+      if (product.id == productId) {
+        product.name = req.body.name;
+        product.size = req.body.size;
+
+        products[index] = product;
+      }
+    });
+
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, " "));
+
+    res.redirect("/products");
+  },
   /* END CRUD */
 
   products: (req, res) => {

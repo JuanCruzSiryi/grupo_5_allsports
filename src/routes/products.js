@@ -5,6 +5,11 @@ const productsController = require('../controllers/productsController');
 
 /* CRUD */
 router.get('/products', productsController.index);
+
+/* actualizar producto */
+router.get('/products/:id/edit', productsController.edit);
+router.put('/products/:id/edit', productsController.update);
+
 /* END CRUD */
 
 router.get('/productDetail', productsController.products);
