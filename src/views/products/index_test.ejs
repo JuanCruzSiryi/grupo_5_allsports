@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="blank-field">
+        <h2>Lista de productos</h2>
+        <ul>
+          <% productsList.forEach(product => { %>
+            <li>
+              <a href="/products/<%= product.id %>"><%= product.name %></a>
+              -
+              <a href="/products/<%= product.id %>/edit">Editar</a>
+              -
+              <a href="/products/delete/<%= product.id %>/">Eliminar</a>
+            </li>
+          <% }) %>
+        </ul>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %> 
+
+  </body>
+</html>

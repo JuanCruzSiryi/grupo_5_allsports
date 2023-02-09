@@ -10,6 +10,9 @@ const routesProducts = require('./routes/products');
 
 const routesUsers = require('./routes/users');
 
+/* Include PUT and DELETE methods */
+const methodOverride = require('method-override');
+
 
 /* Access to the static resources folder is configured */
 app.use(express.static("public"));
@@ -17,6 +20,13 @@ app.use(express.static("public"));
 /* EJS is configured as the app's template engine */
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, "./views/"));
+
+/* Include PUT and DELETE methods */
+app.use(methodOverride('_method'))
+
+/* Receive data from forms */
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 /* Implement index route in the app */
 app.use("/", routesMain); 

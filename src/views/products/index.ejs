@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="blank-field">
+        <h3>Lista de productos</h3>
+        <ul>
+          <% productsList.forEach(product => { %>
+
+              
+            <div class="product">
+              
+              <img class= "image" src="<%= product.image %>" alt="<%= product.image %>">
+
+              <h4 class="name"> <%= product.name %> </h4>
+              
+              <p class="price"> Precio: <%= product.price %></p>              
+             <div class="other-date"> 
+              <p class="category"> Categoría: <%= product.category %></p>
+              <p class="color"> Color: <%= product.color %></p> 
+              <p class="size"> Talle: <%= product.size %> </p>
+            </div> 
+              <br> 
+              <p class="description"> <a href="/products/<%= product.id %>"><%= product.description %></a> </p> 
+              <br>
+              
+              <div class="detail-button">
+                <button type="submit"> <a href="/products/<%= product.id %>/edit">Editar</a></button> 
+              
+                <button type="submit"> <a href="/products/delete/<%= product.id %>/">Eliminar</a></button>
+              </div>
+            </div>
+ 
+          <% }) %>
+        </ul>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %> 
+
+  </body>
+</html>
