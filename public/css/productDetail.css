@@ -40,7 +40,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 /* ------------iconos--------- */
 .icons{
     padding: 6%;
-    margin: 20% 0% 0% 10%;
+    margin: 10% 0% 0% 10%;
 }
 
 
@@ -114,9 +114,6 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     text-align: center;
     background: gainsboro;
     margin-bottom: 5%;
-    margin-top: auto;
-    font-style: italic;
- 
 }
 
 .description-name{
@@ -213,10 +210,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 .detail h4{
     font-size: 10px;
     color: darkblue;
-    text-align: center;
-    font-style: italic;
- 
-} 
+    text-align: center;} 
 
 
 /* -------- tablet--------- */
