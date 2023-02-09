@@ -10,7 +10,7 @@ const productsController = {
   index: (req, res) => {
     res.render("../views/products/index", {
       title: "Products List",
-      stylesheetFile: "index.css",
+      stylesheetFile: "productList.css",
       productsList: productsController.getProducts(),
     });
   },
@@ -67,12 +67,7 @@ const productsController = {
       stylesheetFile: "editProduct.css",
     });
   },
-  productList: (req, res) => {
-    res.render("../views/products/productList", {
-      title: "Products-List",
-      stylesheetFile: "productList.css",
-    });
-  },
+  
 
 
 };

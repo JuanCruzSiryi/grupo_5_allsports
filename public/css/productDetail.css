@@ -114,6 +114,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     text-align: center;
     background: gainsboro;
     margin-bottom: 5%;
+    margin-top: auto;
 }
 
 .description-name{

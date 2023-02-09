@@ -14,8 +14,6 @@ router.put('/products/:id/edit', productsController.update);
 
 router.get('/productDetail', productsController.products);
 
-router.get('/productList', productsController.productList);
-
 router.get('/productCart', productsController.productCart);
 
 router.get('/productRegister', productsController.productRegister);

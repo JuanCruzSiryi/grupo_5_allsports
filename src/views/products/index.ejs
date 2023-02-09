@@ -7,16 +7,35 @@
 
     <main>
       <div class="blank-field">
-        <h2>Lista de productos</h2>
+        <h3>Lista de productos</h3>
         <ul>
           <% productsList.forEach(product => { %>
-            <li>
-              <a href="/products/<%= product.id %>"><%= product.name %></a>
-              -
-              <a href="/products/<%= product.id %>/edit">Editar</a>
-              -
-              <a href="/products/delete/<%= product.id %>/">Eliminar</a>
-            </li>
+
+              
+            <div class="product">
+              
+              <img class= "image" src="<%= product.image %>" alt="<%= product.image %>">
+
+              <h4 class="name"> <%= product.name %> </h4>
+              
+              <p class="price"> Precio: <%= product.price %></p>              
+              <p class="category"> Categoría: <%= product.category %></p>
+              <p class="color"> Color: <%= product.color %></p> 
+              <p class="size"> Talle: <%= product.size %> </p>
+              
+              <br> 
+              <p class="description"> <a href="/products/<%= product.id %>"><%= product.description %></a> </p> 
+              <br>
+              
+              <div class="detail-button">
+                <button type="submit"> <a href="/products/<%= product.id %>/edit" ></a> Editar </button> 
+              
+                <button type="submit"> <a href="/products/delete/<%= product.id %>/"></a> Eliminar </button>
+              </div>
+            </div>
+ 
+ 
+         
           <% }) %>
         </ul>
       </div>
