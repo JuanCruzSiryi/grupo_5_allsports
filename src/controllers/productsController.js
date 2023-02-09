@@ -8,7 +8,7 @@ const productsController = {
     return JSON.parse(fs.readFileSync(productsPath, "utf-8"));
   },
   index: (req, res) => {
-    res.render("../views/products/index_test", {
+    res.render("../views/products/index", {
       title: "Products List",
       stylesheetFile: "productList.css",
       productsList: productsController.getProducts(),

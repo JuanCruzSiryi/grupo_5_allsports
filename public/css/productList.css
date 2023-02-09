@@ -11,14 +11,18 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .blank-field{
     text-align: center;
-    
+    padding: 2%;
 }
+
 .product{     
     width: 100%;
     padding: 2%;
     display: flex;
     flex-wrap: wrap;
+    border-style: ridge;
+    border-color:beige;
 }
+
  /* --------------imagen--------- */
 .image{    
     width: 30vw;
@@ -48,48 +52,47 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     font-size: 13px;
     color: darkblue;
     width: max-content;
-    padding: 2%;
+    
 }
 
 .price {
     color: rgb(89, 49, 126);
     font-size: 13px;
     font-weight: bold;
-    padding: 2%;
-    display: contents;
-
-}  
+    display: grid;
+    align-content: space-evenly;}  
 
 .category {
     color: darkblue;
     font-size: 12px;
-    padding: 5%;
-}  
+}
 
 .color {
     color: darkblue;
     font-size: 12px;
-    padding: 5%;
 }
 
 .size {
     color: darkblue;
-    padding: 5%;
     font-size: 12px;
+}
+
+.other-date{
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 .description {
     color: darkblue;
     font-size: 12px;
+    font-style: italic;
     padding: 5%;
     display: contents;
 }
 
-
 .detail-button{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    margin:auto;
 }
 
 .detail-button button{
