@@ -10,6 +10,10 @@ router.get('/products', productsController.index);
 router.get('/products/:id/edit', productsController.edit);
 router.put('/products/:id/edit', productsController.update);
 
+/* eliminar producto */
+router.get('/products/delete/:id', productsController.delete);
+router.delete('/products/delete/:id', productsController.destroy);
+
 /* END CRUD */
 
 router.get('/productDetail', productsController.products);

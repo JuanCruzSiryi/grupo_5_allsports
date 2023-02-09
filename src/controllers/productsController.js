@@ -43,6 +43,25 @@ const productsController = {
 
     res.redirect("/products");
   },
+
+  delete: (req, res) => {
+    let productId = req.params.id;
+    let product = productsController.getProducts().find((product) => product.id == productId);
+    res.render('products/delete', {
+      title: "Borrar producto",
+      stylesheetFile: "editProduct.css",
+      product
+    });
+  },
+  destroy: (req, res) => {
+    let productId = req.params.id;
+    let products = productsController.getProducts();
+    let newProducts = products.filter(product => product.id != productId)
+
+    fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, "  "));
+
+    res.redirect("/products");
+  },
   /* END CRUD */
 
   products: (req, res) => {
