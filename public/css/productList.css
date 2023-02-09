@@ -11,11 +11,13 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .blank-field{
     text-align: center;
+    
 }
 .product{     
-    width: 85%;
-    display: -webkit-box;
+    width: 100%;
     padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
 }
  /* --------------imagen--------- */
 .image{    
@@ -53,7 +55,9 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: rgb(89, 49, 126);
     font-size: 13px;
     font-weight: bold;
-    padding: 5%;
+    padding: 2%;
+    display: contents;
+
 }  
 
 .category {
@@ -72,7 +76,6 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: darkblue;
     padding: 5%;
     font-size: 12px;
-    display: contents;
 }
 
 .description {
@@ -85,6 +88,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 .detail-button{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
