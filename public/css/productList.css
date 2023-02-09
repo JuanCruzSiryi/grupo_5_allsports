@@ -9,137 +9,86 @@
 
 main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148))}
 
-.productList{
-    width: 40%;
-    display:flex;
-    flex-direction: row;     
+.blank-field{
+    text-align: center;
+}
+.product{     
+    width: 85%;
+    display: -webkit-box;
     padding: 2%;
-} 
-
+}
  /* --------------imagen--------- */
-.imageList{    
-    width: 140%;
-    height: 140%;
+.image{    
+    width: 30vw;
     border: solid 2px grey;
     border-radius: 5%;
-    margin: 32% 0% 0% 5%;
+    margin: 5%;
 }
 
-.imageList:hover{
+.image:hover{
     box-shadow: 0px 0px 10px blueviolet;
     
   }
 
 
-/* --------------------- */
-.column1List{
-    display: flex;
-}
-
-
-/* ------------iconos--------- */
-.iconsList{
-    padding: 6%;
-    margin: 20% 0% 0% 10%;
-}
-
-
-.heartList:hover {
-    color: rgb(226, 43, 43);
-}
-
-.cartList{
-    margin: 32% 5% 32% 5%;
-}
-
-.cartList:hover{    
-  color: blueviolet;  
- } 
-
-
- .product-logoList{
-    display: flex;
-    padding: 21%;
-    margin-top: 7%;
-}
-
-
-/* ----------- talles------------ */
-
-.waistList {
-    width: 20%;
-    display: flex;
-    text-align: center;
-    border: 1px solid #d9d9d9;
-}
-
- .waistList h3{
+.name {        
     color: darkblue;
-    text-decoration: underline;
     font-size: 12px;
- }
-
- select {
-    background: transparent;
-    border: none;
-    font-size: 10px;
-    padding: 5px;
-    width: 25px;
- }
-
- .select:hover {
-    border-color: darkblue;
- }
-
-/* --------------columna 2------- */
- .column2List{    
-    display: flex;
-    flex-wrap: wrap;
-    padding: 4%;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* ----------- columna total----- */
-.columnList {
-    display: inline;
-}
-
-
-
-
- /* ----------descripción prod ----------*/
-.descriptionList{        
-    color: darkblue;
     text-align: center;
     background: gainsboro;
-    margin-bottom: 5%;
+    margin-bottom: 27%;
+    padding: 2%;
+    margin-top: auto;
+    border-radius: 5%;
 }
 
-.description-nameList{
+.p {
     font-size: 13px;
+    color: darkblue;
     width: max-content;
+    padding: 2%;
 }
 
-.description-priceList{
-    font-size: 11px;
+.price {
     color: rgb(89, 49, 126);
+    font-size: 13px;
     font-weight: bold;
+    padding: 5%;
 }  
 
-.description-codeList{
-    font-size: 10px;
-    
+.category {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
 }  
 
-/* --------------- botones--------- */
+.color {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
+}
 
-.detail-buttonList{
+.size {
+    color: darkblue;
+    padding: 5%;
+    font-size: 12px;
+    display: contents;
+}
+
+.description {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
+    display: contents;
+}
+
+
+.detail-button{
     display: flex;
     justify-content: space-around;
 }
 
-.detail-buttonList button{
+.detail-button button{
     width: 35vw;
     height: 23px;
     font-size: 13px;
@@ -151,42 +100,11 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
 
-.delete-buttonList button:hover {
+.delete-button button:hover {
     background-color: rgb(240, 237, 237)
 }
 
 
-
-/* color */
-
-.colorList{
-    display: flex;
-    width: 86%;
-    font-size: 10px;
-    color: darkblue;
-    margin: 24% 0% 0% -15%;
-}
-
-.colorList h3{
-    font-size: 12px;
-    text-decoration: underline;
-    color: darkblue;
-}
-
- 
-
-/* detalle prod */
-
-.detailList{
-    width: 70%;
-    display: flex;
-    flex-direction: column-reverse;
-}
-
-.detailList h4{
-    font-size: 10px;
-    color: darkblue;
-    text-align: center;} 
 
 
 /* -------- tablet--------- */
