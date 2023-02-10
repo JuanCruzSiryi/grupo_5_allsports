@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { v4: uuidv4 } = require('uuid');
 const productsPath = path.join(__dirname, "../data/products.json");
 
 const productsController = {
@@ -13,6 +14,34 @@ const productsController = {
       stylesheetFile: "productList.css",
       productsList: productsController.getProducts(),
     });
+  },
+  create: (req, res) => {
+    res.render('products/create', {
+      title: "Crear producto",
+      stylesheetFile: "productList.css",
+    });
+  },
+  store: (req, res) => {
+    let products = productsController.getProducts();
+    let image = req.file? req.file.filename : "default.jpg";
+
+    console.log("body: ", req.body);
+
+    let newProduct = {
+      "id": uuidv4(),
+      "name": req.body.nameProduct || "sin nombre",
+      "description": req.body.descProduct || "sin descripcion",
+      "price": req.body.priceProduct || 0,
+      "image": image,
+      "category": req.body.categoryProduct || "Hombre",
+      "color": req.body.colorProduct || "Azul",
+      "size": req.body.sizeProduct || 40,
+      "available": true
+    };
+
+    products.push(newProduct)
+    fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
+    res.redirect("/products");
   },
   edit: (req, res) => {
     let productId = req.params.id;
@@ -57,6 +86,8 @@ const productsController = {
     let productId = req.params.id;
     let products = productsController.getProducts();
     let newProducts = products.filter(product => product.id != productId)
+
+    console.log("producto a borrar: ", productId, products);
 
     fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, "  "));
 

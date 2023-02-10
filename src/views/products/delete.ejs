@@ -11,7 +11,7 @@
         </div>
 
         <div class="content-box-register">
-          <form method="post" action="/products/<%=product.id %>/edit/?_method=PUT">
+          <form method="post" action="/products/<%=product.id %>/delete?_method=DELETE">
             <div>
               <label for="nameProduct">Nombre</label>
               <input type="text" name="nameProduct" value="<%= product.name %>">

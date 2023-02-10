@@ -3,16 +3,15 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3005;
 
+/* Include PUT and DELETE methods */
+const methodOverride = require('method-override');
+
 /* Import index route from main,js */ 
 const routesMain = require('./routes/mainRoutes');
 
 const routesProducts = require('./routes/products');
 
 const routesUsers = require('./routes/users');
-
-/* Include PUT and DELETE methods */
-const methodOverride = require('method-override');
-
 
 /* Access to the static resources folder is configured */
 app.use(express.static("public"));
@@ -21,31 +20,17 @@ app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, "./views/"));
 
-/* Include PUT and DELETE methods */
-app.use(methodOverride('_method'))
-
 /* Receive data from forms */
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+/* Include PUT and DELETE methods */
+app.use(methodOverride('_method'))
+
 /* Implement index route in the app */
 app.use("/", routesMain); 
 
-// app.get("/", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "./views/index.html"))
-// });
-
 app.use("/", routesProducts); 
-
-// app.get("/productDetail", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "./views/products/productDetail.html"))
-// });
-
-app.use("/", routesProducts);
-
-// app.get("/productCart", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "./views/products/productCart.html"))
-// });
 
 app.use("/", routesUsers);
 
