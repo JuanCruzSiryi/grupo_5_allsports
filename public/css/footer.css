@@ -57,6 +57,18 @@ footer {
   font-size: 20px;
 }
 
+.social-facebook :hover{
+  color: #003688;
+}
+.social-instagram :hover{
+  color: #ff7029;
+}
+.social-twiter :hover{
+  color: #3bbeff;
+}
+
+
+
 @media(min-width: 768px) {
 
   footer .footer-main-div{

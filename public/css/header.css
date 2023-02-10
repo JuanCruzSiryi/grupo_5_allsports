@@ -100,6 +100,18 @@ input {
   font-weight: lighter;
 }
 
+.admin-buttons {
+  padding-right: 25px;
+}
+
+.header-right-bar li a :hover{
+  color: #052b63;
+}
+
+.admin-buttons li a :hover{
+  color: #06ddf5;
+}
+
 .header-right-bar {
   list-style: none;
   display: flex;
