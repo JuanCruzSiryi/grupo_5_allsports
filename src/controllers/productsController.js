@@ -23,7 +23,7 @@ const productsController = {
   },
   store: (req, res) => {
     let products = productsController.getProducts();
-    let image = req.file? req.file.filename : "default.jpg";
+    let image = req.file? req.file.filename : "default-product.png";
 
     console.log("body: ", req.body);
 
@@ -55,14 +55,19 @@ const productsController = {
   },
   update: (req, res) => {
     let productId = req.params.id;
-    console.log("body: ", req.body);
+    // console.log("body: ", req.body);
     let products = productsController.getProducts();
 
     products.forEach((product, index) => {
       if (product.id == productId) {
-        product.name = req.body.nameProduct || "sin nombre";
-        product.description = req.body.descProduct || "sin descripcion";
-        product.price = req.body.priceProduct || 0;
+        product.name = req.body.nameProduct || product.name;
+        product.description = req.body.descProduct || product.description;
+        product.price = req.body.priceProduct || product.price;
+        product.image = req.file? req.file.filename : product.image,
+        product.category = req.body.categoryProduct || product.category,
+        product.color = req.body.colorProduct || product.color,
+        product.size = req.body.sizeProduct || product.size,
+        product.available = true
 
         products[index] = product;
       }

@@ -5,7 +5,7 @@
     "description": "Las nuevas ADIDAS GRAN PRIX, cuentan con la última tecnología en materiales, un diseño ultra moderno y su suela air top es ideal para running",
     "category": "Hombre",
     "price": 36217,
-    "image": "images/zapa-adidas-azul.jpg",
+    "image": "zapa-adidas-azul.jpg",
     "color": "Azul",
     "size": 40,
     "available": true
@@ -16,7 +16,7 @@
     "description": "Las historicas ADIDAS GALAXI 5, son tu mejor opción para tu out fit",
     "category": "Mujer",
     "price": 48610,
-    "image": "images/zapa-adidas-blanca.jpg",
+    "image": "zapa-adidas-blanca.jpg",
     "color": "Blanco",
     "size": 43,
     "available": false
@@ -27,7 +27,7 @@
     "description": "descripcion de las Nike Jordan 2",
     "category": "Female",
     "price": "61500",
-    "image": "http://dummyimage.com/182x100.png/ff4444/ffffff",
+    "image": "default-product.png",
     "color": "Crimson",
     "size": 42,
     "available": true
@@ -38,7 +38,7 @@
     "description": "et eros vestibulum ac est lacinia nisi venenatis tristique",
     "category": "Male",
     "price": 73150,
-    "image": "http://dummyimage.com/230x100.png/dddddd/000000",
+    "image": "default-product.png",
     "color": "Blue",
     "size": 40,
     "available": false
@@ -49,7 +49,7 @@
     "description": "tortor id nulla ultrices aliquet maecenas leo",
     "category": "Female",
     "price": 45720,
-    "image": "http://dummyimage.com/185x100.png/cc0000/ffffff",
+    "image": "default-product.png",
     "color": "Green",
     "size": 42,
     "available": false
@@ -60,7 +60,7 @@
     "description": "vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam",
     "category": "Male",
     "price": 56700,
-    "image": "http://dummyimage.com/213x100.png/5fa2dd/ffffff",
+    "image": "default-product.png",
     "color": "Aquamarine",
     "size": 40,
     "available": true
@@ -71,7 +71,7 @@
     "description": "luctus et ultrices posuere cubilia curae duis faucibus accumsan odio",
     "category": "Female",
     "price": 39000,
-    "image": "http://dummyimage.com/239x100.png/dddddd/000000",
+    "image": "default-product.png",
     "color": "Yellow",
     "size": 39,
     "available": false
@@ -82,7 +82,7 @@
     "description": "justo morbi ut odio cras mi pede malesuada in imperdiet",
     "category": "Female",
     "price": 37500,
-    "image": "http://dummyimage.com/167x100.png/ff4444/ffffff",
+    "image": "default-product.png",
     "color": "Fuscia",
     "size": 43,
     "available": false
@@ -93,7 +93,7 @@
     "description": "odio cras mi pede malesuada in imperdiet et",
     "category": "Male",
     "price": 81910,
-    "image": "http://dummyimage.com/236x100.png/cc0000/ffffff",
+    "image": "default-product.png",
     "color": "Orange",
     "size": 41,
     "available": false
@@ -104,7 +104,7 @@
     "description": "luctus ultricies eu nibh quisque id justo",
     "category": "Female",
     "price": 60200,
-    "image": "http://dummyimage.com/121x100.png/cc0000/ffffff",
+    "image": "default-product.png",
     "color": "Teal",
     "size": 38,
     "available": false
@@ -115,7 +115,7 @@
     "description": "nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
     "category": "Male",
     "price": 68430,
-    "image": "http://dummyimage.com/148x100.png/cc0000/ffffff",
+    "image": "default-product.png",
     "color": "Maroon",
     "size": 41,
     "available": true
@@ -126,7 +126,7 @@
     "description": "libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu",
     "category": "Male",
     "price": 44350,
-    "image": "http://dummyimage.com/110x100.png/5fa2dd/ffffff",
+    "image": "default-product.png",
     "color": "Turquoise",
     "size": 43,
     "available": true
@@ -137,7 +137,7 @@
     "description": "lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur",
     "category": "Female",
     "price": 44600,
-    "image": "http://dummyimage.com/208x100.png/dddddd/000000",
+    "image": "default-product.png",
     "color": "Khaki",
     "size": 35,
     "available": true
@@ -148,7 +148,7 @@
     "description": "et tempus semper est quam pharetra magna ac consequat metus sapien ut",
     "category": "Male",
     "price": 72820,
-    "image": "http://dummyimage.com/247x100.png/dddddd/000000",
+    "image": "default-product.png",
     "color": "Teal",
     "size": 37,
     "available": true
@@ -159,7 +159,7 @@
     "description": "quis orci eget orci vehicula condimentum curabitur",
     "category": "Female",
     "price": "89100",
-    "image": "http://dummyimage.com/107x100.png/5fa2dd/ffffff",
+    "image": "default-product.png",
     "color": "Maroon",
     "size": 41,
     "available": false

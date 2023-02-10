@@ -13,7 +13,7 @@
         </div>
 
         <div class="content-box-register">
-          <form method="post" action="/products/create">
+          <form method="post" action="/products/create" enctype="multipart/form-data">
             <div>
               <label for="nameProduct">Ingresar nombre</label>
               <input type="text" name="nameProduct" id="nameProduct">
@@ -23,8 +23,8 @@
               <input type="text" name="descProduct" id="descProduct">
             </div>
             <div>
-              <label for="imgProduct">Ingresar imagen</label>
-              <input type="file" name="imgProduct" id="imgProduct">
+              <label for="image">Ingresar imagen</label>
+              <input type="file" name="image" id="image">
             </div>
             <div class="color-product">
               <label for="colorsProduct">Colores disponibles</label>
