@@ -158,7 +158,7 @@
     "name": "NIKE 2023",
     "description": "quis orci eget orci vehicula condimentum curabitur",
     "category": "Female",
-    "price": 89100,
+    "price": "89100",
     "image": "http://dummyimage.com/107x100.png/5fa2dd/ffffff",
     "color": "Maroon",
     "size": 41,

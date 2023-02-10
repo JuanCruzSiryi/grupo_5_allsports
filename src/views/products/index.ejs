@@ -15,11 +15,13 @@
             <div class="product">
               
               <img class= "image" src="<%= product.image %>" alt="<%= product.image %>">
-
-              <h4 class="name"> <%= product.name %> </h4>
-              
+            
+            <div class="first-date"> 
+              <h4 class="name"> <%= product.name %> </h4> 
               <p class="price"> Precio: <%= product.price %></p>              
-             <div class="other-date"> 
+            </div>
+              
+            <div class="other-date"> 
               <p class="category"> Categoría: <%= product.category %></p>
               <p class="color"> Color: <%= product.color %></p> 
               <p class="size"> Talle: <%= product.size %> </p>

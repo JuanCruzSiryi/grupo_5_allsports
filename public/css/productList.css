@@ -12,6 +12,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 .blank-field{
     text-align: center;
     padding: 2%;
+    color: darkblue;
 }
 
 .product{     
@@ -29,6 +30,8 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     border: solid 2px grey;
     border-radius: 5%;
     margin: 5%;
+    box-shadow: 10px 5px 5px teal;
+
 }
 
 .image:hover{
@@ -65,22 +68,32 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 .category {
     color: darkblue;
     font-size: 12px;
+    padding: 5%;
 }
 
 .color {
     color: darkblue;
     font-size: 12px;
+    padding: 5%;
 }
+
 
 .size {
     color: darkblue;
     font-size: 12px;
+    padding: 5%;
 }
+
+.first-date{
+    margin: auto;
+}
+
+
 
 .other-date{
     display: flex;
     margin: auto;
-    flex-wrap: wrap;
+
 }
 
 .description {
@@ -118,101 +131,56 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 @media (min-width: 768px){
    
-    .imageList{
-        display: block;
-        margin: 0;
-        padding: 2%;
+    .blank-field h3{
+        font-size: 24px;
     }
 
-     .column1List {    
-        display: flex;
-        padding: 4%;
-        width: 50%;
-        font-size: 28px;
-        align-items: center;
-    }  
-    .product-logoList{
-        margin: 0% 0% 0% 100%;
-    }
-
-    .waistList{
-        width: 100%;  
-    }
-
-    .waistList h3 {
-            font-size: 20px;
-    }
-
-    .waistList select{    
-        height: 100%;
-        width: 230%;
-        font-size: 16px;
-        text-align: end;
-    }
-
-    .descriptionList{
-        width: 120%;
-        padding: 10%;
-    }
-
-    .description-nameList{
+    .other-date{
+        display: inline;
+    } 
+ 
+    .name{
         font-size: 24px;
     }
     
-    .description-priceList{
+    .price{
         font-size: 24px;
     }
 
-    .description-codeList{
-        font-size:16px;
+    .category{
+        font-size:18px;
     }
 
-    .column2List {    
+    
+    .color{
+        font-size:18px;
+    }
+    
+    .size{
+        font-size:18px;
+    }
+    
+    .description{    
         display: flex;
-        flex-wrap: wrap;
-        width: 130%;
-        align-items: flex-end;
+        width: 120%;
+        font-size: 16px;
+        justify-content: space-evenly;
+        margin: auto;
     }
 
-    .detail-buttonList button {
-        height: 30px;
+
+    .detail-button button {
+        height: 40px;
         font-size: 16px;
     }
 
 
-    .detailList h4{    
-        width: 128%;
-        font-size: 18px;
-    }  
-
-/* -------color---- */
-
-    .colorList{
-        width: 100%;
-        margin: 0% 0% 0% 0%;
-    }
-
-
-    .colorList h3{
-        font-size: 20px;
-        margin: -10% 10% -30% 0%;
-}
-
-
-}
   
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
-    .columnList {
-    width: 100%;
-    margin: 0%;
-    padding: 10%;
-    }
 
     .detailList h4{    
         padding: 5%;
         }  
-
-
 }
