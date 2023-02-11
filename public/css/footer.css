@@ -1,6 +1,13 @@
 footer {
   background-color: #1259c3;
-  color: aliceblue;
+  padding-bottom: 20px;
+}
+
+h4 {
+  text-align: center;
+  font-size: 12px;
+  font-weight: lighter;
+  color: rgb(223, 240, 255);
 }
 
 .footer-div-icon {
@@ -16,16 +23,17 @@ footer {
 }
 
 .footer-title {
+  font-weight: lighter;
   text-align: center;
-  color: black;
-  margin-bottom: 15px;
+  color: white;
+  margin-bottom: 5px;
 }
 
 .footer-text {
   text-align: center;
   font-size: 12px;
   font-weight: lighter;
-  color: white;
+  color: rgb(223, 240, 255);
 }
 
 .footer-logo {
@@ -45,6 +53,16 @@ footer {
   justify-content: flex-start;
 }
 
+.footer-div-second {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 5px;
+  border-top: solid 2px white;
+}
+
 .footer-div ul {
   list-style: none;
 }
@@ -55,17 +73,42 @@ footer {
 
 .footer-div ul li a{
   font-size: 20px;
+  color: rgb(223, 240, 255);
+}
+.footer-text:hover{
+  font-size: 13px;
+  color: white;
 }
 
 .social-facebook :hover{
-  color: #003688;
+  color: white;
+  font-size: 23px;
 }
 .social-instagram :hover{
-  color: #ff7029;
+  color: #ff297f;
+  font-size: 23px;
 }
 .social-twiter :hover{
   color: #3bbeff;
+  font-size: 23px;
 }
+
+.icon-container {
+  width: 35px;
+  height: 35px;
+  /* background-color: #1259c3; */
+  border-radius: 50%;
+  
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container:hover {
+  background-color: #052b63;
+}
+
 
 
 
@@ -73,12 +116,21 @@ footer {
 
   footer .footer-main-div{
     display: flex;
+    margin-bottom: 30px;
+    padding-top: 20px;
   }
 
   footer .footer-div {
     display: flex;
     flex-direction: column;
     width: 25%;
+  }
+  footer .footer-div .footer-div-second {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: solid 2px rgb(223, 240, 255);
+    padding-top: 10px;
   }
 
   footer .footer-icon:hover{
@@ -89,4 +141,10 @@ footer {
     padding-left: 0px;
   }
 
+  .footer-title {
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 15px;
+
+  }
 }
