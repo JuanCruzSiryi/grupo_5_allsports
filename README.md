@@ -16,6 +16,8 @@
 
     6.	Maximiliano Di Giampietro, 28 años, actualmente solo estudio. Me gusta siempre aprender cosas nuevas y soy muy proactivo, con muchas ganas de progresar con mi equipo de trabajo.
 
+    7. Alicia del Carmen Albornoz, 42 años, psicóloga. Actualmente trabajo como community manager. Siempre me ha atraído la programación desde que hice mis primeras casitas con Logo en la escuela, pero siempre la he visto como una especie de magia, así que ahora me encantaría  empezar a hacer mis propios encantamientos.
+
 - Agregar listado en README.md con 5 sitios de referencia y por qué fueron elegidos
 
     Sitio: https://www.dexter.com.ar/ : nos gustó la facilidad y la simplicidad de la página. El potencial cliente tiene fácil accesibilidad para ver las secciones. Mucha claridad a la hora de ver y conocer los productos.
@@ -59,6 +61,8 @@ LINK DE TRELLO SPRINT 1: https://trello.com/b/3XxBkR9M/sprint-1
 LINK DE TRELLO SPRINT 2: https://trello.com/b/w4nUES3c/sprint-2
 
 LINK DE TRELLO SPRINT 3: https://trello.com/b/DPHmEn5d/sprint-3
+
+LINK DE TRELLO SPRINT 4: https://trello.com/b/8H9GEGCu/sprint-4
 
 
 GUÍA DE COLORES Y FUENTES:

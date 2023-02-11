@@ -18,14 +18,12 @@ const productsController = {
   create: (req, res) => {
     res.render('products/create', {
       title: "Crear producto",
-      stylesheetFile: "productList.css",
+      stylesheetFile: "registerProduct.css"
     });
   },
   store: (req, res) => {
     let products = productsController.getProducts();
     let image = req.file? req.file.filename : "default-product.png";
-
-    console.log("body: ", req.body);
 
     let newProduct = {
       "id": uuidv4(),
@@ -91,8 +89,6 @@ const productsController = {
     let productId = req.params.id;
     let products = productsController.getProducts();
     let newProducts = products.filter(product => product.id != productId)
-
-    console.log("producto a borrar: ", productId, products);
 
     fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, "  "));
 

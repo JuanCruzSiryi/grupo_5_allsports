@@ -121,9 +121,8 @@ main {
   display: block;
 }
 
-.content-box-register form .color-product input {
-  width: 30px;
-  height: 30px;
+.content-box-register form .color-product select {
+  border-radius: 6px;
 }
 
 .content-box-register form .size-product {
