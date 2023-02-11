@@ -9,11 +9,18 @@
 
 main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148))}
 
-.blank-field{
+.blank-field h3{
     text-align: center;
     padding: 2%;
     color: darkblue;
+    display: inline;
 }
+
+.create-button{
+    margin: 5% 5% 5%;
+}
+
+
 
 .product{     
     width: 100%;
@@ -104,13 +111,15 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     display: contents;
 }
 
+
+
 .detail-button{
     margin:auto;
 }
 
 .detail-button button{
     width: 35vw;
-    height: 23px;
+    height: 25px;
     font-size: 13px;
     color: white;
     font-weight: bold;
@@ -170,6 +179,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 
 
     .detail-button button {
+        width: 170px;
         height: 40px;
         font-size: 16px;
     }
