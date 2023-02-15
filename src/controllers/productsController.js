@@ -55,7 +55,7 @@ const productsController = {
     let productId = req.params.id;
     let product = productsController.getProducts().find((product) => product.id == productId);
 
-    res.render("../views/products/edit", {
+    res.render("../views/products/productEdit", {
       title: "Mi product",
       stylesheetFile: "editProduct.css",
       product

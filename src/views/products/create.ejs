@@ -57,8 +57,12 @@
               <input type="text" name="brandProduct" id="brandProduct">
             </div>
             <div>
-              <label for="categoryProduct">Categoría</label>
-              <input type="text" name="categoryProduct" id="categoryProduct">
+              <label for="priceProduct">Modificar categoría</label>
+              <select name="categoryProduct" id="categoryProduct">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Niños">Niños</option>
+              </select>
             </div>
             <div>
               <label for="priceProduct">Ingresar precio</label>
@@ -67,6 +71,10 @@
 
             <div class="register-button">
                 <button type="submit">CREAR PRODUCTO</button>
+            </div>
+
+            <div class="register-button">
+              <button type=""><a href="/products/">VOLVER</a></button>
             </div>
 
           </form>

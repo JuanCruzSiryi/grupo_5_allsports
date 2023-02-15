@@ -169,6 +169,10 @@ main {
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
 
+.register-button button a{
+  color: white
+}
+
 .register-button button:hover {
     background-color: rgb(240, 237, 237)
 }
