@@ -42,8 +42,8 @@ const productsController = {
       "price": req.body.priceProduct || 0,
       "image": image,
       "category": req.body.categoryProduct || "Hombre",
-      "color": req.body.colorProduct || "Azul",
-      "size": req.body.sizeProduct || 40,
+      "color": req.body.color || "Azul",
+      "size": req.body.talles || 40,
       "available": true
     };
 
@@ -73,8 +73,8 @@ const productsController = {
         product.price = req.body.priceProduct || product.price;
         product.image = req.file? req.file.filename : product.image,
         product.category = req.body.categoryProduct || product.category,
-        product.color = req.body.colorProduct || product.color,
-        product.size = req.body.sizeProduct || product.size,
+        product.color = req.body.color || product.color,
+        product.size = req.body.talles || product.size,
         product.available = true
 
         products[index] = product;
