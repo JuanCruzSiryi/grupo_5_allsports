@@ -218,7 +218,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: darkblue;
     text-align: center;
     font-style: italic;
- 
+    width: 130%;
 } 
 
 
@@ -229,6 +229,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     .image{
         display: block;
         margin: 22px;
+        width: 100%;
     }
 
      .column1 {    
@@ -262,25 +263,32 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     .waist {
         width: 110%;}
     
-     .waist h3 select{
-        font-size: 20px;     
-    }
+     .waist h3 {
+        font-size: 17px;     
+    }   
     
-
+    select {
+    font-size: 15px;
+    width: 50px;
+    }
 
     .detail-button button {
         height: 30px;
         font-size: 16px;
     }
 
-    .detail h4{    
-        width: 128%;
+    .detail h4{     
         font-size: 17px;
-        margin-top: -35px;
-    }  
+        position: absolute;
+        width: 171px;
+        margin: 0% 0% 18% 74%;
+        }  
 
+    .detail-button button{
+        margin-bottom: 15px;
+        width: 190px;
+    }
 }
-
   
 
 /* -------- desktop------- */
@@ -296,8 +304,13 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     }
 
     .detail h4{    
-        text-align: center;
+        position: absolute;
+    width: 285px;
+    margin: 0% 0% 21% 66%;
         }  
 
-
+    .detail-button button{
+        margin-bottom: 15px;
+        width: 230px;
+    }
 }
