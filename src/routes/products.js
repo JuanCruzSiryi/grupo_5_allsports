@@ -19,6 +19,9 @@ router.put('/products/:id/edit', upload.single("image"), productsController.upda
 router.get('/products/:id/delete', productsController.delete);
 router.delete('/products/:id/delete', productsController.destroy);
 
+/* ver producto */
+router.get('/products/:id', productsController.show);
+
 /* END CRUD */
 
 router.get('/productDetail', productsController.products);

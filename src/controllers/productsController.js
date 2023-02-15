@@ -11,8 +11,18 @@ const productsController = {
   index: (req, res) => {
     res.render("../views/products/index", {
       title: "Products List",
-      stylesheetFile: "productList.css",
+      stylesheetFile: "/products/index.css",
       productsList: productsController.getProducts(),
+    });
+  },
+  show: (req, res) => {
+    let productId = req.params.id;
+    let product = productsController.getProducts().find((product) => product.id == productId);
+
+    res.render("products/show", {
+      title: "Mi Producto",
+      stylesheetFile: "/products/show.css",
+      product
     });
   },
   create: (req, res) => {

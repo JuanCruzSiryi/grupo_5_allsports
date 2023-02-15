@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+
+      
+      <div class="main-container">
+        <div class="product-title">
+          <button 
+            onClick="location.href='/products'"
+            type="submit"
+            class="create-button"
+          >
+            Atras
+          </button>
+
+          <h4 class="name"><%= product.name %></h4>
+        </div>
+        <div class="product-container">
+          <img
+          class="image"
+          src="/images/<%= product.image %>"
+          alt="product-image.jpg"
+          />
+
+          <div class="product-information">
+            <p class="price">Precio: <%= product.price %></p>
+            <p class="category">Categoría: <%= product.category %></p>
+            <p class="color">Color: <%= product.color %></p>
+            <p class="size">Talle: <%= product.size %></p>
+
+            <div class=" description desktop-description">
+              <%= product.description %>
+            </div>
+            <div class="detail-button desktop-buttons">
+              <button type="submit">
+                <a href="/products/<%= product.id %>/edit">Editar</a>
+              </button>
+    
+              <button type="submit">
+                <a href="/products/<%= product.id %>/delete">Eliminar</a>
+              </button>
+            </div>
+          </div>
+          
+        </div>
+        <p class="description mobile-buttons">
+          <%= product.description %>
+        </p>
+
+
+        <div class="detail-button mobile-buttons">
+          <button type="submit">
+            <a href="/products/<%= product.id %>/edit">Editar</a>
+          </button>
+
+          <button type="submit">
+            <a href="/products/<%= product.id %>/delete">Eliminar</a>
+          </button>
+        </div>
+
+      </div>
+
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>
