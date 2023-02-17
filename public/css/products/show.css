@@ -26,7 +26,7 @@ body {
 }
 
 .name {        
-  color: darkblue;
+  color: #052b63;
   font-size: 12px;
   text-align: center;
   background: gainsboro;
@@ -38,37 +38,37 @@ body {
 
 .p {
   font-size: 13px;
-  color: darkblue;
+  color: #052b63;
   width: max-content;
   
 }
 
 .price {
-  color: rgb(89, 49, 126);
+  color: #052b63;
   font-size: 13px;
   font-weight: bold;
 }  
 
 .category {
-  color: darkblue;
+  color: #052b63;
   font-size: 12px;
   padding: 5px 0px 5px 0px;
 }
 
 .color {
-  color: darkblue;
+  color: #052b63;
   font-size: 12px;
   padding: 5px 0px 5px 0px;
 }
 
 .size {
-  color: darkblue;
+  color: #052b63;
   font-size: 12px;
   padding: 5px 0px 5px 0px;
 }
 
 .description {
-  color: darkblue;
+  color: #052b63;
   font-size: 12px;
   font-style: italic;
   padding: 5px 20px 5px 20px;

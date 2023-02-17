@@ -18,6 +18,23 @@ body {
   background: linear-gradient(to right, rgb(196, 212, 255), rgb(255, 218, 203));
 }
 
+.principal-box input {
+  color: #052b63;
+  border: solid 1px #052b63;
+}
+.principal-box select {
+  color: #052b63;
+  border: solid 1px #052b63;
+}
+
+.principal-box input[type="file"] {
+  border: none;
+}
+
+label {
+  color: #052b63;
+}
+
 .principal-box {
     height: 90%;
     display: flex;
@@ -92,14 +109,14 @@ body {
 
 .form-title {
   font-weight: bold;
-  color: rgb(3, 3, 113);
+  color: #052b63;
   font-size: 20px;
   padding-left: 6%;
 }
 
 .title-register {
     font-weight: bold;
-    color: rgb(3, 3, 113);
+    color: #052b63;
     font-size: 20px;
 }
 
