@@ -41,9 +41,10 @@ const productsController = {
       "description": req.body.descProduct || "sin descripcion",
       "price": req.body.priceProduct || 0,
       "image": image,
-      "category": req.body.categoryProduct || "Hombre",
-      "color": req.body.color || "Azul",
-      "size": req.body.talles || 40,
+      "category": req.body.categoryProduct || "sin categoria",
+      "brand": req.body.brand || "sin marca",
+      "color": req.body.color || "sin color",
+      "size": req.body.talles || "sin talle",
       "available": true
     };
 
@@ -73,6 +74,7 @@ const productsController = {
         product.price = req.body.priceProduct || product.price;
         product.image = req.file? req.file.filename : product.image,
         product.category = req.body.categoryProduct || product.category,
+        product.brand = req.body.brand || product.brand,
         product.color = req.body.color || product.color,
         product.size = req.body.talles || product.size,
         product.available = true
