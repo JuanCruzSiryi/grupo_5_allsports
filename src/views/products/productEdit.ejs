@@ -3,62 +3,111 @@
   <%- include('../partials/head') %>
   <body>
     <%- include ("../partials/header.ejs") %>
+    <div class="title-navbar">
+      <div class="back-button">
+        <button type=""><a href="/products/">Atras</a></button>
+      </div>
+      <h2 class="form-title">EDITAR PRODUCTO</h2>
+    </div>
+
     <main>
       <div class="principal-box">
 
-        <div class="title">
+        <!-- <div class="title">
             <h2 class="title-register">EDITAR PRODUCTO</h2>
-        </div>
+        </div> -->
 
         <div class="content-box-register">
-          <form action="/products" method="POST" enctype="multipart/form-data">
+          <form 
+            method="post"
+            action="/products/<%=product.id %>/edit/?_method=PUT"
+            enctype="multipart/form-data"
+          >
             <div>
               <label for="nameProduct">Modificar nombre</label>
-              <input type="text" name="nameProduct" id="nameProduct">
+              <input 
+                type="text" 
+                name="nameProduct" 
+                id="nameProduct" 
+                value="<%= product.name %>"
+              >
             </div>
             <div class="desc-product">
               <label for="descProduct">Modificar descripción</label>
-              <input type="text" name="descProduct" id="descProduct">
+              <input 
+                type="text" 
+                name="descProduct" 
+                id="descProduct" 
+                value="<%= product.description %>"
+              >
             </div>
             <div>
               <label for="imgProduct">Modificar imagen</label>
               <input type="file" name="imgProduct" id="imgProduct">
             </div>
             <div class="color-product">
-              <label for="colorsProduct">Modificar Color</label>
+              <label for="colorsProduct">Modificar colores</label>
               <br>
-              <input type="color" name="colorProduct1" id="colorProduct1">
-              <input type="color" name="colorProduct2" id="colorProduct2">
-              <input type="color" name="colorProduct3" id="colorProduct3">
-              <input type="color" name="colorProduct4" id="colorProduct4">
+              <select name="color" id="color">
+                <option value="Azul" <%= product.color == "Azul" ? "selected" : "" %>> Azul</option>
+                <option value="Blanco" <%= product.color == "Blanco" ? "selected" : "" %>> Blanco</option>
+                <option value="Negro" <%= product.color == "Negro" ? "selected" : "" %>> Negro</option>
+                <option value="Rojo" <%= product.color == "Rojo" ? "selected" : "" %>> Rojo</option>
+              </select>
             </div>
             <div class="size-product">
-              <label for="sizeProduct">Modificar Talle</label>
+              <label for="sizeProduct">Modificar talles</label>
               <br>
-              <label class="checkSize">35 <input type="checkbox" name="sizeProduct" id="sizeProduct1"></label>
-              <label class="checkSize">36 <input type="checkbox" name="sizeProduct" id="sizeProduct2"></label>
-              <label class="checkSize">37 <input type="checkbox" name="sizeProduct" id="sizeProduct3"></label>
-              <label class="checkSize">38 <input type="checkbox" name="sizeProduct" id="sizeProduct4"></label>
-              <label class="checkSize">39 <input type="checkbox" name="sizeProduct" id="sizeProduct5"></label>
-              <label class="checkSize">40 <input type="checkbox" name="sizeProduct" id="sizeProduct6"></label>
-              <label class="checkSize">41 <input type="checkbox" name="sizeProduct" id="sizeProduct7"></label>
-              <label class="checkSize">42 <input type="checkbox" name="sizeProduct" id="sizeProduct8"></label>
-              <label class="checkSize">43 <input type="checkbox" name="sizeProduct" id="sizeProduct9"></label>
-              <label class="checkSize">44 <input type="checkbox" name="sizeProduct" id="sizeProduct10"></label>
-              <label class="checkSize">45 <input type="checkbox" name="sizeProduct" id="sizeProduct11"></label>
+              <select name="talles" id="talles">
+                <option value="36 (EUR 37)" <%= product.size == "36 (EUR 37)" ? "selected" : "" %>> 36 (EUR 37) </option>
+                <option value="37 (EUR 38)" <%= product.size == "37 (EUR 38)" ? "selected" : "" %>> 37 (EUR 38) </option>
+                <option value="38 (EUR 39)" <%= product.size == "38 (EUR 39)" ? "selected" : "" %>> 38 (EUR 39) </option>
+                <option value="39 (EUR 40)" <%= product.size == "39 (EUR 40)" ? "selected" : "" %>> 39 (EUR 40) </option>
+                <option value="40 (EUR 41)" <%= product.size == "40 (EUR 41)" ? "selected" : "" %>> 40 (EUR 41) </option>
+                <option value="41 (EUR 42)" <%= product.size == "41 (EUR 42)" ? "selected" : "" %>> 41 (EUR 42) </option>
+                <option value="42 (EUR 43)" <%= product.size == "42 (EUR 43)" ? "selected" : "" %>> 42 (EUR 43) </option>
+                <option value="43 (EUR 44)" <%= product.size == "43 (EUR 44)" ? "selected" : "" %>> 43 (EUR 44) </option>
+                <option value="44 (EUR 45)" <%= product.size == "44 (EUR 45)" ? "selected" : "" %>> 44 (EUR 45) </option>
+                <option value="45 (EUR 46)" <%= product.size == "45 (EUR 46)" ? "selected" : "" %>> 45 (EUR 46) </option>
+              </select>
+            </div>
+            <div>
+              <label for="brand">Modificar marca</label>
+              <input 
+                type="text" 
+                name="brand" 
+                id="brand"
+                value="<%= product.brand %>"
+              >
+            </div>
+            <div>
+              <label for="priceProduct">Modificar categoría</label>
+              <select name="categoryProduct" id="categoryProduct">
+                <option value="Masculino" <%= product.category == "Masculino" ? "selected" : "" %> >Masculino</option>
+                <option value="Femenino" <%= product.category == "Femenino" ? "selected" : "" %> >Femenino</option>
+                <option value="Niños" <%= product.category == "Niños" ? "selected" : "" %> >Niños</option>
+              </select>
             </div>
             <div>
               <label for="priceProduct">Modificar precio</label>
-              <input type="number" name="priceProduct" id="priceProduct">
+              <input 
+                type="number" 
+                name="priceProduct" 
+                id="priceProduct" 
+                value="<%= product.price %>">
             </div>
 
             <div class="register-button">
-                <button type="submit">APLICAR</button>
+                <button type="submit">Guardar</button>
             </div>
 
-            <div class="register-button">
-              <button type="submit">LIMPIAR</button>
-          </div>
+            <!-- <div class="register-button">
+              <button type="reset">LIMPIAR</button>
+            </div> -->
+
+            <!-- <div class="register-button">
+              <button type=""><a href="/products/">VOLVER</a></button>
+            </div> -->
 
           </form>
         </div>

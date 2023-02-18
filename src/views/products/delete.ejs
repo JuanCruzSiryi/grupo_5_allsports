@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+      <div class="principal-box">
+
+        <div class="title">
+            <h2 class="title-register">¿QUIERES BORRAR EL PRODUCTO?</h2>
+        </div>
+
+        <div class="content-box-register">
+          <form method="post" action="/products/<%=product.id %>/delete?_method=DELETE">
+            <div>
+              <label for="nameProduct">Nombre</label>
+              <input type="text" name="nameProduct" value="<%= product.name %>">
+            </div>
+            <div class="desc-product">
+              <label for="descProduct">Descripción</label>
+              <input type="text" name="descProduct" id="descProduct" value="<%= product.description %>">
+            </div>
+            <div>
+              <!-- <label for="imgProduct">Imagen</label>
+              <input type="file" name="imgProduct" id="imgProduct">
+            </div>
+            <div>
+              <label for="priceProduct">Precio</label>
+              <input type="number" name="priceProduct" id="priceProduct" value="<%= product.price %>">
+            </div> -->
+            <div class="register-button">
+              <button type=""><a href="/products/">Cancelar</a></button>
+            </div>
+
+            <div class="register-button">
+              <button type="submit">Borrar</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+  </body>
+</html>

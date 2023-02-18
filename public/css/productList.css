@@ -1,0 +1,196 @@
+* {
+    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ---------------------Main------------- */
+
+main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148))}
+
+.blank-field h3{
+    text-align: center;
+    padding: 2%;
+    color: darkblue;
+    display: inline;
+}
+
+.create-button{
+    margin: 5% 5% 5%;
+}
+
+
+
+.product{     
+    width: 100%;
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    border-style: ridge;
+    border-color:beige;
+}
+
+ /* --------------imagen--------- */
+.image{    
+    width: 30vw;
+    border: solid 2px grey;
+    border-radius: 5%;
+    margin: 5%;
+    box-shadow: 10px 5px 5px teal;
+
+}
+
+.image:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+    
+  }
+
+
+.name {        
+    color: darkblue;
+    font-size: 12px;
+    text-align: center;
+    background: gainsboro;
+    margin-bottom: 27%;
+    padding: 2%;
+    margin-top: auto;
+    border-radius: 5%;
+}
+
+.p {
+    font-size: 13px;
+    color: darkblue;
+    width: max-content;
+    
+}
+
+.price {
+    color: rgb(89, 49, 126);
+    font-size: 13px;
+    font-weight: bold;
+    display: grid;
+    align-content: space-evenly;}  
+
+.category {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
+}
+
+.color {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
+}
+
+
+.size {
+    color: darkblue;
+    font-size: 12px;
+    padding: 5%;
+}
+
+.first-date{
+    margin: auto;
+}
+
+
+
+.other-date{
+    display: flex;
+    margin: auto;
+
+}
+
+.description {
+    color: darkblue;
+    font-size: 12px;
+    font-style: italic;
+    padding: 5%;
+    display: contents;
+}
+
+
+
+.detail-button{
+    margin:auto;
+}
+
+.detail-button button{
+    width: 35vw;
+    height: 25px;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.delete-button button:hover {
+    background-color: rgb(240, 237, 237)
+}
+
+
+
+
+/* -------- tablet--------- */
+
+@media (min-width: 768px){
+   
+    .blank-field h3{
+        font-size: 24px;
+    }
+
+    .other-date{
+        display: inline;
+    } 
+ 
+    .name{
+        font-size: 24px;
+    }
+    
+    .price{
+        font-size: 24px;
+    }
+
+    .category{
+        font-size:18px;
+    }
+
+    
+    .color{
+        font-size:18px;
+    }
+    
+    .size{
+        font-size:18px;
+    }
+    
+    .description{    
+        display: flex;
+        width: 120%;
+        font-size: 16px;
+        justify-content: space-evenly;
+        margin: auto;
+    }
+
+
+    .detail-button button {
+        width: 170px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+
+}
+
+/* -------- desktop------- */
+@media (min-width: 1024px){
+
+    .detailList h4{    
+        padding: 5%;
+        }  
+}

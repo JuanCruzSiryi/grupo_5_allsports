@@ -23,6 +23,8 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     border: solid 2px grey;
     border-radius: 5%;
     margin: 32% 0% 0% 5%;
+    box-shadow: 10px 5px 5px teal;
+
 }
 
 .image:hover{
@@ -77,6 +79,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     color: darkblue;
     text-decoration: underline;
     font-size: 12px;
+    margin: auto;
  }
 
  select {
@@ -84,7 +87,7 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     border: none;
     font-size: 10px;
     padding: 5px;
-    width: 25px;
+    width: 45px;
  }
 
  .select:hover {
@@ -210,7 +213,10 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
 .detail h4{
     font-size: 10px;
     color: darkblue;
-    text-align: center;} 
+    text-align: center;
+    font-style: italic;
+    width: 130%;
+} 
 
 
 /* -------- tablet--------- */
@@ -219,8 +225,8 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
    
     .image{
         display: block;
-        margin: 0;
-        padding: 2%;
+        margin: 22px;
+        width: 100%;
     }
 
      .column1 {    
@@ -230,47 +236,37 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
         font-size: 28px;
         align-items: center;
     }  
-    .product-logo{
-        margin: 0% 0% 0% 100%;
-    }
-
-    .waist{
-        width: 100%;  
-    }
-
-    .waist h3 {
-            font-size: 20px;
-    }
-
-    .waist select{    
-        height: 100%;
-        width: 230%;
-        font-size: 16px;
-        text-align: end;
-    }
-
+  
     .description{
         width: 120%;
         padding: 10%;
     }
 
     .description-name{
-        font-size: 24px;
+        font-size: 20px;
     }
     
     .description-price{
-        font-size: 24px;
-    }
-
-    .description-code{
-        font-size:16px;
+        font-size: 20px;
     }
 
     .column2 {    
         display: flex;
         flex-wrap: wrap;
-        width: 130%;
+        margin-left: 12%;
         align-items: flex-end;
+    }
+
+    .waist {
+        width: 110%;}
+    
+     .waist h3 {
+        font-size: 17px;     
+    }   
+    
+    select {
+    font-size: 15px;
+    width: 50px;
     }
 
     .detail-button button {
@@ -278,54 +274,26 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
         font-size: 16px;
     }
 
+    .detail h4{     
+        font-size: 17px;
+        position: absolute;
+        width: 171px;
+        margin: 0% 0% 18% 74%;
+        }  
 
-    /* 
-    .amount{
-        width: 100%;
-        height: 26%;
+    .detail-button button{
+        margin-bottom: 15px;
+        width: 190px;
     }
-    .amount h3{
-     width: 100%;
-        font-size: 20px;
-    }
-
-    .amount select{
-        height: 35%;
-        width: 50%;
-        font-size: 16px;
-    }
-*/
-    .detail h4{    
-        width: 128%;
-        font-size: 18px;
-    }  
-
-/* -------color---- */
-
-    /* .color{
-        width: 100%;
-        margin: 0% 0% 0% 0%;
-    }
-
-
-.color h3{
-    font-size: 20px;
-    margin: -10% 10% -30% 0%;
-}
-
-.input-color{
-    width: 100%;
-}
-
-.button-white {
-    width: 115%;
-} */
-
 }
   
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
+
+    .image{
+        width: 100%;
+    }
     .column {
     width: 100%;
     margin: 0%;
@@ -333,8 +301,13 @@ main {background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 14
     }
 
     .detail h4{    
-        padding: 5%;
+        position: absolute;
+    width: 285px;
+    margin: 0% 0% 21% 66%;
         }  
 
-
+    .detail-button button{
+        margin-bottom: 15px;
+        width: 230px;
+    }
 }

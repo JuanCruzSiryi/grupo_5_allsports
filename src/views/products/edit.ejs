@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+      <div class="principal-box">
+        <div class="title">
+          <h2 class="title-register">EDITAR PRODUCTO</h2>
+        </div>
+
+        <div class="content-box-register">
+          <form
+            method="post"
+            action="/products/<%=product.id %>/edit/?_method=PUT"
+            enctype="multipart/form-data"
+          >
+            <div>
+              <label for="nameProduct">Modificar nombre</label>
+              <input
+                type="text"
+                name="nameProduct"
+                value="<%= product.name %>"
+              />
+            </div>
+            <div class="desc-product">
+              <label for="descProduct">Modificar descripción</label>
+              <input
+                type="text"
+                name="descProduct"
+                id="descProduct"
+                value="<%= product.description %>"
+              />
+            </div>
+            <div>
+              <label for="image">Modificar imagen</label>
+              <input type="file" name="image" id="image" />
+            </div>
+            <div class="color-product">
+              <label for="colorsProduct">Modificar Color</label>
+              <br />
+              <select name="color" id="color">
+                <option value="blue">Azul</option>
+                <option value="white">Blanco</option>
+                <option value="black">Negro</option>
+                <option value="red">Rojo</option>
+              </select>
+            </div>
+            <div class="size-product">
+              <label for="sizeProduct">Modificar Talle</label>
+              <br />
+              <select name="talles" id="talles">
+                <option value="36 (EUR 37)"> 36 (EUR 37) </option>
+                <option value="37 (EUR 38)"> 37 (EUR 38) </option>
+                <option value="38 (EUR 39)"> 38 (EUR 39) </option>
+                <option value="39 (EUR 40)"> 39 (EUR 40) </option>
+                <option value="40 (EUR 41)"> 40 (EUR 41) </option>
+                <option value="41 (EUR 42)"> 41 (EUR 42) </option>
+                <option value="42 (EUR 43)"> 42 (EUR 43) </option>
+                <option value="43 (EUR 44)"> 43 (EUR 44) </option>
+                <option value="44 (EUR 45)"> 44 (EUR 45) </option>
+                <option value="45 (EUR 46)"> 45 (EUR 46) </option>
+              </select>
+            </div>
+            <div>
+              <label for="priceProduct">Modificar precio</label>
+              <input
+                type="number"
+                name="priceProduct"
+                id="priceProduct"
+                value="<%= product.price %>"
+              />
+            </div>
+
+            <div class="register-button">
+              <button type="submit">APLICAR</button>
+            </div>
+
+            <div class="register-button">
+              <button type="submit">LIMPIAR</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>
