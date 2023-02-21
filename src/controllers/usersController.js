@@ -11,6 +11,12 @@ const usersController = {
       stylesheetFile: "login.css",
     });
   },
+  profile: (req, res) => {
+    res.render("../views/users/profile", {
+      title: "Profile",
+      stylesheetFile: "profile.css",
+    });
+  },
 };
 
 module.exports = usersController;
