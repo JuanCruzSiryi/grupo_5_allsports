@@ -1,70 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <%- include('../partials/head') %>
+<%- include('../partials/head') %>
+
   <body>
     <%- include('../partials/header') %>
-    <main class="main">
-      <section class="seccionPrincipal">
-        <div class="producto">
-          <img class="imageProducto" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
-          <p>Adidas Galaxy 5</p>
-          <p>$34000</p>
-          <p>AdiAzuDep</p>
-        </div>
-        <div class="column1">
+      <main class="main">
+        <section class="seccionPrincipal">
+          <div class="producto" id="producto">
+            <div>
+              <img class="imageProducto" src="/images/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
+              <div class="informacion">
+                <p>Adidas Galaxy 5</p>
+                <p>$34000</p>
+                <p>AdiAzuDep</p>
+                <!-- <div class="column1">
           <div class="icons">
             <div class="heart"> <i class="fa-regular fa-heart"></i></div>
             <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div>
-          </div>
-          <div class="informacion">
-            <div class="amount">
-              <button> Cantidad </button>
-              <select name="cantidad" id="cantidad">
-                <option value="1"> 1 </option>
-                <option value="2"> 2 </option>
-                <option value="3"> 3 </option>
-                <option value="4"> 4 </option>
-                <option value="5"> 5 </option>
-                <option value="6"> 6 </option>
-                <option value="7"> 7 </option>
-                <option value="8"> 8 </option>
-                <option value="9"> 9 </option>
-                <option value="10"> 10 </option>
-              </select>
-              <button>Comprar</button>
+          </div> -->
+                <div class="amount">
+                  <button> Cantidad </button>
+                  <select name="cantidad" id="cantidad">
+                    <option value="1"> 1 </option>
+                    <option value="2"> 2 </option>
+                    <option value="3"> 3 </option>
+                    <option value="4"> 4 </option>
+                    <option value="5"> 5 </option>
+                    <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                    <option value="8"> 8 </option>
+                    <option value="9"> 9 </option>
+                    <option value="10"> 10 </option>
+                  </select>
+                  <button>Comprar</button>
+                </div>
+              </div>
             </div>
-            <div class="pagos">
-              <nav class="main-navbar">
-                <ul class="mediosDePago">
-                  <li><a href="#">Tarjeta de Crédito</a></li>
-                  <li><a href="#">Tarjeta de Débito</a></li>
-                  <li><a href="#">Pago en Efectivo</a></li>
-                </ul>
+          </div>
+        </section>
+        <div class="pagos">
+          <p>Medios de Pago</p>
+          <img class="tarjetas" src="/images/tarjetas.PNG" alt="tarj"> </img>
+          </div>
+        <section class="seccionSecundaria">
+          <p>También te podría interesar</p>
+          <div class="productosInteres">
+            <div>
+              <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
+              <p>Adidas Court</p>
+              <p>$39000</p>
             </div>
-            </nav>
+            <div>
+              <img class="image" src="/images/zapa-adidas2.jpg" alt="Adidas Galaxy 5"> </img>
+              <p>Adidas Court Pro</p>
+              <p>$39500</p>
+            </div>
+            <div>
+              <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
+              <p>Adidas Court</p>
+              <p>$39000</p>
+            </div>
           </div>
-      </section>
-      <section class="seccionSecundaria">
-        <p>También te podría interesar</p>
-        <div class="productosInteres">
-          <div>
-            <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
-            <p>Adidas Court</p>
-            <p>$39000</p>
-          </div>
-          <div>
-            <img class="image" src="/images/zapa-adidas2.jpg" alt="Adidas Galaxy 5"> </img>
-            <p>Adidas Court Pro</p>
-            <p>$39500</p>
-          </div>
-          <div>
-            <img class="image" src="/images/zapa-adidas.jpg" alt="Adidas Galaxy 5"> </img>
-            <p>Adidas Court</p>
-            <p>$39000</p>
-          </div>
-        </div>
-      </section>
-    </main>
-    <%- include('../partials/footer') %>
+        </section>
+      </main>
+      <%- include('../partials/footer') %>
   </body>
+
 </html>
