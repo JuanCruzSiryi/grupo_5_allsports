@@ -14,94 +14,64 @@ main {
     padding: 15px;
 }
 
+.imageProducto {
+    width: 250px;
+    height: 300px;
+    border-radius: 20px 20px 0px 0px;
+    object-fit: cover;
+}
+
 .seccionPrincipal {
-    width: 100%;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
     flex-direction: row;
     padding: 2%;
+    margin-bottom: 20px;
+}
+
+.producto>div {
+    border: solid 1px blue;
+    border-radius: 20px;
+}
+
+.producto>div:hover {
+    box-shadow: 0px 0px 10px blueviolet;
+    background-color: #2D4263;
 }
 
 .informacion {
-    height: 150px;
+    height: 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    margin-top: 50%;
+    gap: 5px;
 }
 
-.informacion>h3:first-child {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.informacion button {
-    background-color: blueviolet;
-    width: 100px;
-    height: 35;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
-    font-weight: 300;
-    cursor: pointer;
-}
-
-.informacion button:hoover {
-    background-color: #2D4263;
-}
-
-.amount select {
-    margin-left: 30px;
-}
-
-.pagos {
+.amount {
     display: flex;
-    flex-direction: column;
-    margin: 50% 0% 0% 0%;
-}
-
-.pagos .mediosDePago {
-    flex-direction: column;
-    list-style: none;
-}
-
-.producto p {
-    text-align: left;
-    margin-left: 18%;
-    font-size: 13px;
-}
-
-.column1 {
-    display: flex;
-    flex-direction: row;
     justify-content: space-around;
-    text-align: left;
-    margin: 10% 0% 0% 0%;
 }
 
-.heart:hover {
-    color: (226, 43, 43);
-    box-shadow: 0px 0px 10px rgb(245, 4, 44);
+.amount button {
+    width: 20vw;
+    height: 20px;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
 
-.cart {
-    margin: 32% 5% 32% 5%;
+.tarjetas{
+    width: 30%;
+    height: 30%;
 }
 
-.cart:hover {
-    box-shadow: 0px 0px 10px blueviolet;
-}
-
-.imageProducto {
-    width: 70%;
-    border: solid 1px blue;
-    border-radius: 5%;
-    margin: 10% 0% 0% 5%;
-}
-
-.imageProducto:hover {
-    box-shadow: 0px 0px 10px blueviolet;
+.pagos{
+    font-size: 15px;
 }
 
 .seccionSecundaria {
@@ -128,21 +98,35 @@ main {
     box-shadow: 0px 0px 10px blueviolet;
 }
 
-@media (max-width: 768px) {
-
-    .pagos {
-        display: none;
-    }
-}
-
 @media (min-width: 768px) {
+    .imageProducto {
+        width: 50%;
+        height: 50%;
+        border: solid 1px blue;
+        border-radius: 5%;
+        margin: 10% 0% 0% 5%;
+    }
+    
     .seccionPrincipal {
-        width: 100%;
         display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
         flex-direction: row;
         padding: 2%;
+        margin-bottom: 20px;
     }
-
+    
+    .producto>div {
+        border: solid 1px blue;
+        border-radius: 20px;
+    }
+    
+    .producto>div:hover {
+        box-shadow: 0px 0px 10px blueviolet;
+        background-color: #2D4263;
+    }
+    
     .informacion {
         height: 150px;
         display: flex;
@@ -150,79 +134,30 @@ main {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        margin-top: 50%;
     }
-
-    .informacion>h3:first-child {
-        font-size: 12px;
-        font-weight: 300;
-    }
-
-    .informacion button {
-        background-color: blueviolet;
-        width: 100px;
-        height: 35;
-        border-radius: 10px;
-        border: none;
-        font-size: 18px;
-        font-weight: 300;
-        cursor: pointer;
-    }
-
-    .informacion button:hoover {
-        background-color: #2D4263;
-    }
-
+    
     .amount {
-        flex-direction: column;
-    }
-
-    .amount select {
-        margin-left: 15px;
-    }
-
-    .pagos {
         display: flex;
-        flex-direction: column;
-        margin: 50% 0% 0% 0%;
-    }
-
-    .producto p {
-        text-align: left;
-        margin-left: 18%;
-        font-size: 22px;
-    }
-
-    .column1 {
-        display: flex;
-        flex-direction: row;
         justify-content: space-around;
-        text-align: left;
-        margin: 10% 0% 0% 0%;
+    }
+    
+    .amount button {
+        width: 20vw;
+        height: 25px;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        border-radius: 6px;
+        background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+    }
+    
+    .tarjetas{
+        width: 20%;
+        height: 20%;
     }
 
-    .heart:hover {
-        color: (226, 43, 43);
-        box-shadow: 0px 0px 10px rgb(245, 4, 44);
-    }
-
-    .cart {
-        margin: 32% 5% 32% 5%;
-    }
-
-    .cart:hover {
-        box-shadow: 0px 0px 10px blueviolet;
-    }
-
-    .imageProducto {
-        width: 70%;
-        border: solid 1px blue;
-        border-radius: 5%;
-        margin: 10% 0% 0% 5%;
-    }
-
-    .imageProducto:hover {
-        box-shadow: 0px 0px 10px blueviolet;
+    .pagos{
+        font-size: 18px;
     }
 
     .seccionSecundaria {
@@ -230,7 +165,6 @@ main {
         margin-top: 5%;
         font-size: 22px;
     }
-
     .productosInteres {
         display: flex;
         flex-direction: row;
