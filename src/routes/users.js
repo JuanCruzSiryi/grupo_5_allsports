@@ -4,6 +4,7 @@ const router = express.Router();
 const usersController = require('../controllers/usersController');
 
 /* CRUD */
+router.get('/users', usersController.index);
 
 /* END CRUD */
 
