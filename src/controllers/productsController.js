@@ -87,7 +87,6 @@ const productsController = {
 
     res.redirect("/products");
   },
-
   delete: (req, res) => {
     let productId = req.params.id;
     let product = productsController.getProducts().find((product) => product.id == productId);
