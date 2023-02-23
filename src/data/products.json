@@ -178,5 +178,17 @@
     "color": "Azul",
     "size": 18,
     "available": false
+  },
+  {
+    "id": "263f0f6b-b8dd-4acd-82e4-a76473119e81",
+    "name": "sin nombre",
+    "description": "sin descripcion",
+    "price": 0,
+    "image": "product-1677172447799.png",
+    "category": "Masculino",
+    "brand": "sin marca",
+    "color": "Azul",
+    "size": "36 (EUR 37)",
+    "available": true
   }
 ]

@@ -13,7 +13,7 @@ body {
 
 /* --------------imagen--------- */
 .image{    
-  width: 40vw;
+  width: 30vw;
   border: solid 2px grey;
   border-radius: 5%;
   margin: 5%;
@@ -173,7 +173,7 @@ body {
       padding: 5%;
   }   */
   .image{    
-    width: 30vw;
+    width: 12vw;
     margin: 1% 5% 1% 5%;
   }
   .product-container a{
