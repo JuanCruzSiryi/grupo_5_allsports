@@ -33,15 +33,47 @@
           <button onClick="location.href='/productRegister'" type="submit" class="create-button">Create</button>
         </li> -->
       </ul>
-      <li>
-        <a href="/login" class="icon-container"><i class="fa-solid fa-user"></i></a>
+        <% if (locals.userLogged) { %>
+          <li>
+            <a href="/profile" class="icon-container">
+              <img src="/images/users/<%=locals.userLogged.image%>" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="/productCart" class="icon-container"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="#" class="icon-container"><i class="fa-regular fa-circle-question"></i></a>
+          </li>
+          <li>
+            <a href="/logout" class="icon-container"><i class="fa-solid fa-right-to-bracket"></i></a>
+          </li>
+        <% } else { %>
+          <li>
+            <a href="/login" class="icon-container"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li>
+            <a href="/productCart" class="icon-container"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+          <li>
+            <a href="#" class="icon-container"><i class="fa-regular fa-circle-question"></i></a>
+          </li>
+        <% } %>
+      <!-- <li>
+        <% if (locals.userLogged) { %>
+          <a href="/profile" class="icon-container">
+            <img src="/images/users/<%=locals.userLogged.image%>" alt="" />
+          </a>
+        <% } else { %>
+          <a href="/login" class="icon-container"><i class="fa-solid fa-user"></i></a>
+        <% } %>
       </li>
       <li>
         <a href="/productCart" class="icon-container"><i class="fa-solid fa-cart-shopping"></i></a>
       </li>
       <li>
         <a href="#" class="icon-container"><i class="fa-regular fa-circle-question"></i></a>
-      </li>
+      </li> -->
     </ul>
   </div>
 

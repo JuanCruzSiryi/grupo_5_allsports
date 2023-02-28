@@ -11,8 +11,8 @@ const mainController = {
     })
   },
   login: (req, res) => {
-    res.render("../views/users/login", {
-      title: "Login-main",
+    res.render("../views/auth/login", {
+      title: "Login",
       stylesheetFile: "login.css",
     });
   },
@@ -28,8 +28,13 @@ const mainController = {
           { maxAge: 1000 * 60 * 2 }
         );
       }
-      res.redirect('/profile')
+      res.redirect('/')
     }
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    res.clearCookie('userLogged');
+    return res.redirect('/')
   },
 }
 

@@ -140,6 +140,18 @@ input {
   justify-content: center;
 }
 
+.icon-container img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px #052b63;
+}
+
+.icon-container img:hover {
+  width: 35px;
+  height: 35px;
+}
+
 .icon-container:hover {
   background-color: #052b63;
 }
