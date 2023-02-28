@@ -14,7 +14,7 @@ router.get('/register', usersController.register);
 // EDICIÓN DE USUARIO
 
 // LOGIN DE USUARIO
-router.get('/login', usersController.login);
+// router.get('/login', usersController.login);
 
 // ELIMINAR USUARIO
 

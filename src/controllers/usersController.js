@@ -30,12 +30,12 @@ const usersController = {
 
 
   // 
-  login: (req, res) => {
-    res.render("../views/users/login", {
-      title: "Login",
-      stylesheetFile: "login.css",
-    });
-  },
+  // login: (req, res) => {
+  //   res.render("../views/users/login", {
+  //     title: "Login",
+  //     stylesheetFile: "login.css",
+  //   });
+  // },
 
   // SHOW
   profile: (req, res) => {

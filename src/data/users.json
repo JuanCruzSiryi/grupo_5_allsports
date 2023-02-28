@@ -133,5 +133,14 @@
     "password": "Nd1PnkLgWT",
     "category": "Usuario",
     "image": "avatar_15.png"
+  },
+  {
+    "id": "d1625442-ge1d-4f31-9294-dac52963310a",
+    "firstName": "Jhon",
+    "lastName": "Doe",
+    "email": "doe@gmail.com",
+    "password": "1234",
+    "category": "Admin",
+    "image": "default-user.png"
   }
 ]
