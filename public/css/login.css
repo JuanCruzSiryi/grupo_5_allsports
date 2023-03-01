@@ -12,7 +12,7 @@ main {
     /* height: 70vh; */
     background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
     padding: 15px;
-    margin-bottom: -20px;
+    /* margin-bottom: -20px; */
 }
 
 .login-form {
@@ -59,8 +59,12 @@ main form {
     /* text-align: center; */
     /* font-weight: bold; */
     padding-left: 35px;
-    color: #052b63;
+    color: black;
 }
+
+/* .email-form label {
+    margin-bottom: 5px;
+} */
 
 .email-form i {
     position: relative;
@@ -87,7 +91,7 @@ main form {
     /* text-align: center; */
     font-weight: bold;
     padding-left: 35px;
-    color: #052b63;
+    color: black;
 }
 
 .password-form i {
@@ -167,6 +171,14 @@ main form {
 
 .register-button button:hover {
     background-color: rgb(240, 237, 237)
+}
+
+.text-danger {
+    color: red;
+    margin-top: -10px;
+    text-align: center;
+    padding: 0px 20px 0px 15px;
+    font-weight: lighter;
 }
 
 @media (min-width: 768px) {
