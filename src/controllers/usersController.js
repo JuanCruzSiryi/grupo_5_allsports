@@ -45,8 +45,42 @@ const usersController = {
     });
   },
   // EDIT
+  edit: (req, res) => {
+    let userId = req.params.id;
+    let user = usersController.getUsers().find((user) => user.id == userId);
+
+    res.render("../views/users/edit", {
+      title: "Mi User",
+      stylesheetFile: "editProduct.css",
+      product
+    });
+  },
+
 
   // UPDATE
+  update: (req, res) => {
+    let userId = req.params.id;
+    // console.log("body: ", req.body);
+    let users = usersController.getUsers();
+
+    users.forEach((user, index) => {
+      if (user.id == userId) {
+        user.first_name = req.body.first_nameUser || user.first_name;
+        user.last_name = req.body.last_nameUser || user.last_name;
+        user.email = req.body.emailUser || user.email;
+        user.paswword = req.body.paswwordUser || user.paswword
+        user.category = req.body.categoryUser || user.category,
+        user.available = true
+
+        users[index] = user;
+      }
+    });
+
+    fs.writeFileSync(productsPath, JSON.stringify(users, null, "  "));
+
+    res.redirect("/users");
+  },
+
 
   // DELETE
 
