@@ -20,15 +20,40 @@ const mainController = {
     let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     let user = users.find(user => user.email == req.body.email);
     if (user) {
-      req.session.userLogged = user;
-      if(req.body.rememberme){
-        res.cookie(
-          'userLogged',
-          user,
-          { maxAge: 1000 * 60 * 2 }
-        );
+      if (user.password === req.body.password) {
+        req.session.userLogged = user;
+        if(req.body.rememberme){
+          res.cookie(
+            'userLogged',
+            user,
+            { maxAge: 1000 * 60 * 2 }
+          );
+        }
+        res.redirect('/')
+
       }
-      res.redirect('/')
+      else {
+        res.render("../views/auth/login", {
+          title: "Login",
+          stylesheetFile: "login.css",
+          errors: {
+            email: {
+              msg: 'Los datos son incorrectos. Verificalos y vuelve a intentar'
+            }
+          }
+        });
+
+      }
+    } else {
+      res.render("../views/auth/login", {
+        title: "Login",
+        stylesheetFile: "login.css",
+        errors: {
+          email: {
+            msg: 'Los datos son incorrectos. Verificalos y vuelve a intentar'
+          }
+        }
+      });
     }
   },
   logout: (req, res) => {

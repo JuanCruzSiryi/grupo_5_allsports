@@ -3,9 +3,10 @@ const router = express.Router();
 const upload = require('../middlewares/multer');
 
 const productsController = require('../controllers/productsController');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /* CRUD */
-router.get('/products', productsController.index);
+router.get('/products', guestMiddleware, productsController.index);
 
 /* creacion de producto */
 router.get('/products/create', productsController.create);

@@ -2,9 +2,10 @@ const express =  require('express');
 const router = express.Router();
 
 const usersController = require('../controllers/usersController');
+const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /* CRUD */
-router.get('/users', usersController.index);
+router.get('/users', guestMiddleware, usersController.index);
 
 /* END CRUD */
 
