@@ -14,15 +14,21 @@
 
             <div class="email-form">
               <label for="username">Email</label>
-              <input type="email" name="email" id="useremail" required>
+              <input type="email" name="email" id="useremail">
               <i class="fa-solid fa-envelope"></i>
             </div>
 
             <div class="password-form">
               <label for="username">Contraseña</label>
-              <input type="password" name="password" id="userpassword" required>
+              <input type="password" name="password" id="userpassword">
               <i class="fa-solid fa-lock"></i>
             </div>
+
+            <% if (locals.errors && (errors.email || errors.password)) { %>
+              <div class="text-danger">
+                <%= errors.email.msg %>
+              </div>
+            <% } %>
 
             <!-- <label class="remember-me"><input type="checkbox" name="rememberme" id="rememberme>
               Recordarme  
@@ -38,7 +44,7 @@
             </div>
 
             <div class="login-button">
-              <button type="submit">INICIAR SESIÓN</button>
+              <button type="submit">Ingresar</button>
             </div>
 
           </form>
