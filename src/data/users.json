@@ -6,7 +6,8 @@
     "email": "mbenitez10@gmail.com",
     "password": "fbIjp8cb7z",
     "category": "Usuario",
-    "image": "avatar_01.png"
+    "image": "avatar_01.png",
+    "available": true
   },
   {
     "id": "a42bd5ac-e492-4c6c-8bac-feee5ddcafec",
@@ -15,7 +16,8 @@
     "email": "martinezclaudia11@hotmail.com",
     "password": "8jWCwvFet",
     "category": "Usuario",
-    "image": "avatar_02.png"
+    "image": "avatar_02.png",
+    "available": true
   },
   {
     "id": "ccb56176-d4ef-4eab-943e-ee0c60a49ff2",
@@ -24,7 +26,8 @@
     "email": "martina.sanchez98@gmail.com",
     "password": "uZnCmO6",
     "category": "Administrador",
-    "image": "avatar_03.png"
+    "image": "avatar_03.png",
+    "available": true
   },
   {
     "id": "77f32ea7-8084-4ae5-95c2-c868db5d96f6",
@@ -33,7 +36,8 @@
     "email": "fgarcia1990@gmail.com",
     "password": "ltg4FLW19X0",
     "category": "Administrador",
-    "image": "avatar_04.png"
+    "image": "avatar_04.png",
+    "available": true
   },
   {
     "id": "f16727d8-f5cf-4e8a-a3b9-05c1846a7baa",
@@ -42,7 +46,8 @@
     "email": "agustina-alvarez12@hotmail.com",
     "password": "FjprOhV",
     "category": "Usuario",
-    "image": "avatar_05.png"
+    "image": "avatar_05.png",
+    "available": true
   },
   {
     "id": "cac33c8b-f19c-4874-8337-6f7920174247",
@@ -51,7 +56,8 @@
     "email": "peñadavid.96@hotmail.com",
     "password": "bI2LhzLiw5",
     "category": "Usuario",
-    "image": "avatar_06.png"
+    "image": "avatar_06.png",
+    "available": true
   },
   {
     "id": "f36bb32c-e6ab-4195-b0b5-0db01c1f6087",
@@ -60,7 +66,8 @@
     "email": "flor.basualdo92@hotmail.com",
     "password": "0cd20kjCt1dN",
     "category": "Usuario",
-    "image": "avatar_07.png"
+    "image": "avatar_07.png",
+    "available": true
   },
   {
     "id": "a6693090-d33e-4765-bcd2-3b0517760d87",
@@ -69,7 +76,8 @@
     "email": "adrianalopezv@hotmail.com",
     "password": "kxy9zeI0",
     "category": "Usuario",
-    "image": "avatar_08.png"
+    "image": "avatar_08.png",
+    "available": true
   },
   {
     "id": "dd6a2f07-57e6-49ce-9092-6f4d514d7985",
@@ -78,16 +86,18 @@
     "email": "felipe_perez89@gmail.com",
     "password": "rBzoyqxn",
     "category": "Usuario",
-    "image": "avatar_09.png"
+    "image": "avatar_09.png",
+    "available": true
   },
   {
     "id": "62ad8adb-bd39-4fda-ac15-15bb22e804c0",
-    "firstName": "Agustin",
+    "firstName": "Agustina",
     "lastName": "Díaz",
     "email": "adiaz1992@gmail.com",
     "password": "Rs0VNfaduHn",
     "category": "Usuario",
-    "image": "avatar_10.png"
+    "image": "avatar_10.png",
+    "available": true
   },
   {
     "id": "750b98cf-ed18-4039-a58a-f4ef0303fc32",
@@ -96,7 +106,8 @@
     "email": "rodriguezsofia10@hotmail.com",
     "password": "Hs1U44A",
     "category": "Usuario",
-    "image": "avatar_11.png"
+    "image": "avatar_11.png",
+    "available": true
   },
   {
     "id": "0be121eb-4d4d-4394-ae4e-88662d093b5d",
@@ -105,7 +116,8 @@
     "email": "ignaciocampora86@hotmail.com",
     "password": "V0nvMt",
     "category": "Usuario",
-    "image": "avatar_12.png"
+    "image": "avatar_12.png",
+    "available": true
   },
   {
     "id": "0659ea0e-1fad-43d5-a1df-21d57f71bf1b",
@@ -114,7 +126,8 @@
     "email": "camivgonzalez91@gmail.com",
     "password": "KgAibEi8RS",
     "category": "Administrador",
-    "image": "avatar_13.png"
+    "image": "avatar_13.png",
+    "available": true
   },
   {
     "id": "836691af-d286-476b-95c4-ce60e5a97a14",
@@ -123,7 +136,8 @@
     "email": "victoria.fernandez98@gmail.com",
     "password": "13ene4yBhi8",
     "category": "Usuario",
-    "image": "avatar_14.png"
+    "image": "avatar_14.png",
+    "available": true
   },
   {
     "id": "c1628442-fe3d-4f31-9494-cac52963310b",
@@ -132,7 +146,8 @@
     "email": "federicoperez84@gmail.com",
     "password": "Nd1PnkLgWT",
     "category": "Usuario",
-    "image": "avatar_15.png"
+    "image": "avatar_15.png",
+    "available": true
   },
   {
     "id": "d1625442-ge1d-4f31-9294-dac52963310a",
@@ -141,6 +156,7 @@
     "email": "doe@gmail.com",
     "password": "1234",
     "category": "Admin",
-    "image": "default-user.png"
+    "image": "default-user.png",
+    "available": true
   }
 ]

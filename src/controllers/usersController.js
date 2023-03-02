@@ -76,7 +76,7 @@ const usersController = {
       }
     });
 
-    fs.writeFileSync(productsPath, JSON.stringify(users, null, "  "));
+    fs.writeFileSync(usersPath, JSON.stringify(users, null, "  "));
 
     res.redirect("/users");
   },
@@ -85,7 +85,17 @@ const usersController = {
   // DELETE
 
   // DESTROY
-  
+  edit: (req, res) => {
+    res.render("../views/users/edit", {
+      title: "Users-Edit",
+      stylesheetFile: "editProduct.css",
+    });
+  },  
+
+
+
 };
+
+
 
 module.exports = usersController;
