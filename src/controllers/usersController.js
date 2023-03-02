@@ -38,12 +38,21 @@ const usersController = {
   // },
 
   // SHOW
-  profile: (req, res) => {
-    res.render("../views/users/profile", {
-      title: "Profile",
-      stylesheetFile: "profile.css",
-    });
-  },
+  show: (req, res) => {
+    let profileId = req.params.id;
+    let profile = usersController.getUsers().find((profile) => profile.id == profileId);
+  // profile: (req, res) => {
+  //   res.render("../views/users/profile", {
+  //     title: "Profile",
+  //     stylesheetFile: "profile.css",
+  //   });
+  // },
+  res.render("users/show", {
+    title: "Profile",
+    stylesheetFile: "profile.css",
+    profile
+  });
+},
   // EDIT
 
   // UPDATE

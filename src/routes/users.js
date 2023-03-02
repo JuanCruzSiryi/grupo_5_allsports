@@ -19,6 +19,6 @@ router.get('/register', usersController.register);
 // ELIMINAR USUARIO
 
 // SHOW DE USUARIOS
-router.get('/profile', usersController.profile);
+router.get('/profile/:id', usersController.show);
 
 module.exports = router;
