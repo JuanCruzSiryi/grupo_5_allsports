@@ -60,7 +60,7 @@ const usersController = {
     res.render("../views/users/edit", {
       title: "Mi User",
       stylesheetFile: "editUser.css",
-      product
+      user
     });
   },
 
@@ -108,12 +108,12 @@ const usersController = {
   
 
 
-  edit: (req, res) => {
-    res.render("../views/users/edit", {
-      title: "Users-Edit",
-      stylesheetFile: "editUser.css",
-    });
-  },  
+  // edit: (req, res) => {
+  //   res.render("../views/users/edit", {
+  //     title: "Users-Edit",
+  //     stylesheetFile: "editUser.css",
+  //   });
+  // },
 
 
 
