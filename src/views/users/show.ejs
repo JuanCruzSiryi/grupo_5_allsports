@@ -10,11 +10,11 @@
       <div class="main-container">
         <div class="product-title">
           <button 
-            onClick="location.href='/products'"
+            onClick="location.href='/users'"
             type="submit"
             class="create-button"
           >
-            Atras
+            Atrás
           </button>
 
           <h4 class="name"><%= product.name %></h4>
@@ -54,11 +54,11 @@
 
         <div class="detail-button mobile-buttons">
           <button type="submit">
-            <a href="/products/<%= product.id %>/edit">Editar</a>
+            <a href="/users/<%= user.id %>/edit">Editar</a>
           </button>
 
           <button type="submit">
-            <a href="/products/<%= product.id %>/delete">Eliminar</a>
+            <a href="/users/<%= user.id %>/delete">Eliminar</a>
           </button>
         </div>
 

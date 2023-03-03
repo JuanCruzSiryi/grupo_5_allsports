@@ -15,28 +15,6 @@ const usersController = {
       usersList: usersController.getUsers(),
     });
   },
-
-  /* END CRUD */
-
-  // CREATE
-  register: (req, res) => {
-    res.render("../views/users/register", {
-      title: "Register",
-      stylesheetFile: "register.css",
-    });
-  },
-
-  // STORE
-
-
-  // 
-  // login: (req, res) => {
-  //   res.render("../views/users/login", {
-  //     title: "Login",
-  //     stylesheetFile: "login.css",
-  //   });
-  // },
-
   // SHOW
   show: (req, res) => {
     let profileId = req.params.id;
@@ -53,6 +31,27 @@ const usersController = {
     profile
   });
 },
+
+
+  // CREATE
+  register: (req, res) => {
+    res.render("users/register", {
+      title: "Register",
+      stylesheetFile: "register.css",
+    });
+  },
+
+  // STORE
+
+
+  // 
+  // login: (req, res) => {
+  //   res.render("../views/users/login", {
+  //     title: "Login",
+  //     stylesheetFile: "login.css",
+  //   });
+  // },
+
   // EDIT
   edit: (req, res) => {
     let userId = req.params.id;
@@ -60,7 +59,7 @@ const usersController = {
 
     res.render("../views/users/edit", {
       title: "Mi User",
-      stylesheetFile: "editProduct.css",
+      stylesheetFile: "editUser.css",
       product
     });
   },
@@ -94,10 +93,25 @@ const usersController = {
   // DELETE
 
   // DESTROY
+  
+  
+  
+  /* END CRUD */
+
+
+  register: (req, res) => {
+    res.render("../views/users/register", {
+      title: "Users-Register",
+      stylesheetFile: "register.css",
+    });
+  },
+  
+
+
   edit: (req, res) => {
     res.render("../views/users/edit", {
       title: "Users-Edit",
-      stylesheetFile: "editProduct.css",
+      stylesheetFile: "editUser.css",
     });
   },  
 

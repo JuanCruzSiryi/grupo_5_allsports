@@ -4,10 +4,17 @@
   <body>
     <%- include ("../partials/header.ejs") %>
     <main>
+  
       <div class="principal-box">
+
         <div class="title">
-          <h2 class="title-register">EDITAR PRODUCTO</h2>
+          <h2 class="title-register">EDITAR USUARIO</h2>
         </div>
+
+        <div class="back-button">
+          <button type=""><a href="/users">Atrás</a></button>
+        </div>
+        
 
         <div class="content-box-register">
           <form
@@ -20,7 +27,7 @@
               <input
                 type="text"
                 name="firstName"
-                value="<%= users.firstName %>"
+                value="<%= user.firstName %>"
               />
             </div>
             <div class="lastName">
@@ -29,35 +36,35 @@
                 type="text"
                 name="lastName"
                 id="lastName"
-                value="<%= users.lastName %>"
+                value="<%= user.lastName %>"
               />
             </div>
             <div>
               <label for="image">Modificar imagen/avatar</label>
               <input type="file" name="image" id="image"
-              value="<%= users.image %>"  
+              value="<%= user.image %>"  
               />
 
             </div>
             <div class="email">
               <label for="email">Modificar email</label>
               <input type="email" name="email" id="email" 
-              value="<%= users.email %>"  
+              value="<%= user.email %>"  
               />
             </div>
             <div class="password">
               <label for="password">Modificar contraseña</label>
               <input type="password" name="password" id="password" 
-              value="<%= users.password %>"
+              value="<%= user.password %>"
               />
             </div>
             <div class="register-button">
-              <button type="submit">APLICAR</button>
+              <button type="submit">Guardar</button>
             </div>
 
-            <div class="register-button">
-              <button type="submit">LIMPIAR</button>
-            </div>
+            <!-- <div class="register-button">
+              <button type="submit">Limpiar</button>
+            </div> -->
           </form>
         </div>
       </div>

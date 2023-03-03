@@ -13,12 +13,14 @@ router.get('/users', guestMiddleware, usersController.index);
 
 // CREACIÓN DE USUARIO
 router.get('/users/register', usersController.register);
-// router.post('/users/register', upload.single("image"), usersController.store);
+// router.post('/users/register', upload.single("image"), productsController.store);
+
+// 
 
 
 // EDICIÓN DE USUARIO
 router.get('/users/:id/edit', usersController.edit);
-router.post('/users/:id/edit', upload.single("image"), usersController.update);
+router.put('/users/:id/edit', upload.single("image"), usersController.update);
 
 
 // LOGIN DE USUARIO
