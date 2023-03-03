@@ -72,12 +72,12 @@ const productsController = {
         product.name = req.body.nameProduct || product.name;
         product.description = req.body.descProduct || product.description;
         product.price = req.body.priceProduct || product.price;
-        product.image = req.file? req.file.filename : product.image,
-        product.category = req.body.categoryProduct || product.category,
-        product.brand = req.body.brand || product.brand,
-        product.color = req.body.color || product.color,
-        product.size = req.body.talles || product.size,
-        product.available = true
+        product.image = req.file? req.file.filename : product.image;
+        product.category = req.body.categoryProduct || product.category;
+        product.brand = req.body.brand || product.brand;
+        product.color = req.body.color || product.color;
+        product.size = req.body.talles || product.size;
+        product.available = true;
 
         products[index] = product;
       }

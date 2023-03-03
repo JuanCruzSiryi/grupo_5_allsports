@@ -76,9 +76,10 @@ const usersController = {
         user.first_name = req.body.first_nameUser || user.first_name;
         user.last_name = req.body.last_nameUser || user.last_name;
         user.email = req.body.emailUser || user.email;
-        user.paswword = req.body.paswwordUser || user.paswword
-        user.category = req.body.categoryUser || user.category,
-        user.available = true
+        user.image = req.file? req.file.filename : user.image;
+        user.paswword = req.body.paswwordUser || user.paswword;
+        user.category = req.body.categoryUser || user.category;
+        user.available = true;
 
         users[index] = user;
       }
