@@ -71,9 +71,9 @@
   },
   {
     "id": "a6693090-d33e-4765-bcd2-3b0517760d87",
-    "firstName": "Adriana",
+    "firstName": "Adriano",
     "lastName": "Lopez",
-    "email": "adrianalopezv@hotmail.com",
+    "email": "adrianolopezv@hotmail.com",
     "password": "kxy9zeI0",
     "category": "Usuario",
     "image": "avatar_08.png",
@@ -111,9 +111,9 @@
   },
   {
     "id": "0be121eb-4d4d-4394-ae4e-88662d093b5d",
-    "firstName": "Ignacio",
+    "firstName": "Inés",
     "lastName": "Cámpora",
-    "email": "ignaciocampora86@hotmail.com",
+    "email": "icampora86@hotmail.com",
     "password": "V0nvMt",
     "category": "Usuario",
     "image": "avatar_12.png",
@@ -154,9 +154,9 @@
     "firstName": "Jhon",
     "lastName": "Doe",
     "email": "doe@gmail.com",
-    "password": "1234",
+    "password": "$2a$10$gEH5jTKwtubTxZiVVcYOA.Bnp.3o3oRRMwUQPgcF9vq458tXAvyqm",
     "category": "Admin",
-    "image": "avatar-1677932201015.jpg",
+    "image": "avatar-1677950424639",
     "available": true
   },
   {
@@ -164,7 +164,7 @@
     "firstname": "Juan",
     "lastname": "Siryi",
     "email": "juancruzsiryi@gmail.com",
-    "password": "asd123",
+    "password": "$2a$10$IMfUoHwqR6IF71Jk7SP7UOT4OUaaeULYPDxsAg5GOHkV7GVDFimRq",
     "category": "Usuario",
     "image": "avatar-1677897160096.jpg",
     "available": true

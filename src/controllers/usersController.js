@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const usersPath = path.join(__dirname, "../data/users.json");
+const bcryptjs = require('bcryptjs');
+
 
 const usersController = {
   /* CRUD */
@@ -118,7 +120,11 @@ const usersController = {
         user.last_name = req.body.last_nameUser || user.last_name;
         user.email = req.body.emailUser || user.email;
         user.image = req.file? req.file.filename : user.image;
-        user.paswword = req.body.paswwordUser || user.paswword;
+       
+        // user.paswword = req.body.paswwordUser || user.paswword;
+        
+        user.password = bcryptjs.hashSync(req.body.password, 10),
+			
         user.category = req.body.categoryUser || user.category;
         user.available = true;
 
