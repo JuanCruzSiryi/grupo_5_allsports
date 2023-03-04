@@ -195,6 +195,12 @@ label {
     justify-content: center;
 }
 
+.buttonImage{
+  color: white;  
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+
 .register-button button {
     width: 85px;
     height: 30px;
