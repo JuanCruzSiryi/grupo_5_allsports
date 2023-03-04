@@ -13,7 +13,7 @@ router.get('/users', guestMiddleware, usersController.index);
 
 // CREACIÓN DE USUARIO
 router.get('/users/register', usersController.register);
-// router.post('/users/register', upload.single("image"), productsController.store);
+router.post('/users/register', upload.single("image"), usersController.store);
 
 // 
 

@@ -158,5 +158,15 @@
     "category": "Admin",
     "image": "default-user.png",
     "available": true
+  },
+  {
+    "id": 1677897089587,
+    "firstname": "Juan",
+    "lastname": "Siryi",
+    "email": "juancruzsiryi@gmail.com",
+    "password": "asd123",
+    "category": "Usuario",
+    "image": "avatar-1677897160096.jpg",
+    "available": true
   }
 ]

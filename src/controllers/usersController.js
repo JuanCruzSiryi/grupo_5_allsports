@@ -42,7 +42,48 @@ const usersController = {
   },
 
   // STORE
-
+  store: (req, res) => {
+        // let errors = validationResult(req);
+        
+        // if ( ! errors.isEmpty() ) {
+        //     return res.render('users/register', {
+        //         title: 'Nuevo usuario',
+        //         errors: errors.mapped(),
+        //         oldBody: req.body
+        //     })
+        // }
+        
+        let users = usersController.getUsers();
+        let images = [];
+        
+        if (req.files) {
+            req.files.forEach(file => {
+                images.push({
+                    "id": Date.now(),
+                    "name": file.filename,
+                });
+            });
+        } else {
+            images.push("default-user.png");
+        }
+        
+        let newUser = {
+            "id": Date.now(),
+            "firstname": req.body.firstName || "Sin nombre",
+            "lastname": req.body.lastName || "Sin apellido",
+            "email": req.body.email || "Sin email",
+            "password": req.body.password || "Sin contraseña",
+            "category": "Usuario",
+            "image": images,
+            "available": true
+        }
+        
+        users.push(newUser);
+        
+        fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
+        
+        res.redirect('profile');
+  },
 
   // 
   // login: (req, res) => {
