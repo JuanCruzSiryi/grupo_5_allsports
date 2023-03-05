@@ -21,7 +21,7 @@ main {
     text-align: center;
     justify-content: center;
     background: white;
-    opacity: 0.6;
+    /* opacity: 0.6; */
     border-radius: 6px;
 }
 
@@ -155,6 +155,22 @@ main {
     main {
       height: 100vh;
       margin-bottom: 0;
+    }
+    .title-register {
+      margin-bottom: 50px;
+      font-size: 28px;
+    }
+    .content-box-register form{
+      gap: 25px
+    }
+    .content-box-register form div input,  .content-box-register form div select{
+      height: 40px;
+      text-align: center;
+    }
+    .content-box-register form div i {
+      position: absolute;
+      bottom: 12px;
+      left: 22px
     }
 }
 

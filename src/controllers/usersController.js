@@ -74,7 +74,7 @@ const usersController = {
             "firstname": req.body.firstName || "Sin nombre",
             "lastname": req.body.lastName || "Sin apellido",
             "email": req.body.email || "Sin email",
-            "password": req.body.password || "Sin contraseña",
+            "password": bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
             "category": "Usuario",
             "image": images,
             "available": true

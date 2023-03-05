@@ -12,7 +12,7 @@ main {
     /* height: 70vh; */
     background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
     padding: 15px;
-    /* margin-bottom: -20px; */
+    margin-bottom: -20px;
 }
 
 .login-form {
