@@ -168,5 +168,15 @@
     "category": "Usuario",
     "image": "avatar-1677897160096.jpg",
     "available": true
+  },
+  {
+    "id": 1678118243301,
+    "firstname": "Danilo",
+    "lastname": "Burbano",
+    "email": "db@gmail.com",
+    "password": "$2a$10$5cdcgkjQloFXbjZjhxPZy.0J7PT/Ii1n1N.a7Djy9GvxRkS1WBcOS",
+    "category": "Usuario",
+    "image": "default-user.png",
+    "available": true
   }
 ]
