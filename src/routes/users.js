@@ -1,7 +1,7 @@
 const express =  require('express');
 const router = express.Router();
 const upload = require('../middlewares/multer');
-
+const rules = require('../middlewares/userValidator');
 
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
@@ -13,7 +13,7 @@ router.get('/users', guestMiddleware, usersController.index);
 
 // CREACIÓN DE USUARIO
 router.get('/users/register', usersController.register);
-router.post('/users/register', upload.single("image"), usersController.store);
+router.post('/users/register', upload.single("image"), rules, usersController.store);
 
 // 
 

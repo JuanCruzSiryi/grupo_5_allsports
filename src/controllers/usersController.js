@@ -3,7 +3,7 @@ const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const usersPath = path.join(__dirname, "../data/users.json");
 const bcryptjs = require('bcryptjs');
-
+const { validationResult } = require('express-validator');
 
 const usersController = {
   /* CRUD */
@@ -45,15 +45,16 @@ const usersController = {
 
   // STORE
   store: (req, res) => {
-        // let errors = validationResult(req);
+        const errors = validationResult(req);
         
-        // if ( ! errors.isEmpty() ) {
-        //     return res.render('users/register', {
-        //         title: 'Nuevo usuario',
-        //         errors: errors.mapped(),
-        //         oldBody: req.body
-        //     })
-        // }
+        if ( ! errors.isEmpty() ) {
+            return res.render('users/register', {
+              title: 'Nuevo usuario',
+              stylesheetFile: "register.css",
+              errors: errors.mapped(),
+              oldBody: req.body,
+        })
+        }
         
         let users = usersController.getUsers();
         // let images = [];

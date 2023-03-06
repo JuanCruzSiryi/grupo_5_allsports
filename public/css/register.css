@@ -65,10 +65,11 @@ main {
 }
 
 .content-box-register form div i {
-    position: absolute;
-    bottom: 7px;
+    position: relative;
+    bottom: 24px;
     left: 10px;
     opacity: 0.2;
+    width: 10px;
 }
 
 .title {
@@ -146,6 +147,10 @@ main {
     background-color: rgb(240, 237, 237)
 }
 
+.text-errors {
+  color: red
+}
+
 @media (min-width: 768px) {
     .principal-box {
         margin-left: 20%;
@@ -168,9 +173,9 @@ main {
       text-align: center;
     }
     .content-box-register form div i {
-      position: absolute;
-      bottom: 12px;
-      left: 22px
+      position: relative;
+      bottom: 28px;
+      left: 20px
     }
 }
 
