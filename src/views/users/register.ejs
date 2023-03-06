@@ -18,21 +18,33 @@
               <label for="firstName">Nombre</label>
               <input type="text" name="firstName" id="username">
               <i class="fa-solid fa-user"></i>
+              <% if(locals.errors && errors.firstName) { %>
+                <p class="text-errors"><%= errors.firstName.msg %></p>
+              <% } %>
             </div>
             <div>
               <label for="lastName">Apellido</label>
               <input type="text" name="lastName" id="lastName">
               <i class="fa-solid fa-user"></i>
+              <% if(locals.errors && errors.lastName) { %>
+                <p class="text-errors"><%= errors.lastName.msg %></p>
+              <% } %>
             </div>
             <div>
               <label for="email">Email</label>
               <input type="email" name="email" id="email">
               <i class="fa-solid fa-envelope"></i>
+              <% if(locals.errors && errors.email) { %>
+                <p class="text-errors"><%= errors.email.msg %></p>
+              <% } %>
             </div>
             <div>
               <label for="password">Contraseña (mínimo 8 caracteres)</label>
               <input type="password" name="password" id="password">
               <i class="fa-solid fa-lock"></i>
+              <% if (locals.errors && errors.password) { %>
+                <p class="text-errors"><%= errors.password.msg %></p>
+              <% } %>
             </div>
             <div>
               <label for="genre">Género</label>

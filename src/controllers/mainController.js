@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const bcrypt = require('bcryptjs');
+
 const usersPath = path.join(__dirname, "../data/users.json");
 
 const mainController = {
@@ -20,7 +22,7 @@ const mainController = {
     let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
     let user = users.find(user => user.email == req.body.email);
     if (user) {
-      if (user.password === req.body.password) {
+      if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password
         req.session.userLogged = user;
         if(req.body.rememberme){
           res.cookie(

@@ -3,7 +3,7 @@ const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const usersPath = path.join(__dirname, "../data/users.json");
 const bcryptjs = require('bcryptjs');
-
+const { validationResult } = require('express-validator');
 
 const usersController = {
   /* CRUD */
@@ -45,38 +45,41 @@ const usersController = {
 
   // STORE
   store: (req, res) => {
-        // let errors = validationResult(req);
+        const errors = validationResult(req);
         
-        // if ( ! errors.isEmpty() ) {
-        //     return res.render('users/register', {
-        //         title: 'Nuevo usuario',
-        //         errors: errors.mapped(),
-        //         oldBody: req.body
-        //     })
-        // }
-        
-        let users = usersController.getUsers();
-        let images = [];
-        
-        if (req.files) {
-            req.files.forEach(file => {
-                images.push({
-                    "id": Date.now(),
-                    "name": file.filename,
-                });
-            });
-        } else {
-            images.push("default-user.png");
+        if ( ! errors.isEmpty() ) {
+            return res.render('users/register', {
+              title: 'Nuevo usuario',
+              stylesheetFile: "register.css",
+              errors: errors.mapped(),
+              oldBody: req.body,
+        })
         }
         
+        let users = usersController.getUsers();
+        // let images = [];
+        
+        // if (req.files) {
+        //     req.files.forEach(file => {
+        //         images.push({
+        //             "id": Date.now(),
+        //             "name": file.filename,
+        //         });
+        //     });
+        // } else {
+        //     images.push("default-user.png");
+        // }
+        let image = req.file? req.file.filename : "default-user.png";
+
+        const { v4:uuidv4 } = require('uuid');
         let newUser = {
-            "id": Date.now(),
+            "id": uuidv4(),
             "firstname": req.body.firstName || "Sin nombre",
             "lastname": req.body.lastName || "Sin apellido",
             "email": req.body.email || "Sin email",
             "password": bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
             "category": "Usuario",
-            "image": images,
+            "image": image,
             "available": true
         }
         
