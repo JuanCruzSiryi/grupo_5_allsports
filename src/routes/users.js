@@ -29,11 +29,12 @@ router.put('/users/:id/edit', upload.single("image"), usersController.update);
 // ELIMINAR USUARIO
 
 // SHOW DE USUARIOS
-router.get('/profile/:id', usersController.show);
 
 /* END CRUD */
-//router.get('/profile', usersController.profile);
+router.get('/profile', usersController.profile);
 
 router.get('/edit', usersController.edit);
+
+router.get('/users/:id', usersController.show);
 
 module.exports = router;

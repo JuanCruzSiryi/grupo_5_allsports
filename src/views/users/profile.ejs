@@ -2,75 +2,70 @@
 <html lang="en">
   <%- include('../partials/head') %>
   <body>
-    
     <%- include ("../partials/header.ejs") %>
 
     <main>
-      <div class="principal-box">
 
-        <div class="title">
-            <h2 class="title-profile">Perfil de usuario</h2>
+      
+      <div class="main-container">
+        <div class="product-title">
+          <button 
+            onClick="location.href='/users'"
+            type="submit"
+            class="create-button"
+          >
+            Atrás
+          </button>
+
+          <h4 class="name"><%= user.firstName + user.lastName %></h4>
         </div>
+        <div class="product-container">
+          <img
+          class="image"
+          src="/images/users/<%= user.image %>"
+          alt="user-image.jpg"
+          />
 
-        <div class="content-box-profile">
-          <form action="/profile" method="">
-            <div>
-              <label for="avatar">Avatar</label>
-              <input type="file" name="avatar" id="avatar">
-            </div>
-            <div>
-              <label for="username">Nombre</label>
-              <input type="text" name="name" id="username" value="Juan Cruz">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div>
-              <label for="username">Apellido</label>
-              <input type="text" name="lastname" id="userlastname" value="Siryi">
-              <i class="fa-solid fa-user"></i>
-            </div>
-            <div>
-              <label for="username">Email</label>
-              <input type="email" name="email" id="useremail" value="juancruzsiryi@gmail.com">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div>
-              <label for="username">Contraseña actual</label>
-              <input type="password" name="password" id="userpassword" value="********">
-              <i class="fa-solid fa-lock"></i>
-            </div>
-            <div>
-              <label for="username">Nueva contraseña</label>
-              <input type="password" name="password" id="userpassword" value="********">
-              <i class="fa-solid fa-lock"></i>
-            </div>
-            <div>
-              <label for="genre">Género</label>
-              <select name="genre" placeholder="Seleccionar" id="genre">
-                <option>Masculino</option>
-                <option>Femenino</option>
-                <option>Otros</option>
-              </select>
-            </div>
+          <div class="product-information">
+            <p class="price">Precio: <%=  %></p>
+            <p class="category">Categoría: <%=  %></p>
+            <p class="color">Color: <%=  %></p>
+            <p class="size">Talle: <%=  %></p>
 
-            <div class="profile-button">
-                <button type="submit">APLICAR CAMBIOS</button>
+            <div class=" description desktop-description">
+              <%= user.email %>
             </div>
-
-            <div class="profile-button">
-              <button type="reset">CANCELAR CAMBIOS</button>
+            <div class="detail-button desktop-buttons">
+              <button type="submit">
+                <a href="/users/<%= user.id %>/edit">Editar</a>
+              </button>
+    
+              <button type="submit">
+                <a href="/users/<%= user.id %>/delete">Eliminar</a>
+              </button>
             </div>
+          </div>
+          
+        </div>
+        <p class="description mobile-buttons">
+          <%= user.email %>
+        </p>
 
-            <div class="profile-button">
-              <button type="submit">VOLVER</button>
-            </div>
 
-          </form>
+        <div class="detail-button mobile-buttons">
+          <button type="submit">
+            <a href="/users/<%= user.id %>/edit">Editar</a>
+          </button>
+
+          <button type="submit">
+            <a href="/users/<%= user.id %>/delete">Eliminar</a>
+          </button>
         </div>
 
       </div>
+
     </main>
 
-    <%- include ("../partials/footer.ejs") %> 
-
+    <%- include ("../partials/footer.ejs") %>
   </body>
 </html>

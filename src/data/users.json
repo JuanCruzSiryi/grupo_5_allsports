@@ -24,7 +24,7 @@
   "firstName": "Mario",
   "lastName": "Sanchez",
   "email": "mario.sanchez98@gmail.com",
-  "password": "uZnCmO6",
+  "password": "$2a$10$Ujl7jJ.hP4l9kx4Oglq9K.K6zda525TtXW3R1/RFo.ayVobVYp3l2",
   "category": "Administrador",
   "image": "avatar_03.png",
   "available": true
@@ -154,9 +154,19 @@
   "firstName": "Jhon",
   "lastName": "Doe",
   "email": "doe@gmail.com",
-  "password": "$2a$10$gEH5jTKwtubTxZiVVcYOA.Bnp.3o3oRRMwUQPgcF9vq458tXAvyqm",
+  "password": "$2a$10$aXbI3VkW/Pfo8kFlmyH9aetdXJo7BrCeFF0YtwIAX3lb1twJbke9u",
   "category": "Admin",
   "image": "avatar-1677950424639",
+  "available": true
+ },
+ {
+  "id": "b9f4b19f-3d96-483a-8fd4-edc410b00869",
+  "firstname": "Luis",
+  "lastname": "Scola",
+  "email": "luis@gmail.com",
+  "password": "$2a$10$TrxNdR04zzi4z97vn0h0VOUPq6jO7XdS/u4Qtp86AHALHpZ3JBzA2",
+  "category": "Usuario",
+  "image": "default-user.png",
   "available": true
  }
 ]

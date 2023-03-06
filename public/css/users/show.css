@@ -1,0 +1,184 @@
+* {
+  font-family: Roboto;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* ---------------------Main------------- */
+
+body {
+  background: linear-gradient(to right, rgb(201, 216, 255), rgb(255, 247, 205));
+}
+
+/* --------------imagen--------- */
+.image{    
+  width: 40vw;
+  border: solid 2px grey;
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 10px 5px 5px teal;
+}
+
+.image:hover{
+  box-shadow: 0px 0px 10px blueviolet;
+  
+}
+
+.name {        
+  color: #052b63;
+  font-size: 12px;
+  text-align: center;
+  background: gainsboro;
+  padding: 1%;
+  margin-top: auto;
+  border-radius: 5%;
+  margin-left: 5%;
+}
+
+.p {
+  font-size: 13px;
+  color: #052b63;
+  width: max-content;
+  
+}
+
+.price {
+  color: #052b63;
+  font-size: 13px;
+  font-weight: bold;
+}  
+
+.category {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.color {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.size {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.description {
+  color: #052b63;
+  font-size: 12px;
+  font-style: italic;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.detail-button{
+  text-align: center;
+}
+
+.detail-button button{
+  width: 65px;
+  height: 25px;
+  font-size: 13px;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.delete-button button:hover {
+  background-color: rgb(240, 237, 237)
+}
+
+.detail-button a {
+  font-weight: lighter;
+  color: white;
+}
+
+/*- New implementation-*/
+.product-container {
+  display: flex;
+  align-items: center;
+}
+.short-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container{
+  border-style: ridge;
+  border-color:rgb(219, 219, 185);
+}
+
+.desktop-description {
+  display: none;
+}
+
+.desktop-buttons {
+  display: none;
+}
+
+.product-title {
+  background: gainsboro;
+  display: flex;
+  align-items: center;
+  padding: 5px 5%;
+}
+
+/* -------- tablet--------- */
+
+@media (min-width: 768px){
+
+  .name, .price{
+    font-size: 24px;
+  }
+
+  .category, .color, .size, .description{
+    font-size:18px;
+  }
+
+  .detail-button button {
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+}
+
+/* -------- desktop------- */
+@media (min-width: 1024px){
+
+  /* .detailList h4{    
+      padding: 5%;
+  }   */
+  .image{    
+    width: 30vw;
+    margin: 1% 5% 1% 5%;
+  }
+  .name {        
+    padding: 5px;
+  }
+  .product-container {
+    align-items: start;
+  }
+  .product-information {
+    margin-top: 2%;
+  }
+  .desktop-description{
+    display: inline-block;
+    padding: 35px 90px 5px 0px;
+  }
+  .desktop-buttons {
+    display: inline-block;
+    text-align: start;
+    margin-top: 5%;
+  }
+  .mobile-buttons {
+    display: none;
+  }
+}
