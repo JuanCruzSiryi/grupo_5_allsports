@@ -77,8 +77,7 @@ const usersController = {
         //     images.push("default-user.png");
         // }
         let image = req.file? req.file.filename : "default-user.png";
-
-        const { v4:uuidv4 } = require('uuid');
+        
         let newUser = {
             "id": uuidv4(),
             "firstname": req.body.firstName || "Sin nombre",
@@ -92,18 +91,10 @@ const usersController = {
         
         users.push(newUser);
         
-        fs.writeFileSync(usersPath, JSON.stringify(users, null, ' '));
+        fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
         
         res.redirect('profile');
   },
-
-  // 
-  // login: (req, res) => {
-  //   res.render("../views/users/login", {
-  //     title: "Login",
-  //     stylesheetFile: "login.css",
-  //   });
-  // },
 
   // EDIT
   edit: (req, res) => {
@@ -116,7 +107,6 @@ const usersController = {
       user
     });
   },
-
 
   // UPDATE
   update: (req, res) => {
@@ -133,7 +123,7 @@ const usersController = {
        
         // user.paswword = req.body.paswwordUser || user.paswword;
         
-        user.password = bcryptjs.hashSync(req.body.password, 10),
+        // user.password = bcryptjs.hashSync(req.body.password, 10);
 			
         user.category = req.body.categoryUser || user.category;
         user.available = true;
@@ -147,15 +137,11 @@ const usersController = {
     res.redirect("/users");
   },
 
-
   // DELETE
 
   // DESTROY
   
-  
-  
   /* END CRUD */
-
 
   register: (req, res) => {
     res.render("../views/users/register", {
@@ -163,17 +149,6 @@ const usersController = {
       stylesheetFile: "register.css",
     });
   },
-  
-
-
-  // edit: (req, res) => {
-  //   res.render("../views/users/edit", {
-  //     title: "Users-Edit",
-  //     stylesheetFile: "editUser.css",
-  //   });
-  // },
-
-
 
 };
 

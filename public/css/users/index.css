@@ -12,25 +12,25 @@ body {
 }
 
 /* --------------imagen--------- */
-.image{    
+.image{
   /* width: 30vw;
   height: 20vh; */
   width: 170px;
   height: 170px;
   border: solid 2px grey;
-  border-radius: 5%;
+  border-radius: 50%;
   margin: 5%;
   box-shadow: 10px 5px 5px teal;
 }
 
 .image:hover{
   box-shadow: 0px 0px 10px blueviolet;
-  
+
 }
 
-.name {        
+.name {
   color: #052b63;
-  font-size: 12px;
+  font-size: 18px;
   text-align: center;
   padding: 1%;
   margin-top: auto;
@@ -42,14 +42,14 @@ body {
   font-size: 13px;
   color: #052b63;
   width: max-content;
-  
+
 }
 
 .price {
   color: #052b63;
   font-size: 13px;
   font-weight: bold;
-}  
+}
 
 .category {
   color: #052b63;
@@ -73,12 +73,13 @@ body {
   color: #052b63;
   font-size: 12px;
   font-style: italic;
-  padding: 5px 20px 5px 20px;
+  padding: 5px 20px 5px 50px;
   text-align: center;
   margin-top: 0;
 }
 
 .detail-button{
+  padding-left: 30px;
   text-align: center;
 }
 
@@ -107,6 +108,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 .short-information {
   display: flex;
@@ -128,7 +131,7 @@ body {
 
 .product-title {
   background: gainsboro;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   padding: 5px 5%;
 }
@@ -167,27 +170,35 @@ body {
     height: 40px;
     font-size: 16px;
   }
+  .products-list-title {
+    padding: 5px 13%;
+  }
 
 }
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
 
-  /* .detailList h4{    
+  /* .detailList h4{
       padding: 5%;
   }   */
-  .image{    
+  .products-list-title {
+    padding: 5px 5%;
+  }
+  .image{
     /* width: 12vw; */
     margin: 1% 5% 1% 5%;
   }
   .product-container a{
     margin: 1% 5% 1% 5%;
   }
-  .name {        
+  .name {
     padding: 5px;
   }
   .product-container {
     align-items: start;
+    flex-direction: row;
+    padding-right: 7%;
   }
   .product-information {
     margin-top: 2%;
@@ -198,17 +209,27 @@ body {
     display: inline-block;
     padding: 32px 20px 5px 0px;
   }
- 
- 
+
+  .detail-button {
+    padding: 0;
+  }
+
   .desktop-buttons {
-    display: inline-block;
+    display: flex;
     text-align: start;
     margin-top: 5%;
+  }
+  .desktop-buttons button {
+    margin-right: 10px;
   }
   .mobile-buttons {
     display: none;
   }
   .products-list-text{
     margin-right: 40%;
+  }
+  .product-title h4{
+    text-align: left;
+    padding: 5px 37%;
   }
 }
