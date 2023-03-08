@@ -80,8 +80,8 @@ const usersController = {
         
         let newUser = {
             "id": uuidv4(),
-            "firstname": req.body.firstName || "Sin nombre",
-            "lastname": req.body.lastName || "Sin apellido",
+            "firstName": req.body.firstName || "Sin nombre",
+            "lastName": req.body.lastName || "Sin apellido",
             "email": req.body.email || "Sin email",
             "password": bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
             "category": "Usuario",
@@ -116,10 +116,21 @@ const usersController = {
 
     users.forEach((user, index) => {
       if (user.id == userId) {
-        user.first_name = req.body.first_nameUser || user.first_name;
-        user.last_name = req.body.last_nameUser || user.last_name;
-        user.email = req.body.emailUser || user.email;
-        user.image = req.file? req.file.filename : user.image;
+        // user.firstName = req.body.firstName || user.first_name;
+       
+        user.firstName = req.body.firstName || user.firstName;
+       
+
+        // user.last_name = req.body.last_nameUser || user.last_name;
+       user.lastName = req.body.lastName || user.lastName;
+        
+       
+        // user.email = req.body.emailUser || user.email;
+        user.email = req.body.email || user.email;
+        
+        // user.image = req.file? req.file.filename : user.image;
+       
+        user.image = req.file? req.file.image : user.image;
        
         // user.paswword = req.body.paswwordUser || user.paswword;
         

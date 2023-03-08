@@ -158,5 +158,36 @@
     "category": "Admin",
     "image": "avatar-1677950424639",
     "available": true
+  },
+
+  {
+    "id": "b5e1c52e-7a67-422a-9865-75caf1bb07e7",
+    "firstName": "Luis",
+    "lastName": "Scola",
+    "email": "lu@gmail.com",
+    "password": "$2a$10$bZ60GWeFRF9dHnwh1egcaOWlcwAwPlczbgsDcfh9lRsalCCCcy1.2",
+    "category": "Usuario",
+    "image": "default-user.png",
+    "available": true
+  },
+  {
+    "id": "fa887cec-fda7-4f05-835e-618d53317ea7",
+    "firstName": "Max",
+    "lastName": "Sio",
+    "email": "maxi@gmail.com",
+    "password": "$2a$10$wG0G9q8FA9RVYKqvL1V/JuMDk5N91NG6u9XjBid.903dnKO858Fcm",
+    "category": "Usuario",
+    "image": "default-user.png",
+    "available": true
+  },
+  {
+    "id": "87f89080-9ed6-4e79-9273-34faadbfe884",
+    "firstName": "Maria",
+    "lastName": "Díaz",
+    "email": "mari@gmail.com",
+    "password": "$2a$10$6sDZZDGh6nA6xjMKM3ExZ.iddA8y04lXAudMWewzpcN0Ri9SM99cy",
+    "category": "Usuario",
+    "image": "default-user.png",
+    "available": true
   }
 ]
