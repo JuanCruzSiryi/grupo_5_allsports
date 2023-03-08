@@ -1,0 +1,333 @@
+* {
+    font-family: Roboto;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* ---------------------------MAIN---------------------------- */
+main {
+    background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: -20px;
+}
+
+body {
+  background: linear-gradient(to right, rgb(196, 212, 255), rgb(255, 218, 203));
+}
+
+.principal-box input {
+  color: #052b63;
+  border: solid 1px #052b63;
+}
+.principal-box select {
+  color: #052b63;
+  border: solid 1px #052b63;
+}
+
+.principal-box input[type="file"] {
+  border: none;
+}
+
+label {
+  color: #052b63;
+}
+
+.principal-box {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background: rgba(255, 252, 252, 0.87);
+    /* opacity: 0.6; */
+    border-radius: 6px;
+}
+
+.content-box-register form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.content-box-register form div {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: center;
+    position: relative;
+    width: 100%;
+}
+
+.content-box-register form div input {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.content-box-register form div label {
+    position: relative;
+    bottom: 4px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.content-box-register form div select {
+    width: 100%;
+    height: 30px;
+    border-radius: 6px;
+}
+
+.content-box-register form div i {
+    position: absolute;
+    bottom: 7px;
+    left: 10px;
+    opacity: 0.2;
+}
+
+
+.title {
+    width: 100%;
+    padding: 10px;
+}
+
+.title-navbar {
+  display: flex;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  justify-content: flex-start;
+  padding: 5px 0 5px 0;
+}
+
+.form-title {
+  font-weight: bold;
+  color: #052b63;
+  font-size: 20px;
+  padding-left: 6%;
+}
+
+.title-register {
+    font-weight: bold;
+    color: #052b63;
+    font-size: 20px;
+}
+
+.terms-box {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.content-box-register form .terms-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content-box-register form .terms-box label {
+    display: flex;
+    font-size: 12px;
+    gap: 5px;
+}
+
+.content-box-register form .terms-box input {
+    width: 5%;
+    height: 15px;
+    margin-left: 0;
+    margin-right: 5px;
+    padding: 0;
+    text-align: left;
+}
+
+.content-box-register form .desc-product input{
+  height: 10vh;
+  text-align: left;
+  padding: 10px;
+}
+
+.content-box-register form .color-product {
+  display: block;
+}
+
+.content-box-register form .color-product input {
+  width: 30px;
+  height: 30px;
+}
+
+.content-box-register form .size-product {
+  display: block;
+}
+
+.content-box-register form .size-product .checkSize{
+  font-size: 12px;
+}
+
+.content-box-register form .size-product input {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.terms-box label a {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.terms-box label a:visited {
+    color: rgb(78, 4, 147);
+}
+
+.register-button {
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button button {
+    width: 85px;
+    height: 30px;
+    font-size: 15px;
+    color: white;
+    /* font-weight: bold; */
+    border-radius: 6px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+.back-button button {
+    width: 85px;
+    height: 30px;
+    border-radius: 6px;
+    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.back-button button a{
+  font-size: 15px;
+  color: white;
+  /* font-weight: bold; */
+}
+
+.register-button button a{
+    color: white
+}
+
+.register-button button:hover {
+    background-color: rgb(240, 237, 237)
+}
+
+@media (min-width: 768px) {
+    .principal-box {
+        margin-left: 20%;
+        margin-right: 20%;
+        justify-content: center;
+    }
+    main {
+      height: 105vh;
+      margin-bottom: 0;
+    }
+}
+
+
+  @media(min-width: 768px) {
+    .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-text {
+      max-width: 300px;
+      text-align: right;
+    }
+  
+    .hamburguer-button {
+      display: none;
+    }
+    .main-navbar {
+      display: flex;
+    }
+    .main-navbar ul {
+      display: flex;
+    }
+    .main-navbar li {
+      margin: 0 8px;
+    }
+    .title-navbar {
+      margin-left: 21%;
+      margin-right: 21%;
+    }
+    
+    .form-title {
+      padding-left: 12%;
+    }
+  }
+
+  @media (min-width: 1023px) {
+    .title-navbar {
+      margin-left: 21%;
+      margin-right: 21%;
+    }
+    
+    .form-title {
+      padding-left: 22%;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main-header-top-bar, .main-navbar {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .main-header-top-bar{
+      display: flex;
+      align-items: center;
+    }
+    .main-navbar {
+      margin-top: 20px;
+    }
+  
+    .header-text {
+      max-width: none;
+      text-align: right;
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .main-navbar li {
+      margin: 0 10px;
+    }
+  
+    .main-navbar a {
+      font-size: 19px;
+    }
+
+    .content-box-register form .size-product .checkSize{
+      font-size: 14px;
+      margin-right: 2px;
+    }
+    
+    .content-box-register form .size-product input {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+    .form-title {
+      padding-left: 30%;
+    }
+  }

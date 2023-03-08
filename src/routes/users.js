@@ -27,7 +27,8 @@ router.put('/users/:id/edit', upload.single("image"), usersController.update);
 // router.get('/login', usersController.login);
 
 // ELIMINAR USUARIO
-
+router.get('/users/:id/delete', usersController.delete);
+router.delete('/users/:id/delete', usersController.destroy);
 // SHOW DE USUARIOS
 
 /* END CRUD */
