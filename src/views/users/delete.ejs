@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+      <div class="principal-box">
+
+        <div class="title">
+            <h2 class="title-register">¿QUIERES BORRAR EL USUARIO?</h2>
+        </div>
+
+        <div class="content-box-register">
+          <form method="post" action="/users/<%=user.id %>/delete?_method=DELETE">
+            <div>
+              <label for="nameProduct">Usuario</label>
+              <input type="text" name="nameProduct" value="<%= user.firstName + user.lastName %>">
+            </div>
+            <div class="desc-product">
+              <label for="descProduct">Email</label>
+              <input type="text" name="descProduct" id="descProduct" value="<%= user.email %>">
+            </div>
+            <div class="register-button">
+              <button type=""><a href="/users/">Cancelar</a></button>
+            </div>
+
+            <div class="register-button">
+              <button type="submit">Borrar</button>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </main>
+    <%- include ("../partials/footer.ejs") %> 
+  </body>
+</html>

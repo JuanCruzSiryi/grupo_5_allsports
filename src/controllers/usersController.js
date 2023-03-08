@@ -149,9 +149,26 @@ const usersController = {
   },
 
   // DELETE
-
-  // DESTROY
+  delete: (req, res) => {
+    let userId = req.params.id;
+    let user = usersController.getUsers().find((user) => user.id == userId);
+    res.render('users/delete', {
+      title: "Borrar usuario",
+      stylesheetFile: "/users/editUser.css",
+      user
+    });
+  },
   
+  // DESTROY
+  destroy: (req, res) => {
+    let userId = req.params.id;
+    let users = usersController.getUsers();
+    let newUsers = users.filter(user => user.id != userId)
+
+    fs.writeFileSync(usersPath, JSON.stringify(newUsers, null, "  "));
+
+    res.redirect("/users");
+  },
   /* END CRUD */
 
   register: (req, res) => {
