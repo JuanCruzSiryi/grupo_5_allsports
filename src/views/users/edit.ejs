@@ -35,7 +35,8 @@
                 type="text"
                 name="firstName"
                 value="<%= user.firstName %>"
-              />
+                required />
+                <i class="fa-solid fa-user"></i>
             </div>
             <div class="lastName">
               <label for="lastName">Modificar apellido</label>
@@ -44,7 +45,8 @@
                 name="lastName"
                 id="lastName"
                 value="<%= user.lastName %>"
-              />
+                required />
+                <i class="fa-solid fa-user"></i>
             </div>
             <div>
               <label for="image">Modificar imagen/avatar</label>
@@ -57,13 +59,15 @@
               <label for="email">Modificar email</label>
               <input type="email" name="email" id="email" 
               value="<%= user.email %>"  
-              />
+              required/>
+              <i class="fa-solid fa-envelope"></i>
             </div>
             <div class="password">
               <label for="password">Modificar contraseña</label>
-              <input type="password" name="password" id="password" 
-              value="<%= user.password %>"
-              />
+              <input type="password" name="password" id="password"
+               value="<%= user.password %>"
+               required/>
+               <i class="fa-solid fa-lock"></i>
             </div>
             <div class="register-button">
               <button type="submit">Guardar</button>

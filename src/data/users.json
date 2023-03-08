@@ -158,15 +158,5 @@
     "category": "Admin",
     "image": "avatar-1677950424639",
     "available": true
-  },
-  {
-    "id": "b9f4b19f-3d96-483a-8fd4-edc410b00869",
-    "firstname": "Luis",
-    "lastname": "Scola",
-    "email": "luis@gmail.com",
-    "password": "$2a$10$TrxNdR04zzi4z97vn0h0VOUPq6jO7XdS/u4Qtp86AHALHpZ3JBzA2",
-    "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
   }
 ]

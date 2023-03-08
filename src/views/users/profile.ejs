@@ -17,7 +17,7 @@
             Atrás
           </button>
 
-          <h4 class="name"><%= user.firstName + user.lastName %></h4>
+          <h4 class="name"><%= user.firstName + " " + user.lastName %></h4>
         </div>
         <div class="product-container">
           <img
@@ -27,27 +27,30 @@
           />
 
           <div class="product-information">
-            <p class="price">Precio: <%=  %></p>
+            <!-- <p class="price">Precio: <%=  %></p>
             <p class="category">Categoría: <%=  %></p>
             <p class="color">Color: <%=  %></p>
-            <p class="size">Talle: <%=  %></p>
+            <p class="size">Talle: <%=  %></p> -->
 
             <div class=" description desktop-description">
               <%= user.email %>
+             <br>
+              <%= user.category %>
+              
             </div>
             <div class="detail-button desktop-buttons">
-              <button type="submit">
+              <button class ="button-edit" type="submit">
                 <a href="/users/<%= user.id %>/edit">Editar</a>
               </button>
     
-              <button type="submit">
+              <button class= "button-delete" type="submit">
                 <a href="/users/<%= user.id %>/delete">Eliminar</a>
               </button>
             </div>
           </div>
           
         </div>
-        <p class="description mobile-buttons">
+        <!-- <p class="description mobile-buttons">
           <%= user.email %>
         </p>
 
@@ -62,7 +65,7 @@
           </button>
         </div>
 
-      </div>
+      </div> -->
 
     </main>
 

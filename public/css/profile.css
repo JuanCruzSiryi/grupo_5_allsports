@@ -71,6 +71,17 @@ main {
     opacity: 0.2;
 }
 
+.products-list-title {
+  background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 5px 5%;
+}
+
+
+
+
 .title {
     width: 100%;
     padding: 10px;
@@ -82,6 +93,11 @@ main {
     font-size: 20px;
 }
 
+.image {
+  width: 35vw;
+  border-radius: 50%;
+}
+
 .profile-button {
     width: 100%;
     height: 13%;
@@ -91,6 +107,50 @@ main {
     justify-content: center;
     margin-bottom: -20px;
 }
+
+.detail-button a {
+  color: white;
+  
+}
+.detail-button button {
+        width: 85px;
+        font-size: 15px;
+        /* font-weight: bold; */
+        border-radius: 6px;
+        margin-bottom: 8px;
+        margin-top: 8px;
+        background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+    }
+    .back-button button {
+        width: 85px;
+        height: 30px;
+        border-radius: 6px;
+        background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+    }
+    
+    .back-button button a{
+      font-size: 15px;
+      color: white;
+      /* font-weight: bold; */
+    }
+    
+    .register-button button a{
+        color: white
+    }
+    
+    .register-button button:hover {
+        background-color: rgb(240, 237, 237)
+    }
+    
+h4.name{
+  font-size: 15px;
+  color: white;
+  padding: 4%;
+}
+
+
+
+  
 
 .profile-button button {
     width: 60%;

@@ -129,7 +129,8 @@ label {
     font-weight: bold;
     color: #052b63;
     font-size: 20px;
-}
+    text-align: center;
+  }
 
 .terms-box {
     font-size: 12px;
@@ -307,6 +308,12 @@ input::file-selector-button{
     margin: -15% 0% 0% 14%;
     position: absolute;
   } 
+
+  .title-register {
+    display: flex;
+    margin: 4% 0% -8% 32%;
+  }
+
 }
   @media (min-width: 1023px) {
     .title-navbar {
@@ -318,6 +325,7 @@ input::file-selector-button{
       padding-left: 22%;
     }
   
+    
     /* .imageAvatar {
       width: 95px;
       height: 95px;
