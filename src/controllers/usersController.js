@@ -128,9 +128,9 @@ const usersController = {
         // user.email = req.body.emailUser || user.email;
         user.email = req.body.email || user.email;
         
-        // user.image = req.file? req.file.filename : user.image;
+        user.image = req.file? req.file.filename : user.image;
        
-        user.image = req.file? req.file.image : user.image;
+        // user.image = req.file? req.file.image : user.image;
        
         // user.paswword = req.body.paswwordUser || user.paswword;
         

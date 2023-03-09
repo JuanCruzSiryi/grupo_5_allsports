@@ -22,7 +22,6 @@ router.post('/users/register', upload.single("image"), rules, usersController.st
 router.get('/users/:id/edit', usersController.edit);
 router.put('/users/:id/edit', upload.single("image"),rules, usersController.update);
 
-
 // LOGIN DE USUARIO
 // router.get('/login', usersController.login);
 
@@ -34,7 +33,6 @@ router.delete('/users/:id/delete', usersController.destroy);
 /* END CRUD */
 router.get('/profile', usersController.profile);
 
-router.get('/edit', usersController.edit);
 
 router.get('/users/:id', usersController.show);
 

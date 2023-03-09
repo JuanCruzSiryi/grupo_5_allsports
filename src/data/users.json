@@ -150,7 +150,6 @@
     "available": true
   },
   {
-<<<<<<< HEAD
     "id": "d1625442-ge1d-4f31-9294-dac52963310a",
     "firstName": "Jhon",
     "lastName": "Doe",
@@ -160,7 +159,6 @@
     "image": "avatar-1677950424639",
     "available": true
   },
-
   {
     "id": "b5e1c52e-7a67-422a-9865-75caf1bb07e7",
     "firstName": "Luis",
@@ -168,8 +166,8 @@
     "email": "lu@gmail.com",
     "password": "$2a$10$bZ60GWeFRF9dHnwh1egcaOWlcwAwPlczbgsDcfh9lRsalCCCcy1.2",
     "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
+    "available": true,
+    "image": "avatar-1678397395943.jpg"
   },
   {
     "id": "fa887cec-fda7-4f05-835e-618d53317ea7",
@@ -182,28 +180,11 @@
     "available": true
   },
   {
-    "id": "87f89080-9ed6-4e79-9273-34faadbfe884",
-    "firstName": "Maria",
-    "lastName": "Díaz",
-    "email": "mari@gmail.com",
-    "password": "$2a$10$6sDZZDGh6nA6xjMKM3ExZ.iddA8y04lXAudMWewzpcN0Ri9SM99cy",
-=======
-    "id": "b9f4b19f-3d96-483a-8fd4-edc410b00869",
-    "firstname": "Luis",
-    "lastname": "Scola",
-    "email": "luis@gmail.com",
-    "password": "$2a$10$TrxNdR04zzi4z97vn0h0VOUPq6jO7XdS/u4Qtp86AHALHpZ3JBzA2",
->>>>>>> 2fd9101e9788d0d631ae1517d4cf0e9cc4409488
-    "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
-  },
-  {
-    "id": "097c9caa-6699-45db-85ff-aecf5eb436fa",
-    "firstname": "John",
-    "lastname": "Doe",
-    "email": "doe@gmail.com",
-    "password": "$2a$10$jSh5Fpdrd/wQ8RAJPC/OLe8kScRsOwgWW8CFg1zCtVDT3hhBwAPxq",
+    "id": "a06c1dd2-a4e2-4b93-b892-9fbe6f7e6fa2",
+    "firstName": "Juan",
+    "lastName": "Siryi",
+    "email": "juancruzsiryi@gmail.com",
+    "password": "$2a$10$ZWXR0fLwS3IDbZ1eyDigtuiX.WgvIIn/hjqjjQLBOBNHryWtF8T4y",
     "category": "Usuario",
     "image": "default-user.png",
     "available": true
