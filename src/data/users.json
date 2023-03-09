@@ -178,15 +178,5 @@
     "category": "Usuario",
     "image": "default-user.png",
     "available": true
-  },
-  {
-    "id": "0c5440da-dcbb-4f6d-863c-246e2b41c1a3",
-    "firstName": "Maximiliano",
-    "lastName": "Sio",
-    "email": "msio94@hotmail.com",
-    "password": "$2a$10$JWeO1nQPWk57VdkLL6cVJOejgL0sYxeiAjboPLrDc1mhuBXjLwm4u",
-    "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
   }
 ]
