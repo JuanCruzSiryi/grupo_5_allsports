@@ -34,8 +34,6 @@ router.delete('/users/:id/delete', usersController.destroy);
 /* END CRUD */
 router.get('/profile', usersController.profile);
 
-router.get('/edit', usersController.edit);
-
 router.get('/users/:id', usersController.show);
 
 module.exports = router;
