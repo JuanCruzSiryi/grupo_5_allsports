@@ -168,15 +168,6 @@
     "category": "Usuario",
     "image": "default-user.png",
     "available": true
-  },
-  {
-    "id": "fbb60dbc-94b4-4d41-b517-e8386d540b81",
-    "firstName": "Juan",
-    "lastName": "Siryi",
-    "email": "juancruzsiryi@gmail.com",
-    "password": "$2a$10$BnDWFO5XcR1Q28n1WvO5auy.GlkwsIeh8eaKAgNazuhvFjuB3jKIu",
-    "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
   }
+  
 ]
