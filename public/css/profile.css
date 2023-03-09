@@ -79,9 +79,6 @@ main {
   padding: 5px 5%;
 }
 
-
-
-
 .title {
     width: 100%;
     padding: 10px;
@@ -143,14 +140,10 @@ main {
     }
     
 h4.name{
-  font-size: 15px;
+  font-size: 20px;
   color: white;
   padding: 4%;
 }
-
-
-
-  
 
 .profile-button button {
     width: 60%;
@@ -199,8 +192,20 @@ h4.name{
     .title-profile {
       font-size: 24px;
     }
-}
-  
+
+    h4.name{
+      font-size: 30px;
+      color: white;
+      padding: 1%;
+      margin-top: 5%;
+    }
+    
+    .image {
+      width: 20vw;
+      border-radius: 50%;
+    }
+  }
+
   @media(min-width: 768px) {
     .main-navbar {
       max-width: 1200px;
@@ -229,7 +234,9 @@ h4.name{
       margin: 0 8px;
     }
   }
-  
+  .create-button{
+    margin-left: -90%;
+  }
   @media (min-width: 1200px) {
     .main-header-top-bar, .main-navbar {
       max-width: 1200px;

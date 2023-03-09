@@ -1,15 +1,5 @@
 [
   {
-    "id": "ca6da701-3ad7-451e-8b59-864636c10b1c",
-    "firstName": "Marcelo",
-    "lastName": "Benitez",
-    "email": "mbenitez10@gmail.com",
-    "password": "fbIjp8cb7z",
-    "category": "Usuario",
-    "image": "avatar_01.png",
-    "available": true
-  },
-  {
     "id": "a42bd5ac-e492-4c6c-8bac-feee5ddcafec",
     "firstName": "Claudio",
     "lastName": "Martinez",
