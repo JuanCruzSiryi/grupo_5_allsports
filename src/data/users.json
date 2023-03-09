@@ -170,11 +170,11 @@
     "available": true
   },
   {
-    "id": "a06c1dd2-a4e2-4b93-b892-9fbe6f7e6fa2",
+    "id": "fbb60dbc-94b4-4d41-b517-e8386d540b81",
     "firstName": "Juan",
     "lastName": "Siryi",
     "email": "juancruzsiryi@gmail.com",
-    "password": "$2a$10$ZWXR0fLwS3IDbZ1eyDigtuiX.WgvIIn/hjqjjQLBOBNHryWtF8T4y",
+    "password": "$2a$10$BnDWFO5XcR1Q28n1WvO5auy.GlkwsIeh8eaKAgNazuhvFjuB3jKIu",
     "category": "Usuario",
     "image": "default-user.png",
     "available": true
