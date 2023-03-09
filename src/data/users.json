@@ -1,15 +1,5 @@
 [
   {
-    "id": "ca6da701-3ad7-451e-8b59-864636c10b1c",
-    "firstName": "Marcelo",
-    "lastName": "Benitez",
-    "email": "mbenitez10@gmail.com",
-    "password": "fbIjp8cb7z",
-    "category": "Usuario",
-    "image": "avatar_01.png",
-    "available": true
-  },
-  {
     "id": "a42bd5ac-e492-4c6c-8bac-feee5ddcafec",
     "firstName": "Claudio",
     "lastName": "Martinez",
@@ -150,7 +140,6 @@
     "available": true
   },
   {
-<<<<<<< HEAD
     "id": "d1625442-ge1d-4f31-9294-dac52963310a",
     "firstName": "Jhon",
     "lastName": "Doe",
@@ -160,7 +149,6 @@
     "image": "avatar-1677950424639",
     "available": true
   },
-
   {
     "id": "b5e1c52e-7a67-422a-9865-75caf1bb07e7",
     "firstName": "Luis",
@@ -187,23 +175,16 @@
     "lastName": "Díaz",
     "email": "mari@gmail.com",
     "password": "$2a$10$6sDZZDGh6nA6xjMKM3ExZ.iddA8y04lXAudMWewzpcN0Ri9SM99cy",
-=======
-    "id": "b9f4b19f-3d96-483a-8fd4-edc410b00869",
-    "firstname": "Luis",
-    "lastname": "Scola",
-    "email": "luis@gmail.com",
-    "password": "$2a$10$TrxNdR04zzi4z97vn0h0VOUPq6jO7XdS/u4Qtp86AHALHpZ3JBzA2",
->>>>>>> 2fd9101e9788d0d631ae1517d4cf0e9cc4409488
     "category": "Usuario",
     "image": "default-user.png",
     "available": true
   },
   {
-    "id": "097c9caa-6699-45db-85ff-aecf5eb436fa",
-    "firstname": "John",
-    "lastname": "Doe",
-    "email": "doe@gmail.com",
-    "password": "$2a$10$jSh5Fpdrd/wQ8RAJPC/OLe8kScRsOwgWW8CFg1zCtVDT3hhBwAPxq",
+    "id": "0c5440da-dcbb-4f6d-863c-246e2b41c1a3",
+    "firstName": "Maximiliano",
+    "lastName": "Sio",
+    "email": "msio94@hotmail.com",
+    "password": "$2a$10$JWeO1nQPWk57VdkLL6cVJOejgL0sYxeiAjboPLrDc1mhuBXjLwm4u",
     "category": "Usuario",
     "image": "default-user.png",
     "available": true

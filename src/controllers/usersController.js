@@ -93,7 +93,7 @@ const usersController = {
         
         fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
         
-        res.redirect('profile');
+        res.redirect('/');
   },
 
   // EDIT
