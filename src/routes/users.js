@@ -22,7 +22,6 @@ router.post('/users/register', upload.single("image"), rules, usersController.st
 router.get('/users/:id/edit', usersController.edit);
 router.put('/users/:id/edit', upload.single("image"),rules, usersController.update);
 
-
 // LOGIN DE USUARIO
 // router.get('/login', usersController.login);
 
