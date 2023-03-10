@@ -18,7 +18,6 @@ const routesUsers = require('./routes/users');
 
 /* Middlewares */
 const userSessionMiddleware = require('./middlewares/userSessionMiddleware');
-const userIdSessionMiddleware = require('./middlewares/userIdSessionMiddleware');
 
 /* Access to the static resources folder is configured */
 app.use(express.static("public"));
@@ -45,7 +44,6 @@ app.use(session({
 app.use(methodOverride('_method'))
 
 app.use(userSessionMiddleware);
-app.use(userIdSessionMiddleware);
 
 /* Implement index route in the app */
 app.use("/", routesMain); 

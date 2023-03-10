@@ -93,17 +93,18 @@ const usersController = {
         
         fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
         // Login the user registered
-        if(!res.locals.userIdLogged) {
-          req.session.userIdLogged = newUser.id;
-          res.locals.userIdLogged = newUser.id;
+        if(!res.locals.userLogged) {
+          req.session.userLogged = newUser;
+          res.locals.userLogged = newUser;
           res.cookie(
-            'userIdLogged',
-            newUser.id,
+            'userLogged',
+            newUser,
             { maxAge: 1000 * 60 * 5 }
           );
-          console.log("#### Register and Login");
+          // console.log("# Register and Login");
+          return res.redirect('/');
         }
-        res.redirect('/');
+        res.redirect('/users');
   },
 
   // EDIT

@@ -25,21 +25,11 @@ const mainController = {
       if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password
         req.session.userLogged = user;
 
-        //userId session
-        req.session.userIdLogged = user.id;
-        res.locals.userIdLogged = user.id;
-
         if(req.body.rememberme){
           res.cookie(
             'userLogged',
             user,
             { maxAge: 1000 * 60 * 2 }
-          );
-
-          res.cookie(
-            'userIdLogged',
-            user.id,
-            { maxAge: 1000 * 60 * 5 }
           );
         }
         res.redirect('/')
