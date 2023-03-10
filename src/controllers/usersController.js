@@ -92,7 +92,17 @@ const usersController = {
         users.push(newUser);
         
         fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
-        
+        // Login the user registered
+        if(!res.locals.userIdLogged) {
+          req.session.userIdLogged = newUser.id;
+          res.locals.userIdLogged = newUser.id;
+          res.cookie(
+            'userIdLogged',
+            newUser.id,
+            { maxAge: 1000 * 60 * 5 }
+          );
+          console.log("#### Register and Login");
+        }
         res.redirect('/');
   },
 
