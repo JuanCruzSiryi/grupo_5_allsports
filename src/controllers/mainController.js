@@ -24,6 +24,7 @@ const mainController = {
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password
         req.session.userLogged = user;
+
         if(req.body.rememberme){
           res.cookie(
             'userLogged',

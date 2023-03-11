@@ -150,23 +150,13 @@
     "available": true
   },
   {
-    "id": "b5e1c52e-7a67-422a-9865-75caf1bb07e7",
-    "firstName": "Luis",
-    "lastName": "Scola",
-    "email": "lu@gmail.com",
-    "password": "$2a$10$bZ60GWeFRF9dHnwh1egcaOWlcwAwPlczbgsDcfh9lRsalCCCcy1.2",
-    "category": "Usuario",
-    "available": true,
-    "image": "avatar-1678397395943.jpg"
-  },
-  {
     "id": "fa887cec-fda7-4f05-835e-618d53317ea7",
-    "firstName": "Max",
+    "firstName": "Maxi",
     "lastName": "Sio",
     "email": "maxi@gmail.com",
     "password": "$2a$10$wG0G9q8FA9RVYKqvL1V/JuMDk5N91NG6u9XjBid.903dnKO858Fcm",
     "category": "Usuario",
-    "image": "avatar-1678539438858.jpg",
+    "image": "default-user.png",
     "available": true
   }
 ]
