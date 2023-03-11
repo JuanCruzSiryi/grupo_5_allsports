@@ -18,6 +18,10 @@ body {
   background: linear-gradient(to right, rgb(196, 212, 255), rgb(255, 218, 203));
 }
 
+.title{
+  text-align: center;
+}
+
 .principal-box input {
   color: #052b63;
   border: solid 1px #052b63;
@@ -35,6 +39,12 @@ label {
   color: #052b63;
 }
 
+.back-button{
+  display: flex;
+  flex-direction: column;
+
+}
+
 .principal-box {
     height: 90%;
     display: flex;
@@ -50,11 +60,8 @@ label {
     width: 60px;
     height: 60px;
     border: solid 2px grey;
-    border-radius: 5%;
-  
-    margin: -17% 0% 0% 26%;
+    border-radius: 50%;
     box-shadow: 5px 5px 5px teal;
-    position: absolute;
 }
 
 .content-box-register form{
@@ -228,6 +235,7 @@ input::file-selector-button{
 .back-button button {
     width: 85px;
     height: 30px;
+    margin: 2%;
     border-radius: 6px;
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
@@ -251,14 +259,11 @@ input::file-selector-button{
         margin-left: 20%;
         margin-right: 20%;
         justify-content: center;
+        height: 80%;
     }
     main {
       height: 105vh;
       margin-bottom: 0;
-    }
-    .title {
-      margin-bottom: 60px;
-      margin-top: -100px;
     }
     .back-button {
       padding: 15px;
@@ -303,16 +308,11 @@ input::file-selector-button{
     }
 
   .imageAvatar {
-    width: 80px;
-    height: 80px;
-    margin: -15% 0% 0% 14%;
-    position: absolute;
+    width: 85px;
+    height: 85px;
   } 
 
-  .title-register {
-    display: flex;
-    margin: 4% 0% -8% 32%;
-  }
+  
 
 }
   @media (min-width: 1023px) {
@@ -325,7 +325,10 @@ input::file-selector-button{
       padding-left: 22%;
     }
   
-    
+  .principal-box{
+    height: 70%;
+
+  }  
     /* .imageAvatar {
       width: 95px;
       height: 95px;
@@ -378,10 +381,11 @@ input::file-selector-button{
       padding-left: 30%;
     }
     
+    .title{
+      text-align: center;
+    }
      .imageAvatar {
-      width: 95px;
-      height: 95px;
-      margin: -7% 0% 0% 17%;
-      position: absolute;
+      width: 115px;
+      height: 115px;
     } 
   }
