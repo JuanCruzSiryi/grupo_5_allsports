@@ -148,15 +148,5 @@
     "category": "Admin",
     "image": "avatar-1677950424639",
     "available": true
-  },
-  {
-    "id": "fa887cec-fda7-4f05-835e-618d53317ea7",
-    "firstName": "Maxi",
-    "lastName": "Sio",
-    "email": "maxi@gmail.com",
-    "password": "$2a$10$wG0G9q8FA9RVYKqvL1V/JuMDk5N91NG6u9XjBid.903dnKO858Fcm",
-    "category": "Usuario",
-    "image": "default-user.png",
-    "available": true
   }
 ]
