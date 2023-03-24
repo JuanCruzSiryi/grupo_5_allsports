@@ -67,7 +67,18 @@ module.exports = (sequelize, dataTypes) => {
     //             timestamps: false
     //         })
     // }
+    User.associate = models => {
+        User.belongsTo(models.Role, {
+            as: "role",
+            foreignKey: "role_id",
+            timestamps: false
+        })
+        User.belongsTo(models.Country, {
+            as: "country",
+            foreignKey: "country_id",
+            timestamps: false
+        })
+    }
 
- 
     return User
 };

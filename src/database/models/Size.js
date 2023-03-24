@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category';
+    let alias = 'Size';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -8,10 +8,22 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
-        name: {
-            type: dataTypes.STRING(100),
+        cm: {
+            type: dataTypes.DECIMAL(3,1),
             allowNull: false
-        }
+        },
+        eur: {
+            type: dataTypes.DECIMAL(3,1),
+            allowNull: true
+        },
+        uk: {
+            type: dataTypes.DECIMAL(3,1),
+            allowNull: true
+        },
+        us: {
+            type: dataTypes.DECIMAL(3,1),
+            allowNull: true
+        },
     };
     let config = {
         timestamps: true,
@@ -19,17 +31,17 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'updatedAt',
         deletedAt: false
     }
-    const Category = sequelize.define(alias, cols, config); 
+    const Size = sequelize.define(alias, cols, config); 
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
-    Category.associate = models => {
-        Category.hasMany(models.Product, 
+    Size.associate = models => {
+        Size.hasMany(models.Product, 
             {
                 as: "products",
-                foreignKey: "category_id",
+                foreignKey: "size_id",
                 timestamps: false
             })
     }
 
-    return Category
+    return Size
 };

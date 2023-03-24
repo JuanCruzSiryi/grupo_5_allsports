@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category';
+    let alias = 'Tag';
     let cols = {
         id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
@@ -19,17 +19,17 @@ module.exports = (sequelize, dataTypes) => {
         updatedAt: 'updatedAt',
         deletedAt: false
     }
-    const Category = sequelize.define(alias, cols, config); 
+    const Tag = sequelize.define(alias, cols, config); 
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
-    Category.associate = models => {
-        Category.hasMany(models.Product, 
+    Tag.associate = models => {
+        Tag.hasMany(models.Product, 
             {
                 as: "products",
-                foreignKey: "category_id",
+                foreignKey: "tag_id",
                 timestamps: false
             })
     }
 
-    return Category
+    return Tag
 };
