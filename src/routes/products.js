@@ -7,6 +7,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /* CRUD */
 router.get('/products', guestMiddleware, productsController.index);
+router.get('/productsList', productsController.list);
 
 /* creacion de producto */
 router.get('/products/create', productsController.create);

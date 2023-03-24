@@ -5,6 +5,8 @@ const usersPath = path.join(__dirname, "../data/users.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
+const {User} = require('../database/models');
+
 const usersController = {
   /* CRUD */
   getUsers: () => {
@@ -16,6 +18,12 @@ const usersController = {
       stylesheetFile: "/users/index.css",
       usersList: usersController.getUsers(),
     });
+  },
+  list: (req, res) => {
+    User.findAll()
+      .then(users => {
+        res.send(users)
+      })
   },
   // SHOW
   show: (req, res) => {

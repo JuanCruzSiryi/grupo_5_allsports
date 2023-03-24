@@ -3,6 +3,8 @@ const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const productsPath = path.join(__dirname, "../data/products.json");
 
+const {Product} = require('../database/models');
+
 const productsController = {
   /* CRUD */
   getProducts: () => {
@@ -14,6 +16,12 @@ const productsController = {
       stylesheetFile: "/products/index.css",
       productsList: productsController.getProducts(),
     });
+  },
+  list: (req, res) => {
+    Product.findAll()
+      .then(products => {
+        res.send(products)
+      })
   },
   show: (req, res) => {
     let productId = req.params.id;

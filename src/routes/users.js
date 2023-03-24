@@ -8,6 +8,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /* CRUD */
 router.get('/users', guestMiddleware, usersController.index);
+router.get('/usersList', usersController.list);
 
 /* END CRUD */
 
