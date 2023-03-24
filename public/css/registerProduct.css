@@ -235,7 +235,7 @@ color: white;
       justify-content: center;
   }
   main {
-    height: 105vh;
+    /* height: 100vh; */
     margin-bottom: 0;
   }
 }
@@ -274,7 +274,7 @@ color: white;
   }
   
   .form-title {
-    padding-left: 12%;
+    padding-left: 16%;
   }
 }
 

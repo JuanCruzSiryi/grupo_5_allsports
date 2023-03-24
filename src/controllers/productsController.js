@@ -1,10 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
-// const productsPath = path.join(__dirname, "../data/products.json");
+const productsPath = path.join(__dirname, "../data/products.json");
 
 const {Product} = require('../database/models');
-
+const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
@@ -49,19 +49,19 @@ const productsController = {
 
   create: (req, res) => {
     res.render('products/create', {
-      title: "Crear producto",
-      stylesheetFile: "registerProduct.css"
-    });
+    title: "Crear producto",
+    stylesheetFile: "registerProduct.css"
+  });
+  },
 
-  // CRUD NUEVO
+  //CRUD NUEVO
   // create: (req, res) => {
-  //   db.Products.findAll()
+  //   Product.findAll()
   //     .then((products) => {
   //       return res.render("products/create", {products})
   //     })
-  // }
+  // },
 
-  },
   store: (req, res) => {
     let products = productsController.getProducts();
     let image = req.file? req.file.filename : "default-product.png";

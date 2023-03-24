@@ -161,7 +161,7 @@ main {
         justify-content: center;
     }
     main {
-      height: 100vh;
+      /* height: 100vh; */
       margin-bottom: 0;
     }
     .title-register {
