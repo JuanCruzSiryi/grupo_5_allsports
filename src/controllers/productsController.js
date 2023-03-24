@@ -46,11 +46,21 @@ const productsController = {
     });
     
   },
+
   create: (req, res) => {
     res.render('products/create', {
       title: "Crear producto",
       stylesheetFile: "registerProduct.css"
     });
+
+  // CRUD NUEVO
+  // create: (req, res) => {
+  //   db.Products.findAll()
+  //     .then((products) => {
+  //       return res.render("products/create", {products})
+  //     })
+  // }
+
   },
   store: (req, res) => {
     let products = productsController.getProducts();
@@ -72,6 +82,25 @@ const productsController = {
     products.push(newProduct)
     fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
     res.redirect("/products");
+
+    // CRUD NUEVO
+
+    // store: (req, res) {
+    //   db.Product.create({
+    //     name: req.body.nameProduct,
+    //     description: req.body.descProduct,
+    //     brand_id: req.body.brandProduct,
+    //     category_id: req.body.name.categoryProduct,
+    //     tag_id: req.body.name.tags,
+    //     color_id: req.body.name.color,
+    //     image: req.body.image,
+    //     price: req.body.priceProduct,
+    //     size_id: req.body.talles,
+    //     discount: req.body.discount,
+    //     state: req.body.state
+    //   })
+    // }
+
   },
   edit: (req, res) => {
     let productId = req.params.id;
