@@ -1,9 +1,21 @@
 const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
-const productsPath = path.join(__dirname, "../data/products.json");
+// const productsPath = path.join(__dirname, "../data/products.json");
 
 const {Product} = require('../database/models');
+
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+
+const Products = db.Products;
+const Categories = db.Categories;
+const Brands = db.Brands;
+const Product_user = db.Product_user;
+const Sizes = db.Sizes;
+const Colors = db.Colors
+const Tags = db.Tags
+
 
 const productsController = {
   /* CRUD */
@@ -32,6 +44,7 @@ const productsController = {
       stylesheetFile: "/products/show.css",
       product
     });
+    
   },
   create: (req, res) => {
     res.render('products/create', {
