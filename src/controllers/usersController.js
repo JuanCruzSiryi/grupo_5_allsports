@@ -58,14 +58,6 @@ const usersController = {
     });
   },
 
-  // CRUD NUEVO
-  // create: (req, res) => {
-  //   db.Users.findAll()
-  //     .then((users) => {
-  //       return res.render("users/register", {users})
-  //     })
-  // }
-
   // STORE
   store: (req, res) => {
         const errors = validationResult(req);
@@ -126,7 +118,7 @@ const usersController = {
    // CRUD NUEVO
 
     // store: (req, res) {
-    //   db.Users.register({
+    //   const _body = {
     //     firstName: req.body.firstName,
     //     lastName: req.body.lastName,
     //     email: req.body.email,
@@ -136,7 +128,12 @@ const usersController = {
     //     address: req.body.address,
     //     country_id: req.body.country,
     //     state: req.body.state,
-    //   })
+    //   }
+    //    db.Users.create(_body)
+    //    .then(() => {
+    //        res.redirect('/users')
+    //    })
+    //    .catch(error => res.send('error'));
     // }
 
   // EDIT

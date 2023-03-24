@@ -53,15 +53,6 @@ const productsController = {
     stylesheetFile: "registerProduct.css"
   });
   },
-
-  //CRUD NUEVO
-  // create: (req, res) => {
-  //   Product.findAll()
-  //     .then((products) => {
-  //       return res.render("products/create", {products})
-  //     })
-  // },
-
   store: (req, res) => {
     let products = productsController.getProducts();
     let image = req.file? req.file.filename : "default-product.png";
@@ -86,7 +77,7 @@ const productsController = {
     // CRUD NUEVO
 
     // store: (req, res) {
-    //   db.Product.create({
+    //   const _body = {
     //     name: req.body.nameProduct,
     //     description: req.body.descProduct,
     //     brand_id: req.body.brandProduct,
@@ -98,7 +89,12 @@ const productsController = {
     //     size_id: req.body.talles,
     //     discount: req.body.discount,
     //     state: req.body.state
-    //   })
+    //   }
+    //   db.Product.create(_body)
+    //    .then(() => {
+    //        res.redirect('/products')
+    //    })
+    //    .catch(error => res.send('error'));
     // }
 
   },
