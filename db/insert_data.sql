@@ -57,7 +57,7 @@ insert into roles (name)
 values ('admin');
 
 /* Insertar nuevo usuario */
-insert into users (firstName, lastName, email, password, image, role_id)
+insert into users (firstName, lastName, email, image, password, role_id)
 values (
     'Jhon',
     'Doe',
@@ -67,7 +67,7 @@ values (
     2
   );
 
-insert into users (firstName, lastName, email, password, image, role_id)
+insert into users (firstName, lastName, email, image, password, role_id)
 values (
     'Claudio',
     'Martinez',

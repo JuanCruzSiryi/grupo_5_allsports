@@ -23,9 +23,9 @@ module.exports = (sequelize, dataTypes) => {
 
     //Aquí debes realizar lo necesario para crear las relaciones con el modelo (Movie)
     Country.associate = models => {
-        Country.hasMany(models.Product, 
+        Country.hasMany(models.User, 
             {
-                as: "products",
+                as: "users",
                 foreignKey: "country_id",
                 timestamps: false
             })

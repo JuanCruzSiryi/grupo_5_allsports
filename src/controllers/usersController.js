@@ -12,37 +12,65 @@ const usersController = {
   getUsers: () => {
     return JSON.parse(fs.readFileSync(usersPath, "utf-8"));
   },
-  index: (req, res) => {
-    res.render("../views/users/index", {
-      title: "Lista de usuarios",
-      stylesheetFile: "/users/index.css",
-      usersList: usersController.getUsers(),
-    });
+  // index: (req, res) => {
+  //   res.render("../views/users/index", {
+  //     title: "Lista de usuarios",
+  //     stylesheetFile: "/users/index.css",
+  //     usersList: usersController.getUsers(),
+  //   });
+  // },
+  index: async (req, res) => {
+    try {
+      const users = await User.findAll();
+      res.render("../views/users/index", {
+        title: "Lista de usuarios",
+        stylesheetFile: "/users/index.css",
+        usersList: users,
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
-  list: (req, res) => {
-    User.findAll()
-      .then(users => {
-        res.send(users)
-      })
+  list: async (req, res) => {
+    try {
+      const users = await User.findAll();
+      res.render("../views/users/index", {
+        title: "Lista de usuarios",
+        stylesheetFile: "/users/index.css",
+        usersList: users,
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
   // SHOW
-  show: (req, res) => {
-    let profileId = req.params.id;
-    let profile = usersController.getUsers().find((profile) => profile.id == profileId);
+  // show: (req, res) => {
+  //   let profileId = req.params.id;
+  //   let profile = usersController.getUsers().find((profile) => profile.id == profileId);
   
-    
-    res.render("users/show", {
-      title: "Profile",
-      stylesheetFile: "users/show.css",
-      user: profile
-    });
+  //   res.render("users/show", {
+  //     title: "Profile",
+  //     stylesheetFile: "users/show.css",
+  //     user: profile
+  //   });
+  // },
+  show: async (req, res) => {
+    try {
+      const user = await User.findByPk(req.params.id);
+      res.render("users/show", {
+        title: "Profile",
+        stylesheetFile: "users/show.css",
+        user: user
+      });
+
+    } catch (error) {
+      res.send(error)
+    }
   },
 
-  
   profile: (req, res) => {
     let profile= res.locals.userLogged;
     // req.session.userLogged = user;
-       
     res.render("users/profile", {
       title: "Profile",
       stylesheetFile: "profile.css",
@@ -137,89 +165,120 @@ const usersController = {
     // }
 
   // EDIT
-  edit: (req, res) => {
-    let userId = req.params.id;
-    let user = usersController.getUsers().find((user) => user.id == userId);
-
-    res.render("../views/users/edit", {
-      title: "Mi User",
-      stylesheetFile: "editUser.css",
-      user
-    });
+  // edit: (req, res) => {
+  //   let userId = req.params.id;
+  //   let user = usersController.getUsers().find((user) => user.id == userId);
+  //   res.render("../views/users/edit", {
+  //     title: "Mi User",
+  //     stylesheetFile: "editUser.css",
+  //     user
+  //   });
+  // },
+  edit: async (req, res) => {
+    try {
+      const user = await User.findByPk(req.params.id);
+      res.render("../views/users/edit", {
+        title: "Mi User",
+        stylesheetFile: "editUser.css",
+        user
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
 
   // UPDATE
+  // update: (req, res) => {
+  //   let userId = req.params.id;
+  //   // console.log("body: ", req.body);
+  //   let users = usersController.getUsers();
+
+  //   users.forEach((user, index) => {
+  //     if (user.id == userId) {
+  //       // user.firstName = req.body.firstName || user.first_name;
+  //       user.firstName = req.body.firstName || user.firstName;
+
+  //       // user.last_name = req.body.last_nameUser || user.last_name;
+  //      user.lastName = req.body.lastName || user.lastName;
+  //       // user.email = req.body.emailUser || user.email;
+  //       user.email = req.body.email || user.email;
+  //       user.image = req.file? req.file.filename : user.image;
+  //       // user.image = req.file? req.file.image : user.image;
+  //       // user.paswword = req.body.paswwordUser || user.paswword;
+  //       // user.password = bcryptjs.hashSync(req.body.password, 10);
+  //       user.category = req.body.categoryUser || user.category;
+  //       user.available = true;
+  //       users[index] = user;
+  //     }
+  //   });
+  //   fs.writeFileSync(usersPath, JSON.stringify(users, null, "  "));
+  //   res.redirect("/users");
+  // },
+
   update: (req, res) => {
-    let userId = req.params.id;
-    // console.log("body: ", req.body);
-    let users = usersController.getUsers();
-
-    users.forEach((user, index) => {
-      if (user.id == userId) {
-        // user.firstName = req.body.firstName || user.first_name;
-       
-        user.firstName = req.body.firstName || user.firstName;
-       
-
-        // user.last_name = req.body.last_nameUser || user.last_name;
-       user.lastName = req.body.lastName || user.lastName;
-        
-       
-        // user.email = req.body.emailUser || user.email;
-        user.email = req.body.email || user.email;
-        
-        user.image = req.file? req.file.filename : user.image;
-       
-        // user.image = req.file? req.file.image : user.image;
-       
-        // user.paswword = req.body.paswwordUser || user.paswword;
-        
-        // user.password = bcryptjs.hashSync(req.body.password, 10);
-			
-        user.category = req.body.categoryUser || user.category;
-        user.available = true;
-
-        users[index] = user;
-      }
-    });
-
-    fs.writeFileSync(usersPath, JSON.stringify(users, null, "  "));
-
-    res.redirect("/users");
+    User.update(
+      {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        image: req.body.image,
+        category: req.body.categoryUser,
+      },
+      {
+        where: {id: req.params.id}
+      })
+      .then(() => {
+        return res.redirect('/users');
+      })
+      .catch(error => {
+        res.send(error)
+      });
   },
 
   // DELETE
-  delete: (req, res) => {
-    let userId = req.params.id;
-    let user = usersController.getUsers().find((user) => user.id == userId);
-    res.render('users/delete', {
-      title: "Borrar usuario",
-      stylesheetFile: "/users/editUser.css",
-      user
-    });
+  // delete: (req, res) => {
+  //   let userId = req.params.id;
+  //   let user = usersController.getUsers().find((user) => user.id == userId);
+  //   res.render('users/delete', {
+  //     title: "Borrar usuario",
+  //     stylesheetFile: "/users/editUser.css",
+  //     user
+  //   });
+  // },
+  delete: async (req, res) => {
+    try {
+      const user = await User.findByPk(req.params.id);
+      res.render("users/delete", {
+        title: "Borrar usuario",
+        stylesheetFile: "/users/editUser.css",
+        user: user
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
   
   // DESTROY
+  // destroy: (req, res) => {
+  //   let userId = req.params.id;
+  //   let users = usersController.getUsers();
+  //   let newUsers = users.filter(user => user.id != userId)
+  //   fs.writeFileSync(usersPath, JSON.stringify(newUsers, null, "  "));
+  //   res.redirect("/users");
+  // },
+
   destroy: (req, res) => {
-    let userId = req.params.id;
-    let users = usersController.getUsers();
-    let newUsers = users.filter(user => user.id != userId)
-
-    fs.writeFileSync(usersPath, JSON.stringify(newUsers, null, "  "));
-
-    res.redirect("/users");
+    User.destroy({
+      where: {id: req.params.id}
+      })
+      .then(() => {
+        return res.redirect('/users');
+      })
+      .catch(error => {
+        res.send(error);
+      });
   },
   /* END CRUD */
-
-  register: (req, res) => {
-    res.render("../views/users/register", {
-      title: "Users-Register",
-      stylesheetFile: "register.css",
-    });
-  },
-
 };
-
-
 
 module.exports = usersController;

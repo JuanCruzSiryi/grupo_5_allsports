@@ -29,11 +29,13 @@ const productsController = {
       productsList: productsController.getProducts(),
     });
   },
-  list: (req, res) => {
-    Product.findAll()
-      .then(products => {
-        res.send(products)
-      })
+  list: async (req, res) => {
+    try {
+      const products = await Product.findAll();
+      res.send(products)
+    } catch (error) {
+      res.send(error)
+    }
   },
   show: (req, res) => {
     let productId = req.params.id;
