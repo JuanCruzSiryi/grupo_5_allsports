@@ -2,19 +2,14 @@ const fs = require("fs");
 const path = require("path");
 const { v4: uuidv4 } = require('uuid');
 const productsPath = path.join(__dirname, "../data/products.json");
+const bcryptjs = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 const {Product} = require('../database/models');
-const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
-
-const Products = db.Products;
-const Categories = db.Categories;
-const Brands = db.Brands;
-const Product_user = db.Product_user;
-const Sizes = db.Sizes;
-const Colors = db.Colors
-const Tags = db.Tags
+// const db = require('../database/models');
+// const sequelize = db.sequelize;
+// const { Op } = require("sequelize");
+// const Products = db.Products;
 
 
 const productsController = {
@@ -22,32 +17,64 @@ const productsController = {
   getProducts: () => {
     return JSON.parse(fs.readFileSync(productsPath, "utf-8"));
   },
-  index: (req, res) => {
-    res.render("../views/products/index", {
-      title: "Products List",
-      stylesheetFile: "/products/index.css",
-      productsList: productsController.getProducts(),
-    });
-  },
-  list: async (req, res) => {
+  // index: (req, res) => {
+  //   res.render("../views/products/index", {
+  //     title: "Products List",
+  //     stylesheetFile: "/products/index.css",
+  //     productsList: productsController.getProducts(),
+  //   });
+  // },
+  index: async (req, res) => {
     try {
       const products = await Product.findAll();
-      res.send(products)
+      res.render("../views/products/index", {
+        title: "Lista de productoss",
+        stylesheetFile: "/products/index.css",
+        productsList: products,
+      });
     } catch (error) {
       res.send(error)
     }
   },
-  show: (req, res) => {
-    let productId = req.params.id;
-    let product = productsController.getProducts().find((product) => product.id == productId);
 
-    res.render("products/show", {
-      title: "Mi Producto",
-      stylesheetFile: "/products/show.css",
-      product
-    });
-    
+  list: async (req, res) => {
+    try {
+      const products = await Product.findAll();
+      res.render("../views/products/index",{
+        title: "Lista de productoss",
+        stylesheetFile: "/products/index.css",
+        productsList: products,
+      }); 
+    } catch (error) {
+      res.send(error)
+    }
   },
+  // show: (req, res) => {
+  //   let productId = req.params.id;
+  //   let product = productsController.getProducts().find((product) => product.id == productId);
+
+  //   res.render("products/show", {
+  //     title: "Mi Producto",
+  //     stylesheetFile: "/products/show.css",
+  //     product
+  //   });
+    
+  // },
+
+show: async (req, res) => {
+    try {
+      const product = await Product.findByPk(req.params.id);
+      res.render("product/show", {
+        title: "Profile",
+        stylesheetFile: "products/show.css",
+        product: product
+      });
+
+    } catch (error) {
+      res.send(error)
+    }
+  },
+
 
   create: (req, res) => {
     res.render('products/create', {
@@ -100,59 +127,126 @@ const productsController = {
     // }
 
   },
-  edit: (req, res) => {
-    let productId = req.params.id;
-    let product = productsController.getProducts().find((product) => product.id == productId);
+  // edit: (req, res) => {
+  //   let productId = req.params.id;
+  //   let product = productsController.getProducts().find((product) => product.id == productId);
 
-    res.render("../views/products/productEdit", {
-      title: "Mi product",
-      stylesheetFile: "editProduct.css",
-      product
-    });
+  //   res.render("../views/products/productEdit", {
+  //     title: "Mi product",
+  //     stylesheetFile: "editProduct.css",
+  //     product
+  //   });
+  // },
+
+  edit: async (req, res) => {
+    try {
+      const product = await Product.findByPk(req.params.id);
+      res.render("../views/products/edit", {
+        title: "Mi Product",
+        stylesheetFile: "editProduct.css",
+        user
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
+
+  
+  // update: (req, res) => {
+  //   let productId = req.params.id;
+  //   // console.log("body: ", req.body);
+  //   let products = productsController.getProducts();
+
+  //   products.forEach((product, index) => {
+  //     if (product.id == productId) {
+  //       product.name = req.body.nameProduct || product.name;
+  //       product.description = req.body.descProduct || product.description;
+  //       product.price = req.body.priceProduct || product.price;
+  //       product.image = req.file? req.file.filename : product.image;
+  //       product.category = req.body.categoryProduct || product.category;
+  //       product.brand = req.body.brand || product.brand;
+  //       product.color = req.body.color || product.color;
+  //       product.size = req.body.talles || product.size;
+  //       product.available = true;
+
+  //       products[index] = product;
+  //     }
+  //   });
+
+  //   fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
+
+  //   res.redirect("/products");
+  // },
+
   update: (req, res) => {
-    let productId = req.params.id;
-    // console.log("body: ", req.body);
-    let products = productsController.getProducts();
-
-    products.forEach((product, index) => {
-      if (product.id == productId) {
-        product.name = req.body.nameProduct || product.name;
-        product.description = req.body.descProduct || product.description;
-        product.price = req.body.priceProduct || product.price;
-        product.image = req.file? req.file.filename : product.image;
-        product.category = req.body.categoryProduct || product.category;
-        product.brand = req.body.brand || product.brand;
-        product.color = req.body.color || product.color;
-        product.size = req.body.talles || product.size;
-        product.available = true;
-
-        products[index] = product;
-      }
-    });
-
-    fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
-
-    res.redirect("/products");
+    Product.update(
+      { name: req.body.nameProduct,
+        description: req.body.descProduct,
+        price: req.body.priceProduct,
+        image: req.file.filename,
+        category: req.body.categoryProduct,
+        brand: req.body.brand,
+        color: req.body.color,
+        size: req.body.talles
+      },
+      {
+        where: {id: req.params.id}
+      })
+      .then(() => {
+        return res.redirect('/products');
+      })
+      .catch(error => {
+        res.send(error)
+      });
   },
-  delete: (req, res) => {
-    let productId = req.params.id;
-    let product = productsController.getProducts().find((product) => product.id == productId);
-    res.render('products/delete', {
-      title: "Borrar producto",
-      stylesheetFile: "editProduct.css",
-      product
-    });
+
+  // delete: (req, res) => {
+  //   let productId = req.params.id;
+  //   let product = productsController.getProducts().find((product) => product.id == productId);
+  //   res.render('products/delete', {
+  //     title: "Borrar producto",
+  //     stylesheetFile: "editProduct.css",
+  //     product
+  //   });
+  // },
+
+  delete: async (req, res) => {
+    try {
+      const product = await Product.findByPk(req.params.id);
+      res.render("product/delete", {
+        title: "Borrar producto",
+        stylesheetFile: "/products/editProduct.css",
+        product: product
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
+
+
+  // destroy: (req, res) => {
+  //   let productId = req.params.id;
+  //   let products = productsController.getProducts();
+  //   let newProducts = products.filter(product => product.id != productId)
+
+  //   fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, "  "));
+
+  //   res.redirect("/products");
+  // },
+
   destroy: (req, res) => {
-    let productId = req.params.id;
-    let products = productsController.getProducts();
-    let newProducts = products.filter(product => product.id != productId)
-
-    fs.writeFileSync(productsPath, JSON.stringify(newProducts, null, "  "));
-
-    res.redirect("/products");
+    Product.destroy({
+      where: {id: req.params.id}
+      })
+      .then(() => {
+        return res.redirect('/products');
+      })
+      .catch(error => {
+        res.send(error);
+      });
   },
+
+
   /* END CRUD */
 
   products: (req, res) => {
