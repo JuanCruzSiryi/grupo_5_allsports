@@ -22,10 +22,10 @@ const usersController = {
   index: async (req, res) => {
     try {
       const users = await User.findAll();
-      res.render("../views/users/index", {
+      res.render("users/list", {
         title: "Lista de usuarios",
-        stylesheetFile: "/users/index.css",
-        usersList: users,
+        stylesheetFile: "users/list.css",
+        users,
       });
     } catch (error) {
       res.send(error)
@@ -34,10 +34,10 @@ const usersController = {
   list: async (req, res) => {
     try {
       const users = await User.findAll();
-      res.render("../views/users/index", {
+      res.render("users/list", {
         title: "Lista de usuarios",
-        stylesheetFile: "/users/index.css",
-        usersList: users,
+        stylesheetFile: "users/list.css",
+        users,
       });
     } catch (error) {
       res.send(error)

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="products-list-title">
+        <h3 class="name products-list-text">Lista de usuarios</h3>
+        <button 
+          onClick="location.href='/users/register'"
+          type="submit"
+          class="create-button"
+        >
+          Crear 
+        </button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Avatar</th>
+              <th>Email</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach(user => { %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><a href="/users/<%= user.id %>"><%= user.firstName %></a></td>
+                <td><%= user.lastName %></td>
+                <td><a href="/users/<%= user.id %>">
+                  <img
+                  class="image"
+                  src="/images/users/<%= user.image %>"
+                  alt="user-image.jpg"
+                  />
+                </a></td>
+                <td><%= user.email %></td>
+                <td>
+                  <a href="/users/<%= user.id %>/edit" ><i class="fa-solid fa-pen-to-square"></i></i></a>
+                </td>
+                <td>
+                  <a href="/users/<%= user.id %>/delete"><i class="fa-solid fa-trash"></i></i></i></a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <div class="blank-field">
+
+        </div>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>
