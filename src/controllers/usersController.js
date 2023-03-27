@@ -87,8 +87,66 @@ const usersController = {
   },
 
   // STORE
-  store: (req, res) => {
-        const errors = validationResult(req);
+  // store: (req, res) => {
+  //       const errors = validationResult(req);
+        
+  //       if ( ! errors.isEmpty() ) {
+  //           return res.render('users/register', {
+  //             title: 'Nuevo usuario',
+  //             stylesheetFile: "register.css",
+  //             errors: errors.mapped(),
+  //             oldBody: req.body,
+  //       })
+  //       }
+        
+  //       let users = usersController.getUsers();
+  //       // let images = [];
+        
+  //       // if (req.files) {
+  //       //     req.files.forEach(file => {
+  //       //         images.push({
+  //       //             "id": Date.now(),
+  //       //             "name": file.filename,
+  //       //         });
+  //       //     });
+  //       // } else {
+  //       //     images.push("default-user.png");
+  //       // }
+  //       let image = req.file? req.file.filename : "default-user.png";
+        
+  //       let newUser = {
+  //           "id": uuidv4(),
+  //           "firstName": req.body.firstName || "Sin nombre",
+  //           "lastName": req.body.lastName || "Sin apellido",
+  //           "email": req.body.email || "Sin email",
+  //           "password": bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
+  //           "category": "Usuario",
+  //           "image": image,
+  //           "available": true
+  //       }
+        
+  //       users.push(newUser);
+        
+  //       fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
+  //       // Login the user registered
+  //       if(!res.locals.userLogged) {
+  //         req.session.userLogged = newUser;
+  //         res.locals.userLogged = newUser;
+  //         res.cookie(
+  //           'userLogged',
+  //           newUser,
+  //           { maxAge: 1000 * 60 * 5 }
+  //         );
+  //         // console.log("# Register and Login");
+  //         return res.redirect('/');
+  //       }
+  //       res.redirect('/users');
+  // },
+
+   // CRUD NUEVO
+
+    store: (req, res) =>{
+      const errors = validationResult(req);
         
         if ( ! errors.isEmpty() ) {
             return res.render('users/register', {
@@ -98,71 +156,25 @@ const usersController = {
               oldBody: req.body,
         })
         }
-        
-        let users = usersController.getUsers();
-        // let images = [];
-        
-        // if (req.files) {
-        //     req.files.forEach(file => {
-        //         images.push({
-        //             "id": Date.now(),
-        //             "name": file.filename,
-        //         });
-        //     });
-        // } else {
-        //     images.push("default-user.png");
-        // }
         let image = req.file? req.file.filename : "default-user.png";
         
-        let newUser = {
-            "id": uuidv4(),
-            "firstName": req.body.firstName || "Sin nombre",
-            "lastName": req.body.lastName || "Sin apellido",
-            "email": req.body.email || "Sin email",
-            "password": bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
-            "category": "Usuario",
-            "image": image,
-            "available": true
-        }
-        
-        users.push(newUser);
-        
-        fs.writeFileSync(usersPath, JSON.stringify(users, null, '  '));
-        // Login the user registered
-        if(!res.locals.userLogged) {
-          req.session.userLogged = newUser;
-          res.locals.userLogged = newUser;
-          res.cookie(
-            'userLogged',
-            newUser,
-            { maxAge: 1000 * 60 * 5 }
-          );
-          // console.log("# Register and Login");
-          return res.redirect('/');
-        }
-        res.redirect('/users');
-  },
-
-   // CRUD NUEVO
-
-    // store: (req, res) {
-    //   const _body = {
-    //     firstName: req.body.firstName,
-    //     lastName: req.body.lastName,
-    //     email: req.body.email,
-    //     password: req.body.password,
-    //     image: req.body.image,
-    //     role_id: req.body.role,
-    //     address: req.body.address,
-    //     country_id: req.body.country,
-    //     state: req.body.state,
-    //   }
-    //    db.Users.create(_body)
-    //    .then(() => {
-    //        res.redirect('/users')
-    //    })
-    //    .catch(error => res.send('error'));
-    // }
+      const newUser = {
+        firstName: req.body.firstName || "Sin nombre",
+        lastName: req.body.lastName || "Sin apellido",
+        email: req.body.email || "Sin email",
+        password: bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
+        image: image,
+        role_id: req.body.role,
+        address: req.body.address,
+        country_id: req.body.country,
+        state: req.body.state,
+      }
+       User.create(newUser)
+       .then(() => {
+           res.redirect('/users')
+       })
+       .catch(error => res.send('error'));
+    },
 
   // EDIT
   // edit: (req, res) => {
