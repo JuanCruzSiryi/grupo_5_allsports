@@ -18,22 +18,21 @@
     </div>
 
     <ul class="header-right-bar">
-      <ul class="header-right-bar admin-buttons">
-        <li>
-          <a href="/users" class="icon-container"> 
-              <i class="fa-solid fa-users"></i> 
-          </a>
-        </li>
-        <li>
-          <a href="/products" class="icon-container">
-              <i class="fa-solid fa-box-archive"></i>
-          </a>
-        </li>
-        <!-- <li>
-          <button onClick="location.href='/productRegister'" type="submit" class="create-button">Create</button>
-        </li> -->
-      </ul>
+      <% if (locals.userLogged) { %>
         <% if (locals.userLogged) { %>
+          <ul class="header-right-bar admin-buttons">
+            <li>
+              <a href="/users" class="icon-container"> 
+                  <i class="fa-solid fa-users"></i> 
+              </a>
+            </li>
+            <li>
+              <a href="/products" class="icon-container">
+                  <i class="fa-solid fa-box-archive"></i>
+              </a>
+            </li>
+          </ul>
+        <% } %>
           <li>
             <a href="/profile" class="icon-container">
               <img src="/images/users/<%=locals.userLogged.image%>" alt="" />

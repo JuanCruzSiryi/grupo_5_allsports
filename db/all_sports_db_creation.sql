@@ -1,6 +1,7 @@
 /* Primero crear base de datos */
-/* CREATE DATABASE all_sports; */
-/* USE all_sports; */
+DROP DATABASE IF EXISTS all_sports;
+CREATE DATABASE all_sports;
+USE all_sports;
 
 CREATE TABLE `users` (
    `id` INT NOT NULL AUTO_INCREMENT,
