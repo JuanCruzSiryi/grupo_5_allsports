@@ -164,16 +164,16 @@ const usersController = {
         email: req.body.email || "Sin email",
         password: bcryptjs.hashSync(req.body.password, 10) || "Sin contraseña",
         image: image,
-        role_id: req.body.role,
-        address: req.body.address,
-        country_id: req.body.country,
-        state: req.body.state,
+        role_id: 1,
+        address: req.body.address || "Sin dirección",
+        country_id: 2,
+        state: 1,
       }
        User.create(newUser)
        .then(() => {
            res.redirect('/users')
        })
-       .catch(error => res.send('error'));
+       .catch(error => res.send(error));
     },
 
   // EDIT
@@ -227,13 +227,14 @@ const usersController = {
   //   res.redirect("/users");
   // },
 
-  update: (req, res) => {
+  update: async (req, res) => {
+    const user = await User.findByPk(req.params.id);
     User.update(
       {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
-        image: req.body.image,
+        image: req.file? req.file.filename : user.image,
         category: req.body.categoryUser,
       },
       {
