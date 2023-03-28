@@ -3,6 +3,7 @@ const path = require("path");
 const bcrypt = require('bcryptjs');
 
 const usersPath = path.join(__dirname, "../data/users.json");
+const {User} = require('../database/models');
 
 const mainController = {
   index: (req, res) => {
@@ -18,8 +19,9 @@ const mainController = {
       stylesheetFile: "login.css",
     });
   },
-  processLogin: (req, res) => {
-    let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+  processLogin: async (req, res) => {
+    //let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+    const users = await User.findAll();
     let user = users.find(user => user.email == req.body.email);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password

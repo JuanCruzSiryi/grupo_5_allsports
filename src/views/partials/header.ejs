@@ -19,7 +19,7 @@
 
     <ul class="header-right-bar">
       <% if (locals.userLogged) { %>
-        <% if (locals.userLogged) { %>
+        <% if (locals.userLogged.role_id == 2) { %>
           <ul class="header-right-bar admin-buttons">
             <li>
               <a href="/users" class="icon-container"> 
