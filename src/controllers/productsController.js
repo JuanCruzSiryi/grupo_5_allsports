@@ -144,7 +144,7 @@ show: async (req, res) => {
       res.render("../views/products/edit", {
         title: "Mi Product",
         stylesheetFile: "editProduct.css",
-        user
+        product
       });
     } catch (error) {
       res.send(error)
@@ -178,12 +178,13 @@ show: async (req, res) => {
   //   res.redirect("/products");
   // },
 
-  update: (req, res) => {
+  update: async (req, res) => { 
+    const product = await Product.findByPk(req.params.id);
     Product.update(
       { name: req.body.nameProduct,
         description: req.body.descProduct,
         price: req.body.priceProduct,
-        image: req.file.filename,
+        image: req.file? req.file.filename : product.image,
         category: req.body.categoryProduct,
         brand: req.body.brand,
         color: req.body.color,
