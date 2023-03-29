@@ -18,6 +18,20 @@ body {
   background: linear-gradient(to right, rgb(196, 212, 255), rgb(255, 218, 203));
 }
 
+.back-button button {
+  width: 85px;
+  height: 30px;
+  margin: 2%;
+  border-radius: 6px;
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+input::file-selector-button{
+  color: white;  
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+
 .principal-box input {
   color: #052b63;
   border: solid 1px #052b63;
@@ -55,6 +69,29 @@ label {
     margin-left: 15%;
     margin-right: 15%;
 }
+
+
+.imageProduct{
+    width: 40%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    
+    box-shadow: 10px 5px 5px teal;
+
+}
+
+.image:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+    
+  }
+  
+  .image:hover{
+      box-shadow: 0px 0px 10px blueviolet;
+      
+    }
+  
+
+
 
 .content-box-register form div {
     display: flex;
@@ -188,15 +225,11 @@ label {
 .terms-box label a:visited {
     color: rgb(78, 4, 147);
 }
-
-.register-button {
-    width: 100%;
-    height: 13%;
+ 
+ .register-button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    justify-content: space-around;
+} 
 
 .register-button button {
     width: 85px;

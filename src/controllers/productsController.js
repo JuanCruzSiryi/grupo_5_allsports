@@ -40,7 +40,7 @@ const productsController = {
   list: async (req, res) => {
     try {
       const products = await Product.findAll();
-      res.render("../views/products/index",{
+      res.render("../views/products/productDetail.ejs",{
         title: "Lista de productoss",
         stylesheetFile: "/products/index.css",
         productsList: products,
@@ -64,10 +64,10 @@ const productsController = {
 show: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id);
-      res.render("product/show", {
+      res.render('product/show', {
         title: "Profile",
         stylesheetFile: "products/show.css",
-        product: product
+        product
       });
 
     } catch (error) {
@@ -214,16 +214,16 @@ show: async (req, res) => {
   delete: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id);
-      res.render("product/delete", {
+      res.render("products/delete", {
         title: "Borrar producto",
         stylesheetFile: "/products/editProduct.css",
-        product: product
+        product
       });
     } catch (error) {
       res.send(error)
     }
   },
-
+  
 
   // destroy: (req, res) => {
   //   let productId = req.params.id;
