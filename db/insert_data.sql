@@ -1,5 +1,6 @@
 /* Insertar talles */
 insert into sizes (cm, uk, us, eur)
+values (25, 6, 6.5, 39);
 values (26, 7, 8, 40.5);
 
 
@@ -12,12 +13,21 @@ insert into colors (name)
 values ('Blanco');
 insert into colors (name)
 values ('Rojo');
+insert into colors (name)
+values ('Amarillo');
 
 /*Insertar brand*/
 insert into brands (name)
 values ('Adidas');
 insert into brands (name)
 values ('Nike');
+insert into brands (name)
+values ('Puma');
+
+/*Insertar tag*/
+insert into tags (name)
+values ('Deportivo');
+
 
 /*Insertar categoria*/
 insert into categories (name)
@@ -35,12 +45,15 @@ values (
     'zapa-adidas-azul.jpg',
     36217
   );
-insert into products (name, description, image, price)
+insert into products (name, description, image, price, size_id, category_id, brand_id)
 values (
     'Adidas Galaxi 5', 
     'diseño ultra moderno y su suela air top es ideal para running',
     'zapa-adidas-blanca.jpg',
-    36217
+    36217,
+    1,
+    1,
+    1
   );
 
 

@@ -5,7 +5,7 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product} = require('../database/models');
+const {Product, Color} = require('../database/models');
 // const db = require('../database/models');
 // const sequelize = db.sequelize;
 // const { Op } = require("sequelize");
@@ -76,10 +76,12 @@ show: async (req, res) => {
   },
 
 
-  create: (req, res) => {
+  create: async (req, res) => {
+    const colors = await Color.findAll();
     res.render('products/create', {
     title: "Crear producto",
-    stylesheetFile: "registerProduct.css"
+    stylesheetFile: "registerProduct.css",
+    colors: colors
   });
   },
   store: (req, res) => {
