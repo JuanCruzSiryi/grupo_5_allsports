@@ -37,10 +37,10 @@
               <label for="colorsProduct">Colores disponibles</label>
               <br>
               <select name="color" id="color">
-                <option value="Azul">Azul</option>
-                <option value="Blanco">Blanco</option>
-                <option value="Negro">Negro</option>
-                <option value="Rojo">Rojo</option>
+                <% colors.forEach(color => { %>
+                  <option value=<%= color.name %>><%= color.name %></option>
+                <% }) %>
+
               </select>
             </div>
             <div class="size-product">
