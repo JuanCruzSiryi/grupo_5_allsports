@@ -110,3 +110,8 @@ FONT-SIZE TITLE: 20px
 FONT-SIZE SUBTITLE: 18px
 
 FONT-SIZE: 12px
+
+*LISTA DE PASOS PARA CREAR LA BASE DE DATOS*
+1. Abrir script nuevo en dbeaver
+2. Ejecutar script all_sports_db_creation
+3. Ejecutar script insert_data

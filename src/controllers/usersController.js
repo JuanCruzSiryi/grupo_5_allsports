@@ -145,7 +145,7 @@ const usersController = {
 
    // CRUD NUEVO
 
-    store: (req, res) =>{
+  store: (req, res) =>{
       const errors = validationResult(req);
         
         if ( ! errors.isEmpty() ) {
@@ -174,7 +174,7 @@ const usersController = {
            res.redirect('/users')
        })
        .catch(error => res.send(error));
-    },
+  },
 
   // EDIT
   // edit: (req, res) => {
