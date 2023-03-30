@@ -174,9 +174,9 @@
     "category": "Niño",
     "price": "29100",
     "image": "zapa-adidas-azul-bb.jpg",
-    "brand": "sin marca",
+    "brand": "Adidas",
     "color": "Azul",
-    "size": 18,
+    "size": "36 (EUR 37)",
     "available": false
   },
   {
@@ -186,7 +186,7 @@
     "price": "55555",
     "image": "product-1679770505647.jpg",
     "category": "Masculino",
-    "brand": "sin marca",
+    "brand": "Adidas",
     "color": "Negro",
     "size": "39 (EUR 40)",
     "available": true
