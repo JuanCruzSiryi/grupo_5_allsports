@@ -85,25 +85,34 @@ show: async (req, res) => {
   });
   },
   store: (req, res) => {
-    let products = productsController.getProducts();
+    const errors = validationResult(req);
+        
+        if ( ! errors.isEmpty() ) {
+            return res.render('products/create', {
+              title: 'Nuevo producto',
+              stylesheetFile: "registerProduct.css",
+              errors: errors.mapped(),
+              oldBody: req.body,
+        })
+        }
     let image = req.file? req.file.filename : "default-product.png";
 
-    let newProduct = {
-      "id": uuidv4(),
-      "name": req.body.nameProduct || "sin nombre",
-      "description": req.body.descProduct || "sin descripcion",
-      "price": req.body.priceProduct || 0,
-      "image": image,
-      "category": req.body.categoryProduct || "sin categoria",
-      "brand": req.body.brand || "sin marca",
-      "color": req.body.color || "sin color",
-      "size": req.body.talles || "sin talle",
-      "available": true
+    const newProduct = {
+      name: req.body.nameProduct || "sin nombre",
+      description: req.body.descProduct || "sin descripcion",
+      price: req.body.priceProduct || 0,
+      image: image,
+      brand_id: req.body.brandProduct || "sin marca",
+      tag_id: req.body.categoryProduct || "sin etiqueta",
+      color_id: req.body.color || "sin color",
+      size_id: req.body.sizeProduct || "sin talle",
     };
 
-    products.push(newProduct)
-    fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
-    res.redirect("/products");
+    Product.create(newProduct)
+    .then(() => {
+      res.redirect('/products')
+    })
+    .catch(error => res.send(error));
 
     // CRUD NUEVO
 
