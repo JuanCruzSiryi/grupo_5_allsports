@@ -415,7 +415,7 @@ values (
     2
   );
 
-insert into users (firstName, lastName, email, image, password, role_id)
+insert into users (firstName, lastName, email, image, password, role_id, country_id)
 values (
     'Camila',
     'Gonzalez',
@@ -426,7 +426,7 @@ values (
     3
   );
 
-insert into users (firstName, lastName, email, image, password, role_id)
+insert into users (firstName, lastName, email, image, password, role_id, country_id)
 values (
     'Victoria',
     'Fernandez',
@@ -437,7 +437,7 @@ values (
     4
   );
 
-insert into users (firstName, lastName, email, image, password, role_id)
+insert into users (firstName, lastName, email, image, password, role_id, country_id)
 values (
     'Federica',
     'Perez',
@@ -448,7 +448,7 @@ values (
     2
   );
 
-insert into users (firstName, lastName, email, image, password, role_id)
+insert into users (firstName, lastName, email, image, password, role_id, country_id)
 values (
     'Juan Cruz',
     'Siryi',

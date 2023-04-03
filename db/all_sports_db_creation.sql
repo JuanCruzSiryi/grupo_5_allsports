@@ -78,6 +78,7 @@ CREATE TABLE `product_user` (
 
 CREATE TABLE `sizes` (
    `id` INT NOT NULL AUTO_INCREMENT,
+   `arg` DECIMAL(3,1) NOT NULL,
    `cm` DECIMAL(3,1) NOT NULL,
    `eur` DECIMAL(3,1),
    `uk` DECIMAL(3,1),
