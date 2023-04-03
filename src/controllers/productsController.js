@@ -5,7 +5,7 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product, Color} = require('../database/models');
+const {Product, Color, Category} = require('../database/models');
 // const db = require('../database/models');
 // const sequelize = db.sequelize;
 // const { Op } = require("sequelize");
@@ -26,11 +26,13 @@ const productsController = {
   // },
   index: async (req, res) => {
     try {
-      const products = await Product.findAll();
-      res.render("../views/products/index", {
+      const products = await Product.findAll({
+        include: ["category", "color"]
+      });
+      res.render("../views/products/list", {
         title: "Lista de productoss",
-        stylesheetFile: "/products/index.css",
-        productsList: products,
+        stylesheetFile: "products/list.css",
+        products,
       });
     } catch (error) {
       res.send(error)
@@ -64,8 +66,8 @@ const productsController = {
 show: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id);
-      res.render('product/show', {
-        title: "Profile",
+      res.render('products/show', {
+        title: "Detalle del producto",
         stylesheetFile: "products/show.css",
         product
       });
