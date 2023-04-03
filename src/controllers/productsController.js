@@ -5,7 +5,8 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product, Color, Category} = require('../database/models');
+const {Product, Color, Category, Brand, Size} = require('../database/models');
+const { log } = require("console");
 // const db = require('../database/models');
 // const sequelize = db.sequelize;
 // const { Op } = require("sequelize");
@@ -80,32 +81,59 @@ show: async (req, res) => {
 
   create: async (req, res) => {
     const colors = await Color.findAll();
+    const brands = await Brand.findAll();
+    const sizes = await Size.findAll();
+    const categories = await Category.findAll();
     res.render('products/create', {
     title: "Crear producto",
     stylesheetFile: "registerProduct.css",
-    colors: colors
+    colors,
+    brands,
+    sizes,
+    categories
+
   });
   },
-  store: (req, res) => {
-    let products = productsController.getProducts();
+  store: async (req, res) => {
+    const errors = validationResult(req);
+        
+        if ( ! errors.isEmpty() ) {
+          console.log(errors);
+          const colors = await Color.findAll();
+          const brands = await Brand.findAll();
+          const sizes = await Size.findAll();
+          const categories = await Category.findAll();
+            return res.render('products/create', {
+              title: 'Crear producto',
+              stylesheetFile: "registerProduct.css",
+              errors: errors.mapped(),
+              oldBody: req.body,
+              colors,
+              brands,
+              sizes,
+              categories
+        })
+        }
     let image = req.file? req.file.filename : "default-product.png";
+    
+    console.log(req.body);
 
-    let newProduct = {
-      "id": uuidv4(),
-      "name": req.body.nameProduct || "sin nombre",
-      "description": req.body.descProduct || "sin descripcion",
-      "price": req.body.priceProduct || 0,
-      "image": image,
-      "category": req.body.categoryProduct || "sin categoria",
-      "brand": req.body.brand || "sin marca",
-      "color": req.body.color || "sin color",
-      "size": req.body.talles || "sin talle",
-      "available": true
+    const newProduct = {
+      name: req.body.nameProduct || "sin nombre",
+      description: req.body.descProduct || "sin descripcion",
+      price: req.body.priceProduct || 0,
+      image: image,
+      brand_id: req.body.brandProduct || "sin marca",
+      category_id: req.body.categoryProduct || "sin etiqueta",
+      color_id: req.body.color || "sin color",
+      size_id: req.body.sizeProduct || "sin talle",
     };
 
-    products.push(newProduct)
-    fs.writeFileSync(productsPath, JSON.stringify(products, null, "  "));
-    res.redirect("/products");
+    Product.create(newProduct)
+    .then(() => {
+      res.redirect('/products')
+    })
+    .catch(error => res.send(error));
 
     // CRUD NUEVO
 
@@ -220,7 +248,7 @@ show: async (req, res) => {
       const product = await Product.findByPk(req.params.id);
       res.render("products/delete", {
         title: "Borrar producto",
-        stylesheetFile: "/products/editProduct.css",
+        stylesheetFile: "/editProduct.css",
         product
       });
     } catch (error) {

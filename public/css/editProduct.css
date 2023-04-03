@@ -270,7 +270,7 @@ label {
         justify-content: center;
     }
     main {
-      /* height: 105vh; */
+      /* height: 100vh; */
       margin-bottom: 0;
     }
 }
@@ -278,7 +278,7 @@ label {
 
   @media(min-width: 768px) {
     .main-navbar {
-      max-width: 1200px;
+      max-width: 100%;
       margin: auto;
     }
     .main-header-top-bar{
