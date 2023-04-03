@@ -248,7 +248,7 @@ show: async (req, res) => {
       const product = await Product.findByPk(req.params.id);
       res.render("products/delete", {
         title: "Borrar producto",
-        stylesheetFile: "/products/editProduct.css",
+        stylesheetFile: "/editProduct.css",
         product
       });
     } catch (error) {
