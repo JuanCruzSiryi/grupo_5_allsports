@@ -5,7 +5,8 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product, Color, Category} = require('../database/models');
+const {Product, Color, Category, Brand, Size} = require('../database/models');
+const { log } = require("console");
 // const db = require('../database/models');
 // const sequelize = db.sequelize;
 // const { Op } = require("sequelize");
@@ -80,24 +81,42 @@ show: async (req, res) => {
 
   create: async (req, res) => {
     const colors = await Color.findAll();
+    const brands = await Brand.findAll();
+    const sizes = await Size.findAll();
+    const categories = await Category.findAll();
     res.render('products/create', {
     title: "Crear producto",
     stylesheetFile: "registerProduct.css",
-    colors: colors
+    colors,
+    brands,
+    sizes,
+    categories
+
   });
   },
-  store: (req, res) => {
+  store: async (req, res) => {
     const errors = validationResult(req);
         
         if ( ! errors.isEmpty() ) {
+          console.log(errors);
+          const colors = await Color.findAll();
+          const brands = await Brand.findAll();
+          const sizes = await Size.findAll();
+          const categories = await Category.findAll();
             return res.render('products/create', {
-              title: 'Nuevo producto',
+              title: 'Crear producto',
               stylesheetFile: "registerProduct.css",
               errors: errors.mapped(),
               oldBody: req.body,
+              colors,
+              brands,
+              sizes,
+              categories
         })
         }
     let image = req.file? req.file.filename : "default-product.png";
+    
+    console.log(req.body);
 
     const newProduct = {
       name: req.body.nameProduct || "sin nombre",
@@ -105,7 +124,7 @@ show: async (req, res) => {
       price: req.body.priceProduct || 0,
       image: image,
       brand_id: req.body.brandProduct || "sin marca",
-      tag_id: req.body.categoryProduct || "sin etiqueta",
+      category_id: req.body.categoryProduct || "sin etiqueta",
       color_id: req.body.color || "sin color",
       size_id: req.body.sizeProduct || "sin talle",
     };

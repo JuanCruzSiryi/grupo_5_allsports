@@ -23,11 +23,17 @@
           <form method="post" action="/products/create" enctype="multipart/form-data">
             <div>
               <label for="nameProduct">Ingresar nombre</label>
-              <input type="text" name="nameProduct" id="nameProduct" required>
+              <input type="text" name="nameProduct" id="nameProduct">
+              <% if(locals.errors && errors.nameProduct) { %>
+                <p class="text-errors"><%= errors.nameProduct.msg %></p>
+              <% } %>
             </div>
             <div class="desc-product">
               <label for="descProduct">Ingresar descripción</label>
-              <input type="text" name="descProduct" id="descProduct" required>
+              <input type="text" name="descProduct" id="descProduct">
+              <% if(locals.errors && errors.descProduct) { %>
+                <p class="text-errors"><%= errors.descProduct.msg %></p>
+              <% } %>
             </div>
             <div>
               <label for="image">Ingresar imagen</label>
@@ -38,37 +44,33 @@
               <br>
               <select name="color" id="color">
                 <% colors.forEach(color => { %>
-                  <option value=<%= color.name %>><%= color.name %></option>
+                  <option value=<%= color.id %>><%= color.name %></option>
                 <% }) %>
-
               </select>
             </div>
             <div class="size-product">
               <label for="sizeProduct">Talles</label>
               <br>
               <select name="sizeProduct" id="talles">
-                <option value="36 (EUR 37)"> 36 (EUR 37) </option>
-                <option value="37 (EUR 38)"> 37 (EUR 38) </option>
-                <option value="38 (EUR 39)"> 38 (EUR 39) </option>
-                <option value="39 (EUR 40)"> 39 (EUR 40) </option>
-                <option value="40 (EUR 41)"> 40 (EUR 41) </option>
-                <option value="41 (EUR 42)"> 41 (EUR 42) </option>
-                <option value="42 (EUR 43)"> 42 (EUR 43) </option>
-                <option value="43 (EUR 44)"> 43 (EUR 44) </option>
-                <option value="44 (EUR 45)"> 44 (EUR 45) </option>
-                <option value="45 (EUR 46)"> 45 (EUR 46) </option>
+                <% sizes.forEach(size => { %>
+                  <option value=<%= size.id %>><%= size.eur %></option>
+                <% }) %>
               </select>
             </div>
             <div>
               <label for="brandProduct">Marca</label>
-              <input type="text" name="brandProduct" id="brandProduct">
+              <select name="brandProduct" id="brandProduct">
+                <% brands.forEach(brand => { %>
+                  <option value=<%= brand.id %>><%= brand.name %></option>
+                <% }) %>
+              </select>
             </div>
             <div>
               <label for="categoryProduct">Categoría</label>
               <select name="categoryProduct" id="categoryProduct">
-                <option value="1">Masculino</option>
-                <option value="2">Femenino</option>
-                <option value="3">Niños</option>
+                <% categories.forEach(category => { %>
+                  <option value=<%= category.id %>><%= category.name %></option>
+                <% }) %>
               </select>
             </div>
             <div>

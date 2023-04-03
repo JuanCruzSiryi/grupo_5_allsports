@@ -8,6 +8,10 @@ module.exports = (sequelize, dataTypes) => {
         },
         // created_at: dataTypes.TIMESTAMP,
         // updated_at: dataTypes.TIMESTAMP,
+        arg: {
+            type: dataTypes.DECIMAL(3,1),
+            allowNull: false
+        },
         cm: {
             type: dataTypes.DECIMAL(3,1),
             allowNull: false

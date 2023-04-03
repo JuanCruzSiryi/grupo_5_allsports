@@ -35,6 +35,10 @@ label {
   color: #052b63;
 }
 
+.text-errors {
+  color: red
+}
+
 .principal-box {
   height: 90%;
   display: flex;

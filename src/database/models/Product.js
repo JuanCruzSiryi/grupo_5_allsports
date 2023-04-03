@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         tag_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
-            allowNull: false
+            allowNull: true
         },
         color_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,
