@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="products-list-title">
+        <h3 class="name products-list-text">Lista de Productos</h3>
+        <button 
+          onClick="location.href='/products/register'"
+          type="submit"
+          class="create-button"
+        >
+          Crear 
+        </button>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Producto</th>
+              <th>Imagen</th>
+              <th>Color</th>
+              <th>Categoria</th>
+              <th>Precio</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach(product => { %>
+              <tr>
+                <td><%= product.id %></td>
+                <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
+                <td><a href="/products/<%= product.id %>">
+                  <img
+                  class="image"
+                  src="/images/products/<%= product.image %>"
+                  alt="product-image.jpg"
+                  />
+                </a></td>
+                <td><%= product.color.name %></td>
+                <td><%= product.category.name %></td>
+                <td><%= product.price %></td>
+                <td>
+                  <a href="/products/<%= product.id %>/edit" ><i class="fa-solid fa-pen-to-square"></i></i></a>
+                </td>
+                <td>
+                  <a href="/products/<%= product.id %>/delete"><i class="fa-solid fa-trash"></i></i></i></a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <div class="blank-field">
+
+        </div>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>
