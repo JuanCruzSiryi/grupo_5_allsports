@@ -173,10 +173,20 @@ show: async (req, res) => {
   edit: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id);
+      const colors = await Color.findAll();
+          const brands = await Brand.findAll();
+          const sizes = await Size.findAll();
+          const categories = await Category.findAll();
+          
       res.render("../views/products/edit", {
         title: "Mi Product",
         stylesheetFile: "editProduct.css",
-        product
+        product,
+        colors,
+        brands,
+        sizes,
+        categories
+
       });
     } catch (error) {
       res.send(error)

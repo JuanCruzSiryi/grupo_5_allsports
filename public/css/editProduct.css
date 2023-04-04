@@ -225,11 +225,11 @@ label {
 .terms-box label a:visited {
     color: rgb(78, 4, 147);
 }
- 
+/*  
  .register-button {
     display: flex;
     justify-content: space-around;
-} 
+}  */
 
 .register-button button {
     width: 85px;
@@ -247,7 +247,8 @@ label {
     height: 30px;
     border-radius: 6px;
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
-}
+    display: block;
+  }
 
 .back-button button a{
   font-size: 15px;
