@@ -5,7 +5,7 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product, Color, Category, Brand, Size} = require('../database/models');
+const {Product, Color, Category, Brand, Size, Tag} = require('../database/models');
 const { log } = require("console");
 // const db = require('../database/models');
 // const sequelize = db.sequelize;
@@ -28,7 +28,7 @@ const productsController = {
   index: async (req, res) => {
     try {
       const products = await Product.findAll({
-        include: ["category", "color"]
+        include: ["category", "color", "size", "tag", "brand"]
       });
       res.render("../views/products/list", {
         title: "Lista de productoss",
@@ -66,7 +66,8 @@ const productsController = {
 
 show: async (req, res) => {
     try {
-      const product = await Product.findByPk(req.params.id);
+      const product = await Product.findByPk(req.params.id,
+      {include: ["category", "color", "size", "tag", "brand"]})
       res.render('products/show', {
         title: "Detalle del producto",
         stylesheetFile: "products/show.css",
@@ -103,6 +104,7 @@ show: async (req, res) => {
           const brands = await Brand.findAll();
           const sizes = await Size.findAll();
           const categories = await Category.findAll();
+          const tags = await Tag.findAll();
             return res.render('products/create', {
               title: 'Crear producto',
               stylesheetFile: "registerProduct.css",
@@ -111,7 +113,8 @@ show: async (req, res) => {
               colors,
               brands,
               sizes,
-              categories
+              categories,
+              tags
         })
         }
     let image = req.file? req.file.filename : "default-product.png";
@@ -174,9 +177,10 @@ show: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id);
       const colors = await Color.findAll();
-          const brands = await Brand.findAll();
-          const sizes = await Size.findAll();
-          const categories = await Category.findAll();
+      const brands = await Brand.findAll();
+      const sizes = await Size.findAll();
+      const categories = await Category.findAll();
+      const tags = await Tag.findAll();
           
       res.render("../views/products/edit", {
         title: "Mi Product",
@@ -185,7 +189,8 @@ show: async (req, res) => {
         colors,
         brands,
         sizes,
-        categories
+        categories,
+        tags
 
       });
     } catch (error) {
@@ -222,6 +227,10 @@ show: async (req, res) => {
 
   update: async (req, res) => { 
     const product = await Product.findByPk(req.params.id);
+    const colors = await Color.findAll();
+    const brands = await Brand.findAll();
+    const sizes = await Size.findAll();
+    const categories = await Category.findAll();
     Product.update(
       { name: req.body.nameProduct,
         description: req.body.descProduct,

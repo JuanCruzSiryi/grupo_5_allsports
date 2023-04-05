@@ -28,9 +28,11 @@
 
           <div class="product-information">
             <p class="price">Precio: <%= product.price %></p>
-            <p class="category">Categoría: <%= product.category %></p>
-            <p class="color">Color: <%= product.color %></p>
-            <p class="size">Talle: <%= product.size %></p>
+            <p class="category">Categoría: <%= product.category.name%></p>
+            <p class="color">Color: <%= product.color.name %></p>
+            <p class="size">Talle: <%= product.size.arg %></p>
+            <p class="size">Marca: <%= product.brand.name %></p>
+            <p class="size">Tipo: <%= product.tag ? product.tag.name : "" %></p>
 
             <div class=" description desktop-description">
               <%= product.description %>
