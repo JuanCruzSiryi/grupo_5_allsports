@@ -94,13 +94,12 @@ label {
 
 
 .content-box-register form div {
-    display: flex;
-    flex-direction: column;
     text-align: left;
     align-self: center;
     position: relative;
     width: 100%;
 }
+
 
 .content-box-register form div input {
     width: 100%;
@@ -241,7 +240,15 @@ label {
     margin-bottom: 8px;
     margin-top: 8px;
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
-}
+    ;
+  }
+
+  .register-button{    
+    display: flex;
+    justify-content: space-around;
+  }
+
+
 .back-button button {
     width: 85px;
     height: 30px;

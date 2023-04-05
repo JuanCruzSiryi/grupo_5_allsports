@@ -8,40 +8,38 @@
         
         <div class="back-button">
           <button type=""><a href="/products">Atrás</a></button>
-        
-      </div>
+        </div>
 
         
         <div class="title">
           <h2 class="title-register">EDITAR PRODUCTO</h2>
-        </div>
-
-        <a href="/products/<%= product.id %>">
-          <img
-          class="imageProduct"
-          src="/images/products/<%= product.image %>"
-          alt="product-image.jpg"
-          />
-        </a>
-    
-
-        <div class="content-box-register">
-          <form
-            method="post"
-            action="/products/<%=product.id %>/edit/?_method=PUT"
-            enctype="multipart/form-data"
-          >
-          <div>
-            <label for="image">Modificar imagen</label>
-            <input type="file" name="image" id="image" />
           </div>
 
-          
+            <a href="/products/<%= product.id %>">
+            <img
+              class="imageProduct"
+              src="/images/products/<%= product.image %>"
+              alt="product-image.jpg"
+            />
+            </a>
+    
+            
+            <div class="content-box-register">
+              <form
+                method="post"
+                action="/products/<%=product.id %>/edit/?_method=PUT"
+                enctype="multipart/form-data"
+              >
+                <div>
+                  <label for="image">Modificar imagen</label>
+                  <input type="file" name="image" id="image" />
+                </div>
             <div>
               <label for="nameProduct">Modificar nombre</label>
               <input
                 type="text"
                 name="nameProduct"
+                id="nameProduct"
                 value="<%= product.name %>"
               />
             </div>
@@ -56,7 +54,6 @@
             </div>
               <div class="color-product">
               <label for="colorsProduct">Modificar color</label>
-              <br />
               <select name="color" id="color" >
                 <% colors.forEach(color => { %>
                   <option value=<%= color.id %> <%= color.id == product.color_id ? "selected" : "" %>><%= color.name %></option>
@@ -65,10 +62,9 @@
             </div>
             <div class="size-product">
               <label for="sizeProduct">Modificar talle</label>
-              <br>
-              <select name="sizeProduct" id="talles">
+              <select name="sizeProduct" id="size">
                 <% sizes.forEach(size => { %>
-                  <option value=<%= size.id %> <%= size.id == product.size_id ? "selected" : "" %>><%= size.eur %></option>
+                  <option value=<%= size.id %> <%= size.id == product.size_id ? "selected" : "" %>><%= size.arg %></option>
                 <% }) %>
               </select>
             </div>
@@ -81,16 +77,38 @@
                 value="<%= product.price %>"
               />
             </div>
-      
+            <div class="brand-product">
+              <label for="brandProduct">Modificar marca</label>
+              <select name="brandProduct" id="brand">
+                <% brands.forEach(brand => { %>
+                  <option value=<%= brand.id %> <%= brand.id == product.brand_id ? "selected" : "" %>><%= brand.name %></option>
+                <% }) %>
+              </select>
             </div>
+            <div>
+              <div class="tag-product">
+                <label for="tagProduct">Modificar tipo</label>
+              
+                <select name="tagProduct" id="tag">
+                  <% tags.forEach(tag => { %>
+                    <option value=<%= tag.id %> <%= tag.id == product.tag_id ? "selected" : "" %>><%= tag.name %></option>
+                  <% }) %>
+                </select>
+              </div>
+            </div>
+        
+      
+      
+        
             <div class="register-button">
               <button type="submit">Aplicar</button>
             
               <button type="submit">Limpiar</button>
             </div>
+          
           </form>
 
-      </div>
+      
     </main>
     <%- include ("../partials/footer.ejs") %>
   </body>

@@ -41,11 +41,16 @@ values ('Adidas');
 insert into brands (name)
 values ('Nike');
 insert into brands (name)
-values ('Puma');
+values ('Reebok');
 
 /*Insertar tag*/
 insert into tags (name)
 values ('Deportivo');
+insert into tags (name)
+values ('Urbano');
+insert into tags (name)
+values ('Running');
+
 
 
 /*Insertar categoria*/
@@ -107,7 +112,7 @@ values (
     3,
     2,
     2,
-    1
+    2
   );
 
 insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
@@ -159,7 +164,7 @@ values (
     2,
     3,
     4,
-    1
+    3
   );
 
 insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
@@ -211,7 +216,7 @@ values (
     2,
     2,
     4,
-    1
+    3
   );
 
 insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
@@ -263,7 +268,7 @@ values (
     3,
     1,
     1,
-    1
+    2
   );
 
 insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
