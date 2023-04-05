@@ -231,6 +231,10 @@ show: async (req, res) => {
     const brands = await Brand.findAll();
     const sizes = await Size.findAll();
     const categories = await Category.findAll();
+    const tags = await Tags.findAll();
+
+
+
     Product.update(
       { name: req.body.nameProduct,
         description: req.body.descProduct,
