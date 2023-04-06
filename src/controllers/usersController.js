@@ -4,6 +4,8 @@ const { v4: uuidv4 } = require('uuid');
 const usersPath = path.join(__dirname, "../data/users.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const {User} = require('../database/models');
 
@@ -29,8 +31,6 @@ const usersController = {
     const totalItems = await User.count();
     const totalPages = Math.ceil(totalItems / limit); 
     res.locals.totalPages = totalPages;
-    console.log("totalPages: ", totalPages);
-
 
     try {
       const users = await User.findAll({
@@ -46,6 +46,23 @@ const usersController = {
       res.send(error)
     }
   },
+
+  search: async (req, res) => {
+    const search = req.query.q;
+    console.log("Consulta: ", search);
+    try {
+      const users = await User.findAll({
+      });
+      res.render("users/list", {
+        title: "Lista de usuarios",
+        stylesheetFile: "users/list.css",
+        users,
+      });
+    } catch (error) {
+      res.send(error)
+    }
+  },
+
   list: async (req, res) => {
     try {
       const users = await User.findAll();
