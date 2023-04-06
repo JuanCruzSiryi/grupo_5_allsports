@@ -35,25 +35,25 @@
                   <input type="file" name="image" id="image" />
                 </div>
             <div>
-              <label for="nameProduct">Modificar nombre</label>
+              <label for="name">Modificar nombre</label>
               <input
                 type="text"
-                name="nameProduct"
-                id="nameProduct"
+                name="name"
+                id="name"
                 value="<%= product.name %>"
               />
             </div>
             <div class="desc-product">
-              <label for="descProduct">Modificar descripción</label>
+              <label for="description">Modificar descripción</label>
               <input
                 type="text"
-                name="descProduct"
-                id="descProduct"
+                name="description"
+                id="description"
                 value="<%= product.description %>"
               />
             </div>
               <div class="color-product">
-              <label for="colorsProduct">Modificar color</label>
+              <label for="color">Modificar color</label>
               <select name="color" id="color" >
                 <% colors.forEach(color => { %>
                   <option value=<%= color.id %> <%= color.id == product.color_id ? "selected" : "" %>><%= color.name %></option>
@@ -61,25 +61,25 @@
               </select>
             </div>
             <div class="size-product">
-              <label for="sizeProduct">Modificar talle</label>
-              <select name="sizeProduct" id="size">
+              <label for="size">Modificar talle</label>
+              <select name="size" id="size">
                 <% sizes.forEach(size => { %>
                   <option value=<%= size.id %> <%= size.id == product.size_id ? "selected" : "" %>><%= size.arg %></option>
                 <% }) %>
               </select>
             </div>
             <div>
-              <label for="priceProduct">Modificar precio</label>
+              <label for="price">Modificar precio</label>
               <input
                 type="number"
-                name="priceProduct"
-                id="priceProduct"
+                name="price"
+                id="price"
                 value="<%= product.price %>"
               />
             </div>
             <div class="brand-product">
-              <label for="brandProduct">Modificar marca</label>
-              <select name="brandProduct" id="brand">
+              <label for="brand">Modificar marca</label>
+              <select name="brand" id="brand">
                 <% brands.forEach(brand => { %>
                   <option value=<%= brand.id %> <%= brand.id == product.brand_id ? "selected" : "" %>><%= brand.name %></option>
                 <% }) %>
@@ -87,9 +87,9 @@
             </div>
             <div>
               <div class="tag-product">
-                <label for="tagProduct">Modificar tipo</label>
+                <label for="tag">Modificar tipo</label>
               
-                <select name="tagProduct" id="tag">
+                <select name="tag" id="tag">
                   <% tags.forEach(tag => { %>
                     <option value=<%= tag.id %> <%= tag.id == product.tag_id ? "selected" : "" %>><%= tag.name %></option>
                   <% }) %>

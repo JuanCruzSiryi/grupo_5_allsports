@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
         },
         price: {
             type: dataTypes.DECIMAL(10,2),
-            allowNull: false
+            allowNull: true
         },
         brand_id: {
             type: dataTypes.BIGINT(10).UNSIGNED,

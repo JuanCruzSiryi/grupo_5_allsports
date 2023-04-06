@@ -26,7 +26,7 @@ const productsController = {
   //   });
   // },
   index: async (req, res) => {
-    const page = parseInt(req.query.page);
+    const page = parseInt(req.query.page) || 1 ;
     res.locals.page = page;
 
     const limit = 5;
@@ -243,19 +243,21 @@ show: async (req, res) => {
     const brands = await Brand.findAll();
     const sizes = await Size.findAll();
     const categories = await Category.findAll();
-    const tags = await Tags.findAll();
+    const tags = await Tag.findAll();
 
 
+    console.log(req.body);
 
     Product.update(
-      { name: req.body.nameProduct,
-        description: req.body.descProduct,
-        price: req.body.priceProduct,
+      { name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
         image: req.file? req.file.filename : product.image,
-        category: req.body.categoryProduct,
-        brand: req.body.brand,
-        color: req.body.color,
-        size: req.body.talles
+        category_id: req.body.category,
+        brand_id: req.body.brand,
+        color_id: req.body.color,
+        size_id: req.body.size,
+        tag_id: req.body.tag
       },
       {
         where: {id: req.params.id}
