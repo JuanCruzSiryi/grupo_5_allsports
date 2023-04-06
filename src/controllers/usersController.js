@@ -22,7 +22,7 @@ const usersController = {
   //   });
   // },
   index: async (req, res) => {
-    const page = parseInt(req.query.page);
+    const page = parseInt(req.query.page)||1;
     res.locals.page = page;
 
     const limit = 8;
