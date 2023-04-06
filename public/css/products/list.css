@@ -63,6 +63,34 @@ tr:nth-child(even) {
 .blank-field {
   height: 300px;
 }
+.paging-buttons {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.paging-buttons h3{
+  text-decoration:dotted;
+  padding: 0 5px 0 5px;
+  margin: 0 5px 0 5px;
+  font-weight: lighter;
+  font-size: 18px;
+  background-color: rgb(247, 255, 239);
+}
+
+.paging-button{
+  width: 85px;
+  height: 25px;
+  font-size: 13px;
+  color: white;
+  border-radius: 6px;
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.paging-button-disabled{
+  background: rgb(153, 153, 154);
+}
 
 @media (min-width: 768px){
 

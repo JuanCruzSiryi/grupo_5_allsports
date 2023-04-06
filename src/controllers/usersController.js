@@ -20,8 +20,23 @@ const usersController = {
   //   });
   // },
   index: async (req, res) => {
+    const page = parseInt(req.query.page);
+    res.locals.page = page;
+
+    const limit = 8;
+    const offset = (page - 1) * limit;
+
+    const totalItems = await User.count();
+    const totalPages = Math.ceil(totalItems / limit); 
+    res.locals.totalPages = totalPages;
+    console.log("totalPages: ", totalPages);
+
+
     try {
-      const users = await User.findAll();
+      const users = await User.findAll({
+        limit,
+        offset
+      });
       res.render("users/list", {
         title: "Lista de usuarios",
         stylesheetFile: "users/list.css",

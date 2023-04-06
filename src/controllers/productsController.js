@@ -26,9 +26,21 @@ const productsController = {
   //   });
   // },
   index: async (req, res) => {
+    const page = parseInt(req.query.page);
+    res.locals.page = page;
+
+    const limit = 5;
+    const offset = (page - 1) * limit;
+
+    const totalItems = await Product.count();
+    const totalPages = Math.ceil(totalItems / limit); 
+    res.locals.totalPages = totalPages;
+    console.log("totalPages: ", totalPages);
     try {
       const products = await Product.findAll({
-        include: ["category", "color", "size", "tag", "brand"]
+        include: ["category", "color", "size", "tag", "brand"],
+        limit,
+        offset
       });
       res.render("../views/products/list", {
         title: "Lista de productoss",

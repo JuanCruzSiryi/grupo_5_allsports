@@ -52,8 +52,44 @@
             <% }) %>
           </tbody>
         </table>
-        <div class="blank-field">
+        <div class="paging-buttons">
+          <% if (locals.page && locals.page > 1) { %>
+            <button 
+              onClick="location.href='/users?page=<%= parseInt(locals.page) - 1 %>'"
+              type="submit"
+              class="paging-button"
+            >
+              Anterior 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Anterior 
+            </button>
+          <% } %>
 
+           
+
+          <h3><%= locals.page %></h3>
+
+          <% if (locals.totalPages && locals.page < locals.totalPages ) { %>
+            <button 
+              onClick="location.href='/users?page=<%= parseInt(locals.page) + 1 %>'"
+              type="submit"
+              class="paging-button"
+            >
+              Siguiente 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Siguiente 
+            </button>
+          <% } %>
         </div>
       </div>
       
