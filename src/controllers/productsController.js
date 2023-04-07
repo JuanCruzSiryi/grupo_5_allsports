@@ -52,7 +52,6 @@ const productsController = {
   },
 
   search: async (req, res) => {
-    console.log("Estoy en search");
     const search = req.query.q;
     const page = parseInt(req.query.page) || 1;
     res.locals.page = page;
@@ -64,8 +63,6 @@ const productsController = {
       where: {
         name: { [Op.like]: `%${search}%` }
     }});
-
-    console.log("### totalItems", totalItems);
     
     const totalPages = Math.ceil(totalItems / limit);
     res.locals.totalPages = totalPages;
@@ -79,11 +76,11 @@ const productsController = {
         limit,
         offset
       });
-      console.log("### products", products);
       res.render("../views/products/list", {
         title: "Lista de productoss",
         stylesheetFile: "products/list.css",
         products,
+        search
       });
     } catch (error) {
       res.send(error)

@@ -82,6 +82,7 @@ const usersController = {
         title: "Lista de usuarios",
         stylesheetFile: "users/list.css",
         users,
+        search
       });
     } catch (error) {
       res.send(error)

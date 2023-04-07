@@ -17,7 +17,13 @@
       </div>
       <form action="/products/search?page=1" method="GET">
         <div class="search-container">
-          <input class="search-input" type="text" name="q" placeholder="Buscar producto...">
+          <input 
+            class="search-input" 
+            type="text" 
+            name="q"
+            placeholder="Buscar producto..."
+            value=<%= locals.search? search:"" %>
+          >
           <button type="submit" class="search-button">Buscar</button>
         </div>
       </form>
@@ -64,8 +70,12 @@
         </table>
         <div class="paging-buttons">
           <% if (locals.page && locals.page > 1) { %>
-            <button 
-              onClick="location.href='/products?page=<%= parseInt(locals.page) - 1 %>'"
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q='"
+              <% } %> 
               type="submit"
               class="paging-button"
             >
@@ -85,8 +95,12 @@
           <h3><%= locals.page %></h3>
 
           <% if (locals.totalPages && locals.page < locals.totalPages ) { %>
-            <button 
-              onClick="location.href='/products?page=<%= parseInt(locals.page) + 1 %>'"
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q='"
+              <% } %>
               type="submit"
               class="paging-button"
             >
