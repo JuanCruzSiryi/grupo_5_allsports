@@ -1,3 +1,8 @@
+main {
+  margin-top: 134px; /* altura del header */
+  /* otros estilos del contenido de la página */
+}
+
 a {
   text-decoration: none;
 }
@@ -16,6 +21,17 @@ input {
 
 .main-header {
   border: #1259c3;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: solid 4px #052b63;
+  border-top: solid 4px #052b63;
+}
+.marquee-container-hide {
+  display: none;
+}
+.main-navbar-hide {
+  display: none;
 }
 
 .marquee-container {
@@ -221,9 +237,9 @@ li a {
 .site-search {
   display:  flex;
 }
-.search-button {
+.header-search-button {
   position: relative;
-  left: -41px;
+  left: -42px;
   height: 32px;
   background-color: #1259c3;
   border: none;
@@ -236,7 +252,7 @@ li a {
   border-radius: 4px;
   cursor: pointer;
 }
-.search-button:hover {
+.header-search-button:hover {
   background-color: #052b63;
 }
 
@@ -281,7 +297,7 @@ li a {
     border: none;
     margin-left: 20px;
     width: 280px;
-    height: 30px;
+    height: 36px;
     border-radius: 4px;
     border-bottom: 2px solid #ccc;
     padding: 1px 1px 1px 15px;
