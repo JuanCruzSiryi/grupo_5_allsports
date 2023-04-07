@@ -221,6 +221,24 @@ li a {
 .site-search {
   display:  flex;
 }
+.search-button {
+  position: relative;
+  left: -41px;
+  height: 32px;
+  background-color: #1259c3;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.search-button:hover {
+  background-color: #052b63;
+}
 
 @media (min-width: 361px) {
   .header-right-bar {
@@ -260,13 +278,19 @@ li a {
   }
 
   .header-input {
+    border: none;
     margin-left: 20px;
     width: 280px;
-    height: 20px;
+    height: 30px;
+    border-radius: 4px;
+    border-bottom: 2px solid #ccc;
+    padding: 1px 1px 1px 15px;
+    font-size: 16px;
   }
   
   .header-input-botton {
     display: flex;
+    align-items: center;
   }
 
   .hamburguer-button {
