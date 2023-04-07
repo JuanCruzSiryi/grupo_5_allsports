@@ -34,7 +34,7 @@ const usersController = {
 
     try {
       const users = await User.findAll({
-        // include: ["rol"],
+        include: ["role"],
         limit,
         offset
       });
@@ -74,6 +74,7 @@ const usersController = {
             { lastName: { [Op.like]: `%${search}%` } },
           ],
         },
+        include: ["role"],
         limit,
         offset
       });
