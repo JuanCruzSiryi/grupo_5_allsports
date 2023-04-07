@@ -59,6 +59,8 @@ tr:nth-child(even) {
 .products-list-text{
   margin-right: 20%;
   color: #052b63;
+  font-size: 20px;
+  font-weight: bolder ;
 }
 .blank-field {
   height: 300px;
@@ -91,6 +93,38 @@ tr:nth-child(even) {
 
 .paging-button-disabled{
   background: rgb(153, 153, 154);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 10px 10px 10px;
+}
+
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 300px;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #3e8e41;
 }
 
 @media (min-width: 768px){

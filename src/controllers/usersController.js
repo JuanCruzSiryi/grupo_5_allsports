@@ -49,9 +49,32 @@ const usersController = {
 
   search: async (req, res) => {
     const search = req.query.q;
-    console.log("Consulta: ", search);
+    const page = parseInt(req.query.page)||1;
+    res.locals.page = page;
+
+    const limit = 8;
+    const offset = (page - 1) * limit;
+
+    const totalItems = await User.count({where: {
+      [Op.or]: [
+        { firstName: { [Op.like]: `%${search}%` } },
+        { lastName: { [Op.like]: `%${search}%` } },
+      ],
+    }});
+    
+    const totalPages = Math.ceil(totalItems / limit);
+    res.locals.totalPages = totalPages;
+
     try {
       const users = await User.findAll({
+        where: {
+          [Op.or]: [
+            { firstName: { [Op.like]: `%${search}%` } },
+            { lastName: { [Op.like]: `%${search}%` } },
+          ],
+        },
+        limit,
+        offset
       });
       res.render("users/list", {
         title: "Lista de usuarios",

@@ -6,7 +6,7 @@
 
     <main>
       <div class="products-list-title">
-        <h3 class="name products-list-text">Lista de usuarios</h3>
+        <a href="/users" class="name products-list-text" >Lista de Usuarios</a>
         <button 
           onClick="location.href='/users/register'"
           type="submit"
@@ -15,9 +15,11 @@
           Crear 
         </button>
       </div>
-      <form action="/users/search" method="GET">
-        <input type="text" name="q" placeholder="Buscar usuario...">
-        <button type="submit">Buscar</button>
+      <form action="/users/search?page=1" method="GET">
+        <div class="search-container">
+          <input class="search-input" type="text" name="q" placeholder="Buscar usuario...">
+          <button type="submit" class="search-button">Buscar</button>
+        </div>
       </form>
       <div class="table-container">
         <table>

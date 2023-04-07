@@ -6,11 +6,9 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
 const {Product, Color, Category, Brand, Size, Tag} = require('../database/models');
-const { log } = require("console");
-// const db = require('../database/models');
-// const sequelize = db.sequelize;
-// const { Op } = require("sequelize");
+const db = require('../database/models');
 // const Products = db.Products;
+const Op = db.Sequelize.Op;
 
 
 const productsController = {
@@ -29,7 +27,7 @@ const productsController = {
     const page = parseInt(req.query.page) || 1 ;
     res.locals.page = page;
 
-    const limit = 5;
+    const limit = 4;
     const offset = (page - 1) * limit;
 
     const totalItems = await Product.count();
@@ -42,6 +40,45 @@ const productsController = {
         limit,
         offset
       });
+      res.render("../views/products/list", {
+        title: "Lista de productoss",
+        stylesheetFile: "products/list.css",
+        products,
+      });
+    } catch (error) {
+      res.send(error)
+    }
+  },
+
+  search: async (req, res) => {
+    console.log("Estoy en search");
+    const search = req.query.q;
+    const page = parseInt(req.query.page) || 1;
+    res.locals.page = page;
+
+    const limit = 4;
+    const offset = (page - 1) * limit;
+
+    const totalItems = await Product.count({
+      where: {
+        name: { [Op.like]: `%${search}%` }
+    }});
+
+    console.log("### totalItems", totalItems);
+    
+    const totalPages = Math.ceil(totalItems / limit);
+    res.locals.totalPages = totalPages;
+
+    try {
+      const products = await Product.findAll({
+        where: {
+          name: { [Op.like]: `%${search}%` }
+        },
+        include: ["category", "color", "size", "tag", "brand"],
+        limit,
+        offset
+      });
+      console.log("### products", products);
       res.render("../views/products/list", {
         title: "Lista de productoss",
         stylesheetFile: "products/list.css",

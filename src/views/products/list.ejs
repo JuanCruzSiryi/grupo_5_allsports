@@ -6,7 +6,7 @@
 
     <main>
       <div class="products-list-title">
-        <h3 class="name products-list-text">Lista de Productos</h3>
+        <a href="/products" class="name products-list-text" >Lista de Productos</a>
         <button 
           onClick="location.href='/products/create'"
           type="submit"
@@ -15,6 +15,12 @@
           Crear 
         </button>
       </div>
+      <form action="/products/search?page=1" method="GET">
+        <div class="search-container">
+          <input class="search-input" type="text" name="q" placeholder="Buscar producto...">
+          <button type="submit" class="search-button">Buscar</button>
+        </div>
+      </form>
       <div class="table-container">
         <table>
           <thead>
