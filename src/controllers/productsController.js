@@ -26,7 +26,7 @@ const productsController = {
   //   });
   // },
   index: async (req, res) => {
-    const page = parseInt(req.query.page) || 1 ;
+    const page = parseInt(req.query.page) || 1;
     res.locals.page = page;
 
     const limit = 5;
@@ -36,6 +36,7 @@ const productsController = {
     const totalPages = Math.ceil(totalItems / limit); 
     res.locals.totalPages = totalPages;
     console.log("totalPages: ", totalPages);
+    
     try {
       const products = await Product.findAll({
         include: ["category", "color", "size", "tag", "brand"],
@@ -257,7 +258,8 @@ show: async (req, res) => {
         brand_id: req.body.brand,
         color_id: req.body.color,
         size_id: req.body.size,
-        tag_id: req.body.tag
+        tag_id: req.body.tag,
+        discount: req.body.discount
       },
       {
         where: {id: req.params.id}

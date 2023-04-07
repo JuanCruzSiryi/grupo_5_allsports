@@ -20,7 +20,7 @@ const usersController = {
   //   });
   // },
   index: async (req, res) => {
-    const page = parseInt(req.query.page)||1;
+    const page = parseInt(req.query.page) || 1;
     res.locals.page = page;
 
     const limit = 8;
@@ -34,6 +34,7 @@ const usersController = {
 
     try {
       const users = await User.findAll({
+        // include: ["rol"],
         limit,
         offset
       });
