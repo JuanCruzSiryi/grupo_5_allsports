@@ -135,13 +135,15 @@ show: async (req, res) => {
     const brands = await Brand.findAll();
     const sizes = await Size.findAll();
     const categories = await Category.findAll();
+    const tags = await Tag.findAll();
     res.render('products/create', {
     title: "Crear producto",
     stylesheetFile: "registerProduct.css",
     colors,
     brands,
     sizes,
-    categories
+    categories,
+    tags
 
   });
   },
@@ -177,7 +179,7 @@ show: async (req, res) => {
       price: req.body.priceProduct || 0,
       image: image,
       brand_id: req.body.brandProduct || "sin marca",
-      category_id: req.body.categoryProduct || "sin etiqueta",
+      tag_id: req.body.tag || "sin tipo",
       color_id: req.body.color || "sin color",
       size_id: req.body.sizeProduct || "sin talle",
     };

@@ -66,15 +66,19 @@
               </select>
             </div>
             <div>
-              <label for="categoryProduct">Categoría</label>
-              <select name="categoryProduct" id="categoryProduct">
-                <% categories.forEach(category => { %>
-                  <option value=<%= category.id %>><%= category.name %></option>
+              <label for="tag">Tipo</label>
+              <select name="tag" id="tag">
+                <% tags.forEach(tag => { %>
+                  <option value=<%= tag.id %>><%= tag.name %></option>
                 <% }) %>
               </select>
             </div>
             <div>
               <label for="priceProduct">Ingresar precio</label>
+              <input type="number" name="priceProduct" id="priceProduct">
+            </div>
+            <div>
+              <label for="priceProduct">Ingresar descuento</label>
               <input type="number" name="priceProduct" id="priceProduct">
             </div>
             
