@@ -24,14 +24,22 @@
                 
                 <div class="article-information-div">
                   <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                  <h4  class="article-discount-shipping">- <%= product.discount %>%</h4>
-                  <p class="article-name"><%= product.name %></p>
+                  <p class="article-name"><%= product.name %></p>  
+                  <% if (product.discount > 0) { %>
+                      <h4  class="article-discount-shipping">- <%= product.discount %>%</h4>
+                      <p class="article-price-neto"><%= product.price %>  
+                  <% } %>    
+
+                  
                   <div class="article-price">
-                    <p class="article-price-neto"><%= product.price %></p>
-                    <p class="article-discount">$<%= product.price %></p>
-                  </div>
+                    <!-- <p class="article-price-neto"><%= product.price %></p> -->
+                    <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                    <!-- <p class="article-discount">$<%= product.price %></p> -->
+                    <p class="article-discount">$<%= finalPrice %>
+                 </div>
                   <h4 class="article-description"><%= product.description %></h4>
                 </div>
+               
               </div>
             </article>
           <% }) %>
@@ -50,11 +58,21 @@
                 
                 <div class="article-information-div">
                   <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                  <h4  class="article-discount-shipping">- <%= product.discount %>%</h4>
+                              
                   <p class="article-name"><%= product.name %></p>
+                  <% if (product.discount > 0) { %>
+                       <h4  class="article-discount-shipping">- <%= product.discount %>%</h4>
+                       <p class="article-price-neto"><%= product.price %>
+                  <% } %>
+                 
                   <div class="article-price">
-                    <p class="article-price-neto"><%= product.price %></p>
-                    <p class="article-discount">$<%= product.price %></p>
+                    
+                    <!-- <p class="article-price-neto"><%= product.price %></p>
+                     -->
+                    <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                    <!-- <p class="article-discount">$<%= product.price %></p>
+                   -->
+                   <p class="article-discount">$<%= finalPrice %>
                   </div>
                   <h4 class="article-description"><%= product.description %></h4>
                 </div>
