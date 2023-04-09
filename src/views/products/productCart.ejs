@@ -5,6 +5,9 @@
   <body>
     <%- include('../partials/header') %>
       <main class="main">
+        <button onClick="location.href='/'" type="submit" class="create-button">
+          Atrás
+        </button>
         <section class="seccionPrincipal">
           <div class="producto" id="producto">
             <div>
@@ -19,8 +22,8 @@
             <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div>
           </div> -->
                 <div class="amount">
-                  <button> Cantidad </button>
-                  <select name="cantidad" id="cantidad">
+                  <button id="cantidadBtn"> Cantidad </button>
+                  <!-- <select name="cantidad" id="cantidad">
                     <option value="1"> 1 </option>
                     <option value="2"> 2 </option>
                     <option value="3"> 3 </option>
@@ -31,8 +34,11 @@
                     <option value="8"> 8 </option>
                     <option value="9"> 9 </option>
                     <option value="10"> 10 </option>
-                  </select>
-                  <button>Comprar</button>
+                  </select> -->
+                  <button class="btnComprar">Comprar</button>
+                  <div class="carritoPopup" style="display: none;">
+                    <button class="close">Cerrar</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -41,7 +47,7 @@
         <div class="pagos">
           <p>Medios de Pago</p>
           <img class="tarjetas" src="/images/tarjetas.PNG" alt="tarj"> </img>
-          </div>
+        </div>
         <section class="seccionSecundaria">
           <p>También te podría interesar</p>
           <div class="productosInteres">
@@ -64,6 +70,8 @@
         </section>
       </main>
       <%- include('../partials/footer') %>
+      <script src="/js/products/cart.js"></script>
+
   </body>
 
 </html>

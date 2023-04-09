@@ -187,6 +187,7 @@ input {
   color: white;
   border-radius: 6px;
   background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  margin-left: -95%;
 }
 
 li a {
