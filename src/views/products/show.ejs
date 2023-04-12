@@ -27,7 +27,29 @@
           />
 
           <div class="product-information">
-            <p class="price">Precio: <%= product.price %></p>
+            <!-- <p class="price">Precio: <%= product.price %></p>
+             -->
+            <div class="article-information-div">
+                  <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
+                  <p class="article-name"><%= product.name %></p>  
+                  <% if (product.discount > 0) { %>
+                      <div class = "discount">
+                        <p class="article-price-discount"><%= product.price %>                     
+                        <p  class="article-discount-shipping"> Desc.: <%= product.discount %>%</p>
+                      </div>
+                  <% } %>    
+
+                  
+                  <div class="article-price">
+                    <!-- <p class="article-price-neto"><%= product.price %></p> -->
+                    <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                    <!-- <p class="article-discount">$<%= product.price %></p> -->
+                    <p class="price">Precio $:  <%= finalPrice %>
+                 </div>
+        
+                </div>
+    
+            
             <p class="category">Categoría: <%= product.category.name%></p>
             <p class="color">Color: <%= product.color.name %></p>
             <p class="size">Talle: <%= product.size.arg %></p>

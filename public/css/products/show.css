@@ -43,11 +43,39 @@ body {
   
 }
 
+.article-name {
+ font-size: 15px;
+  color: #052b63;
+  font-weight: bold;
+}
+.discount{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.article-price-discount{
+      text-decoration: line-through;
+      margin: 5%;
+      font-size: 14px;
+    }
+
+.article-discount-shipping{
+  color: gainsboro;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+
 .price {
   color: #052b63;
-  font-size: 13px;
-  font-weight: bold;
-}  
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 7%;
+  }  
 
 .category {
   color: #052b63;
@@ -134,13 +162,31 @@ body {
 
 @media (min-width: 768px){
 
-  .name, .price{
-    font-size: 24px;
+  .name, .price, .article-name{
+    font-size: 26px;
+    margin-bottom: 10px;
+  
   }
 
-  .category, .color, .size, .description{
+  .category, .color, .size, .description, .discount{
     font-size:18px;
   }
+
+   
+   .article-price-discount{
+         margin: 10%;
+         font-size:20px;
+       }
+   
+   .article-discount-shipping{
+     width: 100%;
+     height: 100%;
+     font-size: 20px;
+     text-align: center;
+   } 
+
+
+
 
   .detail-button button {
     width: 170px;
@@ -149,6 +195,12 @@ body {
   }
 
 }
+
+
+
+
+
+
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
