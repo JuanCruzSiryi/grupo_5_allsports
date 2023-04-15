@@ -233,4 +233,23 @@ body {
   .mobile-buttons {
     display: none;
   }
+  
+  .discount {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    ;
+  }
+  .article-price-discount{
+    margin: 3%;
+    font-size:21px;
+  }
+
+  .article-discount-shipping{
+    width: 28%;
+    justify-content: space-between;
+    font-size: 22px;
+    margin: 3%;    justify-content: flex-start;
+    text-align: center;
+  } 
 }
