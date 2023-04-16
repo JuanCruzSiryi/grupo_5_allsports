@@ -1,6 +1,6 @@
 WEEKLY MEETING ‘ALL SPORTS’
 GRUPO 5
-INTEGRANTES: Burbano Danilo, López Leandro, Sio Maximiliano, Siryi Juan Cruz, Tironi Tahiel, Albornoz Alicia.
+INTEGRANTES: Burbano Danilo, López Leandro, Sio Maximiliano, Siryi Juan Cruz.
 FECHA: 6 de marzo del 2023.
 OBJETIVO DE LA REUNIÓN: QUINTO SPRINT.
 MODALIDAD: ZOOM.
@@ -15,9 +15,6 @@ DURACIÓN: 1 hora y media.
 
 4.	REPORTE DE JUAN CRUZ: 
 
-5.	REPORTE DE ALICIA: 
-
-6.	REPORTE DE TAHIEL: 
 
 •	SEGUNDA PARTE: PLANEACIÓN
 
