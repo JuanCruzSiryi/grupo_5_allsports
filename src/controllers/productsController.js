@@ -357,12 +357,22 @@ show: async (req, res) => {
 
   /* END CRUD */
 
-  products: (req, res) => {
-    res.render("../views/products/productDetail", {
-      title: "Product-Detail",
-      stylesheetFile: "productDetail.css",
-    });
+  products: async (req, res) => {
+    try {
+      const product = await Product.findByPk(req.params.id,
+      {include: ["category", "color", "size", "tag", "brand"]})
+      const sizes = await Size.findAll();
+      res.render("../views/products/productDetailDef", {
+        title: "Product-Detail",
+        stylesheetFile: "products/detail.css",
+        product,
+        sizes
+      });
+    } catch (error) {
+      res.send(error)
+    }
   },
+
   productCart: (req, res) => {
     res.render("../views/products/productCart", {
       title: "Product-Cart",

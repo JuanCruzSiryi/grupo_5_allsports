@@ -29,7 +29,7 @@ router.get('/products/:id', productsController.show);
 
 /* END CRUD */
 
-router.get('/productDetail', productsController.products);
+router.get('/productDetail/:id', productsController.products);
 
 router.get('/productCart', productsController.productCart);
 
