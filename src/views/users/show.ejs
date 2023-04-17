@@ -29,7 +29,10 @@
           <div class="product-information">
             
             <div class=" description desktop-description">
+              <p><%= user.firstName + " " + user.lastName %></p>
               <%= user.email %>
+              <p><%= user.role.name %></p>
+              <p><%= user.country.name %></p>
             </div>
             <div class="detail-button desktop-buttons">
               <button type="submit">

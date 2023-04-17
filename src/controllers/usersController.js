@@ -114,11 +114,12 @@ const usersController = {
   // },
   show: async (req, res) => {
     try {
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.params.id,
+        {include: ['role', 'country']});
       res.render("users/show", {
         title: "Profile",
         stylesheetFile: "users/show.css",
-        user: user
+        user: user,
       });
 
     } catch (error) {

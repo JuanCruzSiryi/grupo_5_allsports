@@ -25,6 +25,31 @@ body {
   
 }
 
+@media only screen and (max-width: 600px) {
+  .product-information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .article-information-div {
+    display: block;
+    align-items: center;
+  }
+  
+  .category, .color, .size, .description {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .icons {
+    /* display: flex; */
+    align-items: center;
+    margin-left: 130%;
+  }
+}
+
 .name {        
   color: #052b63;
   font-size: 12px;
@@ -222,10 +247,11 @@ body {
 
 }
 
-
-
-
-
+@media screen and (max-width: 767px) {
+  .description {
+    display: none;
+  }
+}
 
 
 /* -------- desktop------- */
