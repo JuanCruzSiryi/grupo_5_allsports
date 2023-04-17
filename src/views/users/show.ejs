@@ -17,7 +17,7 @@
             Atrás
           </button>
 
-          <h4 class="name"><%= user.firstName + " " + user.lastName %></h4>
+          <!-- <h4 class="name"><%= user.firstName + " " + user.lastName %></h4> -->
         </div>
         <div class="product-container">
           <img
@@ -29,10 +29,17 @@
           <div class="product-information">
             
             <div class=" description desktop-description">
-              <p><%= user.firstName + " " + user.lastName %></p>
-              <%= user.email %>
-              <p><%= user.role.name %></p>
-              <p><%= user.country.name %></p>
+              
+              <p>Nombre: <%= user.firstName %></p>
+
+              <p>Apellido: <%= user.lastName %></p>
+
+              <p>Email: <%= user.email %></p>
+
+              <p>Rol: <%= user.role.name %></p>
+
+              <p>País: <%= user.country.name %></p>
+
             </div>
             <div class="detail-button desktop-buttons">
               <button type="submit">
