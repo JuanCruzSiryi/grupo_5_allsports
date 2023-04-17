@@ -5,15 +5,18 @@
     <h3>★   ENVIO GRATIS A TODO EL PAÍS   ★</h3>
   </div>
   <div class="main-header-top-bar">
-    <div class="header-top-bar-container">
-      <a href="/"><img class="header-logo" src="/design/logo_white_large.png" alt="" /></a>
-    </div>
+    <div class="main-header-top-bar-left">
+      <div class="header-top-bar-container">
+        <a href="/"><img class="header-logo" src="/design/logo_white_large.png" alt="" /></a>
+      </div>
+  
+      <div class="header-input-botton">
+        <input type="input" class="header-input" placeholder="Buscar..." />
+        <button type="submit" class="header-search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
 
-    <div class="header-input-botton">
-      <input type="input" class="header-input" placeholder="Buscar..." />
-      <button type="submit" class="header-search-button">
-        <i class="fa-solid fa-magnifying-glass"></i>
-      </button>
     </div>
 
     <ul class="header-right-bar">
@@ -57,21 +60,6 @@
             <a href="#" class="icon-container"><i class="fa-regular fa-circle-question"></i></a>
           </li>
         <% } %>
-      <!-- <li>
-        <% if (locals.userLogged) { %>
-          <a href="/profile" class="icon-container">
-            <img src="/images/users/<%=locals.userLogged.image%>" alt="" />
-          </a>
-        <% } else { %>
-          <a href="/login" class="icon-container"><i class="fa-solid fa-user"></i></a>
-        <% } %>
-      </li>
-      <li>
-        <a href="/productCart" class="icon-container"><i class="fa-solid fa-cart-shopping"></i></a>
-      </li>
-      <li>
-        <a href="#" class="icon-container"><i class="fa-regular fa-circle-question"></i></a>
-      </li> -->
     </ul>
   </div>
 
