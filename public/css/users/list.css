@@ -141,6 +141,15 @@ tr:nth-child(even) {
   background-color: #3e8e41;
 }
 
+.fa-pen-to-square:hover{
+  color: green;
+  font-size: 20px;
+}
+.fa-trash:hover{
+  color: rgb(203, 19, 19);
+  font-size: 20px;
+}
+
 @media (min-width: 768px){
 
   .products-list-title {

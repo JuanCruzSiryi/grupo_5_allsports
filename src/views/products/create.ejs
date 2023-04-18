@@ -22,25 +22,25 @@
         <div class="content-box-register">
           <form method="post" action="/products/create" enctype="multipart/form-data">
             <div>
-              <label for="nameProduct">Ingresar nombre</label>
+              <label for="nameProduct">* Ingresar Nombre</label>
               <input type="text" name="nameProduct" id="nameProduct">
               <% if(locals.errors && errors.nameProduct) { %>
                 <p class="text-errors"><%= errors.nameProduct.msg %></p>
               <% } %>
             </div>
             <div class="desc-product">
-              <label for="descProduct">Ingresar descripción</label>
+              <label for="descProduct">* Ingresar Descripción</label>
               <input type="text" name="descProduct" id="descProduct">
               <% if(locals.errors && errors.descProduct) { %>
                 <p class="text-errors"><%= errors.descProduct.msg %></p>
               <% } %>
             </div>
             <div>
-              <label for="image">Ingresar imagen</label>
+              <label for="image">Ingresar Imagen</label>
               <input type="file" name="image" id="image">
             </div>
             <div class="color-product">
-              <label for="colorsProduct">Colores disponibles</label>
+              <label for="colorsProduct">Colores Disponibles</label>
               <br>
               <select name="color" id="color">
                 <% colors.forEach(color => { %>
@@ -74,11 +74,11 @@
               </select>
             </div>
             <div>
-              <label for="priceProduct">Ingresar precio</label>
+              <label for="priceProduct">Ingresar Precio</label>
               <input type="number" name="priceProduct" id="priceProduct">
             </div>
             <div>
-              <label for="priceProduct">Ingresar descuento</label>
+              <label for="priceProduct">Ingresar Descuento</label>
               <input type="number" name="priceProduct" id="priceProduct">
             </div>
             
