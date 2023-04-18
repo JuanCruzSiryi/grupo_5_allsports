@@ -10,7 +10,7 @@
         <button 
           onClick="location.href='/users/register'"
           type="submit"
-          class="create-button"
+          class="new-button"
         >
           Crear 
         </button>
@@ -45,7 +45,7 @@
             <% users.forEach(user => { %>
               <tr>
                 <td><%= user.id %></td>
-                <td><a href="/users/<%= user.id %>"><%= user.firstName %></a></td>
+                <td><a href="/users/<%= user.id %>" class="product-name"><%= user.firstName %></a></td>
                 <td><%= user.lastName %></td>
                 <td><a href="/users/<%= user.id %>">
                   <img

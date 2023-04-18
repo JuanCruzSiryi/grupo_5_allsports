@@ -82,16 +82,26 @@ tr:nth-child(even) {
 }
 
 .paging-button{
-  width: 85px;
-  height: 25px;
-  font-size: 13px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
   color: white;
-  border-radius: 6px;
-  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.paging-button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 .paging-button-disabled{
   background: rgb(153, 153, 154);
+}
+.paging-button-disabled:hover {
+  background: linear-gradient(to right, rgb(153, 153, 154), rgb(153, 153, 154));
 }
 
 .search-container {
@@ -124,6 +134,27 @@ tr:nth-child(even) {
 
 .search-button:hover {
   background-color: #3e8e41;
+}
+
+.new-button {
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
+}
+
+.product-name{
+  text-decoration:underline;
 }
 
 @media (min-width: 768px){

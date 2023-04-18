@@ -23,6 +23,8 @@ main {
     background: white;
     /* opacity: 0.6; */
     border-radius: 6px;
+    margin-top: 30px;
+    padding-top: 10px;
 }
 
 .content-box-register form{
@@ -135,19 +137,20 @@ main {
 }
 
 .register-button button {
-    width: 60%;
-    height: 30px;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .register-button button:hover {
-    background-color: rgb(240, 237, 237)
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 .text-errors {

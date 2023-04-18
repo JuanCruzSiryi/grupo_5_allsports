@@ -134,14 +134,20 @@ body {
 }
 
 .detail-button button{
-  width: 65px;
-  height: 25px;
-  font-size: 13px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
   color: white;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detail-button button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 .delete-button button:hover {

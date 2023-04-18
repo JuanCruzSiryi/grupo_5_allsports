@@ -10,7 +10,7 @@
         <button 
           onClick="location.href='/products/create'"
           type="submit"
-          class="create-button"
+          class="new-button"
         >
           Crear 
         </button>
@@ -46,7 +46,7 @@
             <% products.forEach(product => { %>
               <tr>
                 <td><%= product.id %></td>
-                <td><a href="/products/<%= product.id %>"><%= product.name %></a></td>
+                <td><a href="/products/<%= product.id %>" class="product-name"><%= product.name %></a></td>
                 <td><a href="/products/<%= product.id %>">
                   <img
                   class="image"
