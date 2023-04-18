@@ -51,6 +51,10 @@ tr:nth-child(even) {
 .product-name{
   text-decoration:underline;
 }
+.product-name:hover{
+  color: #052b63;
+  font-weight: bolder;
+}
 
 .products-list-title {
   background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));

@@ -156,6 +156,10 @@ tr:nth-child(even) {
 .product-name{
   text-decoration:underline;
 }
+.product-name:hover{
+  color: #052b63;
+  font-weight: bolder;
+}
 
 .fa-pen-to-square:hover{
   color: green;
