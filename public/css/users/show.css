@@ -43,6 +43,10 @@ body {
   
 }
 
+.description p {
+  margin-bottom: 30px;
+}
+
 .price {
   color: #052b63;
   font-size: 13px;
@@ -175,7 +179,7 @@ body {
     align-items: start;
   }
   .product-information {
-    margin-top: 2%;
+    margin-top: -5%;
   }
   .desktop-description{
     display: inline-block;

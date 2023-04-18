@@ -27,12 +27,14 @@
                   <p class="article-name"><%= product.name %></p>  
                   <% if (product.discount > 0) { %>
                       <h4  class="article-discount-shipping">- <%= product.discount %>%</h4>
+                    <p class="article-price-neto"><%= product.price %></p>
+
                       <!-- <p class="article-price-neto"><%= product.price %>   -->
                   <% } %>    
 
                   
                   <div class="article-price">
-                    <p class="article-price-neto"><%= product.price %></p>
+                    <!-- <p class="article-price-neto"><%= product.price %></p> -->
                     <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
                     <!-- <p class="article-discount">$<%= product.price %></p> -->
                     <p class="article-discount">$<%= finalPrice %>
