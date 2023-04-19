@@ -62,7 +62,7 @@ insert into categories (name)
 values ('Infantil');
 
 /* Insertar producto */
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount
 )
 values (
     'Adidas Gran Prix', 
@@ -73,10 +73,11 @@ values (
     1,
     1,
     1,
-    1
+    1,
+    20
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount)
 values (
     'Adidas Galaxi 5', 
     'Las historicas ADIDAS GALAXI 5, son tu mejor opción para tu out fit',
@@ -86,10 +87,11 @@ values (
     1,
     1,
     3,
-    1
+    1,
+    40
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Nike Jordan 2', 
     'Deportivas 100%, suela de tenis, gran torsión y un material muy duradero',
@@ -99,10 +101,11 @@ values (
     1,
     2,
     3,
-    1
+    1,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Nike AIR', 
     'Ideales para acompañarte en tus primeros pasos, ultralivianas y comodísimas',
@@ -112,10 +115,11 @@ values (
     3,
     2,
     2,
-    2
+    2,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount)
 values (
     'Nike AIR', 
     'Ideales para acompañarte en tus primeros pasos, ultralivianas y comodísimas',
@@ -125,10 +129,11 @@ values (
     3,
     2,
     2,
-    1
+    1,
+    20
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Adidas Pro', 
     'Diseño innovador, facheras, muy recomendadas para running',
@@ -138,10 +143,11 @@ values (
     1,
     1,
     2,
-    1
+    1,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount)
 values (
     'Nike TOP', 
     'Multiuso, liviana y con suela topslice',
@@ -151,10 +157,11 @@ values (
     2,
     2,
     3,
-    1
+    1,
+    15
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount)
 values (
     'Reebok Dreams', 
     'Tu compañia para ir al gim y tus caminatas, con cámara de aire XD12',
@@ -164,10 +171,11 @@ values (
     2,
     3,
     4,
-    3
+    3,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Adidas Fly', 
     'Hechas de un nuevo material, que las hace las más livianas del mercado',
@@ -177,10 +185,11 @@ values (
     1,
     1,
     2,
-    1
+    1,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Nike NBA Stars', 
     'Si el basket es tu deporte, estas son tus zapas',
@@ -190,10 +199,12 @@ values (
     1,
     2,
     2,
-    1
+    1,
+    10
+
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Reebok Dark 3', 
     'Para todo tipo de usos, ideales para equipos escolares',
@@ -203,10 +214,11 @@ values (
     1,
     3,
     3,
-    1
+    1,
+    25
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Nike Court', 
     'Profesionales, con toda la tecnología SportLine',
@@ -216,10 +228,11 @@ values (
     2,
     2,
     4,
-    3
+    3,
+    25
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Nike All Star', 
     'Aptas para tenis, sólidas y muy cómodas',
@@ -229,10 +242,11 @@ values (
     2,
     2,
     2,
-    1
+    1,
+    15
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Reebok Sports', 
     'Deportivas, excelente calze y de gran contención para tu pie',
@@ -242,10 +256,11 @@ values (
     3,
     3,
     3,
-    1
+    1,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Adidas ExtraPlus', 
     'De cuero orgánico, reforzadas y super duraderas',
@@ -255,10 +270,11 @@ values (
     3,
     1,
     4,
-    1
+    1,
+    0
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id,discount)
 values (
     'Adidas 2023', 
     'Lo último en tecnología, todas las mejores sensaciones por conocer',
@@ -268,10 +284,11 @@ values (
     3,
     1,
     1,
-    2
+    2,
+    30
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id. discount)
 values (
     'Adidas Pro', 
     'Diseño innovador, facheras, muy recomendadas para running',
@@ -281,7 +298,8 @@ values (
     1,
     1,
     2,
-    1
+    1,
+    0
   );
 
 /*Insertar pais*/

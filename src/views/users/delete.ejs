@@ -14,7 +14,7 @@
           <form method="post" action="/users/<%=user.id %>/delete?_method=DELETE">
             <div>
               <label for="nameProduct">Usuario</label>
-              <input type="text" name="nameProduct" value="<%= user.firstName + user.lastName %>">
+              <input type="text" name="nameProduct" value="<%= user.firstName + " " + user.lastName %>">
             </div>
             <div class="desc-product">
               <label for="descProduct">Email</label>
