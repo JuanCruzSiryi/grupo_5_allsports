@@ -174,9 +174,21 @@
     "category": "Niño",
     "price": "29100",
     "image": "zapa-adidas-azul-bb.jpg",
-    "brand": "sin marca",
+    "brand": "Adidas",
     "color": "Azul",
-    "size": 18,
+    "size": "36 (EUR 37)",
     "available": false
+  },
+  {
+    "id": "02bc4716-35a1-420c-8369-7c6e6b3d2240",
+    "name": "Adidas Pro",
+    "description": "Diseño innovador, facheras, muy recomendadas para runnig",
+    "price": "55555",
+    "image": "product-1679770505647.jpg",
+    "category": "Masculino",
+    "brand": "Adidas",
+    "color": "Negro",
+    "size": "39 (EUR 40)",
+    "available": true
   }
 ]

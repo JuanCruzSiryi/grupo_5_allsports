@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main {
+  margin-top: 145px;
+}
+
 /* ---------------------Main------------- */
 
 body {
@@ -13,12 +17,12 @@ body {
 
 /* --------------imagen--------- */
 .image{    
-  width: 30vw;
+  width: 200px;
   border: solid 2px grey;
   border-radius: 50%;
   margin: 5%;
   box-shadow: 10px 5px 5px teal;
-  margin-left: 35%;
+  margin-left: 22%;
 }
 
 .image:hover{
@@ -41,6 +45,10 @@ body {
   color: #052b63;
   width: max-content;
   
+}
+
+.description p {
+  margin-bottom: 30px;
 }
 
 .price {
@@ -81,14 +89,20 @@ body {
 }
 
 .detail-button button{
-  width: 65px;
-  height: 25px;
-  font-size: 13px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
   color: white;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detail-button button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 .delete-button button:hover {
@@ -130,24 +144,47 @@ body {
   padding: 5px 5%;
 }
 
+
+
 /* -------- tablet--------- */
 
 @media (min-width: 768px){
 
-  .name, .price{
-    font-size: 24px;
-    margin-left: 37%;
+  main {
+    margin-top: 130px;
+  }
+  .desktop-description{
+    display: inline-block;
   }
 
-  .category, .color, .size, .description{
-    font-size:18px;
-    margin-top: 25%;
+  .text-property {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
   }
-
-  .detail-button button {
-    width: 170px;
-    height: 40px;
-    font-size: 16px;
+  .text-property h3{
+    color: #052b63;
+    font-style: normal;
+  }
+  .text-property h4{
+    color: #052b63;
+    font-style: normal;
+    font-size: 13px;
+    padding: 3px 0px 0px 10px;
+  }
+  .desktop-buttons {
+    display: inline-block;
+    text-align: start;
+    margin-top: 5%;
+    margin-left: 0;
+    margin-right: 50px;
+  }
+  .desktop-buttons button{
+    padding: 10px 25px;
+    margin-right: 10px;
+  }
+  .mobile-buttons {
+    display: none;
   }
 
 }
@@ -159,8 +196,10 @@ body {
       padding: 5%;
   }   */
   .image{    
-    width: 30vw;
-    margin: 1% 5% 1% 5%;
+    width: 400px;
+    height: 400px;
+    margin: 3% 5% 3% 10%;
+    
   }
   .name {        
     padding: 5px;
@@ -169,18 +208,27 @@ body {
     align-items: start;
   }
   .product-information {
-    margin-top: 2%;
+    align-items: center;
   }
   .desktop-description{
     display: inline-block;
-    padding: 35px 90px 5px 0px;
+    padding: 110px 90px 5px 0px;
   }
-  .desktop-buttons {
+  .text-property h3{
+    font-size: 18px;
+  }
+  .text-property h4{
+    font-size: 18px;
+  }
+    .desktop-buttons {
     display: inline-block;
     text-align: start;
     margin-top: 5%;
+    margin-left: 0;
+    margin-right: 105px;
   }
-  .mobile-buttons {
-    display: none;
+  .desktop-buttons button{
+    padding: 10px 25px;
+    margin-right: 10px;
   }
 }

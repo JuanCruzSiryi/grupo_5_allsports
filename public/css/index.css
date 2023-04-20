@@ -3,10 +3,14 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
 }
+main {
+  margin-top: 0px;
+}
 
 /********************* BANNER *********************/
 .banner-img {
   display: flex;
+  margin-top: 130px;
 }
 .banner-img a img{
   width: 100%;
@@ -211,6 +215,6 @@ main section article :hover .article-description {
 
   /********************* BANNER *********************/
   .banner-img a img {
-    height: 450px;
+    height: 600px;
   }
 }

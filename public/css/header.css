@@ -1,5 +1,11 @@
+main {
+  margin-top: 130px; /* altura del header */
+  /* otros estilos del contenido de la página */
+}
+
 a {
   text-decoration: none;
+  color: white;
 }
 
 header {
@@ -16,6 +22,17 @@ input {
 
 .main-header {
   border: #1259c3;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-bottom: solid 4px #052b63;
+  border-top: solid 4px #052b63;
+}
+.marquee-container-hide {
+  display: none;
+}
+.main-navbar-hide {
+  display: none;
 }
 
 .marquee-container {
@@ -171,6 +188,24 @@ input {
   color: white;
   border-radius: 6px;
   background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  /* margin-left: -95%; */
+}
+
+.new-button {
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.new-button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 li a {
@@ -221,6 +256,30 @@ li a {
 .site-search {
   display:  flex;
 }
+.header-search-button {
+  position: relative;
+  left: -42px;
+  height: 32px;
+  background-color: #1259c3;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header-search-button:hover {
+  background-color: #052b63;
+}
+
+.main-header-top-bar-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
 @media (min-width: 361px) {
   .header-right-bar {
@@ -258,15 +317,24 @@ li a {
   .header-logo {
     padding: 0px
   }
+  .main-header-top-bar-left {
+    width: 68%;
+  }
 
   .header-input {
+    border: none;
     margin-left: 20px;
-    width: 280px;
-    height: 20px;
+    width: 250px;
+    height: 36px;
+    border-radius: 4px;
+    border-bottom: 2px solid #ccc;
+    padding: 1px 1px 1px 15px;
+    font-size: 16px;
   }
   
   .header-input-botton {
     display: flex;
+    align-items: center;
   }
 
   .hamburguer-button {
@@ -323,7 +391,7 @@ li a {
 
   /********************* HEADER *********************/
   .main-header-top-bar, .main-navbar {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
   }
   .main-header-top-bar{
@@ -333,6 +401,17 @@ li a {
   .main-navbar {
     margin-top: 10px;
     padding-right: 25px;
+  }
+
+  .header-input {
+    border: none;
+    margin-left: 20px;
+    width: 300px;
+    height: 36px;
+    border-radius: 4px;
+    border-bottom: 2px solid #ccc;
+    padding: 1px 1px 1px 15px;
+    font-size: 16px;
   }
 
   .header-text {
@@ -357,5 +436,16 @@ li a {
 
   .admin-buttons {
     padding-right: 35px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-header-top-bar, .main-navbar {
+    max-width: 1400px;
+    margin: auto;
+  }
+
+  .main-header-top-bar-left {
+    width: 63%;
   }
 }

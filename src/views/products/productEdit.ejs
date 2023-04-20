@@ -7,7 +7,7 @@
 
     <div class="title-navbar">
       <div class="back-button">
-        <button type=""><a href="/products">Atrás</a></button>
+        <button type=""><a href="/products?page=1">Atrás</a></button>
       </div>
       <h2 class="form-title">EDITAR PRODUCTO</h2>
     </div>
@@ -97,7 +97,11 @@
                 id="priceProduct" 
                 value="<%= product.price %>">
             </div>
-
+            <div>
+              <label for="discount">Descuento</label>
+              <input type="number" name="discount" id="discount">
+            </div>
+            
             <div class="register-button">
                 <button type="submit">Guardar</button>
             </div>

@@ -5,14 +5,14 @@
     
     <%- include ("../partials/header.ejs") %>
 
-    <div class="title-navbar">
-      <div class="back-button">
-        <button type=""><a href="/products/">Atras</a></button>
-      </div>
-      <h2 class="form-title">CREAR PRODUCTO</h2>
-    </div>
-
+    
     <main>
+      <div class="title-navbar">
+        <div class="back-button">
+          <button type=""><a href="/products?page=1">Atras</a></button>
+        </div>
+        <h2 class="form-title">CREAR PRODUCTO</h2>
+      </div>
       <div class="principal-box">
 
         <!-- <div class="title">
@@ -22,59 +22,66 @@
         <div class="content-box-register">
           <form method="post" action="/products/create" enctype="multipart/form-data">
             <div>
-              <label for="nameProduct">Ingresar nombre</label>
-              <input type="text" name="nameProduct" id="nameProduct" required>
+              <label for="nameProduct">* Ingresar Nombre</label>
+              <input type="text" name="nameProduct" id="nameProduct">
+              <% if(locals.errors && errors.nameProduct) { %>
+                <p class="text-errors"><%= errors.nameProduct.msg %></p>
+              <% } %>
             </div>
             <div class="desc-product">
-              <label for="descProduct">Ingresar descripción</label>
-              <input type="text" name="descProduct" id="descProduct" required>
+              <label for="descProduct">* Ingresar Descripción</label>
+              <input type="text" name="descProduct" id="descProduct">
+              <% if(locals.errors && errors.descProduct) { %>
+                <p class="text-errors"><%= errors.descProduct.msg %></p>
+              <% } %>
             </div>
             <div>
-              <label for="image">Ingresar imagen</label>
+              <label for="image">Ingresar Imagen</label>
               <input type="file" name="image" id="image">
             </div>
             <div class="color-product">
-              <label for="colorsProduct">Colores disponibles</label>
+              <label for="colorsProduct">Colores Disponibles</label>
               <br>
               <select name="color" id="color">
-                <option value="Azul">Azul</option>
-                <option value="Blanco">Blanco</option>
-                <option value="Negro">Negro</option>
-                <option value="Rojo">Rojo</option>
+                <% colors.forEach(color => { %>
+                  <option value=<%= color.id %>><%= color.name %></option>
+                <% }) %>
               </select>
             </div>
             <div class="size-product">
               <label for="sizeProduct">Talles</label>
               <br>
-              <select name="talles" id="talles">
-                <option value="36 (EUR 37)"> 36 (EUR 37) </option>
-                <option value="37 (EUR 38)"> 37 (EUR 38) </option>
-                <option value="38 (EUR 39)"> 38 (EUR 39) </option>
-                <option value="39 (EUR 40)"> 39 (EUR 40) </option>
-                <option value="40 (EUR 41)"> 40 (EUR 41) </option>
-                <option value="41 (EUR 42)"> 41 (EUR 42) </option>
-                <option value="42 (EUR 43)"> 42 (EUR 43) </option>
-                <option value="43 (EUR 44)"> 43 (EUR 44) </option>
-                <option value="44 (EUR 45)"> 44 (EUR 45) </option>
-                <option value="45 (EUR 46)"> 45 (EUR 46) </option>
+              <select name="sizeProduct" id="talles">
+                <% sizes.forEach(size => { %>
+                  <option value=<%= size.id %>><%= size.eur %></option>
+                <% }) %>
               </select>
             </div>
             <div>
               <label for="brandProduct">Marca</label>
-              <input type="text" name="brandProduct" id="brandProduct">
-            </div>
-            <div>
-              <label for="priceProduct">Modificar categoría</label>
-              <select name="categoryProduct" id="categoryProduct">
-                <option value="Masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-                <option value="Niños">Niños</option>
+              <select name="brandProduct" id="brandProduct">
+                <% brands.forEach(brand => { %>
+                  <option value=<%= brand.id %>><%= brand.name %></option>
+                <% }) %>
               </select>
             </div>
             <div>
-              <label for="priceProduct">Ingresar precio</label>
+              <label for="tag">Tipo</label>
+              <select name="tag" id="tag">
+                <% tags.forEach(tag => { %>
+                  <option value=<%= tag.id %>><%= tag.name %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div>
+              <label for="priceProduct">Ingresar Precio</label>
               <input type="number" name="priceProduct" id="priceProduct">
             </div>
+            <div>
+              <label for="priceProduct">Ingresar Descuento</label>
+              <input type="number" name="priceProduct" id="priceProduct">
+            </div>
+            
 
             <div class="register-button">
                 <button type="submit">Crear</button>

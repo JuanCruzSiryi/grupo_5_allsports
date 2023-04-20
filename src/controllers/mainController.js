@@ -3,14 +3,37 @@ const path = require("path");
 const bcrypt = require('bcryptjs');
 
 const usersPath = path.join(__dirname, "../data/users.json");
+const {User, Product} = require('../database/models');
+
+const db = require('../database/models');
+const Op = db.Sequelize.Op;
 
 const mainController = {
-  index: (req, res) => {
-    // res.sendFile(path.resolve(__dirname, "../views/index.html"))
-    res.render('index', {
-      title: "All-SPORTS", 
-      stylesheetFile: "index.css",
-    })
+  index: async (req, res) => {
+    try {
+      const newest_products = await Product.findAll({
+        include: ["category", "color", "size", "tag", "brand"],
+        limit: 4,
+        offset: 0
+      });
+      const popular_products = await Product.findAll({
+        include: ["category", "color", "size", "tag", "brand"],
+        limit: 4,
+        offset: 4
+      });
+      res.render('index', {
+        title: "All-SPORTS",
+        stylesheetFile: "index.css",
+        newest_products,
+        popular_products
+      });
+    } catch (error) {
+      res.send(error)
+    }
+    // res.render('index', {
+    //   title: "All-SPORTS", 
+    //   stylesheetFile: "index.css",
+    // })
   },
   login: (req, res) => {
     res.render("../views/auth/login", {
@@ -18,8 +41,9 @@ const mainController = {
       stylesheetFile: "login.css",
     });
   },
-  processLogin: (req, res) => {
-    let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+  processLogin: async (req, res) => {
+    //let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+    const users = await User.findAll();
     let user = users.find(user => user.email == req.body.email);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password

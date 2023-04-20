@@ -10,14 +10,14 @@
       <div class="main-container">
         <div class="product-title">
           <button 
-            onClick="location.href='/users'"
+            onClick="location.href='/users?page=1'"
             type="submit"
-            class="create-button"
+            class="new-button"
           >
             Atrás
           </button>
 
-          <h4 class="name"><%= user.firstName + " " + user.lastName %></h4>
+          <!-- <h4 class="name"><%= user.firstName + " " + user.lastName %></h4> -->
         </div>
         <div class="product-container">
           <img
@@ -28,17 +28,47 @@
 
           <div class="product-information">
             
-            <div class=" description desktop-description">
-              <%= user.email %>
-            </div>
-            <div class="detail-button desktop-buttons">
-              <button type="submit">
-                <a href="/users/<%= user.id %>/edit">Editar</a>
-              </button>
-    
-              <button type="submit">
-                <a href="/users/<%= user.id %>/delete">Eliminar</a>
-              </button>
+            <div class="description desktop-description">
+              
+              <div class="text-property">
+                <h3>Nombre: </h3>
+                <h4><%= user.firstName %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Apellido: </h3>
+                <h4><%= user.lastName %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Email: </h3>
+                <h4><%= user.email %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Role: </h3>
+                <h4><%= user.role.name %></h4>
+              </div>
+              <div class="text-property">
+                <h3>País: </h3>
+                <h4><%= user.country.name %></h4>
+              </div>
+              <!-- <p>Nombre: <%= user.firstName %></p>
+
+              <p>Apellido: <%= user.lastName %></p>
+
+              <p>Email: <%= user.email %></p>
+
+              <p>Rol: <%= user.role.name %></p>
+
+              <p>País: <%= user.country.name %></p> -->
+
+              <div class="detail-button desktop-buttons">
+                <button type="submit">
+                  <a href="/users/<%= user.id %>/edit">Editar</a>
+                </button>
+      
+                <button type="submit">
+                  <a href="/users/<%= user.id %>/delete">Eliminar</a>
+                </button>
+              </div>
             </div>
           </div>
           

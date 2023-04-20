@@ -5,83 +5,120 @@
     <%- include ("../partials/header.ejs") %>
     <main>
       <div class="principal-box">
-        <div class="title">
-          <h2 class="title-register">EDITAR PRODUCTO</h2>
+        
+        <div class="back-button">
+          <button type=""><a href="/products?page=1">Atrás</a></button>
         </div>
 
-        <div class="content-box-register">
-          <form
-            method="post"
-            action="/products/<%=product.id %>/edit/?_method=PUT"
-            enctype="multipart/form-data"
-          >
+        
+        <div class="title">
+          <h2 class="title-register">EDITAR PRODUCTO</h2>
+          </div>
+
+            <a href="/products/<%= product.id %>">
+            <img
+              class="imageProduct"
+              src="/images/products/<%= product.image %>"
+              alt="product-image.jpg"
+            />
+            </a>
+    
+            
+            <div class="content-box-register">
+              <form
+                method="post"
+                action="/products/<%=product.id %>/edit/?_method=PUT"
+                enctype="multipart/form-data"
+              >
+                <div>
+                  <label for="image">Modificar imagen</label>
+                  <input type="file" name="image" id="image" />
+                </div>
             <div>
-              <label for="nameProduct">Modificar nombre</label>
+              <label for="name">Modificar nombre</label>
               <input
                 type="text"
-                name="nameProduct"
+                name="name"
+                id="name"
                 value="<%= product.name %>"
               />
             </div>
             <div class="desc-product">
-              <label for="descProduct">Modificar descripción</label>
+              <label for="description">Modificar descripción</label>
               <input
                 type="text"
-                name="descProduct"
-                id="descProduct"
+                name="description"
+                id="description"
                 value="<%= product.description %>"
               />
             </div>
-            <div>
-              <label for="image">Modificar imagen</label>
-              <input type="file" name="image" id="image" />
-            </div>
-            <div class="color-product">
-              <label for="colorsProduct">Modificar Color</label>
-              <br />
-              <select name="color" id="color">
-                <option value="blue">Azul</option>
-                <option value="white">Blanco</option>
-                <option value="black">Negro</option>
-                <option value="red">Rojo</option>
+              <div class="color-product">
+              <label for="color">Modificar color</label>
+              <select name="color" id="color" >
+                <% colors.forEach(color => { %>
+                  <option value=<%= color.id %> <%= color.id == product.color_id ? "selected" : "" %>><%= color.name %></option>
+                <% }) %>
               </select>
             </div>
             <div class="size-product">
-              <label for="sizeProduct">Modificar Talle</label>
-              <br />
-              <select name="talles" id="talles">
-                <option value="36 (EUR 37)"> 36 (EUR 37) </option>
-                <option value="37 (EUR 38)"> 37 (EUR 38) </option>
-                <option value="38 (EUR 39)"> 38 (EUR 39) </option>
-                <option value="39 (EUR 40)"> 39 (EUR 40) </option>
-                <option value="40 (EUR 41)"> 40 (EUR 41) </option>
-                <option value="41 (EUR 42)"> 41 (EUR 42) </option>
-                <option value="42 (EUR 43)"> 42 (EUR 43) </option>
-                <option value="43 (EUR 44)"> 43 (EUR 44) </option>
-                <option value="44 (EUR 45)"> 44 (EUR 45) </option>
-                <option value="45 (EUR 46)"> 45 (EUR 46) </option>
+              <label for="size">Modificar talle</label>
+              <select name="size" id="size">
+                <% sizes.forEach(size => { %>
+                  <option value=<%= size.id %> <%= size.id == product.size_id ? "selected" : "" %>><%= size.arg %></option>
+                <% }) %>
               </select>
             </div>
             <div>
-              <label for="priceProduct">Modificar precio</label>
+              <label for="price">Modificar precio</label>
               <input
                 type="number"
-                name="priceProduct"
-                id="priceProduct"
+                name="price"
+                id="price"
                 value="<%= product.price %>"
               />
             </div>
-
-            <div class="register-button">
-              <button type="submit">APLICAR</button>
+            <div>
+              <label for="discount">Modificar descuento</label>
+              <input
+                type="number"
+                name="discount"
+                id="discount"
+                value="<%= product.discount %>"
+              />
             </div>
-
-            <div class="register-button">
-              <button type="submit">LIMPIAR</button>
+ 
+            <div class="brand-product">
+              <label for="brand">Modificar marca</label>
+              <select name="brand" id="brand">
+                <% brands.forEach(brand => { %>
+                  <option value=<%= brand.id %> <%= brand.id == product.brand_id ? "selected" : "" %>><%= brand.name %></option>
+                <% }) %>
+              </select>
             </div>
+            <div>
+              <div class="tag-product">
+                <label for="tag">Modificar tipo</label>
+              
+                <select name="tag" id="tag">
+                  <% tags.forEach(tag => { %>
+                    <option value=<%= tag.id %> <%= tag.id == product.tag_id ? "selected" : "" %>><%= tag.name %></option>
+                  <% }) %>
+                </select>
+              </div>
+            </div>
+        
+      
+      
+        
+            <div class="register-button">
+              <button type="submit">Aplicar</button>
+            
+              <button type="submit">Limpiar</button>
+            </div>
+          
           </form>
-        </div>
-      </div>
+
+      
     </main>
     <%- include ("../partials/footer.ejs") %>
   </body>

@@ -10,14 +10,14 @@
       <div class="main-container">
         <div class="product-title">
           <button 
-            onClick="location.href='/products'"
+            onClick="location.href='/products?page=1'"
             type="submit"
-            class="create-button"
+            class="new-button"
           >
             Atras
           </button>
 
-          <h4 class="name"><%= product.name %></h4>
+          <!-- <h4 class="name"><%= product.name %></h4> -->
         </div>
         <div class="product-container">
           <img
@@ -27,10 +27,55 @@
           />
 
           <div class="product-information">
-            <p class="price">Precio: <%= product.price %></p>
-            <p class="category">Categoría: <%= product.category %></p>
-            <p class="color">Color: <%= product.color %></p>
-            <p class="size">Talle: <%= product.size %></p>
+            <!-- <p class="price">Precio: <%= product.price %></p>
+             -->
+            <div class="article-information-div">
+                  <p class="article-name"><%= product.name %></p>  
+                  <!-- <% if (product.discount > 0) { %>
+                      <div class = "discount">
+                        <p class="article-price-discount"><%= product.price %>                     
+                        <p  class="article-discount-shipping"> Desc.: <%= product.discount %>%</p>
+                      </div>
+                  <% } %> -->
+            </div>
+    
+            <div class="text-property">
+              <h3>Precio Bruto: </h3>
+              <h4>$ <%= product.price %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Descuento: </h3>
+              <h4><%= product.discount %>%</h4>
+            </div>
+            <div class="text-property">
+              <h3>Precio Neto: </h3>
+              <h4>$ <%= product.price - ((product.price* product.discount) / 100) %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Categoría: </h3>
+              <h4><%= product.category.name %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Color: </h3>
+              <h4><%= product.color.name %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Talle: </h3>
+              <h4><%= product.size.arg %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Marca: </h3>
+              <h4><%= product.brand.name %></h4>
+            </div>
+            <div class="text-property">
+              <h3>Tipo: </h3>
+              <h4><%= product.tag ? product.tag.name : "" %></h4>
+            </div>
+            <!-- <p class="category">Categoría: <%= product.category.name%></p>
+            <p class="color">Color: <%= product.color.name %></p>
+            <p class="size">Talle: <%= product.size.arg %></p>
+            <p class="size">Marca: <%= product.brand.name %></p>
+            <p class="size">Tipo: <%= product.tag ? product.tag.name : "" %></p> -->
 
             <div class=" description desktop-description">
               <%= product.description %>

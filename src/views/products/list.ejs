@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="products-list-title">
+        <a href="/products" class="name products-list-text" >Lista de Productos</a>
+        <button 
+          onClick="location.href='/products/create'"
+          type="submit"
+          class="new-button"
+        >
+          Crear 
+        </button>
+      </div>
+      <form action="/products/search?page=1" method="GET">
+        <div class="search-container">
+          <input 
+            class="search-input" 
+            type="text" 
+            name="q"
+            placeholder="Buscar producto..."
+            value=<%= locals.search? search:"" %>
+          >
+          <button type="submit" class="search-button">Buscar</button>
+        </div>
+      </form>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Producto</th>
+              <th>Imagen</th>
+              <th>Marca</th>
+              <th>Color</th>
+              <th>Categoria</th>
+              <th>Precio</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach(product => { %>
+              <tr>
+                <td><%= product.id %></td>
+                <td><a href="/products/<%= product.id %>" class="product-name"><%= product.name %></a></td>
+                <td><a href="/products/<%= product.id %>">
+                  <img
+                  class="image"
+                  src="/images/products/<%= product.image %>"
+                  alt="product-image.jpg"
+                  />
+                </a></td>
+                <td><%= product.brand.name %></td>
+                <td><%= product.color.name %></td>
+                <td><%= product.category.name %></td>
+                <td><%= product.price %></td>
+                <td>
+                  <a href="/products/<%= product.id %>/edit" ><i class="fa-solid fa-pen-to-square"></i></i></a>
+                </td>
+                <td>
+                  <a href="/products/<%= product.id %>/delete"><i class="fa-solid fa-trash"></i></i></i></a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <div class="paging-buttons">
+          <% if (locals.page && locals.page > 1) { %>
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q='"
+              <% } %> 
+              type="submit"
+              class="paging-button"
+            >
+              Anterior 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Anterior 
+            </button>
+          <% } %>
+
+           
+
+          <h3><%= locals.page %></h3>
+
+          <% if (locals.totalPages && locals.page < locals.totalPages ) { %>
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q='"
+              <% } %>
+              type="submit"
+              class="paging-button"
+            >
+              Siguiente 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Siguiente 
+            </button>
+          <% } %>
+        </div>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>

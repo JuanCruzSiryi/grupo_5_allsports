@@ -4,6 +4,10 @@
   padding: 0px;
   box-sizing: border-box;
 }
+main {
+  margin-top: 145px;
+}
+
 
 /* ---------------------Main------------- */
 
@@ -43,11 +47,65 @@ body {
   
 }
 
+.article-name {
+  font-size: 15px;
+  color: #052b63;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.discount{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-price-discount{
+  text-decoration: line-through;
+  margin: 5%;
+  font-size: 14px;
+}
+
+.article-discount-shipping{
+  color: gainsboro;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+
 .price {
   color: #052b63;
-  font-size: 13px;
-  font-weight: bold;
-}  
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2%;
+  }
+
+/* .icons{
+    padding: 6%;
+    margin: 21% 0% 0% 10%;
+} */
+
+
+.heart:hover {
+    color: rgb(226, 43, 43);
+}
+
+/* .cart{
+    margin: 32% 5% 32% 5%;
+} */
+
+.cart:hover{    
+  color: blueviolet;  
+ } 
+
+
+/* .product-logo{
+  display: flex;
+  padding: 21%;
+  margin-top: 7%;
+} */
 
 .category {
   color: #052b63;
@@ -81,14 +139,20 @@ body {
 }
 
 .detail-button button{
-  width: 65px;
-  height: 25px;
-  font-size: 13px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
   color: white;
-  border-radius: 6px;
-  margin-bottom: 8px;
-  margin-top: 8px;
-  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.detail-button button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 .delete-button button:hover {
@@ -130,17 +194,53 @@ body {
   padding: 5px 5%;
 }
 
+.text-property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.text-property h3{
+  color: #052b63;
+  font-style: normal;
+  font-size: 13px;
+}
+.text-property h4{
+  color: #052b63;
+  font-style: normal;
+  font-size: 13px;
+  padding: 3px 0px 0px 10px;
+}
 /* -------- tablet--------- */
 
 @media (min-width: 768px){
-
-  .name, .price{
-    font-size: 24px;
+  main {
+    margin-top: 130px;
   }
 
-  .category, .color, .size, .description{
+  .name, .price, .article-name{
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  .category, .color, .size, .description, .discount{
     font-size:18px;
   }
+
+   
+   .article-price-discount{
+         margin: 10%;
+         font-size:20px;
+       }
+   
+   .article-discount-shipping{
+     width: 100%;
+     height: 100%;
+     font-size: 20px;
+     text-align: center;
+   } 
+
+
+
 
   .detail-button button {
     width: 170px;
@@ -149,6 +249,12 @@ body {
   }
 
 }
+
+
+
+
+
+
 
 /* -------- desktop------- */
 @media (min-width: 1024px){
@@ -180,5 +286,27 @@ body {
   }
   .mobile-buttons {
     display: none;
+  }
+  
+  .discount {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    ;
+  }
+  .article-price-discount{
+    margin: 3%;
+    font-size:21px;
+  }
+
+  .article-discount-shipping{
+    width: 20%;
+    text-align: center;
+  }
+  .text-property h3{
+    font-size: 18px;
+  }
+  .text-property h4{
+    font-size: 18px;
   }
 }

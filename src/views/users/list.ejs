@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+      <div class="products-list-title">
+        <a href="/users" class="name products-list-text" >Lista de Usuarios</a>
+        <button 
+          onClick="location.href='/users/register'"
+          type="submit"
+          class="new-button"
+        >
+          Crear 
+        </button>
+      </div>
+      <form action="/users/search?page=1" method="GET">
+        <div class="search-container">
+          <input 
+            class="search-input" 
+            type="text" 
+            name="q"
+            placeholder="Buscar usuario..."
+            value=<%= locals.search? search:"" %>
+          >
+          <button type="submit" class="search-button">Buscar</button>
+        </div>
+      </form>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Avatar</th>
+              <th>Role</th>
+              <th>Email</th>
+              <th>Editar</th>
+              <th>Eliminar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% users.forEach(user => { %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><a href="/users/<%= user.id %>" class="product-name"><%= user.firstName %></a></td>
+                <td><%= user.lastName %></td>
+                <td><a href="/users/<%= user.id %>">
+                  <img
+                  class="image"
+                  src="/images/users/<%= user.image %>"
+                  alt="user-image.jpg"
+                  />
+                </a></td>
+                <td><%= user.role.name %></td>
+                <td><%= user.email %></td>
+                <td>
+                  <a href="/users/<%= user.id %>/edit" ><i class="fa-solid fa-pen-to-square"></i></i></a>
+                </td>
+                <td>
+                  <a href="/users/<%= user.id %>/delete"><i class="fa-solid fa-trash"></i></i></i></a>
+                </td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <div class="paging-buttons">
+          <% if (locals.page && locals.page > 1) { %>
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)-1%>&q='"
+              <% } %> 
+              type="submit"
+              class="paging-button"
+            >
+              Anterior 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Anterior 
+            </button>
+          <% } %>
+
+           
+
+          <h3><%= locals.page %></h3>
+
+          <% if (locals.totalPages && locals.page < locals.totalPages ) { %>
+            <button
+              <% if (locals.search) { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q=<%=locals.search%>'"
+              <% } else { %>
+                onClick="location.href='?page=<%=parseInt(locals.page)+1%>&q='"
+              <% } %>
+              type="submit"
+              class="paging-button"
+            >
+              Siguiente 
+            </button>
+          <% } else { %>
+            <button 
+              class="paging-button paging-button-disabled"
+              disabled
+            >
+              Siguiente 
+            </button>
+          <% } %>
+        </div>
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+  </body>
+</html>

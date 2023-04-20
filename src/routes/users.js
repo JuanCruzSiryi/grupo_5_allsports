@@ -8,6 +8,7 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 
 /* CRUD */
 router.get('/users', guestMiddleware, usersController.index);
+router.get('/usersList', usersController.list);
 
 /* END CRUD */
 
@@ -15,7 +16,8 @@ router.get('/users', guestMiddleware, usersController.index);
 router.get('/users/register', usersController.register);
 router.post('/users/register', upload.single("image"), rules, usersController.store);
 
-// 
+// BUSCAR USUSARIO
+router.get('/users/search', usersController.search)
 
 
 // EDICIÓN DE USUARIO
@@ -28,11 +30,11 @@ router.put('/users/:id/edit', upload.single("image"),rules, usersController.upda
 // ELIMINAR USUARIO
 router.get('/users/:id/delete', usersController.delete);
 router.delete('/users/:id/delete', usersController.destroy);
-// SHOW DE USUARIOS
 
-/* END CRUD */
 router.get('/profile', usersController.profile);
 
+// SHOW DE USUARIOS
 router.get('/users/:id', usersController.show);
 
+/* END CRUD */
 module.exports = router;

@@ -18,6 +18,23 @@ body {
   background: linear-gradient(to right, rgb(196, 212, 255), rgb(255, 218, 203));
 }
 
+.back-button button {
+  width: 85px;
+  height: 30px;
+  margin: 2%;
+  border-radius: 6px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+}
+
+input::file-selector-button{
+  color: white;  
+  background: linear-gradient(to right, #061b3b, #052b63);
+}
+
+.principal-box {
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
 .principal-box input {
   color: #052b63;
   border: solid 1px #052b63;
@@ -56,14 +73,36 @@ label {
     margin-right: 15%;
 }
 
+
+.imageProduct{
+    width: 40%;
+    border: solid 2px grey;
+    border-radius: 5%;
+    
+    box-shadow: 10px 5px 5px teal;
+
+}
+
+.image:hover{
+    box-shadow: 0px 0px 10px blueviolet;
+    
+  }
+  
+  .image:hover{
+      box-shadow: 0px 0px 10px blueviolet;
+      
+    }
+  
+
+
+
 .content-box-register form div {
-    display: flex;
-    flex-direction: column;
     text-align: left;
     align-self: center;
     position: relative;
     width: 100%;
 }
+
 
 .content-box-register form div input {
     width: 100%;
@@ -188,34 +227,42 @@ label {
 .terms-box label a:visited {
     color: rgb(78, 4, 147);
 }
-
-.register-button {
-    width: 100%;
-    height: 13%;
+/*  
+ .register-button {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+    justify-content: space-around;
+}  */
 
 .register-button button {
-    width: 85px;
-    height: 30px;
-    font-size: 15px;
+    background: linear-gradient(to right, #061b3b, #052b63);
+    border: none;
     color: white;
-    /* font-weight: bold; */
-    border-radius: 6px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
-}
-.back-button button {
-    width: 85px;
-    height: 30px;
-    border-radius: 6px;
-    background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+.register-button{    
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.back-button button {
+  width: 85px;
+  height: 30px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  display: block;
+}
+
+.register-button button:hover,  .back-button button:hover{
+  background: linear-gradient(to right, #052b63, #1259c3);
+}
 .back-button button a{
   font-size: 15px;
   color: white;
@@ -237,7 +284,7 @@ label {
         justify-content: center;
     }
     main {
-      height: 105vh;
+      /* height: 100vh; */
       margin-bottom: 0;
     }
 }
@@ -245,7 +292,7 @@ label {
 
   @media(min-width: 768px) {
     .main-navbar {
-      max-width: 1200px;
+      max-width: 100%;
       margin: auto;
     }
     .main-header-top-bar{

@@ -1,0 +1,307 @@
+* {
+  font-family: Roboto;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* ---------------------Main------------- */
+
+body {
+  background: linear-gradient(to right, rgb(201, 216, 255), rgb(255, 247, 205));
+}
+
+/* --------------imagen--------- */
+.image{    
+  width: 40vw;
+  border: solid 2px grey;
+  border-radius: 5%;
+  margin: 5%;
+  box-shadow: 10px 5px 5px teal;
+}
+
+.image:hover{
+  box-shadow: 0px 0px 10px blueviolet;
+  
+}
+
+@media only screen and (max-width: 600px) {
+  .product-information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .article-information-div {
+    display: block;
+    align-items: center;
+  }
+  
+  .category, .color, .size, .description {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .icons {
+    /* display: flex; */
+    align-items: center;
+    margin-left: 130%;
+  }
+}
+
+.name {        
+  color: #052b63;
+  font-size: 12px;
+  text-align: center;
+  background: gainsboro;
+  padding: 1%;
+  margin-top: auto;
+  border-radius: 5%;
+  margin-left: 5%;
+}
+
+.p {
+  font-size: 13px;
+  color: #052b63;
+  width: max-content;
+  
+}
+
+.article-name {
+ font-size: 15px;
+  color: #052b63;
+  font-weight: bold;
+}
+.discount{
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.article-price-discount{
+      text-decoration: line-through;
+      margin: 5%;
+      font-size: 14px;
+    }
+
+.article-discount-shipping{
+  color: gainsboro;
+  background-color: tomato;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  text-align: center;
+}
+
+.price {
+  color: #052b63;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 7%;
+  }
+
+/* .icons{
+    padding: 6%;
+    margin: 21% 0% 0% 10%;
+} */
+
+
+.heart:hover {
+    color: rgb(226, 43, 43);
+}
+
+/* .cart{
+    margin: 32% 5% 32% 5%;
+} */
+
+.cart:hover{    
+  color: blueviolet;  
+ } 
+
+
+/* .product-logo{
+  display: flex;
+  padding: 21%;
+  margin-top: 7%;
+} */
+
+.category {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.color {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.size {
+  color: #052b63;
+  font-size: 12px;
+  padding: 5px 0px 5px 0px;
+}
+
+.description {
+  color: #052b63;
+  font-size: 12px;
+  font-style: italic;
+  padding: 5px 20px 5px 20px;
+  text-align: center;
+  margin-top: 0;
+}
+
+.detail-button{
+  text-align: center;
+}
+
+.detail-button button{
+  width: 65px;
+  height: 25px;
+  font-size: 13px;
+  color: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
+}
+
+.delete-button button:hover {
+  background-color: rgb(240, 237, 237)
+}
+
+.detail-button a {
+  font-weight: lighter;
+  color: white;
+}
+
+/*- New implementation-*/
+.product-container {
+  display: flex;
+  align-items: center;
+}
+
+.short-information {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-container{
+  border-style: ridge;
+  border-color:rgb(219, 219, 185);
+}
+
+.desktop-description {
+  display: none;
+}
+
+.desktop-buttons {
+  display: none;
+}
+
+.product-title {
+  background: gainsboro;
+  display: flex;
+  align-items: center;
+  padding: 5px 5%;
+}
+
+/* -------- tablet--------- */
+
+@media (min-width: 768px){
+
+  .name, .price, .article-name{
+    font-size: 26px;
+    margin-bottom: 10px;
+  
+  }
+
+  .category, .color, .size, .description, .discount{
+    font-size:18px;
+  }
+
+   
+   .article-price-discount{
+         margin: 10%;
+         font-size:20px;
+       }
+   
+   .article-discount-shipping{
+     width: 100%;
+     height: 100%;
+     font-size: 20px;
+     text-align: center;
+   } 
+
+  .detail-button button {
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .icons{
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .description {
+    display: none;
+  }
+}
+
+
+/* -------- desktop------- */
+@media (min-width: 1024px){
+
+  /* .detailList h4{    
+      padding: 5%;
+  }   */
+  .image{    
+    width: 30vw;
+    margin: 1% 5% 1% 5%;
+  }
+  .name {        
+    padding: 5px;
+  }
+  .product-container {
+    align-items: start;
+  }
+  .product-information {
+    margin-top: 2%;
+  }
+  .desktop-description{
+    display: inline-block;
+    padding: 35px 90px 5px 0px;
+  }
+  .desktop-buttons {
+    display: inline-block;
+    text-align: start;
+    margin-top: 5%;
+  }
+  .mobile-buttons {
+    display: none;
+  }
+  
+  .discount {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-start;
+    ;
+  }
+  .article-price-discount{
+    margin: 3%;
+    font-size:21px;
+  }
+
+  .article-discount-shipping{
+    width: 28%;
+    justify-content: space-between;
+    font-size: 22px;
+    margin: 3%;    justify-content: flex-start;
+    text-align: center;
+  } 
+}

@@ -16,75 +16,35 @@
       <section class="main-section">
         <h3 class="main-section-tittle">Los más vendidos</h3>
         <div class="products">
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
+          <% newest_products.forEach(product => { %>
+            <article class="main-article">
+              <div class="article-image-container">
+                <a href="/productDetail/<%= product.id %>"><img class="article-image" src="/images/products/<%= product.image %>" alt="" /></a>
+                <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
+                
+                <div class="article-information-div">
+                  <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
+                  <p class="article-name"><%= product.name %></p>  
+                  <% if (product.discount > 0) { %>
+                      <h4  class="article-discount-shipping"> <%= product.discount %>%</h4>
+                    <p class="article-price-neto"><%= product.price %></p>
 
+                      <!-- <p class="article-price-neto"><%= product.price %>   -->
+                  <% } %>    
+
+                  
+                  <div class="article-price">
+                    <!-- <p class="article-price-neto"><%= product.price %></p> -->
+                    <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                    <!-- <p class="article-discount">$<%= product.price %></p> -->
+                    <p class="article-discount">$<%= finalPrice %>
+                 </div>
+                  <h4 class="article-description"><%= product.description %></h4>
+                </div>
+               
+              </div>
+            </article>
+          <% }) %>
         </div>
   
       </section>
@@ -92,75 +52,33 @@
       <section class="main-section" >
         <h3 class="main-section-tittle">Recomendados para vos</h3>
         <div class="products">
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
+          <% popular_products.forEach(product => { %>
+            <article class="main-article">
+              <div class="article-image-container">
+                <a href="/productDetail/<%= product.id %>"><img class="article-image" src="/images/products/<%= product.image %>" alt="" /></a>
+                <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
+                
+                <div class="article-information-div">
+                  <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
+                              
+                  <p class="article-name"><%= product.name %></p>
+                  <% if (product.discount > 0) { %>
+                       <h4  class="article-discount-shipping"> <%= product.discount %>%</h4>
+                       <p class="article-price-neto"><%= product.price %>
+                  <% } %>
+                 
+                  <div class="article-price">
+                    
+                    <!-- <p class="article-price-neto"><%= product.price %></p>
+                    <% finalPrice = product.price - ((product.price* product.discount) / 100) %> -->
+                    <!-- <p class="article-discount">$<%= product.price %> -->
+                    <p class="article-discount">$<%= finalPrice %>
+                  </div>
+                  <h4 class="article-description"><%= product.description %></h4>
                 </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
               </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-          <article class="main-article">
-            <div class="article-image-container">
-              <a href="/productDetail"><img class="article-image" src="./images/products/zapa-adidas-azul.jpg" alt="" /></a>
-              <!-- <div class="article-heart-shipping"><i class="fa-regular fa-heart"></i></i></div> -->
-              
-              <div class="article-information-div">
-                <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
-                <h4  class="article-discount-shipping">- 35%</h4>
-                <p class="article-name">Adidas Performance</p>
-                <div class="article-price">
-                  <p class="article-price-neto">$299.990</p>
-                  <p class="article-discount">$194.990</p>
-                </div>
-                <h4 class="article-description">Tenis Running Azul-Fris-Blanco adidas Performance Galaxy 6</h4>
-              </div>
-            </div>
-          </article>
-
+            </article>
+          <% }) %>
         </div>
       </section>
 
@@ -188,5 +106,6 @@
     </main>
 
     <%- include('./partials/footer') %>
+    <script src="/js/header.js"></script>
   </body>
 </html>

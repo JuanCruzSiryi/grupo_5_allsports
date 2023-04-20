@@ -65,14 +65,39 @@ main {
     background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
 }
 
-.tarjetas{
+.tarjetas {
     width: 30%;
     height: 30%;
 }
 
-.pagos{
+.pagos {
     font-size: 15px;
 }
+
+.carritoPopup {
+    background-color: rgb(174, 189, 227);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    left: 50%;
+    padding: 20px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    z-index: 9999;
+}
+
+.close {
+    background-color: #050000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px;
+  }
 
 .seccionSecundaria {
     text-align: left;
@@ -106,7 +131,7 @@ main {
         border-radius: 5%;
         margin: 10% 0% 0% 5%;
     }
-    
+
     .seccionPrincipal {
         display: flex;
         justify-content: center;
@@ -116,17 +141,17 @@ main {
         padding: 2%;
         margin-bottom: 20px;
     }
-    
+
     .producto>div {
         border: solid 1px blue;
         border-radius: 20px;
     }
-    
+
     .producto>div:hover {
         box-shadow: 0px 0px 10px blueviolet;
         background-color: #2D4263;
     }
-    
+
     .informacion {
         height: 150px;
         display: flex;
@@ -135,12 +160,12 @@ main {
         align-items: center;
         gap: 15px;
     }
-    
+
     .amount {
         display: flex;
         justify-content: space-around;
     }
-    
+
     .amount button {
         width: 20vw;
         height: 25px;
@@ -150,13 +175,13 @@ main {
         border-radius: 6px;
         background: linear-gradient(to right, rgb(2, 2, 75), rgb(5, 5, 150));
     }
-    
-    .tarjetas{
+
+    .tarjetas {
         width: 20%;
         height: 20%;
     }
 
-    .pagos{
+    .pagos {
         font-size: 18px;
     }
 
@@ -165,6 +190,7 @@ main {
         margin-top: 5%;
         font-size: 22px;
     }
+
     .productosInteres {
         display: flex;
         flex-direction: row;
