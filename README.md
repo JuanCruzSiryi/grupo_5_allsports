@@ -1,3 +1,34 @@
+# ALL-SPORTS
+
+## Guia para ejecutar el proyecto
+
+1. ### Creación de la base de datos
+En la carpeta db se pueden encontrar los scripts para crear las tablas y poblar la base de datos respectivamente:
+
+```
+* all_sports_db_creation.sql
+* insert_data.sql
+```
+
+_**Nota: Recuerde configurar el usuario y la contraseña de su base de datos en el archivo \src\database\config\config.js_
+
+2. ### Instalación de paquetes
+Ejecute el siguiente comando para instalar los paquetes requeridos en el proyecto
+```
+>> npm install
+```
+3. ### Puesta en marcha del servidor
+Ejecute el siguiente comando para poner en marcha el proyecto. 
+
+```
+>> npm run dev
+```
+
+Recuerde que el proyecto se ejecuta en http://localhost:3005/
+
+
+## Descripción del proyecto
+
 - Descripción de la oferta de productos: Tienda Deportiva. Ofrecemos la venta de productos que incluye ropa deportiva, accesorios y calzados. El nombre será ALL SPORTS.
 
 - Descripción del público: Público en general.
@@ -10,13 +41,8 @@
 
     3.	Maximiliano Sio, 28 años, Ingeniero Industrial. Actualmente trabajo como Asesor Técnico Comercial en Bridgestone. Ansioso de aprender de este nuevo mundo con compañeros para crecer profesional y personalmente.
 
-    4.	Tahiel Tironi, 22 años, estudiante de Ingeniería en Computación 3er año. Actualmente trabajo en una empresa como programador y vendedor de artículos para controladores e impresoras fiscales. Con manija de seguir aprendiendo conjuntamente con mis compañeros de equipo y llevar el trabajo integrador de la mejor manera para poder mostrar nuestro proyecto.
+    4.	Danilo Burbano, 26 años, Ingeniero Electrónico, habilidades de investigación en inteligencia artificial, robótica y control, experiencia como ingeniero de pruebas,  experiencia en desarrollo con c++, c#, python, JavaScript, desarrollo de aplicaciones de realidad mixta en Unity, actualmente desempeño el cargo de desarrollador de software. Me apasiona continuar aprendiendo y proponerme nuevos retos.
 
-    5.	Danilo Burbano, 26 años, Ingeniero Electrónico, habilidades de investigación en inteligencia artificial, robótica y control, experiencia como ingeniero de pruebas,  experiencia en desarrollo con c++, c#, python, JavaScript, desarrollo de aplicaciones de realidad mixta en Unity, actualmente desempeño el cargo de desarrollador de software. Me apasiona continuar aprendiendo y proponerme nuevos retos.
-
-    6.	Maximiliano Di Giampietro, 28 años, actualmente solo estudio. Me gusta siempre aprender cosas nuevas y soy muy proactivo, con muchas ganas de progresar con mi equipo de trabajo.
-
-    7. Alicia del Carmen Albornoz, 42 años, psicóloga. Actualmente trabajo como community manager. Siempre me ha atraído la programación desde que hice mis primeras casitas con Logo en la escuela, pero siempre la he visto como una especie de magia, así que ahora me encantaría  empezar a hacer mis propios encantamientos.
 
 - Agregar listado en README.md con 5 sitios de referencia y por qué fueron elegidos
 
