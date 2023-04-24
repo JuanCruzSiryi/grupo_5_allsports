@@ -97,6 +97,17 @@
             </div>
             <div>
               <div class="tag-product">
+                <label for="tag">Modificar categoria</label>
+              
+                <select name="category" id="category">
+                  <% categories.forEach(category => { %>
+                    <option value=<%= category.id %> <%= category.id == product.category_id ? "selected" : "" %>><%= category.name %></option>
+                  <% }) %>
+                </select>
+              </div>
+            </div>
+            <div>
+              <div class="tag-product">
                 <label for="tag">Modificar tipo</label>
               
                 <select name="tag" id="tag">
@@ -106,10 +117,7 @@
                 </select>
               </div>
             </div>
-        
-      
-      
-        
+
             <div class="register-button">
               <button type="submit">Aplicar</button>
             

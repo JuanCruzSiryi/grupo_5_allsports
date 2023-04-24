@@ -46,13 +46,11 @@ label {
 }
 
 .principal-box {
-    height: 90%;
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     background: rgba(255, 252, 252, 0.87);
-    /* opacity: 0.6; */
     border-radius: 6px;
 }
 
@@ -258,7 +256,6 @@ input::file-selector-button{
         margin-left: 20%;
         margin-right: 20%;
         justify-content: center;
-        height: 80%;
     }
     main {
       height: 105vh;
@@ -323,17 +320,6 @@ input::file-selector-button{
     .form-title {
       padding-left: 22%;
     }
-  
-  .principal-box{
-    height: 70%;
-
-  }  
-    /* .imageAvatar {
-      width: 95px;
-      height: 95px;
-      margin: -22% 0% 0% -4%;
-      position: absolute;
-  } */
   
   }
   
