@@ -226,7 +226,7 @@ main section article :hover .article-animation-container {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
-  main section div.products {
+  main section div.products, #products{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -236,6 +236,11 @@ main section article :hover .article-animation-container {
   main section div.products article{
     width: 44%;
   }
+  #products article{
+    width: 44%;
+  }
+
+
 }
 
 @media(min-width: 768px) {
@@ -247,6 +252,9 @@ main section article :hover .article-animation-container {
 
   /********************* MAIN *********************/
   main section div.products article{
+    width: 22%;
+  }
+  #products article{
     width: 22%;
   }
 

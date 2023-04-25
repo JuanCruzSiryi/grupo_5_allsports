@@ -1,13 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  console.log("Hola mundo");
   renderCart()
 });
 
 const renderCart = () => {
   let cart = getCart();
   cart.forEach(product => {
-    renderProduct(product)
+    renderProductInCart(product)
     contentProducts.innerHTML += `
       <span>Cantidad: ${product.quantity}</span>
       <button onclick="removeItem(${product.id}, ${product.quantity})"
