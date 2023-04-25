@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const { v4: uuidv4 } = require('uuid');
 const usersPath = path.join(__dirname, "../data/users.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
@@ -129,15 +128,16 @@ const usersController = {
     });
   },
 
-  store: (req, res) =>{
+  store: async (req, res) =>{
       const errors = validationResult(req);
-        
+      const countries = await Country.findAll();
         if ( ! errors.isEmpty() ) {
             return res.render('users/register', {
               title: 'Nuevo usuario',
               stylesheetFile: "users/register.css",
               errors: errors.mapped(),
               oldBody: req.body,
+              countries
         })
         }
         let image = req.file? req.file.filename : "default-user.png";
