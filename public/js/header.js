@@ -1,7 +1,6 @@
 let prevScrollPos = window.pageYOffset;
 
 window.onscroll = function() {
-  console.log("Scrolling...");
   let currentScrollPos = window.pageYOffset;
   if (prevScrollPos > currentScrollPos) {
     document.querySelector('.marquee-container').classList.remove('marquee-container-hide');

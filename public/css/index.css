@@ -81,12 +81,16 @@ body {
 }
 
 .article-discount-shipping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50px;
   height: 30px;
   position: absolute;
   background-color: red;
   color: white;
-  padding-top: 7px;
+  font-size: 15px;
+  text-align: center;
   right: 3px;
   top: -44px;
 }
@@ -148,6 +152,10 @@ body {
   margin-top: 20px;
   color: #666;
 }
+.article-animation-container {
+  display: none;
+  margin-top: 20px;
+}
 
 .article-information-div {
   border-top: 1px solid #ebebeb;
@@ -161,6 +169,39 @@ body {
 
 main section article :hover .article-description {
   display: block;
+}
+main section article :hover .article-animation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-cart-button {
+  background: linear-gradient(to right, #061b3b, #052b63);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 70%;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+.product-size{
+  width: 70%;
+  margin-bottom: 15px;
+  align-self: center;
+  height: 30px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.add-cart-button:hover {
+  background: linear-gradient(to right, #052b63, #1259c3);
 }
 
 /* main section article .article-image-container :hover .article-description {

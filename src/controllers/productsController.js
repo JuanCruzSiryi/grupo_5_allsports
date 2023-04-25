@@ -274,7 +274,7 @@ show: async (req, res) => {
   },
 
   productCart: (req, res) => {
-    res.render("../views/products/productCart", {
+    res.render("../views/products/cart", {
       title: "Product-Cart",
       stylesheetFile: "/products/cart.css",
     });

@@ -26,7 +26,7 @@
                   <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
                   <p class="article-name"><%= product.name %></p>  
                   <% if (product.discount > 0) { %>
-                      <h4  class="article-discount-shipping"> <%= product.discount %>%</h4>
+                    <h4  class="article-discount-shipping"> <%= parseInt(product.discount) %>%</h4>
                     <p class="article-price-neto"><%= product.price %></p>
 
                       <!-- <p class="article-price-neto"><%= product.price %>   -->
@@ -40,6 +40,22 @@
                     <p class="article-discount">$<%= finalPrice %>
                  </div>
                   <h4 class="article-description"><%= product.description %></h4>
+                  <div class="article-animation-container">
+                    <select class="product-size" name="size">
+                      <option value="" disabled selected>Seleccione una talle</option>
+                      <option value="1">37</option>
+                      <option value="2">38</option>
+                      <option value="2">39</option>
+                    </select>
+                    <button class="add-cart-button" >AGREGAR AL CARRITO</button>
+                    <button onclick="addToCart(this)"
+                      data-id="${product.id}"
+                      data-name="${product.name}"
+                      data-image="${product.image}"
+                      data-price="${product.price}"
+                      > Añadir al carrito 
+                    </button>
+                  </div>
                 </div>
                
               </div>
@@ -60,11 +76,12 @@
                 
                 <div class="article-information-div">
                   <!-- <div class="article-logo-shipping"><i class="fa-solid fa-truck"></i></i></div> -->
+                  <!-- <div class="cart-shipping"><i class="fa-solid fa-cart-shopping"></i></div> -->
                               
                   <p class="article-name"><%= product.name %></p>
                   <% if (product.discount > 0) { %>
-                       <h4  class="article-discount-shipping"> <%= product.discount %>%</h4>
-                       <p class="article-price-neto"><%= product.price %>
+                    <h4  class="article-discount-shipping"> <%= parseInt(product.discount) %>%</h4>
+                    <p class="article-price-neto"><%= product.price %>
                   <% } %>
                  
                   <div class="article-price">
@@ -75,6 +92,15 @@
                     <p class="article-discount">$<%= finalPrice %>
                   </div>
                   <h4 class="article-description"><%= product.description %></h4>
+                  <div class="article-animation-container">
+                    <select class="product-size" name="size">
+                      <option value="" disabled selected>Seleccione una talle</option>
+                      <option value="1">37</option>
+                      <option value="2">38</option>
+                      <option value="2">39</option>
+                    </select>
+                    <button class="add-cart-button" >AGREGAR AL CARRITO</button>
+                  </div>
                 </div>
               </div>
             </article>
@@ -107,5 +133,7 @@
 
     <%- include('./partials/footer') %>
     <script src="/js/header.js"></script>
+    <script src="/js/cart/common.js"></script>
+    <script src="/js/cart/products.js"></script>
   </body>
 </html>
