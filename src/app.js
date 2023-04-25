@@ -16,6 +16,9 @@ const routesProducts = require('./routes/products');
 
 const routesUsers = require('./routes/users');
 
+//Aquí pueden colocar las rutas de las APIs
+const ApiProductsRoutes = require('./routes/api/ApiProductsRoutes');
+
 /* Middlewares */
 const userSessionMiddleware = require('./middlewares/userSessionMiddleware');
 
@@ -51,6 +54,8 @@ app.use("/", routesMain);
 app.use("/", routesProducts); 
 
 app.use("/", routesUsers);
+
+app.use(ApiProductsRoutes);
 
 app.listen(PORT, () => {
   console.log(`server listening on ${PORT}`);
