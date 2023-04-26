@@ -5,9 +5,10 @@ const rules = require('../middlewares/userValidator');
 
 const usersController = require('../controllers/usersController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /* CRUD */
-router.get('/users', guestMiddleware, usersController.index);
+router.get('/users', adminMiddleware, usersController.index);
 router.get('/usersList', usersController.list);
 
 /* END CRUD */

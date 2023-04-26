@@ -5,10 +5,11 @@ const rules = require('../middlewares/productValidator');
 
 const productsController = require('../controllers/productsController');
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /* CRUD */
-router.get('/products', guestMiddleware, productsController.index);
-router.get('/productsList', productsController.list);
+router.get('/products', adminMiddleware, productsController.index);
+router.get('/productsList', guestMiddleware, productsController.list);
 // BUSCAR USUSARIO
 router.get('/products/search', productsController.search);
 
