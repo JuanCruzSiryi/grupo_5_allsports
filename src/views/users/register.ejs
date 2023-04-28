@@ -13,7 +13,7 @@
         </div>
 
         <div class="content-box-register">
-          <form action="/users/register" method="post" enctype="multipart/form-data">
+          <form action="/users/register" id="register-form" method="post" enctype="multipart/form-data">
             <div>
               <label for="firstName">* Nombre</label>
               <input type="text" name="firstName" id="username">
@@ -21,6 +21,9 @@
               <% if(locals.errors && errors.firstName) { %>
                 <p class="text-errors"><%= errors.firstName.msg %></p>
               <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors firstNameError"></small>
+              </div>
             </div>
             <div>
               <label for="lastName">* Apellido</label>
@@ -29,14 +32,21 @@
               <% if(locals.errors && errors.lastName) { %>
                 <p class="text-errors"><%= errors.lastName.msg %></p>
               <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors lastNameError"></small>
+              </div>
+
             </div>
             <div>
               <label for="email">* Email</label>
-              <input type="email" name="email" id="email">
+              <input type="text" name="email" id="email">
               <i class="fa-solid fa-envelope"></i>
               <% if(locals.errors && errors.email) { %>
                 <p class="text-errors"><%= errors.email.msg %></p>
               <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors emailError"></small>
+              </div>
             </div>
             <div>
               <label for="password">* Contraseña (mínimo 8 caracteres)</label>
@@ -45,6 +55,9 @@
               <% if (locals.errors && errors.password) { %>
                 <p class="text-errors"><%= errors.password.msg %></p>
               <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors passwordError"></small>
+              </div>
             </div>
             <div>
               <label for="genre">Género</label>
@@ -64,12 +77,15 @@
             </div>
 
             <div class="terms-box">
-                <label class="terms-box-label"><input type="checkbox" name="accepted-terms" value=""> 
+                <label class="terms-box-label"><input type="checkbox" id="terms" name="accepted-terms" value=""> 
                   Acepto las Políticas de Privacidad y Términos y Condiciones.
                 </label>
                 <label class="terms-box-label"><input type="checkbox" name="accepted-promotions" value="">
                   Quiero recibir emails de promociones y noticias.  
                 </label>
+                <div class="col-8 col-lg-10">
+                  <p class="text-errors termsError"></p>
+                </div>
             </div>
 
             <div class="register-button">
@@ -83,6 +99,8 @@
     </main>
 
     <%- include ("../partials/footer.ejs") %> 
+
+    <script src="/js/users/register.js"></script>
 
   </body>
 </html>
