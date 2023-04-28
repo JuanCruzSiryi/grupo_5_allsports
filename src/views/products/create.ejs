@@ -20,7 +20,7 @@
         </div> -->
 
         <div class="content-box-register">
-          <form method="post" action="/products/create" enctype="multipart/form-data">
+          <form id="formCreateProduct" method="post" action="/products/create" enctype="multipart/form-data">
             <div>
               <label for="nameProduct">* Ingresar Nombre</label>
               <input type="text" name="nameProduct" id="nameProduct">
@@ -98,6 +98,6 @@
     </main>
 
     <%- include ("../partials/footer.ejs") %> 
-
+    <script src = "/js/products/create.js"></script>
   </body>
 </html>
