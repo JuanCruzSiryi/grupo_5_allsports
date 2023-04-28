@@ -25,7 +25,7 @@
     
             
             <div class="content-box-register">
-              <form
+              <form id="formEditProduct"
                 method="post"
                 action="/products/<%=product.id %>/edit/?_method=PUT"
                 enctype="multipart/form-data"
@@ -129,5 +129,6 @@
       
     </main>
     <%- include ("../partials/footer.ejs") %>
+    <script src = "/js/products/edit.js"></script></script>
   </body>
 </html>
