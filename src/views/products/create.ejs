@@ -18,7 +18,6 @@
         <!-- <div class="title">
             <h2 class="title-register">INGRESAR NUEVO PRODUCTO</h2>
         </div> -->
-        <div class="content-box-register">
         <form id="formCreateProduct" method="post" action="/products/create" enctype="multipart/form-data">
          <div>
           <label for="nameProduct">* Ingresar Nombre</label>
@@ -27,6 +26,9 @@
             <p class="text-errors"><%= errors.nameProduct.msg %></p>
            <% } %>
           </div>
+          
+          <small class="text-errors nameProductError"></small>
+            
           <div class="desc-product">
            <label for="descProduct">* Ingresar Descripción</label>
            <input type="text" name="descProduct" id="descProduct">
@@ -35,10 +37,17 @@
            <% } %>
           </div>
           
+          <small class="text-errors descProductError"></small>
+            
+          
           <div>
               <label for="image">Ingresar Imagen</label>
               <input type="file" name="image" id="image">
             </div>
+          
+            <small class="text-errors imageError"></small>
+          
+          
             <div class="color-product">
               <label for="colorsProduct">Colores Disponibles</label>
               <br>
@@ -85,10 +94,16 @@
               <label for="priceProduct">Ingresar Precio</label>
               <input type="number" name="priceProduct" id="priceProduct">
             </div>
+            
+            <small class="text-errors priceError"></small>
+            
+            
             <div>
               <label for="discount">Ingresar Descuento</label>
               <input type="number" name="discount" id="discount">
             </div>
+            
+            <small class="text-errors discountError"></small>
             
 
             <div class="register-button">

@@ -327,6 +327,11 @@ label {
     }
   }
 
+  .text-errors {
+    color: red
+  }
+
+
   @media (min-width: 1023px) {
     .title-navbar {
       margin-left: 21%;

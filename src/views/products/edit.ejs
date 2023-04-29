@@ -34,6 +34,10 @@
                   <label for="image">Modificar imagen</label>
                   <input type="file" name="image" id="image" />
                 </div>
+
+                <small class="text-errors imageError"></small>
+
+
             <div>
               <label for="name">Modificar nombre</label>
               <input
@@ -43,6 +47,10 @@
                 value="<%= product.name %>"
               />
             </div>
+           
+                 <small class="text-errors nameProductError"></small>
+                       
+            
             <div class="desc-product">
               <label for="description">Modificar descripción</label>
               <input
@@ -52,7 +60,11 @@
                 value="<%= product.description %>"
               />
             </div>
-              <div class="color-product">
+
+                
+            <small class="text-errors descProductError"></small>
+
+            <div class="color-product">
               <label for="color">Modificar color</label>
               <select name="color" id="color" >
                 <% colors.forEach(color => { %>
@@ -76,7 +88,11 @@
                 id="price"
                 value="<%= product.price %>"
               />
+              
             </div>
+            
+            <small class="text-errors priceError"></small>
+
             <div>
               <label for="discount">Modificar descuento</label>
               <input
@@ -87,6 +103,8 @@
               />
             </div>
  
+            <small class="text-errors discountError"></small>
+
             <div class="brand-product">
               <label for="brand">Modificar marca</label>
               <select name="brand" id="brand">
