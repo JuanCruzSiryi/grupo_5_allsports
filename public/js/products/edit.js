@@ -3,11 +3,11 @@ const form = document.getElementById('formEditProduct')
 document.addEventListener('DOMContentLoaded', formulary)
 
 function formulary (){
-    form.name.addEventListener ('blur', validationName);
-    form.description.addEventListener ('blur', validationDesc)
-    form.discount.addEventListener ('blur', validationDisc)
-    form.price.addEventListener ('blur', validationPrice)
-    form.image.addEventListener ('blur', validationImage)
+    form.name.addEventListener ('change', validationName);
+    form.description.addEventListener ('change', validationDesc)
+    form.discount.addEventListener ('change', validationDisc)
+    form.price.addEventListener ('change', validationPrice)
+    form.image.addEventListener ('change', validationImage)
 
 }
 
@@ -64,23 +64,24 @@ function validationDisc (e){
     }else{
         errorPrice.innerHTML = ''
     }
-    }
-   
-   
-   function validationImage (e){ 
+    }   
 
-   // FALTA CORREGIR!!!!!!!!!
 
    function validationImage (e){ 
     e.preventDefault()
+    
     let errorImage = document.querySelector('.imageError')
-  
-   if (!form.image.value == "JPG" || "JPEG" ||"PNG" || "GIT"){
    
-    errorImage.innerHTML ="El archivo solo puede ser JPG, JPEG, PNG o GIF"
-
-   }else{
-       errorImage.innerHTML = ''            
+    var filePath = this.value;
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        
+        errorImage.innerHTML = 'El archivo solo puede ser .JPG, .JPEG, .PNG o .GIF'
+        
+        fileInput.value = '';
+        return false;
+    }else{
+        errorImage.innerHTML = '' 
+    
     }
-   }
    }

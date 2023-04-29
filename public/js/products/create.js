@@ -3,11 +3,11 @@ const form = document.getElementById('formCreateProduct')
 document.addEventListener('DOMContentLoaded', formulary)
 
 function formulary (){
-   form.nameProduct.addEventListener ('blur', validationName);
+   form.nameProduct.addEventListener ('change', validationName);
    form.descProduct.addEventListener ('blur', validationDesc)
    form.discount.addEventListener ('blur', validationDisc)
    form.priceProduct.addEventListener ('blur', validationPrice)
-   form.image.addEventListener ('blur', validationImage)
+   form.image.addEventListener ('change', validationImage)
 }
 
 function validationName (e){
@@ -53,26 +53,27 @@ if (form.nameProduct.value.length < 5){
    if (form.price.value == 0){
    
       errorPrice.innerHTML = 'El precio no puede ser $0'
-               // let errorDesc = document.getElementById("error")
-    // errorDesc.innerHTML = '<p class= "text-error"> El mail es obligatorio </p>'
     }else{
       errorPrice.innerHTML = ''
     }
    }
    
-// FALTA CORREGIR!!!!!!!!!
-
-   function validationImage (e){ 
+     function validationImage (e){ 
       e.preventDefault()
+      
       let errorImage = document.querySelector('.imageError')
-    
-     if (!form.image.value == "JPG" || "JPEG" ||"PNG" || "GIT"){
      
-      errorImage.innerHTML ="El archivo solo puede ser JPG, JPEG, PNG o GIF"
- 
-     }else{
-         errorImage.innerHTML = ''            
+      var filePath = this.value;
+      var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+      if(!allowedExtensions.exec(filePath)){
+          
+          errorImage.innerHTML = 'El archivo solo puede ser .JPG, .JPEG, .PNG o .GIF'
+          
+          fileInput.value = '';
+          return false;
+      }else{
+          errorImage.innerHTML = '' 
+      
       }
      }
-
-
+  

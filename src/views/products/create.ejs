@@ -3,121 +3,117 @@
   <%- include('../partials/head') %>
   <body>
     
-    <%- include ("../partials/header.ejs") %>
-
-    
+    <%- include ("../partials/header.ejs") %>    
     <main>
       <div class="title-navbar">
         <div class="back-button">
           <button type=""><a href="/products?page=1">Atras</a></button>
         </div>
-        <h2 class="form-title">CREAR PRODUCTO</h2>
+          <h2 class="form-title">CREAR PRODUCTO</h2>
       </div>
+      
       <div class="principal-box">
 
         <!-- <div class="title">
             <h2 class="title-register">INGRESAR NUEVO PRODUCTO</h2>
         </div> -->
         <form id="formCreateProduct" method="post" action="/products/create" enctype="multipart/form-data">
-         <div>
-          <label for="nameProduct">* Ingresar Nombre</label>
-          <input type="text" name="nameProduct" id="nameProduct">
-           <% if(locals.errors && errors.nameProduct) { %>
-            <p class="text-errors"><%= errors.nameProduct.msg %></p>
-           <% } %>
+          <div>
+            <label for="nameProduct">* Ingresar Nombre</label>
+            <input type="text" name="nameProduct" id="nameProduct">
+              <% if(locals.errors && errors.nameProduct) { %>
+                  <p class="text-errors"><%= errors.nameProduct.msg %></p>
+              <% } %>
           </div>
           
           <small class="text-errors nameProductError"></small>
             
           <div class="desc-product">
-           <label for="descProduct">* Ingresar Descripción</label>
-           <input type="text" name="descProduct" id="descProduct">
-           <% if(locals.errors && errors.descProduct) { %>
-            <p class="text-errors"><%= errors.descProduct.msg %></p>
-           <% } %>
+            <label for="descProduct">* Ingresar Descripción</label>
+            <input type="text" name="descProduct" id="descProduct">
+                <% if(locals.errors && errors.descProduct) { %>
+                    <p class="text-errors"><%= errors.descProduct.msg %></p>
+                <% } %>
           </div>
           
           <small class="text-errors descProductError"></small>
             
           
           <div>
-              <label for="image">Ingresar Imagen</label>
-              <input type="file" name="image" id="image">
-            </div>
+            <label for="image">Ingresar Imagen</label>
+            <input type="file" name="image" id="image">
+          </div>
           
-            <small class="text-errors imageError"></small>
+          <small class="text-errors imageError"></small>
           
           
-            <div class="color-product">
-              <label for="colorsProduct">Colores Disponibles</label>
+          <div class="color-product">
+            <label for="colorsProduct">Colores Disponibles</label>
               <br>
-              <select name="color" id="color">
+            <select name="color" id="color">
                 <% colors.forEach(color => { %>
                   <option value=<%= color.id %>><%= color.name %></option>
                 <% }) %>
-              </select>
-            </div>
-            <div class="size-product">
-              <label for="sizeProduct">Talles</label>
+            </select>
+          </div>
+          <div class="size-product">
+            <label for="sizeProduct">Talles</label>
               <br>
-              <select name="sizeProduct" id="talles">
+            <select name="sizeProduct" id="talles">
                 <% sizes.forEach(size => { %>
                   <option value=<%= size.id %>><%= size.eur %></option>
                 <% }) %>
-              </select>
-            </div>
-            <div>
-              <label for="brandProduct">Marca</label>
+            </select>
+          </div>
+          <div>
+            <label for="brandProduct">Marca</label>
               <select name="brandProduct" id="brandProduct">
                 <% brands.forEach(brand => { %>
                   <option value=<%= brand.id %>><%= brand.name %></option>
                 <% }) %>
               </select>
-            </div>
-            <div>
-              <label for="category">Categoria</label>
+          </div>
+          <div>
+            <label for="category">Categoria</label>
               <select name="category" id="category">
                 <% categories.forEach(category => { %>
                   <option value=<%= category.id %>><%= category.name %></option>
                 <% }) %>
               </select>
-            </div>
-            <div>
-              <label for="tag">Tipo</label>
+          </div>
+          <div>
+            <label for="tag">Tipo</label>
               <select name="tag" id="tag">
                 <% tags.forEach(tag => { %>
                   <option value=<%= tag.id %>><%= tag.name %></option>
                 <% }) %>
               </select>
-            </div>
-            <div>
-              <label for="priceProduct">Ingresar Precio</label>
+          </div>
+          <div>
+            <label for="priceProduct">Ingresar Precio</label>
               <input type="number" name="priceProduct" id="priceProduct">
-            </div>
+          </div>
             
-            <small class="text-errors priceError"></small>
-            
-            
-            <div>
-              <label for="discount">Ingresar Descuento</label>
+          <small class="text-errors priceError"></small>
+              
+          <div>
+            <label for="discount">Ingresar Descuento</label>
               <input type="number" name="discount" id="discount">
-            </div>
+          </div>
             
-            <small class="text-errors discountError"></small>
+          <small class="text-errors discountError"></small>
             
-
-            <div class="register-button">
-                <button type="submit">Crear</button>
-            </div>
+          <div class="register-button">
+            <button type="submit">Crear</button>
+          </div>
 
             <!-- <div class="register-button">
               <button type=""><a href="/products/">VOLVER</a></button>
             </div> -->
 
-          </form>
-        </div>
-
+        </form>
       </div>
+      
     </main>
 
     <%- include ("../partials/footer.ejs") %> 
