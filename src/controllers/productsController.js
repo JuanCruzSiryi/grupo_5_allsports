@@ -209,7 +209,7 @@ const productsController = {
 
     // Validar longitud de la descripción
     if (req.body.description.length < 20) {
-      return res.send("La descripción debe tener menos de 20 caracteres");
+      return res.send("La descripción debe tener más de 20 caracteres");
     }
 
     Product.update(
