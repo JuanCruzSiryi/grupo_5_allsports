@@ -16,8 +16,9 @@ window.addEventListener('DOMContentLoaded', function() {
   function register(evt) {
     // console.log("el elemento", evt.target);
     let errores = {}
-    if(form.firstName.value.length < 2) errores.firstName = 'El Nombre debe tener mas de 2 caracteres'
-    if(form.email.value.length < 2) errores.lastName = 'El Email debe tener mas de 2 caracteres'
+    if(form.firstName.value.length < 2) errores.firstName = 'El Nombre debe tener más de 2 caracteres'
+    if(form.lastName.value.length < 2) errores.lastName = 'El Apellio debe tener más de 2 caracteres'
+    if(form.email.value.length < 2) errores.emai = 'El Email debe ser válido'
     if(form.password.value.length < 8) errores.password = 'La contraseña debe tener al menos 8 caracteres'
     if(!form.terms.checked) errores.terms = 'Debes aceptar los terminos'
     
