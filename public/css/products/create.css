@@ -31,6 +31,12 @@ body {
   border: none;
 }
 
+input::file-selector-button{
+  color: white;  
+  background: linear-gradient(to right, #061b3b, #052b63);
+}
+
+
 label {
   color: #052b63;
 }
@@ -244,7 +250,7 @@ color: white;
   .principal-box {
       margin-left: 20%;
       margin-right: 20%;
-      justify-content: center;
+      /* justify-content: center; */
   }
   main {
     /* height: 100vh; */
@@ -289,6 +295,22 @@ color: white;
     padding-left: 16%;
   }
 }
+
+content-box-register form .size-product .checkSize{
+      font-size: 14px;
+      margin-right: 2px;
+    }
+    
+    .content-box-register form .size-product input {
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+
+
+
 
 @media (min-width: 1023px) {
   .title-navbar {
