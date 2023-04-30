@@ -5,7 +5,7 @@ const productsPath = path.join(__dirname, "../data/products.json");
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 
-const {Product, Color, Category, Brand, Size, Tag} = require('../database/models');
+const { Product, Color, Category, Brand, Size, Tag } = require('../database/models');
 const db = require('../database/models');
 // const Products = db.Products;
 const Op = db.Sequelize.Op;
@@ -25,10 +25,10 @@ const productsController = {
     const offset = (page - 1) * limit;
 
     const totalItems = await Product.count();
-    const totalPages = Math.ceil(totalItems / limit); 
+    const totalPages = Math.ceil(totalItems / limit);
     res.locals.totalPages = totalPages;
     console.log("totalPages: ", totalPages);
-    
+
     try {
       const products = await Product.findAll({
         include: ["category", "color", "size", "tag", "brand"],
@@ -59,8 +59,9 @@ const productsController = {
     const totalItems = await Product.count({
       where: {
         name: { [Op.like]: `%${search}%` }
-    }});
-    
+      }
+    });
+
     const totalPages = Math.ceil(totalItems / limit);
     res.locals.totalPages = totalPages;
 
@@ -87,20 +88,20 @@ const productsController = {
   list: async (req, res) => {
     try {
       const products = await Product.findAll();
-      res.render("../views/products/productDetail.ejs",{
+      res.render("../views/products/productDetail.ejs", {
         title: "Lista de productoss",
         stylesheetFile: "/products/index.css",
         productsList: products,
-      }); 
+      });
     } catch (error) {
       res.send(error)
     }
   },
 
-show: async (req, res) => {
+  show: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id,
-      {include: ["category", "color", "size", "tag", "brand"]})
+        { include: ["category", "color", "size", "tag", "brand"] })
       res.render('products/show', {
         title: "Detalle del producto",
         stylesheetFile: "products/show.css",
@@ -120,40 +121,40 @@ show: async (req, res) => {
     const categories = await Category.findAll();
     const tags = await Tag.findAll();
     res.render('products/create', {
-    title: "Crear producto",
-    stylesheetFile: "/products/create.css",
-    colors,
-    brands,
-    sizes,
-    categories,
-    tags
+      title: "Crear producto",
+      stylesheetFile: "/products/create.css",
+      colors,
+      brands,
+      sizes,
+      categories,
+      tags
 
-  });
+    });
   },
   store: async (req, res) => {
     const errors = validationResult(req);
-        
-        if ( ! errors.isEmpty() ) {
-          console.log(errors);
-          const colors = await Color.findAll();
-          const brands = await Brand.findAll();
-          const sizes = await Size.findAll();
-          const categories = await Category.findAll();
-          const tags = await Tag.findAll();
-            return res.render('products/create', {
-              title: 'Crear producto',
-              stylesheetFile: "/products/create.css",
-              errors: errors.mapped(),
-              oldBody: req.body,
-              colors,
-              brands,
-              sizes,
-              categories,
-              tags
-        })
-        }
-    let image = req.file? req.file.filename : "default-product.png";
-    
+
+    if (!errors.isEmpty()) {
+      console.log(errors);
+      const colors = await Color.findAll();
+      const brands = await Brand.findAll();
+      const sizes = await Size.findAll();
+      const categories = await Category.findAll();
+      const tags = await Tag.findAll();
+      return res.render('products/create', {
+        title: 'Crear producto',
+        stylesheetFile: "/products/create.css",
+        errors: errors.mapped(),
+        oldBody: req.body,
+        colors,
+        brands,
+        sizes,
+        categories,
+        tags
+      })
+    }
+    let image = req.file ? req.file.filename : "default-product.png";
+
     console.log(req.body);
 
     const newProduct = {
@@ -171,10 +172,10 @@ show: async (req, res) => {
     console.log("Producto a crear: ", newProduct);
 
     Product.create(newProduct)
-    .then(() => {
-      res.redirect('/products')
-    })
-    .catch(error => res.send(error));
+      .then(() => {
+        res.redirect('/products')
+      })
+      .catch(error => res.send(error));
 
   },
 
@@ -186,7 +187,7 @@ show: async (req, res) => {
       const sizes = await Size.findAll();
       const categories = await Category.findAll();
       const tags = await Tag.findAll();
-          
+
       res.render("../views/products/edit", {
         title: "Mi Product",
         stylesheetFile: "products/edit.css",
@@ -203,14 +204,20 @@ show: async (req, res) => {
     }
   },
 
-  update: async (req, res) => { 
+  update: async (req, res) => {
     const product = await Product.findByPk(req.params.id);
 
+    // Validar longitud de la descripción
+    if (req.body.description.length < 20) {
+      return res.send("La descripción debe tener menos de 20 caracteres");
+    }
+
     Product.update(
-      { name: req.body.name,
+      {
+        name: req.body.name,
         description: req.body.description,
         price: req.body.price,
-        image: req.file? req.file.filename : product.image,
+        image: req.file ? req.file.filename : product.image,
         category_id: req.body.category,
         brand_id: req.body.brand,
         color_id: req.body.color,
@@ -219,7 +226,7 @@ show: async (req, res) => {
         discount: req.body.discount
       },
       {
-        where: {id: req.params.id}
+        where: { id: req.params.id }
       })
       .then(() => {
         return res.redirect('/products');
@@ -244,8 +251,8 @@ show: async (req, res) => {
 
   destroy: (req, res) => {
     Product.destroy({
-      where: {id: req.params.id}
-      })
+      where: { id: req.params.id }
+    })
       .then(() => {
         return res.redirect('/products');
       })
@@ -260,7 +267,7 @@ show: async (req, res) => {
   products: async (req, res) => {
     try {
       const product = await Product.findByPk(req.params.id,
-      {include: ["category", "color", "size", "tag", "brand"]})
+        { include: ["category", "color", "size", "tag", "brand"] })
       const sizes = await Size.findAll();
       res.render("../views/products/productDetailDef", {
         title: "Product-Detail",
