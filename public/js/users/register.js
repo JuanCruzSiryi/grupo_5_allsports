@@ -1,4 +1,6 @@
 // import validator from 'validator';
+//const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+
 
 window.addEventListener('DOMContentLoaded', function() {
   let form = document.getElementById('register-form')
@@ -7,6 +9,7 @@ window.addEventListener('DOMContentLoaded', function() {
   let emailError = this.document.querySelector('.emailError')
   let passwordError = this.document.querySelector('.passwordError')
   let termsError = this.document.querySelector('.termsError')
+  //let fileError = this.document.querySelector('.fileError')
 
   console.log("Form: ", form);
 
@@ -22,6 +25,11 @@ window.addEventListener('DOMContentLoaded', function() {
     if(form.email.value.length < 2) errores.emai = 'El Email debe ser válido'
     if(form.password.value.length < 8) errores.password = 'La contraseña debe tener al menos 8 caracteres'
     if(!form.terms.checked) errores.terms = 'Debes aceptar los terminos'
+    // let image = form.image.files[0]
+    // if (image) {
+    //   if(!allowedExtensions.test(image.name)) errores.image = 'Formato de archivo no válido'
+      
+    // }
     
     // console.log("is email?: ", validator.isEmail(form.email.value));
 
@@ -34,6 +42,7 @@ window.addEventListener('DOMContentLoaded', function() {
       emailError.innerHTML = (errores.email) ? `<li> ${errores.email} </li>` : '';
       passwordError.innerHTML = (errores.password) ? `<li> ${errores.password} </li>` : '';
       termsError.innerHTML = (errores.terms) ? `<li> ${errores.terms} </li>` : '';
+      //fileError.innerHTML = (errores.image) ? `<li> ${errores.image} </li>` : '';
     } else {
       form.submit();
     }
