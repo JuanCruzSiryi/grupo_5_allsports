@@ -1,5 +1,5 @@
 // import validator from 'validator';
-const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
 window.addEventListener('DOMContentLoaded', function() {
   let form = document.getElementById('register-form')

@@ -12,8 +12,8 @@ function formulary (){
     form.price.addEventListener ('change', validationPrice)
     form.price.addEventListener ('blur', validationPrice)
     form.image.addEventListener ('change', validationImage)
-    form.image.addEventListener ('blur', validationImage)
 
+    form.addEventListener('submit', validationButton);
 }
 
 function validationName (e){
@@ -62,7 +62,7 @@ function validationDisc (e){
     e.preventDefault()
     let errorPrice = document.querySelector('.priceError')
    
-   if (form.price.value < 1){
+   if (form.price.value < 1 || form.price.value == "" ){
    
         errorPrice.innerHTML = 'El precio no puede ser $0'
  
@@ -70,6 +70,7 @@ function validationDisc (e){
         errorPrice.innerHTML = ''
     }
     }   
+
 
 
    function validationImage (e){ 
@@ -84,9 +85,20 @@ function validationDisc (e){
         errorImage.innerHTML = 'El archivo solo puede ser .JPG, .JPEG, .PNG o .GIF'
         
         fileInput.value = '';
-        return false;
+          return false;
     }else{
         errorImage.innerHTML = '' 
     
     }
    }
+
+   function validationButton (e){
+    e.preventDefault()
+    validationName(e)
+    validationDesc(e)
+    validationPrice(e)
+    validationDisc(e)
+    validationName(e)
+    validationImage(e)
+ 
+}

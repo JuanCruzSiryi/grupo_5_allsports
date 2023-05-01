@@ -5,16 +5,16 @@ document.addEventListener('DOMContentLoaded', formulary)
 function formulary (){
    form.nameProduct.addEventListener ('blur', validationName);
    form.nameProduct.addEventListener ('change',  validationName);
-   form.descProduct.addEventListener ('blur', validationDesc)
-   form.descProduct.addEventListener ('change', validationDesc)
-   form.discount.addEventListener ('blur', validationDisc)
-   form.discount.addEventListener ('change', validationDisc)
-   form.priceProduct.addEventListener ('blur', validationPrice)
-   form.priceProduct.addEventListener ('change', validationPrice)
-   form.image.addEventListener ('change', validationImage)
-   form.image.addEventListener ('blur', validationImage)
+   form.descProduct.addEventListener ('blur', validationDesc);
+   form.descProduct.addEventListener ('change', validationDesc);
+   form.discount.addEventListener ('blur', validationDisc);
+   form.discount.addEventListener ('change', validationDisc);
+   form.priceProduct.addEventListener ('blur', validationPrice);
+   form.priceProduct.addEventListener ('change', validationPrice);
+   form.image.addEventListener ('change', validationImage);
+   form.image.addEventListener ('blur', validationImage);
 
-   form.addEventListener('submit', register)
+   form.addEventListener('submit', validationButton);
 
 
 }
@@ -59,7 +59,7 @@ if (form.nameProduct.value.length < 5 || form.nameProduct.value.length == 0 ){
     e.preventDefault()
     let errorPrice = document.querySelector('.priceError')
   
-   if (form.priceProduct.value < 1){
+   if (form.priceProduct.value < 1 || form.priceProduct.value == "" ){
    
       errorPrice.innerHTML = 'El precio no puede ser $0'
     }else{
@@ -86,11 +86,13 @@ if (form.nameProduct.value.length < 5 || form.nameProduct.value.length == 0 ){
       }
      }
   
-     function register (e){
-         validationName
-         validationDesc
-         validationDisc
-         validationName
-         validationImage
+     function validationButton (e){
+         e.preventDefault()
+         validationName(e)
+         validationDesc(e)
+         validationPrice(e)
+         validationDisc(e)
+         validationName(e)
+         validationImage(e)
       
      }
