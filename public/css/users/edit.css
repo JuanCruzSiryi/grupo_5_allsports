@@ -263,7 +263,7 @@ input::file-selector-button{
         justify-content: center;
     }
     main {
-      height: 105vh;
+      /* height: 105vh; */
       margin-bottom: 0;
     }
     .back-button {
