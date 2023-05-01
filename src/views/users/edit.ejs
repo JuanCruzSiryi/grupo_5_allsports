@@ -30,6 +30,7 @@
             method="post"
             action="/users/<%=user.id %>/edit/?_method=PUT"
             enctype="multipart/form-data"
+            id="register-form"
           >
           <div>
             <label for="image">Modificar imagen/avatar</label>
@@ -44,9 +45,16 @@
               <input
                 type="text"
                 name="firstName"
+                id="firstName"
                 value="<%= user.firstName %>"
-                required />
+                 />
                 <i class="fa-solid fa-user"></i>
+                <% if(locals.errors && errors.firstName) { %>
+                  <p class="text-errors"><%= errors.firstName.msg %></p>
+                <% } %>
+                <div class="col-8 col-lg-10">
+                  <small class="text-errors firstNameError"></small>
+                </div>
             </div>
             <div class="lastName">
               <label for="lastName">Modificar apellido</label>
@@ -55,16 +63,28 @@
                 name="lastName"
                 id="lastName"
                 value="<%= user.lastName %>"
-                required />
+              >
                 <i class="fa-solid fa-user"></i>
+                <% if(locals.errors && errors.lastName) { %>
+                  <p class="text-errors"><%= errors.lastName.msg %></p>
+                <% } %>
+                <div class="col-8 col-lg-10">
+                  <small class="text-errors lastNameError"></small>
+                </div>
             </div>
             
             <div class="email">
               <label for="email">Modificar email</label>
-              <input type="email" name="email" id="email" 
+              <input type="text" name="email" id="email" 
               value="<%= user.email %>"  
-              required/>
+              />
               <i class="fa-solid fa-envelope"></i>
+              <% if(locals.errors && errors.email) { %>
+                <p class="text-errors"><%= errors.email.msg %></p>
+              <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors emailError"></small>
+              </div>
             </div>
             <div>
               <label for="country">País</label>
@@ -82,5 +102,6 @@
       </div>
     </main>
     <%- include ("../partials/footer.ejs") %>
+    <script src="/js/users/edit.js"></script>
   </body>
 </html>
