@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', formulary)
 
 function formulary (){
     form.name.addEventListener ('change', validationName);
+    form.name.addEventListener ('blur', validationName);
     form.description.addEventListener ('change', validationDesc)
+    form.description.addEventListener ('blur', validationDesc)
     form.discount.addEventListener ('change', validationDisc)
+    form.discount.addEventListener ('blur', validationDisc)
     form.price.addEventListener ('change', validationPrice)
+    form.price.addEventListener ('blur', validationPrice)
     form.image.addEventListener ('change', validationImage)
+    form.image.addEventListener ('blur', validationImage)
 
 }
 
@@ -16,7 +21,7 @@ function validationName (e){
 e.preventDefault()
 let errorName = document.querySelector('.nameProductError')
     
-if (form.name.value.length < 5){
+if (form.name.value.length < 5 || form.name.value.length == 0){
     errorName.innerHTML = 'El nombre debe contener al menos 5 caracteres'
      } else{
        errorName.innerHTML = ''
@@ -57,7 +62,7 @@ function validationDisc (e){
     e.preventDefault()
     let errorPrice = document.querySelector('.priceError')
    
-   if (form.price.value == 0){
+   if (form.price.value < 1){
    
         errorPrice.innerHTML = 'El precio no puede ser $0'
  
