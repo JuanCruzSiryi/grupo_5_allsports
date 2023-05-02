@@ -11,6 +11,9 @@ const rules = [
   body('price')
     .isFloat({ gt: 0 })
     .withMessage('El precio del producto es obligatorio y debe ser un número mayor a cero.'),
+  body('discount')
+    .isFloat({ min: 0, max: 99 })
+    .withMessage('El descuento debe ser un número entre 0 y 99.'),
   body('size')
     .custom(async (value, { req }) => {
       const sizes = await db.Size.findAll();
