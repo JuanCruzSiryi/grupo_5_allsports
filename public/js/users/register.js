@@ -1,52 +1,44 @@
-// import validator from 'validator';
 //const allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
 
+let form = document.getElementById('register-form')
+let firstNameError = this.document.querySelector('.firstNameError')
+let lastNameError = this.document.querySelector('.lastNameError')
+let emailError = this.document.querySelector('.emailError')
+let passwordError = this.document.querySelector('.passwordError')
+let termsError = this.document.querySelector('.termsError')
+//let fileError = this.document.querySelector('.fileError')
 
-window.addEventListener('DOMContentLoaded', function() {
-  let form = document.getElementById('register-form')
-  let firstNameError = this.document.querySelector('.firstNameError')
-  let lastNameError = this.document.querySelector('.lastNameError')
-  let emailError = this.document.querySelector('.emailError')
-  let passwordError = this.document.querySelector('.passwordError')
-  let termsError = this.document.querySelector('.termsError')
-  //let fileError = this.document.querySelector('.fileError')
+window.addEventListener('DOMContentLoaded', contentLoaded)
 
-  console.log("Form: ", form);
-
+function contentLoaded() {
   //Add register event
   form.addEventListener('submit', register);
+}
 
-  function register(evt) {
-    console.log("Botooooon");
-    // console.log("el elemento", evt.target);
-    let errores = {}
-    if(form.firstName.value.length < 2) errores.firstName = 'El Nombre debe tener más de 2 caracteres'
-    if(form.lastName.value.length < 2) errores.lastName = 'El Apellio debe tener más de 2 caracteres'
-    if(form.email.value.length < 2) errores.emai = 'El Email debe ser válido'
-    if(form.password.value.length < 8) errores.password = 'La contraseña debe tener al menos 8 caracteres'
-    if(!form.terms.checked) errores.terms = 'Debes aceptar los terminos'
-    // let image = form.image.files[0]
-    // if (image) {
-    //   if(!allowedExtensions.test(image.name)) errores.image = 'Formato de archivo no válido'
-      
-    // }
+function register(evt) {
+  let errors = {}
+  if(form.firstName.value.length < 2) errors.firstName = 'El Nombre debe tener más de 2 caracteres'
+  if(form.lastName.value.length < 2) errors.lastName = 'El Apellio debe tener más de 2 caracteres'
+  if(!validator.isEmail(form.email.value)) errors.email = 'El Email debe ser válido'
+  if(form.password.value.length < 8) errors.password = 'La contraseña debe tener al menos 8 caracteres'
+  if(!form.terms.checked) errors.terms = 'Debes aceptar los terminos'
+  // let image = form.image.files[0]
+  // if (image) {
+  //   if(!allowedExtensions.test(image.name)) errors.image = 'Formato de archivo no válido'
     
-    // console.log("is email?: ", validator.isEmail(form.email.value));
+  // }
 
-
-    console.log("errors", errores);
-    if (Object.keys(errores).length >= 1) {
-      evt.preventDefault();
-      firstNameError.innerHTML = (errores.firstName) ? `<li> ${errores.firstName} </li>` : '';
-      lastNameError.innerHTML = (errores.lastName) ? `<li> ${errores.lastName} </li>` : '';
-      emailError.innerHTML = (errores.email) ? `<li> ${errores.email} </li>` : '';
-      passwordError.innerHTML = (errores.password) ? `<li> ${errores.password} </li>` : '';
-      termsError.innerHTML = (errores.terms) ? `<li> ${errores.terms} </li>` : '';
-      //fileError.innerHTML = (errores.image) ? `<li> ${errores.image} </li>` : '';
-    } else {
-      form.submit();
-    }
-    
+  console.log("errors", errors);
+  if (Object.keys(errors).length >= 1) {
+    evt.preventDefault();
+    firstNameError.innerHTML = (errors.firstName) ? `<li> ${errors.firstName} </li>` : '';
+    lastNameError.innerHTML = (errors.lastName) ? `<li> ${errors.lastName} </li>` : '';
+    emailError.innerHTML = (errors.email) ? `<li> ${errors.email} </li>` : '';
+    passwordError.innerHTML = (errors.password) ? `<li> ${errors.password} </li>` : '';
+    termsError.innerHTML = (errors.terms) ? `<li> ${errors.terms} </li>` : '';
+    //fileError.innerHTML = (errors.image) ? `<li> ${errors.image} </li>` : '';
+  } else {
+    form.submit();
   }
-})
-
+  
+}
