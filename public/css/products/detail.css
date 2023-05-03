@@ -108,17 +108,33 @@ body {
 } */
 
 
+
+
+
+
+
 .heart:hover {
-    color: rgb(226, 43, 43);
+  color: rgb(226, 43, 43);
+ } 
+
+.heart:focus {
+  font-weight:bold;
+  color: rgb(226, 43, 43);
+} 
+
+
+.cart{
+  /* margin: 32% 5% 32% 5%;*/
+  color: black; 
 }
 
-/* .cart{
-    margin: 32% 5% 32% 5%;
-} */
-
 .cart:hover{    
-  color: blueviolet;  
- } 
+color: blueviolet;  
+} 
+
+.cart:focus{
+  color: blueviolet;
+}
 
 
 /* .product-logo{

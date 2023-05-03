@@ -18,8 +18,7 @@ function formulary() {
   form.priceProduct.addEventListener("blur", validationPrice);
   form.priceProduct.addEventListener("change", validationPrice);
   form.image.addEventListener("change", validationImage);
-  form.image.addEventListener("blur", validationImage);
-
+  
   form.addEventListener("submit", submitButton);
 }
 
