@@ -7,17 +7,15 @@ const renderCart = () => {
   let cart = getCart();
   cart.forEach(product => {
     renderProductInCart(product)
-    contentProducts.innerHTML += `
-      <span>Cantidad: ${product.quantity}</span>
-      <button onclick="removeItem(${product.id}, ${product.quantity})"
-      > Eliminar </button>
-    `
   });
-  contentProducts.innerHTML += `
-    <br>
-    <br>
-    <h3>Total: ${getTotal()}</h3>
-    <button onclick="clearCart()"
+  
+  cartSummary.innerHTML += `
+    <div class="total">
+      <p>Total</p>
+      <p>$${getTotal()}</p>
+    </div>
+    <button class="checkout-button">Finalizar compra</button>
+    <button class="delete-button" onclick="clearCart()"
     > Limpiar Carrito </button>
   `
 }
@@ -28,10 +26,36 @@ function clearCart() {
   location.reload();
 }
 
+function deleteItem(productId, qyt) {
+  let cart = getCart();
+  let newCart = cart.filter(product => product.id != productId);
+  saveCart(newCart);
+  location.reload();
+}
+
+function addItem(productId, qyt) {
+  let cart = getCart();
+  let newCart = cart.map(product => {
+    if (product.id == productId) {
+      console.log(product);
+      product.quantity++;
+    }
+    return product; 
+  });
+  saveCart(newCart);
+  location.reload();
+}
+
 function removeItem(productId, qyt) {
-  if(qyt > 2){
-    let cart = getCart();
-    let newCart = cart.filter(product => product.id != productId);
+  let cart = getCart();
+  if(qyt > 0) {
+    let newCart = cart.map(product => {
+      if (product.id == productId) {
+        console.log(product);
+        product.quantity--;
+      }
+      return product; 
+    });
     saveCart(newCart);
   }
   location.reload();
