@@ -10,26 +10,36 @@
           <h3 class="title-form">
             Iniciar Sesión
           </h3>
-          <form action="/login" method="post">
+          <form id="form-login" action="/login" method="post">
 
             <div class="email-form">
-              <label for="username">Email</label>
+              <label for="email">Email</label>
               <input type="email" name="email" id="useremail">
               <i class="fa-solid fa-envelope"></i>
+              <% if (locals.errors && (errors.email || errors.password)) { %>
+                <div class="text-danger">
+                  <%= errors.email.msg %>
+                </div>
+              <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors emailError"></small>
+              </div>
             </div>
 
             <div class="password-form">
-              <label for="username">Contraseña</label>
+              <label for="username">Contraseña(mínimo 8 caracteres)</label>
               <input type="password" name="password" id="userpassword">
               <i class="fa-solid fa-lock"></i>
+              <% if (locals.errors && errors.password) { %>
+                <p class="text-errors"><%= errors.password.msg %></p>
+              <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors passwordError"></small>
+              </div>
             </div>
 
-            <% if (locals.errors && (errors.email || errors.password)) { %>
-              <div class="text-danger">
-                <%= errors.email.msg %>
-              </div>
-            <% } %>
-
+            
+          
             <!-- <label class="remember-me"><input type="checkbox" name="rememberme" id="rememberme>
               Recordarme  
             </label> -->
@@ -53,6 +63,9 @@
     </main>
 
     <%- include ("../partials/footer.ejs") %> 
-   
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/users/login.js"></script>
+
+
   </body>
 </html>

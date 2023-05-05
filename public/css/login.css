@@ -74,6 +74,19 @@ main form {
     width: 5px;
 }
 
+
+
+
+.text-errors {
+    color: red
+  }
+
+
+
+
+
+
+
 .password-form {
     display: flex;
     flex-direction: column;
@@ -93,6 +106,7 @@ main form {
     padding-left: 35px;
     color: black;
 }
+
 
 .password-form i {
     position: relative;

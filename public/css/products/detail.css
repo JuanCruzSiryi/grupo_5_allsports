@@ -165,7 +165,7 @@ color: blueviolet;
   color: #052b63;
   font-size: 12px;
   font-style: italic;
-  padding: 5px 20px 5px 20px;
+  padding: 0px 20px 5px 20px;
   text-align: center;
   margin-top: 0;
 }
@@ -239,7 +239,6 @@ color: blueviolet;
     font-size:18px;
   }
 
-   
    .article-price-discount{
          margin: 10%;
          font-size:20px;
@@ -287,7 +286,7 @@ color: blueviolet;
     align-items: start;
   }
   .product-information {
-    margin-top: 2%;
+    margin-top: 4%;
   }
   .desktop-description{
     display: inline-block;

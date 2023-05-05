@@ -58,14 +58,16 @@ function removeItem(productId, qyt) {
     });
     saveCart(newCart);
   }
+  
   location.reload();
 }
 
 function getTotal() {
   let cart = getCart();
+  
   let total = 0;
   cart.forEach(product => {
     total += product.price * product.quantity;
   });
-  return total;
+  return total.toFixed(2);
 }

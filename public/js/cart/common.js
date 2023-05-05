@@ -30,7 +30,7 @@ const renderProduct = (product) => {
               data-name="${product.name}"
               data-image="${product.image}"
               data-price="${product.price - ((product.price* product.discount) / 100)}">
-              AÑADIR AL CARRITO
+               AÑADIR AL CARRITO
             </button>
           </div>
         </div>
@@ -41,6 +41,8 @@ const renderProduct = (product) => {
 }
 
 const renderProductInCart = (product) => {
+  
+  const totalParcial=  product.price*product.quantity;
   contentProducts.innerHTML += 
   `
     <tr>
@@ -60,8 +62,8 @@ const renderProductInCart = (product) => {
         </div>
       </td>
       <td class="price-cell">$${product.price}</td>
-      <td class="total-cell">$${product.price*product.quantity}</td>
-      <td class="delete-cell"><button class="delete-button" onclick="deleteItem(${product.id}, ${product.quantity})">Eliminar</button></td>
+      <td class="total-cell">$${totalParcial.toFixed(2)}</td>
+       <td class="delete-cell"><button class="delete-button" onclick="deleteItem(${product.id}, ${product.quantity})">Eliminar</button></td>
     </tr>
   `
 }
