@@ -14,8 +14,8 @@ function contentLoaded() {
 
 function register(evt) {
   let errors = {}
-  if(!validator.isEmail(form.useremail.value)) errors.email = 'El Email debe ser válido'
-  if(form.userpassword.value.length < 8) errors.password = 'La contraseña debe tener al menos 8 caracteres'
+  if(!validator.isEmail(form.useremail.value)) errors.email = 'Email no valido'
+  if(form.userpassword.value.length < 4) errors.password = 'Contraseña incorrecta'
   // let image = form.image.files[0]
   // if (image) {
   //   if(!allowedExtensions.test(image.name)) errors.image = 'Formato de archivo no válido'
@@ -25,8 +25,8 @@ function register(evt) {
   console.log("errors", errors);
   if (Object.keys(errors).length >= 1) {
     evt.preventDefault();
-    emailError.innerHTML = (errors.email) ? `<li> ${errors.email} </li>` : '';
-    passwordError.innerHTML = (errors.password) ? `<li> ${errors.password} </li>` : '';
+    emailError.innerHTML = (errors.email) ? `${errors.email}` : '';
+    passwordError.innerHTML = (errors.password) ? `${errors.password}` : '';
     //fileError.innerHTML = (errors.image) ? `<li> ${errors.image} </li>` : '';
   } else {
     form.submit();
