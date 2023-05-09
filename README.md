@@ -92,6 +92,12 @@ LINK DE TRELLO SPRINT 4: https://trello.com/b/8H9GEGCu/sprint-4
 
 LINK DE TRELLO SPRINT 5: https://trello.com/b/2nm1hSAH/sprint-5
 
+LINK DE TRELLO SPRINT 6: https://trello.com/b/kStBYM7N/sprint-6
+
+LINK DE TRELLO SPRINT 7: https://trello.com/b/IflQUGr8/sprint-7
+
+LINK DE TRELLO SPRINT 8: https://trello.com/b/cPQ2GBFt/sprint-8
+
 
 GUÍA DE COLORES Y FUENTES:
 
