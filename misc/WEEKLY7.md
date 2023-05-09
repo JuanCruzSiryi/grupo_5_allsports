@@ -1,7 +1,7 @@
 WEEKLY MEETING ‘ALL SPORTS’
 GRUPO 5
 INTEGRANTES: Burbano Danilo, López Leandro, Sio Maximiliano, Siryi Juan Cruz
-FECHA: 06 de abril del 2023.
+FECHA: 20 de abril del 2023.
 OBJETIVO DE LA REUNIÓN: SEXTO SPRINT.
 MODALIDAD: ZOOM.
 DURACIÓN: 1 hora y media.
@@ -18,7 +18,7 @@ DURACIÓN: 1 hora y media.
 
 •	SEGUNDA PARTE: PLANEACIÓN
 
-o	Continuar con detalles de la entrega del sprint 5: procuramos seguir implementando mejoras y arreglos en las vistas, tanto de productos (formularios de creación, edición, detalle de producto y carrito) como de usuarios (login y registro). 
+o	Continuar con detalles de la entrega del sprint 6: procuramos seguir implementando mejoras y arreglos en las vistas, tanto de productos (formularios de creación, edición, detalle de producto y carrito) como de usuarios (login y registro). 
 
 o	Aprovechar el tiempo ganado por eficiencia en la realización de las tareas programadas para el corriente sprint y utilizarlo para mejoras y retoques estéticos, en su mayoría, dentro del sitio web. 
 
@@ -33,9 +33,9 @@ o	En la reunión retro se detallaron las principales devoluciones, pero fueron t
 
 o	Se pudieron solucionar más detalles y observaciones de los profesores en tiempo y forma.
 
-o	Gran labor de todos los integrantes del equipo y se nota entusiasmo y compromiso para enfrentar el nuevo sprint (6).
+o	Gran labor de todos los integrantes del equipo y se nota entusiasmo y compromiso para enfrentar el nuevo sprint (7).
 
-o	Gran comienzo de Sprint 6. Armado de trello y división de tareas efectuadas. El equipo busca aumentar la eficiencia del tiempo. 
+o	Gran comienzo de Sprint 7. Armado de trello y división de tareas efectuadas. El equipo busca aumentar la eficiencia del tiempo. 
 
 o	Queremos contar con la semana próxima para ir remodelando el sitio estéticamente, cada integrante con su vista en particular.
 
