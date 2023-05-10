@@ -7,6 +7,7 @@ const db = require('../database/models');
 const Op = db.Sequelize.Op;
 
 const {User, Country} = require('../database/models');
+const { log } = require("console");
 
 const usersController = {
   /* CRUD */
@@ -129,13 +130,25 @@ const usersController = {
   },
 
   store: async (req, res) =>{
+
+      const users = await User.findAll();
+      const user = users.find(user => user.email == req.body.email);
+    
       const errors = validationResult(req);
       const countries = await Country.findAll();
-        if ( ! errors.isEmpty() ) {
-            return res.render('users/register', {
+        
+        if ( ! errors.isEmpty() || user) {
+          let customErrors = errors.mapped();
+          let emailError = null;
+          if (user){
+            emailError = "El correo ingresado ya existe."
+            customErrors["email_2"] = {msg: emailError};
+          }
+          
+          return res.render('users/register', {
               title: 'Nuevo usuario',
               stylesheetFile: "users/register.css",
-              errors: errors.mapped(),
+              errors: customErrors,
               oldBody: req.body,
               countries
         })
@@ -153,11 +166,7 @@ const usersController = {
         role_id: 1,
         state: 1,
       }
-       User.create(newUser)
-       .then(() => {
-          res.redirect('/users')
-       })
-       .catch(error => res.send(error));
+       
   },
   edit: async (req, res) => {
     try {
