@@ -44,6 +44,9 @@
               <% if(locals.errors && errors.email) { %>
                 <p class="text-errors"><%= errors.email.msg %></p>
               <% } %>
+              <% if(locals.errors && errors.email_2) { %>
+                <p class="text-errors"><%= errors.email_2.msg %></p>
+              <% } %>
               <div class="col-8 col-lg-10">
                 <small class="text-errors emailError"></small>
               </div>
@@ -101,7 +104,7 @@
     <%- include ("../partials/footer.ejs") %> 
 
     <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
-    <script src="/js/users/register.js"></script>
+    <!-- <script src="/js/users/register.js"></script> -->
 
   </body>
 </html>
