@@ -6,7 +6,7 @@ const productsController = {
     'list': async (req, res) => {
         const page = parseInt(req.query.page) || 1;
         const count = await Product.count();
-        const limit = 10;
+        const limit = 12;
         const offset = (page - 1) * limit;
         try {
             const products = await Product.findAll({
@@ -18,21 +18,32 @@ const productsController = {
                 offset
             });
 
-            // const byCategory = await Product.findAll({
-            //     attributes: ['category', [db.Sequelize.fn('COUNT', 'category'), 'total']],
-            //     group: ['category']
-            // });
+            const byCategory = await Product.findAll({
+                include: ["category"],
+                attributes: ['category_id', [db.Sequelize.fn('COUNT', 'category'), 'products']],
+                group: ['category_id']
+            });
+
+            const newProducts = products.map(product => {
+                const productoPlain = product.get({ plain: true });
+                return {
+                    ...productoPlain,
+                    detail: 'localhost:3005/api/products/'+product.id
+                };
+            })
 
             let response = {
                 meta: {
                     status: 200,
                     count,
                     page,
+                    next: 'localhost:3005/api/products/?page='+(page+1),
+                    previous: 'localhost:3005/api/products/?page='+(page>1?page-1:''),
                     length: products.length,
+                    byCategory,
                     url: 'localhost:3005/api/products',
-                    
                 },
-                data: products
+                data: newProducts,
             }
             res.json(response)
         } catch (error) {
