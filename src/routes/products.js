@@ -32,7 +32,7 @@ router.get('/products/:id', productsController.show);
 
 router.get('/productDetail/:id', productsController.products);
 
-router.get('/productCart', productsController.productCart);
+router.get('/productCart', guestMiddleware, productsController.productCart);
 
 router.get('/productRegister', productsController.productRegister);
 

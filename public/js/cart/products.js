@@ -13,6 +13,9 @@ const getProducts = async (api) =>{
 
 document.addEventListener('DOMContentLoaded', ()=>{
   // getProducts(API).then(data => renderProducts(data));
+  if(logoutButton){
+    logoutButton.addEventListener('click', logoutEvent);
+  }
   getProducts(API).then(response => renderProducts(response.data));
 })
 
@@ -55,6 +58,7 @@ const addToCart = (btn) => {
   }
   // se actualiza local storage
   saveCart(cart);
+  location.href = '/productCart'
 }
 
 

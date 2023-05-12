@@ -1,5 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', ()=>{
+  if(logoutButton){
+    logoutButton.addEventListener('click', logoutEvent);
+  }
   renderCart()
 });
 
