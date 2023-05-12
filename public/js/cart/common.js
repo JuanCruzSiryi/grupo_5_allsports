@@ -1,12 +1,14 @@
 let contentProducts = document.getElementById('products');
+let newestProducts = document.getElementById('newest-products');
+let recommendedProducts = document.getElementById('recommended-products');
 let cartSummary = document.getElementById('cart-summary');
 let logoutButton = document.getElementById('logout-button');
 function getCart(){
   return JSON.parse(localStorage.getItem('cart') || "[]")
 }
 
-const renderProduct = (product) => {
-  contentProducts.innerHTML += 
+const renderProduct = (product, container) => {
+  container.innerHTML += 
   `
     <article class="main-article">
       <div class="article-image-container">

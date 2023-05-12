@@ -21,8 +21,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 // renderizar los productos
 const renderProducts = (products) => {
-  products.forEach(product => {
-    renderProduct(product);
+  products.forEach((product, index) => {
+    renderProduct(product, contentProducts);
+    if(index < 4) renderProduct(product, newestProducts);
+    if(index > 4 && index < 9) renderProduct(product, recommendedProducts);
   });
 }
 

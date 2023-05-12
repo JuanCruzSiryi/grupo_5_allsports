@@ -226,7 +226,7 @@ main section article :hover .article-animation-container {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
-  main section div.products, #products{
+  main section div.products, #products, #newest-products, #recommended-products{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -237,6 +237,12 @@ main section article :hover .article-animation-container {
     width: 44%;
   }
   #products article{
+    width: 44%;
+  }
+  #newest-products article{
+    width: 44%;
+  }
+  #recommended-products article{
     width: 44%;
   }
 
@@ -255,6 +261,12 @@ main section article :hover .article-animation-container {
     width: 22%;
   }
   #products article{
+    width: 22%;
+  }
+  #newest-products article{
+    width: 22%;
+  }
+  #recommended-products article{
     width: 22%;
   }
 
