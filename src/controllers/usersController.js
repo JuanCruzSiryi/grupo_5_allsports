@@ -137,23 +137,23 @@ const usersController = {
       const errors = validationResult(req);
       const countries = await Country.findAll();
         
-        if ( ! errors.isEmpty() || user) {
-          let customErrors = errors.mapped();
-          let emailError = null;
-          if (user){
-            emailError = "El correo ingresado ya existe."
-            customErrors["email_2"] = {msg: emailError};
-          }
-          
-          return res.render('users/register', {
-              title: 'Nuevo usuario',
-              stylesheetFile: "users/register.css",
-              errors: customErrors,
-              oldBody: req.body,
-              countries
-        })
+      if ( ! errors.isEmpty() || user) {
+        let customErrors = errors.mapped();
+        let emailError = null;
+        if (user){
+          emailError = "El correo ingresado ya existe."
+          customErrors["email_2"] = {msg: emailError};
         }
-        let image = req.file? req.file.filename : "default-user.png";
+        
+        return res.render('users/register', {
+            title: 'Nuevo usuario',
+            stylesheetFile: "users/register.css",
+            errors: customErrors,
+            oldBody: req.body,
+            countries
+        })
+      }
+      let image = req.file? req.file.filename : "default-user.png";
         
       const newUser = {
         firstName: req.body.firstName || "Sin nombre",
@@ -166,7 +166,12 @@ const usersController = {
         role_id: 1,
         state: 1,
       }
-       
+      User.create(newUser)
+        .then(() => {
+          res.redirect('/users')
+        })
+        .catch(error => res.send(error));
+
   },
   edit: async (req, res) => {
     try {

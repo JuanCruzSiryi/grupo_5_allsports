@@ -1,10 +1,14 @@
 const express =  require('express');
 const path = require("path");
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 3005;
 
 /* Include PUT and DELETE methods */
 const methodOverride = require('method-override');
+app.use(cors({
+  origin: '*',
+}))
 
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -19,6 +23,7 @@ const routesUsers = require('./routes/users');
 /* API routes */
 const ApiProductsRoutes = require('./routes/api/ApiProductsRoutes');
 const ApiUsersRoutes = require('./routes/api/ApiUsersRoutes');
+const ApiCategoriesRoutes = require('./routes/api/ApiCategoriesRoutes');
 
 /* Middlewares */
 const userSessionMiddleware = require('./middlewares/userSessionMiddleware');
@@ -58,6 +63,7 @@ app.use("/", routesUsers);
 
 app.use(ApiProductsRoutes);
 app.use(ApiUsersRoutes);
+app.use(ApiCategoriesRoutes);
 
 app.listen(PORT, () => {
   console.log(`server listening on ${PORT}`);
