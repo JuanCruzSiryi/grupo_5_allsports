@@ -43,7 +43,7 @@ const mainController = {
   },
   processLogin: async (req, res) => {
     //let users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
-    const users = await User.findAll();
+    const users = await User.findAll({include: ["country"]});
     let user = users.find(user => user.email == req.body.email);
     if (user) {
       if (bcrypt.compareSync(req.body.password, user.password)) { //user.password === req.body.password

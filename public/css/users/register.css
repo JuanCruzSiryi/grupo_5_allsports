@@ -1,251 +1,104 @@
 * {
-    font-family: Roboto;
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  font-family: Roboto;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-/* ---------------------------MAIN---------------------------- */
 main {
-    background: linear-gradient(to right, rgb(174, 189, 227), rgb(187, 159, 148));
-    text-align: center;
-    width: 100%;
-    padding: 15px;
-    margin-bottom: -20px;
+  margin-top: 145px;
 }
 
-.principal-box {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    background: white;
-    /* opacity: 0.6; */
-    border-radius: 6px;
-    margin-top: 30px;
-    padding-top: 10px;
+/* ---------------------Main------------- */
+
+body {
+  background: linear-gradient(to right, rgb(181, 200, 247), rgb(212, 235, 249));
 }
 
-.content-box-register form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 10px;
-    margin-bottom: 10px;
-    margin-left: 15%;
-    margin-right: 15%;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* Altura del contenedor */
+  margin: 2em;
+  padding: 2em;
 }
 
-.content-box-register form div {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-self: center;
-    position: relative;
-    width: 100%;
-}
-
-.content-box-register form div input {
-    width: 100%;
-    height: 30px;
-    border-radius: 6px;
-    text-align: center;
-    color: black;
-
-  }
-
-.content-box-register form div label {
-    position: relative;
-    bottom: 4px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.content-box-register form div select {
-    width: 100%;
-    height: 30px;
-    border-radius: 6px;
-}
-
-.content-box-register form div i {
-    position: relative;
-    bottom: 24px;
-    left: 10px;
-    opacity: 0.2;
-    width: 10px;
-}
-
-.title {
-    width: 100%;
-    padding: 10px;
-}
-
-.title-register {
-    font-weight: bold;
-    color: rgb(3, 3, 113);
-    font-size: 20px;
-}
-
-
-.terms-box {
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 10px;
-}
-
-.content-box-register form .terms-box{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-.content-box-register form .terms-box label {
-    display: flex;
-    font-size: 12px;
-    gap: 5px;
-}
-
-.content-box-register form .terms-box input {
-    width: 5%;
-    height: 15px;
-    margin-left: 0;
-    margin-right: 5px;
-    padding: 0;
-    text-align: left;
-}
-
-
-.terms-box label a {
-    font-weight: bold;
-    text-decoration: underline;
-}
-
-.terms-box label a:visited {
-    color: rgb(78, 4, 147);
-}
-
-
-.register-button {
-    width: 100%;
-    height: 13%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.register-button button {
-  background: linear-gradient(to right, #061b3b, #052b63);
-  border: none;
-  color: white;
-  padding: 8px 20px;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 25em;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 4px;
-  cursor: pointer;
+  background-color: #f5f5f5;
+  padding: 1em;
 }
 
-.register-button button:hover {
+.card img {
+  width: 15em;
+  height: 15em;
+  transition: 0.3s;
+  box-shadow: 10px 5px 5px teal;
+  border-radius: 50%;
+  border: solid 2px grey;
+  object-fit: cover;
+}
+.card img:hover{
+  box-shadow: 0px 0px 10px blueviolet;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  font-size: 16px;
+  align-self: center;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, #061b3b, #052b63);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.btn:hover {
   background: linear-gradient(to right, #052b63, #1259c3);
 }
 
-.text-errors {
-  color: red
+.card-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0 1em 0;
 }
-
-@media (min-width: 768px) {
-    .principal-box {
-        margin-left: 20%;
-        margin-right: 20%;
-        justify-content: center;
-    }
-    main {
-      /* height: 100vh; */
-      margin-bottom: 0;
-    }
-    .title-register {
-      margin-bottom: 50px;
-      font-size: 28px;
-    }
-    .content-box-register form{
-      gap: 25px
-    }
-    .content-box-register form div input,  .content-box-register form div select{
-      height: 40px;
-      text-align: center;
-    }
-    .content-box-register form div i {
-      position: relative;
-      bottom: 28px;
-      left: 20px
-    }
+.card-item h3{
+  font-weight: bolder;
+  margin-right: 0.5em;
+  font-size: 16px;
+  align-self: center;
 }
-
-@media (min-width: 1200px) {
-    .content-box-register form .terms-box .terms-box-label{
-      font-size: 14px;
-    }
-}
-
-  
-  @media(min-width: 768px) {
-    .main-navbar {
-      max-width: 1200px;
-      margin: auto;
-    }
-    .main-header-top-bar{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .header-text {
-      max-width: 300px;
-      text-align: right;
-    }
-  
-    .hamburguer-button {
-      display: none;
-    }
-    .main-navbar {
-      display: flex;
-    }
-    .main-navbar ul {
-      display: flex;
-    }
-    .main-navbar li {
-      margin: 0 8px;
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .main-header-top-bar, .main-navbar {
-      max-width: 1200px;
-      margin: auto;
-    }
-    .main-header-top-bar{
-      display: flex;
-      align-items: center;
-    }
-    .main-navbar {
-      margin-top: 20px;
-    }
-  
-    .header-text {
-      max-width: none;
-      text-align: right;
-      font-size: 20px;
-      margin: 0;
-    }
-  
-    .main-navbar li {
-      margin: 0 10px;
-    }
-  
-    .main-navbar a {
-      font-size: 19px;
-    }
-  }

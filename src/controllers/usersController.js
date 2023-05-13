@@ -110,11 +110,11 @@ const usersController = {
   },
 
   profile: (req, res) => {
-    let profile= res.locals.userLogged;
+    let profile = res.locals.userLogged;
     // req.session.userLogged = user;
     res.render("users/profile", {
       title: "Profile",
-      stylesheetFile: "users/profile.css",
+      stylesheetFile: "users/register.css",
       user: profile
     });
   },

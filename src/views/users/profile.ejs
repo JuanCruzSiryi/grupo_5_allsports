@@ -5,55 +5,32 @@
     <%- include ("../partials/header.ejs") %>
 
     <main>
-
-      
-      <div class="main-container">
-        <div class="product-title">
-          <button 
-            onClick="location.href='/'"
-            type="submit"
-            class="create-button"
-          >
-            Atrás
-          </button>
-
-          <h4 class="name"><%= user.firstName + " " + user.lastName %></h4>
-        </div>
-        <div class="product-container">
-          <img
-          class="image"
-          src="/images/users/<%= user.image %>"
-          alt="user-image.jpg"
-          />
-
-          <div class="product-information">
-            <!-- <p class="price">Precio: <%=  %></p>
-            <p class="category">Categoría: <%=  %></p>
-            <p class="color">Color: <%=  %></p>
-            <p class="size">Talle: <%=  %></p> -->
-
-            <div class=" description desktop-description">
-              <%= user.email %>
-             <br>
-              <%= user.category %>
-              
+      <div class="container">
+        <div class="card">
+          <img src="/images/users/<%= user.image %>" alt="Imagen de ejemplo">
+          <div class="card-body">
+            <h3 class="card-title"><%= user.firstName + ' ' + user.lastName %></h3>
+            <div class="card-item">
+              <h3>Email: </h3>
+              <p class="card-text"><%= user.email %></p>
             </div>
-            <div class="detail-button desktop-buttons">
-              <button class ="button-edit" type="submit">
+            <div class="card-item">
+              <h3>País: </h3>
+              <p class="card-text"><%= user.country.name %></p>
+            </div>
+            
+            <div class="buttons">
+              <button class="btn" type="submit">
                 <a href="/users/<%= user.id %>/edit">Editar</a>
               </button>
-    
-              <button class= "button-delete" type="submit">
+              <button class="btn" type="submit">
                 <a href="/users/<%= user.id %>/delete">Eliminar</a>
               </button>
             </div>
-          </div>
-          
-        </div>
-        <!-- <p class="description mobile-buttons">
-          <%= user.email %>
-        </p> -->
 
+          </div>
+        </div>
+      </div>
     </main>
 
     <%- include ("../partials/footer.ejs") %>
