@@ -23,6 +23,7 @@ main {
 .banner-img-2 a img{
   width: 100%;
   height: 35vh;
+  object-fit: contain;
 }
 
 /********************* MAIN *********************/
@@ -253,7 +254,7 @@ main section article :hover .article-animation-container {
 
   /********************* BANNER *********************/
   .banner-img a img{
-    height: 350px;
+    height: 330px;
   }
 
   /********************* MAIN *********************/
@@ -276,6 +277,6 @@ main section article :hover .article-animation-container {
 
   /********************* BANNER *********************/
   .banner-img a img {
-    height: 600px;
+    height: 550px;
   }
 }

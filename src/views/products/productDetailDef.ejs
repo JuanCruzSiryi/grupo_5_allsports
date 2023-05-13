@@ -8,18 +8,6 @@
 
       
       <div class="main-container">
-        <div class="product-title">
-          <button 
-            onClick="location.href='/products?page=1'"
-            type="submit"
-            class="create-button"
-          >
-            Atras
-          </button>
-
-          <h4 class="name"><%= product.name %></h4>
-
-        </div>
         <div class="product-container">
           <img
           class="image"
@@ -36,35 +24,35 @@
                   <p class="article-name"><%= product.name %></p>  
                   <% if (product.discount > 0) { %>
                       <div class = "discount">
-                        <p class="article-price-discount"><%= product.price %>                     
-                        <p  class="article-discount-shipping"> Desc.: <%= product.discount %>%</p>
+                        <p class="article-price-discount">Antes $<%= product.price %>                     
+                        <p  class="article-discount-shipping"><%= parseInt(product.discount) %>% OFF</p>
                       </div>
-                  <% } %>
-                  <div class="icons">
-                    <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-                    <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
-                  </div>  
+                  <% } %> 
                   <div class="article-price">
-                    <!-- <p class="article-price-neto"><%= product.price %></p> -->
                     <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
-                    <!-- <p class="article-discount">$<%= product.price %></p> -->
-                    <p class="price">Precio $:  <%= finalPrice %>
-                 </div>
+                    <p class="price">Precio: $ <%= finalPrice %>
+                  </div>
         
-                </div>
+            </div>
+            <!-- <div class="icons">
+              <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div> -->
+            <button id="cart-button" class="add-cart-button" 
+              data-id= <%= product.id %>
+              data-name=<%=product.name%>
+              data-image=<%=product.image%>
+              data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
+              AÑADIR AL CARRITO
+            </button> 
     
             
             <p class="category">Categoría: <%= product.category.name%></p>
             <p class="color">Color: <%= product.color.name %></p>
-            <p class="size">Talle: 
-              <select name="sizeProduct" id="talles">
-                <% sizes.forEach(size => { %>
-                  <option value=<%= size.id %>><%= size.eur %></option>
-                <% }) %>
-              </select>  
+            <p class="size">Talle: <%= product.size.arg %>
+
             </p>
             <p class="size">Marca: <%= product.brand.name %></p>
-            <p class="size">Tipo: <%= product.tag ? product.tag.name : "" %></p>
+            <!-- <p class="size">Tipo: <%= product.tag ? product.tag.name : "" %></p> -->
 
             <div class=" description desktop-description">
               <%= product.description %>
@@ -79,5 +67,7 @@
     </main>
 
     <%- include ("../partials/footer.ejs") %>
+    <script src="/js/cart/common.js"></script>
+    <script src="/js/cart/productDetail.js"></script>
   </body>
 </html>

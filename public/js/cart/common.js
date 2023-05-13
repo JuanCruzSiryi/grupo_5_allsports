@@ -75,6 +75,41 @@ function productExist(product, cart) {
   return cart.find(item => item.id == product.id)
 }
 
+// Agregar al carrito
+
+const addToCart = (btn) => {
+  let product = {
+    id: btn.dataset.id,
+    name: btn.dataset.name,
+    image: btn.dataset.image,
+    price: btn.dataset.price,
+    quantity: 1
+  }
+  //obtener el carrito del local storage
+  let cart = getCart();
+
+  if(cart.length){
+    // verificar si el producto ya existe
+    let product_exist = productExist(product, cart);
+    if(product_exist){
+      // actualizar la cantidad
+      cart.forEach(item => {
+        if (item.id == product_exist.id ) {
+          item.quantity++;
+        }
+      });
+    }
+    else {
+      cart.push(product)
+    }
+  } else {
+    cart.push(product);
+  }
+  // se actualiza local storage
+  saveCart(cart);
+  location.href = '/productCart'
+}
+
 function saveCart(cart) {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
