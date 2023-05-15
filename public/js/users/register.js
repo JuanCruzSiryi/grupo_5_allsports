@@ -18,7 +18,7 @@ function contentLoaded() {
 function register(evt) {
   let errors = {}
   if(form.firstName.value.length < 2) errors.firstName = 'El Nombre debe tener más de 2 caracteres'
-  if(form.lastName.value.length < 2) errors.lastName = 'El Apellio debe tener más de 2 caracteres'
+  if(form.lastName.value.length < 2) errors.lastName = 'El Apellido debe tener más de 2 caracteres'
   if(!validator.isEmail(form.email.value)) errors.email = 'El Email debe ser válido'
   if(form.password.value.length < 8) errors.password = 'La contraseña debe tener al menos 8 caracteres'
   if(!form.terms.checked) errors.terms = 'Debes aceptar los terminos'

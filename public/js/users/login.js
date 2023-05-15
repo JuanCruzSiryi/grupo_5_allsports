@@ -14,7 +14,7 @@ function contentLoaded() {
 
 function register(evt) {
   let errors = {}
-  if(!validator.isEmail(form.useremail.value)) errors.email = 'Email no valido'
+  if(!validator.isEmail(form.useremail.value)) errors.email = 'Email no válido'
   if(form.userpassword.value.length < 4) errors.password = 'Contraseña incorrecta'
   // let image = form.image.files[0]
   // if (image) {
