@@ -6,7 +6,7 @@ const productsController = {
     'list': async (req, res) => {
         const page = parseInt(req.query.page) || 1;
         const count = await Product.count();
-        const limit = 12;
+        const limit = 100;
         const offset = (page - 1) * limit;
         try {
             const products = await Product.findAll({
