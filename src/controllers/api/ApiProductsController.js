@@ -28,6 +28,7 @@ const productsController = {
                 const productoPlain = product.get({ plain: true });
                 return {
                     ...productoPlain,
+                    image_url: 'localhost:3005/images/products/'+product.image,
                     detail: 'localhost:3005/api/products/'+product.id
                 };
             })

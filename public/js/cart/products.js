@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
 // renderizar los productos
 const renderProducts = (products) => {
-  products.forEach((product, index) => {
+  products.slice(0, Math.floor(products.length / 4) * 4).forEach((product, index) => {
     renderProduct(product, contentProducts);
     if(index < 4) renderProduct(product, newestProducts);
     if(index > 4 && index < 9) renderProduct(product, recommendedProducts);
