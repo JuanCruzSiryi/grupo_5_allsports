@@ -114,7 +114,7 @@ const usersController = {
     // req.session.userLogged = user;
     res.render("users/profile", {
       title: "Profile",
-      stylesheetFile: "users/register.css",
+      stylesheetFile: "users/profile.css",
       user: profile
     });
   },
