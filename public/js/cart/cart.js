@@ -17,10 +17,16 @@ const renderCart = () => {
       <p>Total</p>
       <p>$${getTotal()}</p>
     </div>
-    <button class="checkout-button">Finalizar compra</button>
+    <button class="checkout-button" onclick="endCart()">Finalizar compra</button>
     <button class="delete-button" onclick="clearCart()"
     > Limpiar Carrito </button>
   `
+}
+
+function endCart(){
+  alert("¡Compra exitosa!"),
+  localStorage.clear()
+  window.location.href = "/";
 }
 
 function clearCart() {
