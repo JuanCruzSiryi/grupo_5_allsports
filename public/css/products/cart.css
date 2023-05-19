@@ -11,7 +11,7 @@ main {
   background: linear-gradient(to right, rgb(196, 213, 255), rgb(249, 253, 232));
   text-align: center;
   width: 100%;
-  padding: 15px;
+  padding: 2.5em;
 }
 
 /* Estilos generales */

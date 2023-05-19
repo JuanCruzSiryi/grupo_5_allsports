@@ -24,9 +24,27 @@ const renderCart = () => {
 }
 
 function endCart(){
-  alert("¡Compra exitosa!"),
-  localStorage.clear()
-  window.location.href = "/";
+  // alert("¡Compra exitosa!")
+  let cart = getCart();
+  console.log(cart);
+  if (cart.length>0) {
+    Swal.fire({
+      icon: 'success',
+      title: '¡Compra exitosa!',
+      showConfirmButton: false,
+      timer: 1500,
+      didClose: () => {
+        localStorage.clear()
+        window.location.href = "/";
+      }
+    })
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: '!No tienes productos en el carrito!'
+    })
+  }
 }
 
 function clearCart() {
