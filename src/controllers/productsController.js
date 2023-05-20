@@ -298,6 +298,11 @@ const productsController = {
       stylesheetFile: "products/edit.css",
     });
   },
+  error404: (req, res) => {
+    res.status(404).render('error404', {
+      title: "Error 404: Página no encontrada",
+      stylesheetFile: "error404.css"
+    });
+  }
 };
-
 module.exports = productsController;

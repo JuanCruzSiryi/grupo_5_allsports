@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('./partials/head', {title: title}) %>
+  <style>
+    .not-found {
+      max-width: 30%;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .not-found {
+        width: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <%- include('./partials/header') %>
+  <main>
+  <h1><%= title %></h1>
+  <img class= 'not-found' src="/images/error-404.png" alt="404">
+  <img class= 'not-found' src="/images/error-404.png" alt="404">
+  <img class= 'not-found' src="/images/error-404.png" alt="404">
+  </main>
+  <%- include('./partials/footer') %>
+  <script src="/js/header.js"></script>
+  <script src="/js/cart/common.js"></script>
+</body>
+</html>

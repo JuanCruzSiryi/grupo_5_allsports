@@ -65,6 +65,13 @@ app.use(ApiProductsRoutes);
 app.use(ApiUsersRoutes);
 app.use(ApiCategoriesRoutes);
 
+app.use((req, res, next) => {
+  res.status(404).render('error404', {
+    title: "Error 404: Página no encontrada",
+    stylesheetFile: "error404.css"
+  });
+});
+
 app.listen(PORT, () => {
   console.log(`server listening on ${PORT}`);
 });
