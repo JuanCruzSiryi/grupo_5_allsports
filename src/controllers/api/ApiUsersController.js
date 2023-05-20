@@ -23,6 +23,7 @@ const apiUsersController = {
                 delete userPlain.password
                 return {
                     ...userPlain,
+                    image_url: 'localhost:3005/images/users/'+user.image,
                     detail: 'localhost:3005/api/users/'+user.id
                 };
             })
