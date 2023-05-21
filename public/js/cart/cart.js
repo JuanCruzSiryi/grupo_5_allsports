@@ -42,7 +42,7 @@ function endCart(){
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
-      text: '!No tienes productos en el carrito!'
+      text: '¡No tienes productos en el carrito!'
     })
   }
 }
