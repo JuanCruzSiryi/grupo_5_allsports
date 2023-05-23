@@ -288,7 +288,7 @@ values (
     30
   );
 
-insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id. discount)
+insert into products (name, description, image, price, size_id, category_id, brand_id, color_id, tag_id, discount)
 values (
     'Adidas Pro', 
     'Diseño innovador, facheras, muy recomendadas para running',
@@ -330,7 +330,7 @@ values (
     'Doe',
     'doe@gmail.com',
     'avatar-1677950424639',
-    '$2a$10$aXbI3VkW/Pfo8kFlmyH9aetdXJo7BrCeFF0YtwIAX3lb1twJbke9u',
+    '$2a$10$V232x6C0USVXJ4Z/woCTluskAB1aVsgy6pjvKlhQy.wnQYXBoOOB6',
     2,
     2
   );

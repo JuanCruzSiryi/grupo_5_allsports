@@ -142,6 +142,7 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 5%;
+  padding-top: 1em;
 }
 
 

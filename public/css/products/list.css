@@ -54,6 +54,7 @@ tr:nth-child(even) {
   align-items: center;
   justify-content: end;
   padding: 5px 5%;
+  padding-top: 1em;
 }
 
 .products-list-text{
@@ -174,6 +175,7 @@ tr:nth-child(even) {
 
   .products-list-title {
     padding: 5px 13%;
+    padding-top: 1em;
   }
 
 }
@@ -182,6 +184,7 @@ tr:nth-child(even) {
 
   .products-list-title {
     padding: 5px 5%;
+    padding-top: 1em;
   }
   .name {
     padding: 5px;

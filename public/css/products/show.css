@@ -177,6 +177,7 @@ body {
 .main-container{
   border-style: ridge;
   border-color:rgb(219, 219, 185);
+  padding-bottom: 1em;
 }
 
 .desktop-description {
@@ -192,6 +193,7 @@ body {
   display: flex;
   align-items: center;
   padding: 5px 5%;
+  padding-top: 1em;
 }
 
 .text-property {
