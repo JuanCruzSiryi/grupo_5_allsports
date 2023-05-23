@@ -107,7 +107,23 @@ const addToCart = (btn) => {
   }
   // se actualiza local storage
   saveCart(cart);
-  location.href = '/productCart'
+
+  Swal.fire({
+    icon: 'success',
+    width: 150,
+    showConfirmButton: false,
+    backdrop: `
+      url("https://media.tenor.com/KFwN-qERWW8AAAAi/foodpanda-panda.gif")
+      left top
+      no-repeat
+    `,
+    timer: 1500,
+    didClose: () => {
+      window.location.href = '/productCart';
+    }
+  })
+  
+  //location.href = '/productCart'
 }
 
 function saveCart(cart) {
