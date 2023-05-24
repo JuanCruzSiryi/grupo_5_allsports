@@ -252,7 +252,7 @@ const usersController = {
       const user = await User.findByPk(req.params.id);
       res.render("users/delete", {
         title: "Borrar usuario",
-        stylesheetFile: "/users/delete.css",
+        stylesheetFile: "/products/edit.css",
         user: user
       });
     } catch (error) {
