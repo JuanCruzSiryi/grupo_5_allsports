@@ -29,6 +29,7 @@ body {
 .principal-box select {
   color: #052b63;
   border: solid 1px #052b63;
+  text-align: center;
 }
 
 .principal-box input[type="file"] {

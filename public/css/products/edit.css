@@ -29,6 +29,7 @@ body {
 input::file-selector-button{
   color: white;  
   background: linear-gradient(to right, #061b3b, #052b63);
+  text-align: center;
 }
 
 .principal-box {
