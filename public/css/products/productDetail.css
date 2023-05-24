@@ -16,6 +16,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  color: #052b63;
 }
 
 .mobile-main-container {
@@ -24,6 +25,7 @@ body {
   margin-bottom: 0;
   display: block;
   background-color: white;
+  color: #052b63;
 }
 
 .large-main-container {
@@ -31,6 +33,7 @@ body {
   padding: 1.7em;
   margin-bottom: 0;
   display: none;
+  color: #052b63;
 }
 
 .article-name {
@@ -75,6 +78,10 @@ body {
   padding-bottom: 1px;
   border-bottom: solid 2px rgb(155, 155, 155);
   margin-bottom: 1em;
+  box-shadow: 10px 5px 5px teal;
+}
+.product-image-mobile img:hover {
+  box-shadow: 0px 0px 10px blueviolet;
 }
 
 .product-detail-mobile {
@@ -90,6 +97,7 @@ body {
   padding: 1em;
   border: solid 2px gainsboro;
   border-radius: 5px;
+  margin-bottom: 1em;
 }
 
 .text-property {
@@ -102,7 +110,7 @@ body {
   font-size: 14px;
 }
 .text-property h4{
-  color: black;
+  color: #052b63;
   font-size: 14px;
   padding: 3px 0px 0px 10px;
 }
