@@ -36,8 +36,8 @@ body {
 }
 
 .card img {
-  width: 15em;
-  height: 15em;
+  width: 10em;
+  height: 10em;
   transition: 0.3s;
   box-shadow: 10px 5px 5px teal;
   border-radius: 50%;
@@ -140,8 +140,8 @@ body {
 }
 
 .card img {
-  width: 15em;
-  height: 15em;
+  width: 10em;
+  height: 10em;
   transition: 0.3s;
   box-shadow: 10px 5px 5px teal;
   border-radius: 50%;
