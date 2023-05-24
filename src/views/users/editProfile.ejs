@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+    <main>
+  
+        <div class="title">
+          <h2 class="title-register">EDITAR USUARIO</h2>
+        </div>
+
+        <div class="principal-box">
+        
+  
+        <div class="back-button">
+          <button type=""><a href="/users?page=1">Atrás</a></button>
+        
+
+        <a href="/users/<%= user.id %>">
+          <img
+          class="imageAvatar"
+          src="/images/users/<%= user.image %>"
+          alt="user-image.jpg"
+          />
+        </a>
+      </div>
+
+        <div class="content-box-register">
+          <form
+            method="post"
+            action="/users/<%=user.id %>/editProfile/?_method=PUT"
+            enctype="multipart/form-data"
+            id="register-form"
+          >
+          <div>
+            <label for="image">Modificar imagen/avatar</label>
+            <input class= "buttonImage" type="file" name="image" id="image"
+            value="<%= user.image %>"  
+            />
+            <div class="col-8 col-lg-10">
+              <small class="text-errors fileError"></small>
+            </div>
+
+          </div>  
+          
+          <div>
+              <label for="firstName">Modificar nombre</label>
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                value="<%= user.firstName %>"
+                 />
+                <i class="fa-solid fa-user"></i>
+                <% if(locals.errors && errors.firstName) { %>
+                  <p class="text-errors"><%= errors.firstName.msg %></p>
+                <% } %>
+                <div class="col-8 col-lg-10">
+                  <small class="text-errors firstNameError"></small>
+                </div>
+            </div>
+            <div class="lastName">
+              <label for="lastName">Modificar apellido</label>
+              <input
+                type="text"
+                name="lastName"
+                id="lastName"
+                value="<%= user.lastName %>"
+              >
+                <i class="fa-solid fa-user"></i>
+                <% if(locals.errors && errors.lastName) { %>
+                  <p class="text-errors"><%= errors.lastName.msg %></p>
+                <% } %>
+                <div class="col-8 col-lg-10">
+                  <small class="text-errors lastNameError"></small>
+                </div>
+            </div>
+            
+            <div class="email">
+              <label for="email">Modificar email</label>
+              <input type="text" name="email" id="email" 
+              value="<%= user.email %>"  
+              />
+              <i class="fa-solid fa-envelope"></i>
+              <% if(locals.errors && errors.email) { %>
+                <p class="text-errors"><%= errors.email.msg %></p>
+              <% } %>
+              <div class="col-8 col-lg-10">
+                <small class="text-errors emailError"></small>
+              </div>
+            </div>
+            <div>
+              <label for="country">País</label>
+              <select name="country" id="country">
+                <% countries.forEach(country => { %>
+                  <option value=<%= country.id %> <%= country.id == user.country_id ? "selected" : "" %>><%= country.name %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="register-button">
+              <button type="submit">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <%- include ("../partials/footer.ejs") %>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="/js/users/edit.js"></script>
+  </body>
+</html>

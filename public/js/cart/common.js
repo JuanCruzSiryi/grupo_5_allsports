@@ -110,11 +110,12 @@ const addToCart = (btn) => {
 
   Swal.fire({
     icon: 'success',
-    width: 150,
+    width: '15%',
+    height: '15%',
     showConfirmButton: false,
     backdrop: `
       url("https://media.tenor.com/KFwN-qERWW8AAAAi/foodpanda-panda.gif")
-      left top
+      20% 30% / 20% auto
       no-repeat
     `,
     timer: 1500,

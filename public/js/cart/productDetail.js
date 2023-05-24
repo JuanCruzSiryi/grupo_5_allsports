@@ -1,8 +1,11 @@
 const addButton = document.getElementById('cart-button');
+const addButtonMobile = document.getElementById('cart-button-mobile');
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  console.log("button", addButton);
   addButton.addEventListener('click', (evt)=>{
+    addToCart(evt.target);
+  })
+  addButtonMobile.addEventListener('click', (evt)=>{
     addToCart(evt.target);
   })
 })

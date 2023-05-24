@@ -4,7 +4,7 @@ const upload = require('../middlewares/multer');
 const rules = require('../middlewares/userValidator');
 
 const usersController = require('../controllers/usersController');
-const guestMiddleware = require('../middlewares/guestMiddleware');
+const editProfileMiddleware = require('../middlewares/editProfileMiddleware');
 const adminMiddleware = require('../middlewares/adminMiddleware');
 
 /* CRUD */
@@ -24,6 +24,8 @@ router.get('/users/search', adminMiddleware, usersController.search)
 // EDICIÓN DE USUARIO
 router.get('/users/:id/edit', adminMiddleware, usersController.edit);
 router.put('/users/:id/edit',adminMiddleware, upload.single("image"),rules, usersController.update);
+router.get('/users/:id/editProfile', editProfileMiddleware, usersController.editProfile);
+router.put('/users/:id/editProfile', editProfileMiddleware, upload.single("image"), rules, usersController.updateProfile);
 
 // LOGIN DE USUARIO
 // router.get('/login', usersController.login);

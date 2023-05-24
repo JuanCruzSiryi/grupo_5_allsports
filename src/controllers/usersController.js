@@ -187,6 +187,20 @@ const usersController = {
       res.send(error)
     }
   },
+  editProfile: async (req, res) => {
+    try {
+      const user = await User.findByPk(req.params.id);
+      const countries = await Country.findAll();
+      res.render("../views/users/editProfile", {
+        title: "Editar Perfil",
+        stylesheetFile: "/users/edit.css",
+        user,
+        countries
+      });
+    } catch (error) {
+      res.send(error)
+    }
+  },
 
   update: async (req, res) => {
     const user = await User.findByPk(req.params.id);
@@ -204,6 +218,29 @@ const usersController = {
       })
       .then(() => {
         return res.redirect('/users');
+      })
+      .catch(error => {
+        res.send(error)
+      });
+  },
+
+  updateProfile: async (req, res) => {
+    const user = await User.findByPk(req.params.id);
+    User.update(
+      {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        image: req.file? req.file.filename : user.image,
+        category: req.body.categoryUser,
+        country_id: req.body.country,
+      },
+      {
+        where: {id: req.params.id}
+      })
+      .then(() => {
+        req.session.destroy();
+        return res.redirect('/login');
       })
       .catch(error => {
         res.send(error)

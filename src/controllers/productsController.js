@@ -269,9 +269,9 @@ const productsController = {
       const product = await Product.findByPk(req.params.id,
         { include: ["category", "color", "size", "tag", "brand"] })
       const sizes = await Size.findAll();
-      res.render("../views/products/productDetailDef", {
+      res.render("../views/products/productDetail", {
         title: "Product-Detail",
-        stylesheetFile: "products/detail.css",
+        stylesheetFile: "products/productDetail.css",
         product,
         sizes
       });

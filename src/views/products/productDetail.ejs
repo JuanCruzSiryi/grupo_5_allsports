@@ -2,62 +2,125 @@
 <html lang="en">
   <%- include('../partials/head') %>
   <body>
-    <%- include('../partials/header') %>
+    <%- include ("../partials/header.ejs") %>
+
     <main>
-      <div class="product"> 
-        <img class="image" src="/images/products/zapa-adidas-azul.jpg" alt="Adidas Galaxy 5"> </img>
-        <div class= "column" >
-        <div class="column1">
-          <div class="icons">
-            <div class="heart"> <i class="fa-regular fa-heart"></i></div>
-            <!-- <div class="cart"> <i class="fa-solid fa-cart-shopping"></i></div> -->
-            <a class="cart" href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+      <div class="main-container">
+        <div class="large-main-container">
+          <div class="product-image-mobile">
+            <img
+            class="image"
+            src="/images/products/<%= product.image %>"
+            alt="product-image.jpg"
+            />
           </div>
-          <img class="product-logo" src="https://sportingio.vtexassets.com/arquivos/ids/523444-auto-200?width=auto&amp;height=200&amp;aspect=true" alt="ADIDAS" crossorigin="anonymous" style="height: 100px;"> </img> 
-        </div>
-        
-        <div class="column2">
-          <div class= "description">
-            <h3 class="description-name"> Adidas Galaxi 5 </h3>
-            <h3 class= "description-price"></h3> $34000 </h3>
-            <h3 class= "description-code"> AdiAzuDep </3>
-          </div> 
-          <div class="waist">   
-            <h3> Talles </h3>
-            <select name="talles" id="talles">
-              <option value="36 (EUR 37)"> 36 (EUR 37) </option>
-              <option value="37 (EUR 38)"> 37 (EUR 38) </option>
-              <option value="38 (EUR 39)"> 38 (EUR 39) </option>
-              <option value="39 (EUR 40)"> 39 (EUR 40) </option>
-              <option value="40 (EUR 41)"> 40 (EUR 41) </option>
-              <option value="41 (EUR 42)"> 41 (EUR 42) </option>
-              <option value="42 (EUR 43)"> 42 (EUR 43) </option>
-              <option value="43 (EUR 44)"> 43 (EUR 44) </option>
-              <option value="44 (EUR 45)"> 44 (EUR 45) </option>
-              <option value="45 (EUR 46)"> 45 (EUR 46) </option>
-            </select>
+          <div class="large-product-detail">
+            <div class="product-info-mobile">
+              <p class="article-name"><%= product.name %></p>
+              <% if (product.discount > 0) { %>
+                <div class = "discount">
+                  <p class="article-price-discount">Antes $<%= product.price %>                     
+                  <p  class="article-discount-shipping"><%= parseInt(product.discount) %>% OFF</p>
+                </div>
+              <% } %> 
+              <div class="article-price">
+                <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                <p class="price">Precio: $ <%= finalPrice %>
+              </div>
+            </div>
+            <div class="product-detail-mobile">
+              <div class="text-property">
+                <h3>Categoría: </h3>
+                <h4><%= product.category.name %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Color: </h3>
+                <h4><%= product.color.name %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Talle: </h3>
+                <h4><%= product.size.arg %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Marca: </h3>
+                <h4><%= product.brand.name %></h4>
+              </div>
+            </div>
+            <p class="product-description"><%= product.description %></p>
+            <div class="mobile-footer">
+              <button id="cart-button" class="add-cart-button" 
+                data-id= <%= product.id %>
+                data-name=<%=product.name%>
+                data-image=<%=product.image%>
+                data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
+                AÑADIR AL CARRITO
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      </div> 
-          <br>  
-        <div class="detail">
-          <br>
-          <h4> Las nuevas ADIDAS GALAXI 5, cuentan con la última tecnología en materiales, un diseño ultra moderno y su suela air top es ideal para running</h4>
-        </div> 
-        
-        <!-- <div class="detail-button">
-          <div class="edit-button">
-            <button onClick="location.href='/productEdit'" type="submit" >EDITAR</button>
-          </div>
-          <div class="delete-button">
-            <button type="submit">BORRAR</button>
-          </div>
-        </div> -->
 
-      
+      <div class="mobile-main-container">
+        <div class="product-info-mobile">
+          <p class="article-name"><%= product.name %></p>
+          <% if (product.discount > 0) { %>
+            <div class = "discount">
+              <p class="article-price-discount">Antes $<%= product.price %>                     
+              <p  class="article-discount-shipping"><%= parseInt(product.discount) %>% OFF</p>
+            </div>
+          <% } %> 
+          <div class="article-price">
+            <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+            <p class="price">Precio: $ <%= finalPrice %>
+          </div>
+        </div>
+        <div class="product-image-mobile">
+          <img
+          class="image"
+          src="/images/products/<%= product.image %>"
+          alt="product-image.jpg"
+          />
+        </div>
+        <div class="product-detail-mobile">
+          <div class="text-property">
+            <h3>Categoría: </h3>
+            <h4><%= product.category.name %></h4>
+          </div>
+          <div class="text-property">
+            <h3>Color: </h3>
+            <h4><%= product.color.name %></h4>
+          </div>
+          <div class="text-property">
+            <h3>Talle: </h3>
+            <h4><%= product.size.arg %></h4>
+          </div>
+          <div class="text-property">
+            <h3>Marca: </h3>
+            <h4><%= product.brand.name %></h4>
+          </div>
+          <!-- <p class="category">Categoría: <%= product.category.name%></p>
+          <p class="color">Color: <%= product.color.name %></p>
+          <p class="size">Talle: <%= product.size.arg %></p>
+          <p class="size">Marca: <%= product.brand.name %></p> -->
+        </div>
+        <p class="product-description"><%= product.description %></p>
+        <div class="mobile-footer">
+          <button id="cart-button-mobile" class="add-cart-button" 
+            data-id= <%= product.id %>
+            data-name=<%=product.name%>
+            data-image=<%=product.image%>
+            data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
+            AÑADIR AL CARRITO
+          </button>
+        </div>
+      </div>
+
     </main>
-    <%- include('../partials/footer') %>
+
+    <%- include ("../partials/footer.ejs") %>
+    <script src="/js/cart/common.js"></script>
+    <script src="/js/cart/productDetail.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
