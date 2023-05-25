@@ -11,7 +11,7 @@ main {
   background: linear-gradient(to right, rgb(196, 213, 255), rgb(249, 253, 232));
   text-align: center;
   width: 100%;
-  padding: 2.5em;
+  padding: 0.75rem;
 }
 
 /* Estilos generales */
@@ -22,24 +22,25 @@ body {
 
 .cart-container {
   max-width: 800px;
-  margin: 70px auto;
+  /* margin: 70px auto; */
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .return {
   color: black;
-  padding-right: 250px;
+  padding-right: 300px;
+  font-size: 10px;
 }
 .title {
-  display: flex;
+  /* display: flex; */
   justify-content: left;
   align-items: center;
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 16px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -53,8 +54,9 @@ table {
 
 th,
 td {
-  text-align: left;
-  padding: 10px;
+  text-align: center;
+  padding: 5px;
+  font-size: 11px
 }
 
 th {
@@ -111,6 +113,17 @@ button.delete-button {
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 9px;
+}
+
+button.checkout-button {
+  background-color: #4caf50;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 9px;
+  cursor: pointer;
 }
 
 button.delete-button:hover {
@@ -119,7 +132,7 @@ button.delete-button:hover {
 
 /* Estilos de resumen de carrito */
 .cart-summary {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
@@ -140,19 +153,10 @@ button.delete-button:hover {
 }
 
 .cart-summary p:last-child {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   color: #f44336;
-}
-
-button.checkout-button {
-  background-color: #4caf50;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
+  /* padding: 1%; */
 }
 
 button.checkout-button:hover {
@@ -162,6 +166,7 @@ button.checkout-button:hover {
 .quantity-container {
   display: flex;
   align-items: center;
+  margin-left:19%;
 }
 
 .quantity-button {
@@ -171,11 +176,11 @@ button.checkout-button:hover {
   border: none;
   background-color: #b9b7b7;
   color: #fff;
-  font-size: 1.25rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 1rem;
   text-align: center;
-  width: 2rem;
-  height: 1.7rem;
+  width: 1rem;
+  height: 1rem;
   border-radius: 0.25rem;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
@@ -195,7 +200,7 @@ button.checkout-button:hover {
   font-size: 1rem;
   line-height: 1.5rem;
   text-align: center;
-  width: 2rem;
+  width: 1rem;
   height: 2.5rem;
 }
 
@@ -208,39 +213,214 @@ button.checkout-button:hover {
 .quantity-input:focus {
   outline: none;
 }
+p{
+  font-size: 11px;
+}
 /* Estilos para dispositivos móviles */
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
+  main {
+    background: linear-gradient(to right, rgb(196, 213, 255), rgb(249, 253, 232));
+    text-align: center;
+    width: 100%;
+    padding: 2.5em;
+  }
+  
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
   .cart-container {
-    padding: 0 10px;
+    max-width: 800px;
+    margin: 70px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-
+  .return {
+    color: black;
+    padding-right: 250px;
+    font-size: 15px;
+  }
+  .title {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Estilos de tabla */
   table {
-    font-size: 14px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
   }
-
-  .cart-table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  
+  th,
+  td {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    margin-left: 17%;
   }
-
-  .total-cell {
-    display: none;
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
   }
-
-  .delete-cell {
-    display: none;
+  
+  td.product-cell {
+    display: flex;
+    align-items: center;
   }
-
-  .subtotal,
-  .taxes,
-  .total {
+  
+  td.product-cell img {
+    width: 60px;
+    margin-right: 10px;
+  }
+  
+  td.quantity-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  td.quantity-container .quantity-button {
+    background-color: #f2f2f2;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  td.quantity-container .quantity-input {
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  td.price-cell,
+  td.total-cell {
+    font-weight: bold;
+  }
+  
+  td.delete-cell {
+    text-align: center;
+  }
+  
+  button.delete-button {
+    background-color: #f44336;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button.delete-button:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Estilos de resumen de carrito */
+  .cart-summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
   }
-
-  .checkout-button {
-    width: 100%;
+  
+  .cart-summary div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cart-summary p:first-child {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .cart-summary p:last-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f44336;
+  }
+  
+  button.checkout-button {
+    background-color: #4caf50;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button.checkout-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .quantity-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .quantity-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #b9b7b7;
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 2rem;
+    height: 1.7rem;
+    border-radius: 0.25rem;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .quantity-button:hover {
+    background-color: #8d8b8b;
+    cursor: pointer;
+  }
+  
+  .quantity-button:focus {
+    outline: none;
+  }
+  
+  .quantity-input {
+    appearance: none;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    width: 2rem;
+    height: 2.5rem;
+  }
+  
+  .quantity-input::-webkit-inner-spin-button,
+  .quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .quantity-input:focus {
+    outline: none;
   }
 }
