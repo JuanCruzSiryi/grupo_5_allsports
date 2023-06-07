@@ -11,10 +11,45 @@
       </div>
   
       <div class="header-input-botton">
-        <input type="input" class="header-input" placeholder="Buscar..." />
+        <!-- <input type="input" class="header-input" placeholder="Buscar..." />
         <button type="submit" class="header-search-button">
           <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
+        </button> -->
+
+        <!-- nuevo -->
+
+            <form action="/products/searchHeader" method="GET">
+              <div class="header-input-botton">
+                <input 
+                  class="header-input" 
+                  type="text" 
+                  placeholder="Buscar..."
+                  name="q"
+                  placeholder="Buscar producto..."
+                  value=<%= locals.search? search:"" %>
+                >
+                <button type="submit" class="header-search-button">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </div>
+            </form>
+
+
+        <!-- nuevo -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       </div>
 
     </div>
@@ -67,12 +102,26 @@
     <nav class="main-navbar">
       <ul>
         <li><a href="#">New In</a></li>
-        <li><a href="#">Categorias</a></li>
-        <!-- <li><a href="#">Hombre</a></li> -->
-        <!-- <li><a href="#">Mujer</a></li> -->
-        <li><a href="#">Marcas</a></li>
-        <li><a href="#">SALE</a></li>
-        <!-- <li><a href="#">Niños</a></li> -->
+        <ul>    
+            <li><a href="#">Categorias</a>
+            <!-- <li><a href="#">Hombre</a></li>
+            <li><a href="#">Mujer</a></li> 
+            <li><a href="#">Niños</a></li>-->
+            </li>  
+          </ul> 
+          <ul> 
+            <li><a href="#">Marcas</a>
+              <!-- <li><a href="#">Adidas</a></li>
+              <li><a href="#">Nike</a></li> 
+              <li><a href="#">Reebok</a></li> -->
+            
+            </li>
+          </ul>
+          <ul> 
+          
+            <li><a href="#">SALE</a></li>
+          </ul>
+          
       </ul>
     </nav>
   </div>
@@ -101,5 +150,20 @@
       <i class="fa-solid fa-magnifying-glass"></i>
     </button>
     <input type="input" class="header-input" placeholder="Buscar..." />
+  
+
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   </div>
 </header>

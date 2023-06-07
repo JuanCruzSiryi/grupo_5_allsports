@@ -13,6 +13,11 @@ router.get('/productsList', guestMiddleware, productsController.list);
 // BUSCAR USUSARIO
 router.get('/products/search', productsController.search);
 
+//nuevo
+router.get('/products/searchHeader', productsController.searchHeader);
+
+
+
 /* creacion de producto */
 router.get('/products/create',adminMiddleware, productsController.create);
 router.post('/products/create',adminMiddleware, upload.single("image"), rules, productsController.store);

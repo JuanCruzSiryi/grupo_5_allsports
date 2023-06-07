@@ -303,6 +303,54 @@ const productsController = {
       title: "Error 404: Página no encontrada",
       stylesheetFile: "error404.css"
     });
-  }
+  },
+
+
+  /* nuevo */
+
+  searchHeader: async (req, res) => {
+    const search = req.query.q;
+    const page = parseInt(req.query.page) || 1;
+    res.locals.page = page;
+
+    const limit = 4;
+    const offset = (page - 1) * limit;
+
+    const totalItems = await Product.count({
+      where: {
+        name: { [Op.like]: `%${search}%` }
+      }
+    });
+
+    const totalPages = Math.ceil(totalItems / limit);
+    res.locals.totalPages = totalPages;
+
+    try {
+      const products = await Product.findAll({
+        where: {
+          name: { [Op.like]: `%${search}%` }
+        },
+        include: ["category", "color", "size", "tag", "brand"],
+        limit,
+        offset
+      });
+      res.render("../views/products/productSearch.ejs", {
+        title: "Lista de productos buscados",
+        stylesheetFile: "products/productSearch.css",
+        products,
+        search
+      });
+    } catch (error) {
+      res.send(error)
+    }
+  },
+
+
+
+
+
+
+
+
 };
 module.exports = productsController;

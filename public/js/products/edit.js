@@ -20,7 +20,9 @@ function formulary (){
     form.image.addEventListener ('change', validationImage)
 
     form.addEventListener('submit', submitButton);
-}
+    // form.addEventListener('reset', resetButton);
+
+  }
 
 function validationName (e){
 if (form.name.value.length < 5 || form.name.value.length == 0){
@@ -110,5 +112,17 @@ function submitButton(e) {
       form.submit();
     }
   }
-  
+  // function resetButton(e) {
+  //   console.log("errors", errors);
+  //   if (Object.keys(errors).length >= 1) {
+  //      e.preventDefault();
+  //     errorName.innerHTML = (errors.name) ? `<li> ${errors.name} </li>` : '';
+  //     errorDesc.innerHTML = (errors.description) ? `<li> ${errors.description} </li>` : '';
+  //     errorDisc.innerHTML = (errors.discount) ? `<li> ${errors.discount} </li>` : '';
+  //     errorPrice.innerHTML = (errors.price) ? `<li> ${errors.price} </li>` : '';
+  //     errorImage.innerHTML = (errors.image) ? `<li> ${errors.image} </li>` : '';
+  //   } else {
+  //     form.reset();
+  //   }
+  // }
 

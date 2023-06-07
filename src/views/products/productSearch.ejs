@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head') %>
+  <body>
+    <%- include ("../partials/header.ejs") %>
+
+    <main>
+
+      <div class="main-container">
+        <div class="mobile-main-container">
+
+          <% products.forEach(product => { %>
+
+          <div class="mobile-product-detail">
+            <div class="product-info-mobile">
+              <p class="article-name"><%= product.name %></p>
+          
+              <div class="product-image-mobile">
+                <img class="product-image"
+                    src="/images/products/<%= product.image %>"
+                    alt="product-image.jpg"
+                >
+              </div>
+              
+          
+              <% if (product.discount > 0) { %>
+                <div class = "discount">
+                  <p class="article-price-discount">Antes $<%= product.price %>                     
+                  <p  class="article-discount-shipping"><%= parseInt(product.discount) %>% OFF</p>
+                </div>
+              <% } %> 
+              <div class="article-price">
+                <% finalPrice = product.price - ((product.price* product.discount) / 100) %>
+                <p class="price">Precio: $ <%= finalPrice %>
+              </div>
+            </div>
+
+            <div class="product-detail-mobile">
+              <div class="text-property">
+                <h3>Categoría: </h3>
+                <h4><%= product.category.name %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Color: </h3>
+                <h4><%= product.color.name %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Talle: </h3>
+                <h4><%= product.size.arg %></h4>
+              </div>
+              <div class="text-property">
+                <h3>Marca: </h3>
+                <h4><%= product.brand.name %></h4>
+              </div>
+
+            </div>
+            <p class="product-description"><%= product.description %></p>
+               
+            </div>           
+
+        <div class="mobile-footer">
+          <button id="cart-button-mobile" class="add-cart-button" 
+            data-id= <%= product.id %>
+            data-name=<%=product.name%>
+            data-image=<%=product.image%>
+            data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
+            AÑADIR AL CARRITO
+          </button>
+        </div>
+      
+      
+        <% }) %>
+      </div>
+      
+      </div>
+        
+
+        <br> </br>
+      
+      </div>
+      
+    </main>
+
+    <%- include ("../partials/footer.ejs") %>
+    <script src="/js/cart/common.js"></script>
+    <script src="/js/cart/productDetail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
+</html>
