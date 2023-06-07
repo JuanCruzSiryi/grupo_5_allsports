@@ -48,7 +48,7 @@ body {
 }
 
 .product-image{
-  width: 160px;
+  width: 180px;
    border: 2px solid grey;
   border-radius: 5%;
   margin: 2em;
@@ -221,4 +221,4 @@ display: flex;
     padding: 1em;
     border: solid 2px gainsboro;
     border-radius: 5px;
-  }}    */ */
+  }}    */ 

@@ -126,6 +126,54 @@ input {
   font-weight: lighter;
 }
 
+/* nuevo */
+
+.dropdown {
+  position: relative;
+  display:inline-block;
+  font-size: 20px;
+
+}
+
+.dropdownLi{
+  display: none;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+.dropdown-content {
+   display: none;
+  position: absolute;
+  min-width: 160px;
+  z-index: 1;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropdownLi{
+
+  display: flex;
+  flex-direction: column;
+  background-color: #052b63;  
+}
+
+/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
 .admin-buttons {
   padding-right: 25px;
 }
