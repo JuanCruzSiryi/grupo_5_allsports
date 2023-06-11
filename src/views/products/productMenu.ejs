@@ -54,28 +54,29 @@
               </div>
 
             </div>
-            <p class="product-description"><%= product.description %></p>
+              <p class="product-description"><%= product.description %></p>
                
             </div>           
-
-        <div class="mobile-footer">
-          <button id="cart-button-mobile" class="add-cart-button" 
-            data-id= <%= product.id %>
-            data-name=<%=product.name%>
-            data-image=<%=product.image%>
-            data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
-            AÑADIR AL CARRITO
-          </button>
-        </div>
+            <% }) %> 
+        
+            <div class="mobile-footer">
+              <button id="cart-button-mobile" class="add-cart-button" 
+                  data-id= <%= product.id %>
+                  data-name=<%=product.name%>
+                  data-image=<%=product.image%>
+                  data-price=<%=product.price - ((product.price* product.discount) / 100)%>>
+                  AÑADIR AL CARRITO
+              </button>
+            </div>
       
       
-        <% }) %>
+       
       </div>
       
       </div>
         
 
-       
+        
       </div>
       
     </main>

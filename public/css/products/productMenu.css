@@ -85,7 +85,7 @@ body {
 .price {
   font-weight: bolder;
   font-family: sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .product-image-mobile {
@@ -111,9 +111,10 @@ body {
 .product-description {
   text-align: center;
   font-size: 14px;
+  padding: 10%;
+  
   border-radius: 5px;
-  width: 400px;
-  margin: 10% 10% 0% 10%;
+  margin-bottom: 1em;
 }
 
 .text-property {
@@ -124,7 +125,7 @@ body {
 }
 .text-property h3{
   font-style: normal;
-  font-size: 16px;
+  font-size: 14px;
 }
 .text-property h4{
   color: #052b63;
@@ -161,13 +162,11 @@ body {
 
 .mobile-product-detail {
 margin: 1%;
-margin-right: 8%;
 padding: 3%;
 border: solid 2px gainsboro;
 border-radius: 5px;
 margin-bottom: 1em;
 display: flex;
-border-bottom-color: grey;
 }
 
 .large-product-detail {
