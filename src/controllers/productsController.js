@@ -75,7 +75,7 @@ const productsController = {
         offset
       });
       res.render("../views/products/list", {
-        title: "Lista de productoss",
+        title: "Lista de productos",
         stylesheetFile: "products/list.css",
         products,
         search
@@ -321,24 +321,24 @@ searchHeader: async (req, res) => {
 },
 
 menuSelectHeader: async (req, res) => {
-  const search = req.query.q;
+  const search = "adidas";
    const page = parseInt(req.query.page) || 1;
-  res.locals.page = page;
+   res.locals.page = page;
 
 
-  const totalItems = await Product.count({
-    where: {
-      name: { [Op.like]: `%${search}%` }
-    }
-  });
+   const totalItems = await Product.count({
+     where: {
+       name: { [Op.like]: `%${search}%` }
+     }
+   });
 
-  const totalPages = Math.ceil(totalItems / limit);
-  res.locals.totalPages = totalPages;
+   const totalPages = Math.ceil(totalItems / 1);
+   res.locals.totalPages = totalPages;
 
   try {
     const products = await Product.findAll({
       where: {
-        name: { [Op.like]: `%${search}%` }
+        category: { [Op.like]: search }
       },
       include: ["category", "color", "size", "tag", "brand"],
       limit,

@@ -16,7 +16,7 @@ router.get('/products/search', productsController.search);
 //nuevo
 router.get('/products/searchHeader', productsController.searchHeader);
 
-router.get('/products/menuSelectHeader', productsController.menuSelectHeader);
+router.get('/products/productMenu', productsController.menuSelectHeader);
 
 
 /* creacion de producto */
