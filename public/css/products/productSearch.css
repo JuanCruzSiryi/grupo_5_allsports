@@ -45,6 +45,7 @@ body {
   /* font-size: 25px; */
   margin: 8px 0;
   text-align: center;
+  border-top: solid 1px gray;
 }
 
 .product-image{
@@ -256,6 +257,7 @@ margin: 1%;
 
 .article-name {
   font-size: 25px;
+  border-top:0px;
 }
 
 .discount {

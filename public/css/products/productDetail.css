@@ -74,7 +74,7 @@
   }
   
   .product-image-mobile img {
-    width: 100%;
+    width: 60%;
     padding-bottom: 1px;
     border-bottom: solid 2px rgb(155, 155, 155);
     margin-bottom: 1em;
@@ -153,6 +153,10 @@
       display: none;
     }
   
+    .product-image-mobile img {
+      width: 100%;
+    }
+
     .large-main-container {
       display: flex;
       justify-content: center;
